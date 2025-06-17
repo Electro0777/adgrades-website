@@ -1,0 +1,69 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ThemeProvider } from './contexts/ThemeContext';
+import Layout from './components/Layout';
+import ProtectedRoute from './components/ProtectedRoute';
+import Home from './pages/Home';
+import Services from './pages/Services';
+import Portfolio from './pages/Portfolio';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Careers from './pages/Careers';
+import AdminLogin from './pages/AdminLogin';
+import AdminDashboard from './pages/AdminDashboard';
+import CertificateVerification from './pages/CertificateVerification';
+
+function App() {
+  return (
+    <ThemeProvider>
+      <Router>
+        <Routes>
+          {/* Public Routes with Layout */}
+          <Route path="/" element={
+            <Layout>
+              <Home />
+            </Layout>
+          } />
+          <Route path="/services" element={
+            <Layout>
+              <Services />
+            </Layout>
+          } />
+          <Route path="/portfolio" element={
+            <Layout>
+              <Portfolio />
+            </Layout>
+          } />
+          <Route path="/about" element={
+            <Layout>
+              <About />
+            </Layout>
+          } />
+          <Route path="/contact" element={
+            <Layout>
+              <Contact />
+            </Layout>
+          } />
+          <Route path="/careers" element={
+            <Layout>
+              <Careers />
+            </Layout>
+          } />
+          
+          {/* Certificate Verification - Public Route without Layout */}
+          <Route path="/verify" element={<CertificateVerification />} />
+          
+          {/* Admin Routes - No Layout */}
+          <Route path="/admin/login" element={<AdminLogin />} />
+          <Route path="/admin/dashboard" element={
+            <ProtectedRoute>
+              <AdminDashboard />
+            </ProtectedRoute>
+          } />
+        </Routes>
+      </Router>
+    </ThemeProvider>
+  );
+}
+
+export default App;
