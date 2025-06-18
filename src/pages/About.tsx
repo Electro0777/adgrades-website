@@ -11,6 +11,7 @@ import {
   Zap
 } from 'lucide-react';
 import AnimatedCounter from '../components/AnimatedCounter';
+import VortexBackground from '../components/VortexBackground';
 
 const About: React.FC = () => {
   const milestones = [
@@ -133,6 +134,9 @@ const About: React.FC = () => {
 
   return (
     <div className="pt-16 overflow-x-hidden">
+      {/* Vortex Background */}
+      <VortexBackground className="-z-10" />
+
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

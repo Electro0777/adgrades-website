@@ -13,6 +13,7 @@ import {
   ChevronUp,
   Zap
 } from 'lucide-react';
+import VortexBackground from '../components/VortexBackground';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -130,6 +131,9 @@ const Contact: React.FC = () => {
 
   return (
     <div className="pt-16">
+      {/* Vortex Background */}
+      <VortexBackground className="-z-10" />
+
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

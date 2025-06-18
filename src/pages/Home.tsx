@@ -18,6 +18,7 @@ import {
 import AnimatedCounter from '../components/AnimatedCounter';
 import Marquee from '../components/Marquee';
 import ClientCard from '../components/ClientCard';
+import VortexBackground from '../components/VortexBackground';
 
 const Home: React.FC = () => {
   const services = [
@@ -94,6 +95,9 @@ const Home: React.FC = () => {
 
   return (
     <div className="pt-16 overflow-x-hidden">
+      {/* Vortex Background */}
+      <VortexBackground className="-z-10" />
+
       {/* Hero Section - Mobile Responsive */}
       <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
         <div className="relative z-10 max-w-5xl mx-auto text-center">
