@@ -15,7 +15,7 @@ const Marquee: React.FC<MarqueeProps> = ({
 }) => {
   return (
     <div
-      className={`group flex overflow-hidden p-2 [--duration:40s] [--gap:0.5rem] sm:[--gap:1rem] [gap:var(--gap)] ${className}`}
+      className={`group flex overflow-hidden p-2 [--duration:30s] [--gap:0.5rem] sm:[--gap:1rem] [gap:var(--gap)] ${className}`}
       style={{
         maskImage: 'linear-gradient(to right, transparent, white 10%, white 90%, transparent)',
         WebkitMaskImage: 'linear-gradient(to right, transparent, white 10%, white 90%, transparent)',
@@ -25,6 +25,14 @@ const Marquee: React.FC<MarqueeProps> = ({
         className={`flex shrink-0 justify-around [gap:var(--gap)] animate-marquee ${
           reverse ? '[animation-direction:reverse]' : ''
         } ${pauseOnHover ? 'group-hover:[animation-play-state:paused]' : ''}`}
+      >
+        {children}
+      </div>
+      <div
+        className={`flex shrink-0 justify-around [gap:var(--gap)] animate-marquee ${
+          reverse ? '[animation-direction:reverse]' : ''
+        } ${pauseOnHover ? 'group-hover:[animation-play-state:paused]' : ''}`}
+        aria-hidden="true"
       >
         {children}
       </div>

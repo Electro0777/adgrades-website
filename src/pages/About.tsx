@@ -12,7 +12,6 @@ import {
 } from 'lucide-react';
 import DynamicBackground from '../components/DynamicBackground';
 import AnimatedCounter from '../components/AnimatedCounter';
-import GlareCard from '../components/GlareCard';
 
 const About: React.FC = () => {
   const milestones = [
@@ -135,78 +134,70 @@ const About: React.FC = () => {
 
   return (
     <div className="pt-16 overflow-x-hidden">
-      {/* Hero Section with Dynamic Background */}
+      {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <DynamicBackground variant="about" />
         
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in">
-            {/* Enhanced Badge */}
-            <div className="inline-flex items-center px-4 sm:px-8 py-3 sm:py-4 bg-card/30 backdrop-blur-xl border border-primary/30 rounded-full text-primary text-xs sm:text-sm font-medium mb-6 sm:mb-8 hover:bg-card/40 transition-all duration-500 shadow-lg hover:shadow-primary/20 hover:scale-105">
-              <Zap className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 animate-pulse" />
-              <span className="bg-professional-gradient bg-clip-text text-transparent font-semibold">
+            {/* Badge */}
+            <div className="page-badge">
+              <Zap className="w-5 h-5 mr-3 animate-pulse" />
+              <span className="brand-gradient-text font-semibold">
                 Meet the Team Behind the Magic
               </span>
             </div>
             
-            <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-card-foreground mb-6 sm:mb-8 leading-tight tracking-tight font-display px-2">
+            <h1 className="heading-primary text-foreground text-glow mb-8 leading-tight">
               We're{' '}
-              <span className="bg-professional-gradient bg-clip-text text-transparent drop-shadow-2xl">
+              <span className="brand-gradient-text brand-glow">
                 AdGrades
               </span>
             </h1>
             
-            <p className="text-base sm:text-xl md:text-2xl text-muted-foreground mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed px-4">
+            <p className="text-xl md:text-2xl text-muted-foreground text-glow mb-12 max-w-4xl mx-auto leading-relaxed">
               A passionate team of marketers, designers, and developers dedicated to helping 
               startups and growing businesses become industry leaders through strategic marketing 
               and exceptional design.
             </p>
             
-            <div className="grid grid-cols-2 gap-6 sm:gap-8 max-w-md mx-auto">
+            <div className="grid grid-cols-2 gap-8 max-w-md mx-auto">
               <div className="text-center">
-                <div className="text-2xl sm:text-4xl md:text-5xl font-bold bg-professional-gradient bg-clip-text text-transparent mb-2 font-display drop-shadow-2xl">
+                <div className="text-4xl md:text-5xl font-bold brand-gradient-text brand-glow mb-3">
                   <AnimatedCounter end={25} suffix="+" />
                 </div>
-                <p className="text-muted-foreground font-semibold text-sm sm:text-base">Happy Clients</p>
+                <p className="text-muted-foreground text-glow font-semibold">Happy Clients</p>
               </div>
               <div className="text-center">
-                <div className="text-2xl sm:text-4xl md:text-5xl font-bold bg-professional-gradient bg-clip-text text-transparent mb-2 font-display drop-shadow-2xl">
+                <div className="text-4xl md:text-5xl font-bold brand-gradient-text brand-glow mb-3">
                   <AnimatedCounter end={15} suffix="" />
                 </div>
-                <p className="text-muted-foreground font-semibold text-sm sm:text-base">Team Members</p>
+                <p className="text-muted-foreground text-glow font-semibold">Team Members</p>
               </div>
             </div>
           </div>
         </div>
-        
-        {/* Enhanced scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 sm:w-8 sm:h-12 border-2 border-primary/40 rounded-full flex justify-center backdrop-blur-sm bg-card/20">
-            <div className="w-1 h-3 sm:w-1.5 sm:h-4 bg-professional-gradient rounded-full mt-2 animate-pulse" />
-          </div>
-        </div>
       </section>
 
-      {/* Enhanced Company Story Timeline */}
-      <section className="py-20 sm:py-32 bg-gradient-to-b from-background to-card/20">
+      {/* Company Story Timeline */}
+      <section className="section-padding bg-card/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 sm:mb-24">
-            <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-card-foreground mb-6 sm:mb-8 font-display px-2">
+          <div className="text-center mb-24">
+            <h2 className="heading-secondary text-foreground text-glow mb-8">
               Our{' '}
-              <span className="bg-professional-gradient bg-clip-text text-transparent drop-shadow-lg">
+              <span className="brand-gradient-text brand-glow">
                 Journey
               </span>
             </h2>
-            <p className="text-lg sm:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed px-4">
+            <p className="text-xl text-muted-foreground text-glow max-w-4xl mx-auto leading-relaxed">
               From a startup idea to a growing agency, here's how we've evolved alongside our clients.
             </p>
           </div>
 
           <div className="relative">
-            {/* Enhanced Timeline Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-professional-gradient opacity-30 hidden md:block rounded-full" />
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full brand-gradient opacity-30 hidden md:block rounded-full" />
 
-            <div className="space-y-12 sm:space-y-20">
+            <div className="space-y-20">
               {milestones.map((milestone, index) => (
                 <div
                   key={`${milestone.year}-${index}`}
@@ -215,24 +206,23 @@ const About: React.FC = () => {
                   }`}
                 >
                   <div className={`w-full md:w-1/2 ${
-                    index % 2 === 0 ? 'md:pr-8 lg:pr-16 md:text-right' : 'md:pl-8 lg:pl-16'
+                    index % 2 === 0 ? 'md:pr-16 md:text-right' : 'md:pl-16'
                   }`}>
-                    <GlareCard className="bg-card/60 backdrop-blur-xl p-6 sm:p-10 rounded-3xl border border-border/50 hover:border-primary/40 transition-all duration-700 transform hover:-translate-y-3 hover:shadow-2xl hover:shadow-primary/15">
-                      <div className="text-2xl sm:text-4xl font-bold text-primary mb-3 sm:mb-4 font-display drop-shadow-lg">
+                    <div className="minimal-card p-10 hover:border-primary/40 transition-all duration-700 transform hover:-translate-y-3">
+                      <div className="text-4xl font-bold text-primary brand-glow mb-4">
                         {milestone.year}
                       </div>
-                      <h3 className="text-lg sm:text-2xl font-semibold text-card-foreground mb-3 sm:mb-4">
+                      <h3 className="text-2xl font-semibold text-foreground text-glow mb-4">
                         {milestone.title}
                       </h3>
-                      <p className="text-muted-foreground leading-relaxed text-base sm:text-lg">
+                      <p className="text-muted-foreground leading-relaxed text-lg">
                         {milestone.description}
                       </p>
-                    </GlareCard>
+                    </div>
                   </div>
 
-                  {/* Enhanced Timeline dot */}
-                  <div className="hidden md:flex w-8 h-8 sm:w-12 sm:h-12 bg-professional-gradient rounded-full items-center justify-center relative z-10 shadow-xl">
-                    <div className="w-3 h-3 sm:w-6 sm:h-6 bg-white rounded-full" />
+                  <div className="hidden md:flex w-12 h-12 brand-gradient rounded-full items-center justify-center relative z-10 shadow-xl">
+                    <div className="w-6 h-6 bg-white rounded-full" />
                   </div>
 
                   <div className="w-full md:w-1/2" />
@@ -243,116 +233,111 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      {/* Enhanced Core Values */}
-      <section className="py-20 sm:py-32 bg-gradient-to-r from-card/40 via-card/30 to-card/40 backdrop-blur-xl">
+      {/* Core Values */}
+      <section className="section-padding">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 sm:mb-24">
-            <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-card-foreground mb-6 sm:mb-8 font-display px-2">
+          <div className="text-center mb-24">
+            <h2 className="heading-secondary text-foreground text-glow mb-8">
               Our Core{' '}
-              <span className="bg-professional-gradient bg-clip-text text-transparent drop-shadow-lg">
+              <span className="brand-gradient-text brand-glow">
                 Values
               </span>
             </h2>
-            <p className="text-lg sm:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed px-4">
+            <p className="text-xl text-muted-foreground text-glow max-w-4xl mx-auto leading-relaxed">
               These principles guide everything we do and define how we serve our clients.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
             {values.map((value, index) => (
-              <GlareCard
+              <div
                 key={value.title}
-                className="group text-center p-6 sm:p-10 bg-card/60 backdrop-blur-xl rounded-3xl border border-border/50 hover:border-primary/40 transition-all duration-700 transform hover:-translate-y-4 hover:scale-[1.03] hover:shadow-2xl hover:shadow-primary/15"
-                style={{ animationDelay: `${index * 100}ms` }}
+                className="group text-center p-10 minimal-card hover:border-primary/40 transition-all duration-700 transform hover:-translate-y-4 hover:scale-[1.03]"
               >
-                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-primary/20 rounded-3xl flex items-center justify-center mx-auto mb-6 sm:mb-8 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-xl">
-                  <value.icon className="h-8 w-8 sm:h-10 sm:w-10 text-primary" />
+                <div className="w-20 h-20 bg-primary/20 rounded-3xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-all duration-500 shadow-xl">
+                  <value.icon className="h-10 w-10 text-primary" />
                 </div>
-                <h3 className="text-lg sm:text-2xl font-semibold text-card-foreground mb-4 sm:mb-6 group-hover:text-primary transition-colors duration-500">
+                <h3 className="text-2xl font-semibold text-foreground text-glow mb-6 group-hover:text-primary transition-colors duration-500">
                   {value.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed text-base sm:text-lg">
+                <p className="text-muted-foreground leading-relaxed text-lg">
                   {value.description}
                 </p>
-              </GlareCard>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Enhanced Team Section */}
-      <section className="py-20 sm:py-32 bg-gradient-to-b from-background to-card/20">
+      {/* Team Section */}
+      <section className="section-padding bg-card/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 sm:mb-24">
-            <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-card-foreground mb-6 sm:mb-8 font-display px-2">
+          <div className="text-center mb-24">
+            <h2 className="heading-secondary text-foreground text-glow mb-8">
               Meet Our{' '}
-              <span className="bg-professional-gradient bg-clip-text text-transparent drop-shadow-lg">
+              <span className="brand-gradient-text brand-glow">
                 Team
               </span>
             </h2>
-            <p className="text-lg sm:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed px-4">
+            <p className="text-xl text-muted-foreground text-glow max-w-4xl mx-auto leading-relaxed">
               The talented individuals behind AdGrades who make the magic happen every day.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
             {team.map((member, index) => (
-              <GlareCard
+              <div
                 key={member.name}
-                className="group bg-card/60 backdrop-blur-xl rounded-3xl p-6 sm:p-8 text-center border border-border/50 hover:border-primary/40 hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-4 hover:scale-[1.03] hover:shadow-primary/15"
-                style={{ animationDelay: `${index * 50}ms` }}
+                className="group minimal-card rounded-3xl p-8 text-center hover:border-primary/40 transition-all duration-700 transform hover:-translate-y-4 hover:scale-[1.03]"
               >
-                <div className="relative mb-6 sm:mb-8">
+                <div className="relative mb-8">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover mx-auto mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-500 shadow-xl"
+                    className="w-24 h-24 rounded-full object-cover mx-auto mb-6 group-hover:scale-110 transition-transform duration-500 shadow-xl"
                   />
-                  <div className="absolute inset-0 rounded-full bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
-                <h3 className="text-lg sm:text-xl font-semibold text-card-foreground mb-2 sm:mb-3 group-hover:text-primary transition-colors duration-500">
+                <h3 className="text-xl font-semibold text-foreground text-glow mb-3 group-hover:text-primary transition-colors duration-500">
                   {member.name}
                 </h3>
-                <p className="text-primary font-medium text-xs sm:text-sm mb-3 sm:mb-4">
+                <p className="text-primary font-medium text-sm mb-4">
                   {member.role}
                 </p>
-                <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed mb-4 sm:mb-6">
+                <p className="text-muted-foreground text-sm leading-relaxed mb-6">
                   {member.bio}
                 </p>
                 <a
                   href={member.linkedin}
-                  className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-primary hover:bg-primary/80 text-white rounded-full transition-all duration-500 hover:scale-110 shadow-xl hover:shadow-2xl"
+                  className="inline-flex items-center justify-center w-12 h-12 bg-primary hover:bg-primary/80 text-white rounded-full transition-all duration-500 hover:scale-110 shadow-xl"
                 >
-                  <Linkedin className="h-4 w-4 sm:h-5 sm:w-5" />
+                  <Linkedin className="h-5 w-5" />
                 </a>
-              </GlareCard>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Enhanced CTA Section */}
-      <section className="py-20 sm:py-32 bg-professional-gradient text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-black/20" />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-transparent to-secondary/20" />
+      {/* CTA Section */}
+      <section className="section-padding brand-gradient">
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-8 sm:mb-10 font-display drop-shadow-lg">
+          <h2 className="heading-secondary text-[#0B1120] mb-10">
             Ready to Work with Our Team?
           </h2>
-          <p className="text-lg sm:text-xl mb-12 sm:mb-16 opacity-95 leading-relaxed max-w-4xl mx-auto px-4">
+          <p className="text-xl text-[#0B1120]/80 mb-16 leading-relaxed max-w-4xl mx-auto">
             Let's discuss how our expertise and passion can help transform your business. 
             Every great partnership starts with a conversation.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 justify-center px-4">
-            <button className="inline-flex items-center px-8 sm:px-12 py-4 sm:py-6 bg-white text-primary font-bold rounded-full hover:bg-gray-100 transition-all duration-500 transform hover:scale-110 shadow-2xl hover:shadow-3xl text-base sm:text-lg justify-center">
-              <Users className="mr-3 h-5 w-5 sm:h-6 sm:w-6" />
+          <div className="flex flex-col sm:flex-row gap-8 justify-center">
+            <button className="inline-flex items-center px-12 py-6 bg-[#0B1120] text-foreground font-bold rounded-lg hover:bg-[#0F172A] transition-all duration-500 transform hover:scale-110 shadow-2xl text-lg">
+              <Users className="mr-3 h-6 w-6" />
               Meet the Team
             </button>
             <a
               href="/contact"
-              className="inline-flex items-center px-8 sm:px-12 py-4 sm:py-6 border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-primary transition-all duration-500 transform hover:scale-110 text-base sm:text-lg justify-center"
+              className="inline-flex items-center px-12 py-6 border-2 border-[#0B1120] text-[#0B1120] font-bold rounded-lg hover:bg-[#0B1120] hover:text-foreground transition-all duration-500 transform hover:scale-110 text-lg"
             >
-              <Target className="mr-3 h-5 w-5 sm:h-6 sm:w-6" />
+              <Target className="mr-3 h-6 w-6" />
               Start a Project
             </a>
           </div>

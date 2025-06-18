@@ -12,7 +12,8 @@ import {
   Users,
   Award,
   Target,
-  CheckCircle
+  CheckCircle,
+  Zap
 } from 'lucide-react';
 import DynamicBackground from '../components/DynamicBackground';
 import AnimatedCounter from '../components/AnimatedCounter';
@@ -95,28 +96,38 @@ const Home: React.FC = () => {
 
   return (
     <div className="pt-16 overflow-x-hidden">
-      {/* Clean Hero Section */}
+      {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center">
         <DynamicBackground variant="home" />
         
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in">
-            <h1 className="heading-primary text-[#F1F5F9] mb-8 leading-tight">
-              We're{' '}
-              <span className="brand-gradient-text brand-glow">
-                AdGrades
+            {/* Badge */}
+            <div className="page-badge">
+              <Zap className="w-5 h-5 mr-3 animate-pulse" />
+              <span className="brand-gradient-text font-semibold">
+                Transforming Businesses Since 2023
               </span>
+            </div>
+            
+            <h1 className="heading-primary text-foreground text-glow mb-8 leading-tight">
+              We Help{' '}
+              <span className="brand-gradient-text brand-glow">
+                Startups
+              </span>
+              <br />
+              Become Industry Leaders
             </h1>
             
-            <p className="text-xl md:text-2xl text-[#94A3B8] mb-12 max-w-3xl mx-auto leading-relaxed">
-              We help startups become industry leaders through strategic marketing, 
-              stunning design, and data-driven growth.
+            <p className="text-xl md:text-2xl text-muted-foreground text-glow mb-12 max-w-3xl mx-auto leading-relaxed">
+              Creative marketing, data-driven advertising, and stunning web design that transforms 
+              your vision into market-leading success stories.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Link
                 to="/contact"
-                className="brand-button inline-flex items-center"
+                className="brand-button"
               >
                 Start a Project
                 <ArrowRight className="ml-3 h-5 w-5" />
@@ -124,7 +135,7 @@ const Home: React.FC = () => {
               
               <Link
                 to="/portfolio"
-                className="brand-button-outline inline-flex items-center"
+                className="brand-button-outline"
               >
                 View Our Work
                 <ArrowRight className="ml-3 h-5 w-5" />
@@ -134,47 +145,47 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Clean Stats Section */}
-      <section className="section-padding bg-[#0F172A]/50">
+      {/* Stats Section */}
+      <section className="section-padding bg-card/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-4xl md:text-6xl font-bold brand-gradient-text mb-3">
+              <div className="text-4xl md:text-6xl font-bold brand-gradient-text brand-glow mb-3">
                 <AnimatedCounter end={25} suffix="+" />
               </div>
-              <p className="text-[#94A3B8] font-medium">Happy Clients</p>
+              <p className="text-muted-foreground font-medium text-glow">Happy Clients</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-6xl font-bold brand-gradient-text mb-3">
+              <div className="text-4xl md:text-6xl font-bold brand-gradient-text brand-glow mb-3">
                 <AnimatedCounter end={300} suffix="%" />
               </div>
-              <p className="text-[#94A3B8] font-medium">Average ROI</p>
+              <p className="text-muted-foreground font-medium text-glow">Average ROI</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-6xl font-bold brand-gradient-text mb-3">
+              <div className="text-4xl md:text-6xl font-bold brand-gradient-text brand-glow mb-3">
                 <AnimatedCounter end={15} suffix="" />
               </div>
-              <p className="text-[#94A3B8] font-medium">Team Members</p>
+              <p className="text-muted-foreground font-medium text-glow">Team Members</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-6xl font-bold brand-gradient-text mb-3">
+              <div className="text-4xl md:text-6xl font-bold brand-gradient-text brand-glow mb-3">
                 <AnimatedCounter end={99} suffix="%" />
               </div>
-              <p className="text-[#94A3B8] font-medium">Client Satisfaction</p>
+              <p className="text-muted-foreground font-medium text-glow">Client Satisfaction</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Clean Services Section */}
+      {/* Services Section */}
       <section className="section-padding">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="heading-secondary text-[#F1F5F9] mb-6">
+            <h2 className="heading-secondary text-foreground text-glow mb-6">
               Services That Drive{' '}
-              <span className="brand-gradient-text">Growth</span>
+              <span className="brand-gradient-text brand-glow">Growth</span>
             </h2>
-            <p className="text-xl text-[#94A3B8] max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground text-glow max-w-3xl mx-auto">
               Comprehensive marketing and design solutions that transform startups into industry leaders.
             </p>
           </div>
@@ -188,15 +199,15 @@ const Home: React.FC = () => {
                 <div className="w-16 h-16 brand-gradient rounded-lg flex items-center justify-center mb-6">
                   <service.icon className="h-8 w-8 text-[#0B1120]" />
                 </div>
-                <h3 className="text-xl font-semibold text-[#F1F5F9] mb-4">
+                <h3 className="text-xl font-semibold text-foreground text-glow mb-4">
                   {service.title}
                 </h3>
-                <p className="text-[#94A3B8] leading-relaxed mb-6">
+                <p className="text-muted-foreground leading-relaxed mb-6">
                   {service.description}
                 </p>
                 <Link
                   to="/contact"
-                  className="inline-flex items-center text-[#00B5FF] hover:text-[#01F9C6] font-medium transition-colors"
+                  className="inline-flex items-center text-primary hover:text-secondary font-medium transition-colors"
                 >
                   Learn More
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -207,22 +218,22 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Clean Clients Section */}
-      <section className="section-padding bg-[#0F172A]/30">
+      {/* Clients Section with Infinite Marquee */}
+      <section className="section-padding bg-card/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
           <div className="text-center">
-            <h2 className="heading-secondary text-[#F1F5F9] mb-6">
+            <h2 className="heading-secondary text-foreground text-glow mb-6">
               Trusted by{' '}
-              <span className="brand-gradient-text">Amazing Clients</span>
+              <span className="brand-gradient-text brand-glow">Amazing Clients</span>
             </h2>
-            <p className="text-xl text-[#94A3B8] max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground text-glow max-w-3xl mx-auto">
               We're proud to work with innovative businesses across various industries.
             </p>
           </div>
         </div>
 
         <div className="relative flex h-[400px] w-full flex-col items-center justify-center overflow-hidden">
-          <Marquee pauseOnHover className="[--duration:40s]">
+          <Marquee pauseOnHover className="[--duration:30s]">
             {firstRow.map((client) => (
               <ClientCard
                 key={client.name}
@@ -232,7 +243,7 @@ const Home: React.FC = () => {
             ))}
           </Marquee>
 
-          <Marquee reverse pauseOnHover className="[--duration:40s]">
+          <Marquee reverse pauseOnHover className="[--duration:30s]">
             {secondRow.map((client) => (
               <ClientCard
                 key={client.name}
@@ -242,18 +253,18 @@ const Home: React.FC = () => {
             ))}
           </Marquee>
 
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-20 sm:w-40 bg-gradient-to-r from-[#0B1120] to-transparent"></div>
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-20 sm:w-40 bg-gradient-to-l from-[#0B1120] to-transparent"></div>
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-20 sm:w-40 bg-gradient-to-r from-background to-transparent"></div>
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-20 sm:w-40 bg-gradient-to-l from-background to-transparent"></div>
         </div>
       </section>
 
-      {/* Clean Testimonials */}
+      {/* Testimonials */}
       <section className="section-padding">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="heading-secondary text-[#F1F5F9] mb-6">
+            <h2 className="heading-secondary text-foreground text-glow mb-6">
               What Our{' '}
-              <span className="brand-gradient-text">Clients Say</span>
+              <span className="brand-gradient-text brand-glow">Clients Say</span>
             </h2>
           </div>
 
@@ -265,10 +276,10 @@ const Home: React.FC = () => {
               >
                 <div className="flex items-center mb-6">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-[#01F9C6] fill-current" />
+                    <Star key={i} className="h-5 w-5 text-secondary fill-current" />
                   ))}
                 </div>
-                <blockquote className="text-[#94A3B8] mb-8 italic leading-relaxed">
+                <blockquote className="text-muted-foreground mb-8 italic leading-relaxed">
                   "{testimonial.quote}"
                 </blockquote>
                 <div className="flex items-center">
@@ -278,10 +289,10 @@ const Home: React.FC = () => {
                     className="w-12 h-12 rounded-full object-cover mr-4"
                   />
                   <div>
-                    <div className="font-semibold text-[#F1F5F9]">
+                    <div className="font-semibold text-foreground text-glow">
                       {testimonial.author}
                     </div>
-                    <div className="text-[#94A3B8] text-sm">
+                    <div className="text-muted-foreground text-sm">
                       {testimonial.role}
                     </div>
                   </div>
@@ -292,7 +303,7 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Clean CTA Section */}
+      {/* CTA Section */}
       <section className="section-padding brand-gradient">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="heading-secondary text-[#0B1120] mb-8">
@@ -304,14 +315,14 @@ const Home: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link
               to="/contact"
-              className="inline-flex items-center px-8 py-4 bg-[#0B1120] text-[#F1F5F9] font-semibold rounded-lg hover:bg-[#0F172A] transition-all duration-300"
+              className="inline-flex items-center px-8 py-4 bg-[#0B1120] text-foreground font-semibold rounded-lg hover:bg-[#0F172A] transition-all duration-300"
             >
               Start a Project
               <Target className="ml-3 h-5 w-5" />
             </Link>
             <Link
               to="/portfolio"
-              className="inline-flex items-center px-8 py-4 border-2 border-[#0B1120] text-[#0B1120] font-semibold rounded-lg hover:bg-[#0B1120] hover:text-[#F1F5F9] transition-all duration-300"
+              className="inline-flex items-center px-8 py-4 border-2 border-[#0B1120] text-[#0B1120] font-semibold rounded-lg hover:bg-[#0B1120] hover:text-foreground transition-all duration-300"
             >
               View Our Work
               <ArrowRight className="ml-3 h-5 w-5" />

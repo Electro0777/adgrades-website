@@ -61,8 +61,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   ];
 
   return (
-    <div className="min-h-screen text-foreground transition-colors duration-300 font-sans overflow-x-hidden" style={{ background: 'linear-gradient(to right, #0B1120, #0F172A)' }}>
-      {/* Clean Navigation */}
+    <div className={`min-h-screen text-foreground transition-colors duration-300 font-sans overflow-x-hidden ${isDark ? 'dark' : 'light'}`}>
+      {/* Navigation */}
       <nav className={`fixed w-full z-50 transition-all duration-500 ${
         isScrolled ? 'py-2' : 'py-4'
       }`}>
@@ -86,13 +86,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   <Link
                     key={item.name}
                     to={item.path}
-                    className={`font-medium transition-all duration-300 relative group px-3 py-2 rounded-lg flex items-center ${
+                    className={`font-medium transition-all duration-300 relative group px-3 py-2 rounded-lg flex items-center text-glow ${
                       location.pathname === item.path
-                        ? 'text-[#00B5FF]'
-                        : 'text-[#F1F5F9] hover:text-[#00B5FF]'
+                        ? 'text-primary'
+                        : 'text-foreground hover:text-primary'
                     } ${
                       item.isSpecial 
-                        ? 'text-[#01F9C6] hover:text-[#00B5FF]' 
+                        ? 'text-secondary hover:text-primary' 
                         : ''
                     }`}
                   >
@@ -102,11 +102,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 ))}
               </div>
 
-              {/* Right side buttons */}
+              {/* Right side buttons - Fixed alignment */}
               <div className="hidden lg:flex items-center space-x-4">
                 <button
                   onClick={toggleTheme}
-                  className="p-2 rounded-lg text-[#94A3B8] hover:text-[#00B5FF] transition-all duration-300"
+                  className="p-2.5 rounded-lg text-muted-foreground hover:text-primary transition-all duration-300 flex items-center justify-center"
                   aria-label="Toggle dark mode"
                 >
                   {isDark ? <Sun size={18} /> : <Moon size={18} />}
@@ -114,7 +114,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 
                 <Link 
                   to="/contact" 
-                  className="brand-button"
+                  className="brand-button flex items-center justify-center"
                 >
                   Start a Project
                 </Link>
@@ -124,14 +124,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               <div className="lg:hidden flex items-center space-x-2">
                 <button
                   onClick={toggleTheme}
-                  className="p-2 rounded-lg text-[#94A3B8] hover:text-[#00B5FF] transition-all duration-300"
+                  className="p-2 rounded-lg text-muted-foreground hover:text-primary transition-all duration-300"
                   aria-label="Toggle dark mode"
                 >
                   {isDark ? <Sun size={18} /> : <Moon size={18} />}
                 </button>
                 <button
                   onClick={() => setIsMenuOpen(!isMenuOpen)}
-                  className="mobile-menu-button p-2 rounded-lg text-[#94A3B8] hover:text-[#00B5FF] transition-all duration-300"
+                  className="mobile-menu-button p-2 rounded-lg text-muted-foreground hover:text-primary transition-all duration-300"
                   aria-label="Toggle menu"
                 >
                   {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -151,7 +151,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             
             <div className="mobile-menu absolute top-0 right-0 h-full w-80 max-w-[85vw] nav-glass transform transition-transform duration-300 ease-out">
               <div className="flex flex-col h-full">
-                <div className="flex items-center justify-between p-6 border-b border-[#1E293B]">
+                <div className="flex items-center justify-between p-6 border-b border-border">
                   <img
                     src={isDark ? "/Asset 2.png" : "/Asset 1.png"}
                     alt="AdGrades Logo"
@@ -159,7 +159,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   />
                   <button
                     onClick={() => setIsMenuOpen(false)}
-                    className="p-2 rounded-lg text-[#94A3B8] hover:text-[#00B5FF] transition-all duration-300"
+                    className="p-2 rounded-lg text-muted-foreground hover:text-primary transition-all duration-300"
                   >
                     <X size={24} />
                   </button>
@@ -171,13 +171,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                       key={item.name}
                       to={item.path}
                       onClick={() => setIsMenuOpen(false)}
-                      className={`flex items-center px-4 py-4 rounded-xl font-medium transition-all duration-300 ${
+                      className={`flex items-center px-4 py-4 rounded-xl font-medium transition-all duration-300 text-glow ${
                         location.pathname === item.path
-                          ? 'text-[#00B5FF] bg-[#00B5FF]/10'
-                          : 'text-[#F1F5F9] hover:text-[#00B5FF] hover:bg-[#00B5FF]/5'
+                          ? 'text-primary bg-primary/10'
+                          : 'text-foreground hover:text-primary hover:bg-primary/5'
                       } ${
                         item.isSpecial 
-                          ? 'text-[#01F9C6] hover:text-[#00B5FF]' 
+                          ? 'text-secondary hover:text-primary' 
                           : ''
                       }`}
                     >
@@ -187,7 +187,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   ))}
                 </div>
 
-                <div className="p-6 border-t border-[#1E293B] space-y-4">
+                <div className="p-6 border-t border-border space-y-4">
                   <Link
                     to="/contact"
                     onClick={() => setIsMenuOpen(false)}
@@ -205,8 +205,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       {/* Main Content */}
       <main className="overflow-x-hidden">{children}</main>
 
-      {/* Clean Footer */}
-      <footer className="bg-[#0F172A]/80 border-t border-[#1E293B] overflow-x-hidden">
+      {/* Footer */}
+      <footer className="bg-card/80 border-t border-border overflow-x-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Brand */}
@@ -218,28 +218,28 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   className="h-10 w-auto object-contain"
                 />
               </div>
-              <p className="text-[#94A3B8] mb-8 max-w-md leading-relaxed">
+              <p className="text-muted-foreground text-glow mb-8 max-w-md leading-relaxed">
                 We help startups become the next big name through creative marketing, data-driven ads, and stunning web design.
               </p>
               
               {/* Contact Info */}
               <div className="space-y-3 mb-8">
-                <div className="flex items-start text-[#94A3B8]">
-                  <Phone className="h-4 w-4 mr-3 mt-0.5 text-[#00B5FF] flex-shrink-0" />
+                <div className="flex items-start text-muted-foreground text-glow">
+                  <Phone className="h-4 w-4 mr-3 mt-0.5 text-primary flex-shrink-0" />
                   <div>
                     <div>+91 80736 98913</div>
                     <div>+91 9686314869</div>
                   </div>
                 </div>
-                <div className="flex items-start text-[#94A3B8]">
-                  <Mail className="h-4 w-4 mr-3 mt-0.5 text-[#00B5FF] flex-shrink-0" />
+                <div className="flex items-start text-muted-foreground text-glow">
+                  <Mail className="h-4 w-4 mr-3 mt-0.5 text-primary flex-shrink-0" />
                   <div>
                     <div>info@adgrades.in</div>
                     <div>adgradesweb@gmail.com</div>
                   </div>
                 </div>
-                <div className="flex items-start text-[#94A3B8]">
-                  <MapPin className="h-4 w-4 mr-3 mt-1 text-[#00B5FF] flex-shrink-0" />
+                <div className="flex items-start text-muted-foreground text-glow">
+                  <MapPin className="h-4 w-4 mr-3 mt-1 text-primary flex-shrink-0" />
                   <div>
                     <div>Vinayaka Industries</div>
                     <div>Behind KMF Cattle Feed Factory</div>
@@ -252,13 +252,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
             {/* Quick Links */}
             <div>
-              <h4 className="font-semibold text-[#F1F5F9] mb-6">Quick Links</h4>
+              <h4 className="font-semibold text-foreground text-glow mb-6">Quick Links</h4>
               <ul className="space-y-3">
                 {navItems.map((item) => (
                   <li key={item.name}>
                     <Link
                       to={item.path}
-                      className="text-[#94A3B8] hover:text-[#00B5FF] transition-colors duration-300 flex items-center"
+                      className="text-muted-foreground hover:text-primary transition-colors duration-300 flex items-center text-glow"
                     >
                       {item.icon && <item.icon className="w-4 h-4 mr-2" />}
                       {item.name}
@@ -270,20 +270,20 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
             {/* Social Links & Hours */}
             <div>
-              <h4 className="font-semibold text-[#F1F5F9] mb-6">Connect & Hours</h4>
+              <h4 className="font-semibold text-foreground text-glow mb-6">Connect & Hours</h4>
               <div className="flex space-x-4 mb-6">
                 <a
                   href="https://www.linkedin.com/company/ad-grades"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 bg-[#1E293B] rounded-xl text-[#94A3B8] hover:text-[#00B5FF] hover:bg-[#00B5FF]/10 transition-all duration-300"
+                  className="p-3 bg-muted rounded-xl text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
                   aria-label="LinkedIn"
                 >
                   <Linkedin size={18} />
                 </a>
                 <a
                   href="#"
-                  className="p-3 bg-[#1E293B] rounded-xl text-[#94A3B8] hover:text-[#01F9C6] hover:bg-[#01F9C6]/10 transition-all duration-300"
+                  className="p-3 bg-muted rounded-xl text-muted-foreground hover:text-secondary hover:bg-secondary/10 transition-all duration-300"
                   aria-label="Instagram"
                 >
                   <Instagram size={18} />
@@ -292,30 +292,30 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   href="https://wa.me/919686314869"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 bg-[#1E293B] rounded-xl text-[#94A3B8] hover:text-[#01F9C6] hover:bg-[#01F9C6]/10 transition-all duration-300"
+                  className="p-3 bg-muted rounded-xl text-muted-foreground hover:text-secondary hover:bg-secondary/10 transition-all duration-300"
                   aria-label="WhatsApp"
                 >
                   <MessageCircle size={18} />
                 </a>
               </div>
               
-              <div className="text-sm text-[#94A3B8]">
-                <div className="font-medium text-[#F1F5F9] mb-2">Business Hours</div>
+              <div className="text-sm text-muted-foreground text-glow">
+                <div className="font-medium text-foreground mb-2">Business Hours</div>
                 <div>Mon - Sat: 9:00 AM - 9:00 PM</div>
                 <div>Sun: 9:00 AM - 1:30 PM</div>
               </div>
             </div>
           </div>
 
-          <div className="border-t border-[#1E293B] mt-12 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-[#94A3B8] text-sm text-center md:text-left">
+          <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <p className="text-muted-foreground text-glow text-sm text-center md:text-left">
               © {new Date().getFullYear()} AdGrades. All rights reserved.
             </p>
             <div className="flex space-x-6">
-              <a href="#" className="text-[#94A3B8] hover:text-[#00B5FF] text-sm transition-colors duration-300">
+              <a href="#" className="text-muted-foreground hover:text-primary text-sm transition-colors duration-300 text-glow">
                 Privacy Policy
               </a>
-              <a href="#" className="text-[#94A3B8] hover:text-[#00B5FF] text-sm transition-colors duration-300">
+              <a href="#" className="text-muted-foreground hover:text-primary text-sm transition-colors duration-300 text-glow">
                 Terms of Service
               </a>
             </div>
