@@ -11,7 +11,10 @@ const DynamicBackground: React.FC<DynamicBackgroundProps> = ({
 }) => {
   return (
     <div className={`fixed inset-0 overflow-hidden -z-10 ${className}`}>
-      {/* Animated slate gradient background */}
+      {/* Animated gradient drift background */}
+      <div className={variant === 'home' ? 'hero-gradient-bg' : 'hero-gradient-radial'} />
+      
+      {/* Base slate gradient background */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#0B1120] to-[#0F172A]">
         
         {/* Animated glowing orbs with reduced opacity */}

@@ -32,11 +32,13 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     const root = window.document.documentElement;
     if (isDark) {
       root.classList.add('dark');
+      root.classList.remove('light');
       localStorage.setItem('theme', 'dark');
       // Apply dark mode background
       document.body.style.background = 'linear-gradient(to right, #0B1120, #0F172A)';
     } else {
       root.classList.remove('dark');
+      root.classList.add('light');
       localStorage.setItem('theme', 'light');
       // Apply light mode background with lighter slate
       document.body.style.background = 'linear-gradient(to right, #1E293B, #334155)';
