@@ -32,7 +32,6 @@ import {
   importDatabase
 } from '../utils/database';
 import { Certificate } from '../types/certificate';
-import AestheticBackground from '../components/AestheticBackground';
 import GlareCard from '../components/GlareCard';
 
 const AdminDashboard: React.FC = () => {
@@ -159,7 +158,6 @@ const AdminDashboard: React.FC = () => {
   if (isLoading) {
     return (
       <div className="min-h-screen bg-background relative overflow-hidden flex items-center justify-center">
-        <AestheticBackground variant="services" />
         <div className="relative z-10 text-center">
           <div className="w-16 h-16 border-4 border-primary/30 border-t-primary rounded-full animate-spin mx-auto mb-4"></div>
           <p className="text-muted-foreground">Loading certificate data...</p>
@@ -170,8 +168,6 @@ const AdminDashboard: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
-      <AestheticBackground variant="services" />
-      
       <div className="relative z-10">
         {/* Header */}
         <header className="bg-card/80 backdrop-blur-xl border-b border-border/50 sticky top-0 z-50">

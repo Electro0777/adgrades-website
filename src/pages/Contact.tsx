@@ -13,7 +13,6 @@ import {
   ChevronUp,
   Zap
 } from 'lucide-react';
-import AestheticBackground from '../components/AestheticBackground';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -133,26 +132,24 @@ const Contact: React.FC = () => {
     <div className="pt-16">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <AestheticBackground variant="contact" />
-        
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in">
-            {/* Badge with glow */}
-            <div className="page-badge brand-glow animate-pulse-glow">
-              <Zap className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 animate-pulse" />
+            {/* Badge */}
+            <div className="page-badge">
+              <Zap className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" />
               <span className="brand-gradient-text font-semibold">
                 Let's Start Something Amazing
               </span>
             </div>
             
-            <h1 className="heading-primary text-foreground text-glow mb-8 leading-tight">
+            <h1 className="heading-primary text-foreground mb-8 leading-tight">
               Let's Chat About Your{' '}
-              <span className="brand-gradient-text brand-glow">
+              <span className="brand-gradient-text">
                 Next Project
               </span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-muted-foreground text-glow mb-12 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed">
               Ready to transform your business? We'd love to hear about your goals and 
               discuss how AdGrades can help you achieve remarkable growth.
             </p>
@@ -160,7 +157,7 @@ const Contact: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <a
                 href="#contact-form"
-                className="brand-button aesthetic-glow"
+                className="brand-button"
               >
                 Send Message
                 <Send className="ml-3 h-6 w-6" />
@@ -170,7 +167,7 @@ const Contact: React.FC = () => {
                 href="https://wa.me/919686314869"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="brand-button-outline glass-effect"
+                className="brand-button-outline"
               >
                 WhatsApp Us
                 <MessageCircle className="ml-3 h-6 w-6" />
@@ -185,15 +182,15 @@ const Contact: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
             {/* Contact Form */}
-            <div className="minimal-card p-10 rounded-3xl glass-effect aesthetic-glow">
-              <h2 className="text-4xl font-bold text-foreground text-glow mb-10">
+            <div className="minimal-card p-10 rounded-3xl">
+              <h2 className="text-4xl font-bold text-foreground mb-10">
                 Send us a Message
               </h2>
               
               {isSubmitted ? (
                 <div className="text-center py-16">
                   <CheckCircle className="h-20 w-20 text-secondary mx-auto mb-6" />
-                  <h3 className="text-2xl font-semibold text-foreground text-glow mb-3">
+                  <h3 className="text-2xl font-semibold text-foreground mb-3">
                     Message Sent Successfully!
                   </h3>
                   <p className="text-muted-foreground text-lg">
@@ -204,7 +201,7 @@ const Contact: React.FC = () => {
                 <form onSubmit={handleSubmit} className="space-y-8">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-semibold text-foreground text-glow mb-3">
+                      <label htmlFor="name" className="block text-sm font-semibold text-foreground mb-3">
                         Full Name *
                       </label>
                       <input
@@ -219,7 +216,7 @@ const Contact: React.FC = () => {
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-sm font-semibold text-foreground text-glow mb-3">
+                      <label htmlFor="email" className="block text-sm font-semibold text-foreground mb-3">
                         Email Address *
                       </label>
                       <input
@@ -236,7 +233,7 @@ const Contact: React.FC = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="company" className="block text-sm font-semibold text-foreground text-glow mb-3">
+                    <label htmlFor="company" className="block text-sm font-semibold text-foreground mb-3">
                       Company Name
                     </label>
                     <input
@@ -252,7 +249,7 @@ const Contact: React.FC = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
-                      <label htmlFor="service" className="block text-sm font-semibold text-foreground text-glow mb-3">
+                      <label htmlFor="service" className="block text-sm font-semibold text-foreground mb-3">
                         Service Interested In
                       </label>
                       <select
@@ -273,7 +270,7 @@ const Contact: React.FC = () => {
                       </select>
                     </div>
                     <div>
-                      <label htmlFor="budget" className="block text-sm font-semibold text-foreground text-glow mb-3">
+                      <label htmlFor="budget" className="block text-sm font-semibold text-foreground mb-3">
                         Project Budget
                       </label>
                       <select
@@ -294,7 +291,7 @@ const Contact: React.FC = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-semibold text-foreground text-glow mb-3">
+                    <label htmlFor="message" className="block text-sm font-semibold text-foreground mb-3">
                       Project Details *
                     </label>
                     <textarea
@@ -311,7 +308,7 @@ const Contact: React.FC = () => {
 
                   <button
                     type="submit"
-                    className="w-full brand-button aesthetic-glow"
+                    className="w-full brand-button"
                   >
                     Send Message
                     <Send className="ml-3 h-6 w-6" />
@@ -323,7 +320,7 @@ const Contact: React.FC = () => {
             {/* Contact Information */}
             <div className="space-y-10">
               <div>
-                <h2 className="text-4xl font-bold text-foreground text-glow mb-10">
+                <h2 className="text-4xl font-bold text-foreground mb-10">
                   Get in Touch
                 </h2>
                 <div className="space-y-8">
@@ -333,7 +330,7 @@ const Contact: React.FC = () => {
                         <info.icon className="h-8 w-8 text-primary" />
                       </div>
                       <div>
-                        <h3 className="font-bold text-foreground text-glow mb-3 text-lg">
+                        <h3 className="font-bold text-foreground mb-3 text-lg">
                           {info.title}
                         </h3>
                         {info.details.map((detail, detailIndex) => (
@@ -349,7 +346,7 @@ const Contact: React.FC = () => {
 
               {/* Direct Contact Methods */}
               <div>
-                <h3 className="text-2xl font-semibold text-foreground text-glow mb-8">
+                <h3 className="text-2xl font-semibold text-foreground mb-8">
                   Connect with Us
                 </h3>
                 <div className="grid grid-cols-1 gap-6">
@@ -359,13 +356,13 @@ const Contact: React.FC = () => {
                       href={method.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group flex items-center p-6 minimal-card rounded-2xl hover:border-primary/40 transition-all duration-500 transform hover:-translate-y-2 glass-effect aesthetic-glow"
+                      className="group flex items-center p-6 minimal-card rounded-2xl hover:border-primary/40 transition-all duration-500 transform hover:-translate-y-2"
                     >
                       <div className={`w-16 h-16 bg-gradient-to-br ${method.color} rounded-2xl flex items-center justify-center mr-6 shadow-xl group-hover:shadow-2xl transition-all duration-500 group-hover:scale-110`}>
                         <method.icon className="h-8 w-8 text-white" />
                       </div>
                       <div className="flex-1">
-                        <h4 className="font-bold text-foreground text-glow text-lg">
+                        <h4 className="font-bold text-foreground text-lg">
                           {method.title}
                         </h4>
                         <p className="text-muted-foreground">
@@ -388,13 +385,13 @@ const Contact: React.FC = () => {
       <section className="section-padding bg-card/20">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h2 className="heading-secondary text-foreground text-glow mb-6">
+            <h2 className="heading-secondary text-foreground mb-6">
               Frequently Asked{' '}
-              <span className="brand-gradient-text brand-glow">
+              <span className="brand-gradient-text">
                 Questions
               </span>
             </h2>
-            <p className="text-xl text-muted-foreground text-glow">
+            <p className="text-xl text-muted-foreground">
               Get answers to common questions about our services and process.
             </p>
           </div>
@@ -403,13 +400,13 @@ const Contact: React.FC = () => {
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="minimal-card rounded-2xl overflow-hidden glass-effect aesthetic-glow"
+                className="minimal-card rounded-2xl overflow-hidden"
               >
                 <button
                   onClick={() => toggleFaq(index)}
                   className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-card/40 transition-colors duration-300"
                 >
-                  <h3 className="text-xl font-semibold text-foreground text-glow pr-6">
+                  <h3 className="text-xl font-semibold text-foreground pr-6">
                     {faq.question}
                   </h3>
                   {openFaq === index ? (
@@ -435,18 +432,18 @@ const Contact: React.FC = () => {
       <section className="section-padding">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h2 className="heading-secondary text-foreground text-glow mb-6">
+            <h2 className="heading-secondary text-foreground mb-6">
               Visit Our{' '}
-              <span className="brand-gradient-text brand-glow">
+              <span className="brand-gradient-text">
                 Office
               </span>
             </h2>
-            <p className="text-xl text-muted-foreground text-glow">
+            <p className="text-xl text-muted-foreground">
               Located in Hassan, Karnataka, we're always ready for a coffee chat.
             </p>
           </div>
           
-          <div className="minimal-card rounded-3xl overflow-hidden glass-effect aesthetic-glow">
+          <div className="minimal-card rounded-3xl overflow-hidden">
             <div className="h-[500px]">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.983962!2d76.107463!3d12.983962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU5JzAyLjMiTiA3NsKwMDYnMjYuOSJF!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"

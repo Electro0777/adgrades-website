@@ -14,7 +14,6 @@ import {
 } from 'lucide-react';
 import { getCertificateById, isCertificateValid } from '../utils/database';
 import { Certificate } from '../types/certificate';
-import AestheticBackground from '../components/AestheticBackground';
 import GlareCard from '../components/GlareCard';
 
 const CertificateVerification: React.FC = () => {
@@ -70,8 +69,6 @@ const CertificateVerification: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
-      <AestheticBackground variant="contact" />
-      
       <div className="relative z-10">
         {/* Header */}
         <header className="bg-card/80 backdrop-blur-xl border-b border-border/50">

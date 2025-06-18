@@ -10,7 +10,6 @@ import {
   Target,
   Zap
 } from 'lucide-react';
-import AestheticBackground from '../components/AestheticBackground';
 import AnimatedCounter from '../components/AnimatedCounter';
 
 const About: React.FC = () => {
@@ -136,26 +135,24 @@ const About: React.FC = () => {
     <div className="pt-16 overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <AestheticBackground variant="about" />
-        
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in">
-            {/* Badge with glow */}
-            <div className="page-badge brand-glow animate-pulse-glow">
-              <Zap className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 animate-pulse" />
+            {/* Badge */}
+            <div className="page-badge">
+              <Zap className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" />
               <span className="brand-gradient-text font-semibold">
                 Meet the Team Behind the Magic
               </span>
             </div>
             
-            <h1 className="heading-primary text-foreground text-glow mb-8 leading-tight">
+            <h1 className="heading-primary text-foreground mb-8 leading-tight">
               We're{' '}
-              <span className="brand-gradient-text brand-glow">
+              <span className="brand-gradient-text">
                 AdGrades
               </span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-muted-foreground text-glow mb-12 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed">
               A passionate team of marketers, designers, and developers dedicated to helping 
               startups and growing businesses become industry leaders through strategic marketing 
               and exceptional design.
@@ -163,16 +160,16 @@ const About: React.FC = () => {
             
             <div className="grid grid-cols-2 gap-8 max-w-md mx-auto">
               <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold brand-gradient-text brand-glow mb-3">
+                <div className="text-4xl md:text-5xl font-bold brand-gradient-text mb-3">
                   <AnimatedCounter end={25} suffix="+" />
                 </div>
-                <p className="text-muted-foreground text-glow font-semibold">Happy Clients</p>
+                <p className="text-muted-foreground font-semibold">Happy Clients</p>
               </div>
               <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold brand-gradient-text brand-glow mb-3">
+                <div className="text-4xl md:text-5xl font-bold brand-gradient-text mb-3">
                   <AnimatedCounter end={15} suffix="" />
                 </div>
-                <p className="text-muted-foreground text-glow font-semibold">Team Members</p>
+                <p className="text-muted-foreground font-semibold">Team Members</p>
               </div>
             </div>
           </div>
@@ -183,13 +180,13 @@ const About: React.FC = () => {
       <section className="section-padding bg-card/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-24">
-            <h2 className="heading-secondary text-foreground text-glow mb-8">
+            <h2 className="heading-secondary text-foreground mb-8">
               Our{' '}
-              <span className="brand-gradient-text brand-glow">
+              <span className="brand-gradient-text">
                 Journey
               </span>
             </h2>
-            <p className="text-xl text-muted-foreground text-glow max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
               From a startup idea to a growing agency, here's how we've evolved alongside our clients.
             </p>
           </div>
@@ -209,10 +206,10 @@ const About: React.FC = () => {
                     index % 2 === 0 ? 'md:pr-16 md:text-right' : 'md:pl-16'
                   }`}>
                     <div className="minimal-card p-10 hover:border-primary/40 transition-all duration-700 transform hover:-translate-y-3">
-                      <div className="text-4xl font-bold text-primary brand-glow mb-4">
+                      <div className="text-4xl font-bold text-primary mb-4">
                         {milestone.year}
                       </div>
-                      <h3 className="text-2xl font-semibold text-foreground text-glow mb-4">
+                      <h3 className="text-2xl font-semibold text-foreground mb-4">
                         {milestone.title}
                       </h3>
                       <p className="text-muted-foreground leading-relaxed text-lg">
@@ -237,13 +234,13 @@ const About: React.FC = () => {
       <section className="section-padding">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-24">
-            <h2 className="heading-secondary text-foreground text-glow mb-8">
+            <h2 className="heading-secondary text-foreground mb-8">
               Our Core{' '}
-              <span className="brand-gradient-text brand-glow">
+              <span className="brand-gradient-text">
                 Values
               </span>
             </h2>
-            <p className="text-xl text-muted-foreground text-glow max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
               These principles guide everything we do and define how we serve our clients.
             </p>
           </div>
@@ -257,7 +254,7 @@ const About: React.FC = () => {
                 <div className="w-20 h-20 bg-primary/20 rounded-3xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-all duration-500 shadow-xl">
                   <value.icon className="h-10 w-10 text-primary" />
                 </div>
-                <h3 className="text-2xl font-semibold text-foreground text-glow mb-6 group-hover:text-primary transition-colors duration-500">
+                <h3 className="text-2xl font-semibold text-foreground mb-6 group-hover:text-primary transition-colors duration-500">
                   {value.title}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed text-lg">
@@ -273,13 +270,13 @@ const About: React.FC = () => {
       <section className="section-padding bg-card/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-24">
-            <h2 className="heading-secondary text-foreground text-glow mb-8">
+            <h2 className="heading-secondary text-foreground mb-8">
               Meet Our{' '}
-              <span className="brand-gradient-text brand-glow">
+              <span className="brand-gradient-text">
                 Team
               </span>
             </h2>
-            <p className="text-xl text-muted-foreground text-glow max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
               The talented individuals behind AdGrades who make the magic happen every day.
             </p>
           </div>
@@ -297,7 +294,7 @@ const About: React.FC = () => {
                     className="w-24 h-24 rounded-full object-cover mx-auto mb-6 group-hover:scale-110 transition-transform duration-500 shadow-xl"
                   />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground text-glow mb-3 group-hover:text-primary transition-colors duration-500">
+                <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors duration-500">
                   {member.name}
                 </h3>
                 <p className="text-primary font-medium text-sm mb-4">

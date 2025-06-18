@@ -15,7 +15,6 @@ import {
   CheckCircle,
   Zap
 } from 'lucide-react';
-import AestheticBackground from '../components/AestheticBackground';
 import AnimatedCounter from '../components/AnimatedCounter';
 import Marquee from '../components/Marquee';
 import ClientCard from '../components/ClientCard';
@@ -98,28 +97,26 @@ const Home: React.FC = () => {
     <div className="pt-16 overflow-x-hidden">
       {/* Hero Section - Mobile Responsive */}
       <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
-        <AestheticBackground variant="home" />
-        
         <div className="relative z-10 max-w-5xl mx-auto text-center">
           <div className="animate-fade-in">
             {/* Badge */}
-            <div className="page-badge brand-glow animate-pulse-glow">
-              <Zap className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 animate-pulse" />
+            <div className="page-badge">
+              <Zap className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" />
               <span className="brand-gradient-text font-semibold text-sm sm:text-base">
                 Transforming Businesses Since 2023
               </span>
             </div>
             
-            <h1 className="heading-primary text-foreground text-glow mb-6 sm:mb-8 leading-tight">
+            <h1 className="heading-primary text-foreground mb-6 sm:mb-8 leading-tight">
               We Help{' '}
-              <span className="brand-gradient-text brand-glow">
+              <span className="brand-gradient-text">
                 Startups
               </span>
               <br />
               Become Industry Leaders
             </h1>
             
-            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground text-glow mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed px-4">
               Creative marketing, data-driven advertising, and stunning web design that transforms 
               your vision into market-leading success stories.
             </p>
@@ -127,7 +124,7 @@ const Home: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4">
               <Link
                 to="/contact"
-                className="brand-button w-full sm:w-auto aesthetic-glow"
+                className="brand-button w-full sm:w-auto"
               >
                 Start a Project
                 <ArrowRight className="ml-2 sm:ml-3 h-4 w-4 sm:h-5 sm:w-5" />
@@ -135,7 +132,7 @@ const Home: React.FC = () => {
               
               <Link
                 to="/portfolio"
-                className="brand-button-outline w-full sm:w-auto glass-effect"
+                className="brand-button-outline w-full sm:w-auto"
               >
                 View Our Work
                 <ArrowRight className="ml-2 sm:ml-3 h-4 w-4 sm:h-5 sm:w-5" />
@@ -149,29 +146,29 @@ const Home: React.FC = () => {
       <section className="section-padding bg-card/20 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
-            <div className="text-center glass-effect p-4 sm:p-6 rounded-2xl aesthetic-glow">
-              <div className="text-2xl sm:text-4xl md:text-6xl font-bold brand-gradient-text brand-glow mb-2 sm:mb-3">
+            <div className="text-center p-4 sm:p-6 rounded-2xl bg-card/60 backdrop-blur-sm border border-border">
+              <div className="text-2xl sm:text-4xl md:text-6xl font-bold brand-gradient-text mb-2 sm:mb-3">
                 <AnimatedCounter end={25} suffix="+" />
               </div>
-              <p className="text-muted-foreground font-medium text-glow text-sm sm:text-base">Happy Clients</p>
+              <p className="text-muted-foreground font-medium text-sm sm:text-base">Happy Clients</p>
             </div>
-            <div className="text-center glass-effect p-4 sm:p-6 rounded-2xl aesthetic-glow">
-              <div className="text-2xl sm:text-4xl md:text-6xl font-bold brand-gradient-text brand-glow mb-2 sm:mb-3">
+            <div className="text-center p-4 sm:p-6 rounded-2xl bg-card/60 backdrop-blur-sm border border-border">
+              <div className="text-2xl sm:text-4xl md:text-6xl font-bold brand-gradient-text mb-2 sm:mb-3">
                 <AnimatedCounter end={300} suffix="%" />
               </div>
-              <p className="text-muted-foreground font-medium text-glow text-sm sm:text-base">Average ROI</p>
+              <p className="text-muted-foreground font-medium text-sm sm:text-base">Average ROI</p>
             </div>
-            <div className="text-center glass-effect p-4 sm:p-6 rounded-2xl aesthetic-glow">
-              <div className="text-2xl sm:text-4xl md:text-6xl font-bold brand-gradient-text brand-glow mb-2 sm:mb-3">
+            <div className="text-center p-4 sm:p-6 rounded-2xl bg-card/60 backdrop-blur-sm border border-border">
+              <div className="text-2xl sm:text-4xl md:text-6xl font-bold brand-gradient-text mb-2 sm:mb-3">
                 <AnimatedCounter end={15} suffix="" />
               </div>
-              <p className="text-muted-foreground font-medium text-glow text-sm sm:text-base">Team Members</p>
+              <p className="text-muted-foreground font-medium text-sm sm:text-base">Team Members</p>
             </div>
-            <div className="text-center glass-effect p-4 sm:p-6 rounded-2xl aesthetic-glow">
-              <div className="text-2xl sm:text-4xl md:text-6xl font-bold brand-gradient-text brand-glow mb-2 sm:mb-3">
+            <div className="text-center p-4 sm:p-6 rounded-2xl bg-card/60 backdrop-blur-sm border border-border">
+              <div className="text-2xl sm:text-4xl md:text-6xl font-bold brand-gradient-text mb-2 sm:mb-3">
                 <AnimatedCounter end={99} suffix="%" />
               </div>
-              <p className="text-muted-foreground font-medium text-glow text-sm sm:text-base">Client Satisfaction</p>
+              <p className="text-muted-foreground font-medium text-sm sm:text-base">Client Satisfaction</p>
             </div>
           </div>
         </div>
@@ -181,11 +178,11 @@ const Home: React.FC = () => {
       <section className="section-padding">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="heading-secondary text-foreground text-glow mb-4 sm:mb-6">
+            <h2 className="heading-secondary text-foreground mb-4 sm:mb-6">
               Services That Drive{' '}
-              <span className="brand-gradient-text brand-glow">Growth</span>
+              <span className="brand-gradient-text">Growth</span>
             </h2>
-            <p className="text-lg sm:text-xl text-muted-foreground text-glow max-w-3xl mx-auto px-4">
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
               Comprehensive marketing and design solutions that transform startups into industry leaders.
             </p>
           </div>
@@ -194,12 +191,12 @@ const Home: React.FC = () => {
             {services.map((service, index) => (
               <div
                 key={service.title}
-                className="service-card group glass-effect aesthetic-glow"
+                className="service-card group"
               >
-                <div className="w-12 h-12 sm:w-16 sm:h-16 brand-gradient rounded-lg flex items-center justify-center mb-4 sm:mb-6 animate-pulse-glow">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 brand-gradient rounded-lg flex items-center justify-center mb-4 sm:mb-6">
                   <service.icon className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
                 </div>
-                <h3 className="text-lg sm:text-xl font-semibold text-foreground text-glow mb-3 sm:mb-4">
+                <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">
                   {service.title}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base">
@@ -222,11 +219,11 @@ const Home: React.FC = () => {
       <section className="section-padding bg-card/20 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 sm:mb-12">
           <div className="text-center">
-            <h2 className="heading-secondary text-foreground text-glow mb-4 sm:mb-6">
+            <h2 className="heading-secondary text-foreground mb-4 sm:mb-6">
               Trusted by{' '}
-              <span className="brand-gradient-text brand-glow">Amazing Clients</span>
+              <span className="brand-gradient-text">Amazing Clients</span>
             </h2>
-            <p className="text-lg sm:text-xl text-muted-foreground text-glow max-w-3xl mx-auto px-4">
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
               We're proud to work with innovative businesses across various industries.
             </p>
           </div>
@@ -262,9 +259,9 @@ const Home: React.FC = () => {
       <section className="section-padding">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="heading-secondary text-foreground text-glow mb-4 sm:mb-6">
+            <h2 className="heading-secondary text-foreground mb-4 sm:mb-6">
               What Our{' '}
-              <span className="brand-gradient-text brand-glow">Clients Say</span>
+              <span className="brand-gradient-text">Clients Say</span>
             </h2>
           </div>
 
@@ -272,7 +269,7 @@ const Home: React.FC = () => {
             {testimonials.map((testimonial, index) => (
               <div
                 key={testimonial.author}
-                className="minimal-card p-6 sm:p-8 glass-effect aesthetic-glow"
+                className="minimal-card p-6 sm:p-8"
               >
                 <div className="flex items-center mb-4 sm:mb-6">
                   {[...Array(5)].map((_, i) => (
@@ -289,7 +286,7 @@ const Home: React.FC = () => {
                     className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover mr-3 sm:mr-4"
                   />
                   <div>
-                    <div className="font-semibold text-foreground text-glow text-sm sm:text-base">
+                    <div className="font-semibold text-foreground text-sm sm:text-base">
                       {testimonial.author}
                     </div>
                     <div className="text-muted-foreground text-xs sm:text-sm">
@@ -315,14 +312,14 @@ const Home: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
             <Link
               to="/contact"
-              className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-white text-slate-dark font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 w-full sm:w-auto aesthetic-glow"
+              className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-white text-slate-dark font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 w-full sm:w-auto"
             >
               Start a Project
               <Target className="ml-2 sm:ml-3 h-4 w-4 sm:h-5 sm:w-5" />
             </Link>
             <Link
               to="/portfolio"
-              className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-slate-dark transition-all duration-300 w-full sm:w-auto glass-effect"
+              className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-slate-dark transition-all duration-300 w-full sm:w-auto"
             >
               View Our Work
               <ArrowRight className="ml-2 sm:ml-3 h-4 w-4 sm:h-5 sm:w-5" />

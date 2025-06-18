@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { ExternalLink, ArrowRight, Filter, Zap } from 'lucide-react';
-import AestheticBackground from '../components/AestheticBackground';
 
 const Portfolio: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -204,26 +203,24 @@ const Portfolio: React.FC = () => {
     <div className="pt-16">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <AestheticBackground variant="portfolio" />
-        
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in">
-            {/* Badge with glow */}
-            <div className="page-badge brand-glow animate-pulse-glow">
-              <Zap className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 animate-pulse" />
+            {/* Badge */}
+            <div className="page-badge">
+              <Zap className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" />
               <span className="brand-gradient-text font-semibold">
                 Our Success Stories
               </span>
             </div>
             
-            <h1 className="heading-primary text-foreground text-glow mb-8 leading-tight">
+            <h1 className="heading-primary text-foreground mb-8 leading-tight">
               Client{' '}
-              <span className="brand-gradient-text brand-glow">
+              <span className="brand-gradient-text">
                 Success Stories
               </span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-muted-foreground text-glow mb-12 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed">
               Explore how we've helped businesses across industries achieve remarkable growth 
               through strategic marketing, stunning design, and innovative technology solutions.
             </p>
@@ -237,7 +234,7 @@ const Portfolio: React.FC = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <Filter className="h-6 w-6 text-muted-foreground" />
-              <span className="text-foreground font-semibold text-lg text-glow">Filter by:</span>
+              <span className="text-foreground font-semibold text-lg">Filter by:</span>
             </div>
             <div className="flex flex-wrap gap-4">
               {categories.map((category) => (
@@ -262,13 +259,13 @@ const Portfolio: React.FC = () => {
       <section className="section-padding bg-card/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-24">
-            <h2 className="heading-secondary text-foreground text-glow mb-8">
+            <h2 className="heading-secondary text-foreground mb-8">
               Our Trusted{' '}
-              <span className="brand-gradient-text brand-glow">
+              <span className="brand-gradient-text">
                 Clients
               </span>
             </h2>
-            <p className="text-xl text-muted-foreground text-glow max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
               We're proud to work with amazing brands across various industries.
             </p>
           </div>
@@ -277,7 +274,7 @@ const Portfolio: React.FC = () => {
             {filteredClients.map((client, index) => (
               <div
                 key={client.name}
-                className="group minimal-card rounded-3xl overflow-hidden hover:border-primary/40 shadow-xl hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-4 hover:scale-[1.03] glass-effect aesthetic-glow"
+                className="group minimal-card rounded-3xl overflow-hidden hover:border-primary/40 shadow-xl hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-4 hover:scale-[1.03]"
               >
                 {/* Image container with overlay */}
                 <div className="relative overflow-hidden">
@@ -307,7 +304,7 @@ const Portfolio: React.FC = () => {
 
                 {/* Content */}
                 <div className="p-8">
-                  <h3 className="text-2xl font-bold text-foreground text-glow mb-3 group-hover:text-primary transition-colors duration-500">
+                  <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-500">
                     {client.name}
                   </h3>
                   <p className="text-muted-foreground mb-6 leading-relaxed text-lg">
@@ -338,13 +335,13 @@ const Portfolio: React.FC = () => {
       <section className="section-padding">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-24">
-            <h2 className="heading-secondary text-foreground text-glow mb-8">
+            <h2 className="heading-secondary text-foreground mb-8">
               Detailed{' '}
-              <span className="brand-gradient-text brand-glow">
+              <span className="brand-gradient-text">
                 Case Studies
               </span>
             </h2>
-            <p className="text-xl text-muted-foreground text-glow max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
               Deep dive into our most successful projects and the strategies that drove results.
             </p>
           </div>
@@ -353,7 +350,7 @@ const Portfolio: React.FC = () => {
             {filteredProjects.map((project, index) => (
               <div
                 key={project.id}
-                className="group minimal-card rounded-3xl overflow-hidden hover:border-primary/40 shadow-xl hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-4 hover:scale-[1.03] glass-effect aesthetic-glow"
+                className="group minimal-card rounded-3xl overflow-hidden hover:border-primary/40 shadow-xl hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-4 hover:scale-[1.03]"
               >
                 {/* Project Image */}
                 <div className="relative overflow-hidden">
@@ -379,7 +376,7 @@ const Portfolio: React.FC = () => {
                 <div className="p-10">
                   <div className="flex items-start justify-between mb-8">
                     <div>
-                      <h3 className="text-2xl font-bold text-foreground text-glow mb-3 group-hover:text-primary transition-colors duration-500">
+                      <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-500">
                         {project.title}
                       </h3>
                       <p className="text-primary font-semibold text-lg">
@@ -391,7 +388,7 @@ const Portfolio: React.FC = () => {
                   {/* Project Details */}
                   <div className="space-y-6 mb-8">
                     <div>
-                      <h4 className="font-bold text-foreground text-glow text-sm mb-2">
+                      <h4 className="font-bold text-foreground text-sm mb-2">
                         Challenge
                       </h4>
                       <p className="text-muted-foreground leading-relaxed">
@@ -399,7 +396,7 @@ const Portfolio: React.FC = () => {
                       </p>
                     </div>
                     <div>
-                      <h4 className="font-bold text-foreground text-glow text-sm mb-2">
+                      <h4 className="font-bold text-foreground text-sm mb-2">
                         Solution
                       </h4>
                       <p className="text-muted-foreground leading-relaxed">
@@ -429,7 +426,7 @@ const Portfolio: React.FC = () => {
                   </div>
 
                   {/* View Project Button */}
-                  <button className="w-full flex items-center justify-center px-8 py-4 brand-gradient text-white font-semibold rounded-2xl transition-all duration-500 transform hover:scale-105 shadow-xl aesthetic-glow">
+                  <button className="w-full flex items-center justify-center px-8 py-4 brand-gradient text-white font-semibold rounded-2xl transition-all duration-500 transform hover:scale-105 shadow-xl">
                     View Full Case Study
                     <ArrowRight className="ml-3 h-5 w-5" />
                   </button>
@@ -440,7 +437,7 @@ const Portfolio: React.FC = () => {
 
           {filteredProjects.length === 0 && filteredClients.length === 0 && (
             <div className="text-center py-20">
-              <p className="text-2xl text-muted-foreground text-glow">
+              <p className="text-2xl text-muted-foreground">
                 No projects found for the selected category.
               </p>
             </div>
@@ -460,7 +457,7 @@ const Portfolio: React.FC = () => {
           </p>
           <a
             href="/contact"
-            className="inline-flex items-center px-12 py-6 bg-white text-slate-dark font-bold rounded-lg hover:bg-gray-100 transition-all duration-500 transform hover:scale-110 shadow-2xl text-lg aesthetic-glow"
+            className="inline-flex items-center px-12 py-6 bg-white text-slate-dark font-bold rounded-lg hover:bg-gray-100 transition-all duration-500 transform hover:scale-110 shadow-2xl text-lg"
           >
             Start Your Project
             <ArrowRight className="ml-3 h-6 w-6" />

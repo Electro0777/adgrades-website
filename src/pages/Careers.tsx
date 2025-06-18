@@ -13,7 +13,6 @@ import {
   DollarSign,
   Briefcase
 } from 'lucide-react';
-import AestheticBackground from '../components/AestheticBackground';
 
 const Careers: React.FC = () => {
   const [applicationData, setApplicationData] = useState({
@@ -160,26 +159,24 @@ const Careers: React.FC = () => {
     <div className="pt-16">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <AestheticBackground variant="careers" />
-        
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in">
-            {/* Badge with glow */}
-            <div className="page-badge brand-glow animate-pulse-glow">
-              <Zap className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 animate-pulse" />
+            {/* Badge */}
+            <div className="page-badge">
+              <Zap className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" />
               <span className="brand-gradient-text font-semibold">
                 Join Our Growing Team
               </span>
             </div>
             
-            <h1 className="heading-primary text-foreground text-glow mb-8 leading-tight">
+            <h1 className="heading-primary text-foreground mb-8 leading-tight">
               Join the{' '}
-              <span className="brand-gradient-text brand-glow">
+              <span className="brand-gradient-text">
                 AdGrades Team
               </span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-muted-foreground text-glow mb-12 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed">
               Be part of a dynamic team that's revolutionizing digital marketing. 
               We're looking for passionate individuals who want to make a real impact.
             </p>
@@ -187,7 +184,7 @@ const Careers: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <a
                 href="#open-positions"
-                className="brand-button aesthetic-glow"
+                className="brand-button"
               >
                 View Open Positions
                 <Briefcase className="ml-3 h-6 w-6" />
@@ -195,7 +192,7 @@ const Careers: React.FC = () => {
               
               <a
                 href="#application-form"
-                className="brand-button-outline glass-effect"
+                className="brand-button-outline"
               >
                 Apply Now
                 <Send className="ml-3 h-6 w-6" />
@@ -209,13 +206,13 @@ const Careers: React.FC = () => {
       <section className="section-padding bg-card/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-24">
-            <h2 className="heading-secondary text-foreground text-glow mb-8">
+            <h2 className="heading-secondary text-foreground mb-8">
               Our Culture &{' '}
-              <span className="brand-gradient-text brand-glow">
+              <span className="brand-gradient-text">
                 Values
               </span>
             </h2>
-            <p className="text-xl text-muted-foreground text-glow max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
               At AdGrades, we've built a culture that fosters creativity, collaboration, and personal growth.
             </p>
           </div>
@@ -224,12 +221,12 @@ const Careers: React.FC = () => {
             {cultureValues.map((value, index) => (
               <div
                 key={value.title}
-                className="group text-center p-10 minimal-card rounded-3xl hover:border-primary/40 transition-all duration-700 transform hover:-translate-y-4 hover:scale-[1.03] glass-effect aesthetic-glow"
+                className="group text-center p-10 minimal-card rounded-3xl hover:border-primary/40 transition-all duration-700 transform hover:-translate-y-4 hover:scale-[1.03]"
               >
                 <div className="w-20 h-20 bg-primary/20 rounded-3xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-xl">
                   <value.icon className="h-10 w-10 text-primary" />
                 </div>
-                <h3 className="text-2xl font-semibold text-foreground text-glow mb-6 group-hover:text-primary transition-colors duration-500">
+                <h3 className="text-2xl font-semibold text-foreground mb-6 group-hover:text-primary transition-colors duration-500">
                   {value.title}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed text-lg">
@@ -245,13 +242,13 @@ const Careers: React.FC = () => {
       <section id="open-positions" className="section-padding">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-24">
-            <h2 className="heading-secondary text-foreground text-glow mb-8">
+            <h2 className="heading-secondary text-foreground mb-8">
               Open{' '}
-              <span className="brand-gradient-text brand-glow">
+              <span className="brand-gradient-text">
                 Positions
               </span>
             </h2>
-            <p className="text-xl text-muted-foreground text-glow max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
               Explore exciting career opportunities and find the perfect role to grow your career with us.
             </p>
           </div>
@@ -260,12 +257,12 @@ const Careers: React.FC = () => {
             {openPositions.map((position, index) => (
               <div
                 key={position.title}
-                className="minimal-card rounded-3xl hover:border-primary/40 shadow-xl hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-4 hover:scale-[1.02] overflow-hidden glass-effect aesthetic-glow"
+                className="minimal-card rounded-3xl hover:border-primary/40 shadow-xl hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-4 hover:scale-[1.02] overflow-hidden"
               >
                 <div className="p-10">
                   <div className="flex items-start justify-between mb-6">
                     <div>
-                      <h3 className="text-2xl font-bold text-foreground text-glow mb-3">
+                      <h3 className="text-2xl font-bold text-foreground mb-3">
                         {position.title}
                       </h3>
                       <div className="flex items-center space-x-6 text-sm text-muted-foreground">
@@ -300,7 +297,7 @@ const Careers: React.FC = () => {
                   </p>
 
                   <div className="mb-8">
-                    <h4 className="font-bold text-foreground text-glow mb-4 text-lg">
+                    <h4 className="font-bold text-foreground mb-4 text-lg">
                       Requirements:
                     </h4>
                     <ul className="space-y-3">
@@ -313,7 +310,7 @@ const Careers: React.FC = () => {
                     </ul>
                   </div>
 
-                  <button className="w-full brand-gradient text-white font-semibold py-4 px-8 rounded-2xl transition-all duration-500 transform hover:scale-105 shadow-xl aesthetic-glow">
+                  <button className="w-full brand-gradient text-white font-semibold py-4 px-8 rounded-2xl transition-all duration-500 transform hover:scale-105 shadow-xl">
                     Apply Now
                   </button>
                 </div>
@@ -328,13 +325,13 @@ const Careers: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div>
-              <h2 className="heading-secondary text-foreground text-glow mb-10">
+              <h2 className="heading-secondary text-foreground mb-10">
                 Why Work at{' '}
-                <span className="brand-gradient-text brand-glow">
+                <span className="brand-gradient-text">
                   AdGrades?
                 </span>
               </h2>
-              <p className="text-xl text-muted-foreground text-glow mb-12 leading-relaxed">
+              <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
                 We believe in taking care of our team members and providing an environment 
                 where everyone can thrive both professionally and personally.
               </p>
@@ -355,11 +352,11 @@ const Careers: React.FC = () => {
                 alt="AdGrades team working together"
                 className="rounded-3xl shadow-2xl hover:shadow-3xl transition-shadow duration-700"
               />
-              <div className="absolute -bottom-8 -right-8 bg-card/80 backdrop-blur-xl p-8 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 border border-border glass-effect aesthetic-glow">
+              <div className="absolute -bottom-8 -right-8 bg-card/80 backdrop-blur-xl p-8 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 border border-border">
                 <div className="flex items-center space-x-4">
                   <Users className="h-10 w-10 text-primary" />
                   <div>
-                    <div className="font-bold text-foreground text-glow text-lg">15+ Team Members</div>
+                    <div className="font-bold text-foreground text-lg">15+ Team Members</div>
                     <div className="text-muted-foreground">And Growing!</div>
                   </div>
                 </div>
@@ -373,22 +370,22 @@ const Careers: React.FC = () => {
       <section id="application-form" className="section-padding">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h2 className="heading-secondary text-foreground text-glow mb-6">
+            <h2 className="heading-secondary text-foreground mb-6">
               Join Our{' '}
-              <span className="brand-gradient-text brand-glow">
+              <span className="brand-gradient-text">
                 Team
               </span>
             </h2>
-            <p className="text-xl text-muted-foreground text-glow">
+            <p className="text-xl text-muted-foreground">
               Don't see the perfect role? Send us your information and we'll keep you in mind for future opportunities.
             </p>
           </div>
 
-          <div className="minimal-card rounded-3xl p-10 glass-effect aesthetic-glow">
+          <div className="minimal-card rounded-3xl p-10">
             {isSubmitted ? (
               <div className="text-center py-16">
                 <CheckCircle className="h-20 w-20 text-secondary mx-auto mb-6" />
-                <h3 className="text-2xl font-semibold text-foreground text-glow mb-3">
+                <h3 className="text-2xl font-semibold text-foreground mb-3">
                   Application Submitted Successfully!
                 </h3>
                 <p className="text-muted-foreground text-lg">
@@ -399,7 +396,7 @@ const Careers: React.FC = () => {
               <form onSubmit={handleSubmit} className="space-y-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-semibold text-foreground text-glow mb-3">
+                    <label htmlFor="name" className="block text-sm font-semibold text-foreground mb-3">
                       Full Name *
                     </label>
                     <input
@@ -414,7 +411,7 @@ const Careers: React.FC = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-semibold text-foreground text-glow mb-3">
+                    <label htmlFor="email" className="block text-sm font-semibold text-foreground mb-3">
                       Email Address *
                     </label>
                     <input
@@ -432,7 +429,7 @@ const Careers: React.FC = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-semibold text-foreground text-glow mb-3">
+                    <label htmlFor="phone" className="block text-sm font-semibold text-foreground mb-3">
                       Phone Number
                     </label>
                     <input
@@ -446,7 +443,7 @@ const Careers: React.FC = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="position" className="block text-sm font-semibold text-foreground text-glow mb-3">
+                    <label htmlFor="position" className="block text-sm font-semibold text-foreground mb-3">
                       Position of Interest
                     </label>
                     <select
@@ -468,7 +465,7 @@ const Careers: React.FC = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
-                    <label htmlFor="experience" className="block text-sm font-semibold text-foreground text-glow mb-3">
+                    <label htmlFor="experience" className="block text-sm font-semibold text-foreground mb-3">
                       Years of Experience
                     </label>
                     <select
@@ -486,7 +483,7 @@ const Careers: React.FC = () => {
                     </select>
                   </div>
                   <div>
-                    <label htmlFor="portfolio" className="block text-sm font-semibold text-foreground text-glow mb-3">
+                    <label htmlFor="portfolio" className="block text-sm font-semibold text-foreground mb-3">
                       Portfolio/LinkedIn URL
                     </label>
                     <input
@@ -502,7 +499,7 @@ const Careers: React.FC = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-semibold text-foreground text-glow mb-3">
+                  <label htmlFor="message" className="block text-sm font-semibold text-foreground mb-3">
                     Tell us about yourself *
                   </label>
                   <textarea
@@ -519,7 +516,7 @@ const Careers: React.FC = () => {
 
                 <button
                   type="submit"
-                  className="w-full brand-button aesthetic-glow"
+                  className="w-full brand-button"
                 >
                   Submit Application
                   <Send className="ml-3 h-6 w-6" />
