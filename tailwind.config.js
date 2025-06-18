@@ -8,40 +8,41 @@ export default {
         'xs': '475px',
       },
       colors: {
-        // AdGrades Brand Colors
-        background: 'rgb(11 17 32)', // Deep slate
-        foreground: 'rgb(241 245 249)', // Light text
-        card: 'rgb(15 23 42)', // Slightly lighter slate
-        'card-foreground': 'rgb(241 245 249)',
+        // CSS variables for theme switching
+        background: 'rgb(var(--background) / <alpha-value>)',
+        foreground: 'rgb(var(--foreground) / <alpha-value>)',
+        card: {
+          DEFAULT: 'rgb(var(--card) / <alpha-value>)',
+          foreground: 'rgb(var(--card-foreground) / <alpha-value>)',
+        },
         primary: {
-          DEFAULT: '#00B5FF', // Cyan
-          foreground: 'rgb(11 17 32)',
+          DEFAULT: 'rgb(var(--primary) / <alpha-value>)',
+          foreground: 'rgb(var(--primary-foreground) / <alpha-value>)',
         },
         secondary: {
-          DEFAULT: '#01F9C6', // Teal
-          foreground: 'rgb(11 17 32)',
+          DEFAULT: 'rgb(var(--secondary) / <alpha-value>)',
+          foreground: 'rgb(var(--secondary-foreground) / <alpha-value>)',
         },
         accent: {
-          DEFAULT: '#00B5FF',
-          foreground: 'rgb(11 17 32)',
+          DEFAULT: 'rgb(var(--accent) / <alpha-value>)',
+          foreground: 'rgb(var(--accent-foreground) / <alpha-value>)',
         },
         muted: {
-          DEFAULT: 'rgb(30 41 59)',
-          foreground: 'rgb(148 163 184)',
+          DEFAULT: 'rgb(var(--muted) / <alpha-value>)',
+          foreground: 'rgb(var(--muted-foreground) / <alpha-value>)',
         },
-        border: 'rgb(30 41 59)',
-        input: 'rgb(30 41 59)',
-        ring: '#00B5FF',
+        border: 'rgb(var(--border) / <alpha-value>)',
+        input: 'rgb(var(--input) / <alpha-value>)',
+        ring: 'rgb(var(--ring) / <alpha-value>)',
+        
+        // Static brand colors
         success: '#01F9C6',
         warning: '#F59E0B',
         error: '#EF4444',
-        // Brand specific colors
         'cyan-brand': '#00B5FF',
         'teal-brand': '#01F9C6',
         'slate-dark': '#0B1120',
         'slate-darker': '#0F172A',
-        'text-light': '#F1F5F9',
-        'text-secondary': '#94A3B8',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
@@ -51,10 +52,11 @@ export default {
         'float': 'float 6s ease-in-out infinite',
         'fade-in': 'fadeIn 1s ease-out',
         'slide-up': 'slideUp 0.8s ease-out',
+        'marquee': 'marquee var(--duration) linear infinite',
       },
       backgroundImage: {
         'brand-gradient': 'linear-gradient(135deg, #00B5FF 0%, #01F9C6 100%)',
-        'slate-gradient': 'linear-gradient(to right, #0B1120, #0F172A)',
+        'professional-gradient': 'linear-gradient(135deg, #00B5FF 0%, #01F9C6 100%)',
       },
       spacing: {
         '18': '4.5rem',
