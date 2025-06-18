@@ -13,7 +13,7 @@ import {
   ChevronUp,
   Zap
 } from 'lucide-react';
-import DynamicBackground from '../components/DynamicBackground';
+import AestheticBackground from '../components/AestheticBackground';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -133,13 +133,13 @@ const Contact: React.FC = () => {
     <div className="pt-16">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <DynamicBackground variant="contact" />
+        <AestheticBackground variant="contact" />
         
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in">
             {/* Badge with glow */}
-            <div className="page-badge brand-glow">
-              <Zap className="w-5 h-5 mr-3 animate-pulse" />
+            <div className="page-badge brand-glow animate-pulse-glow">
+              <Zap className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 animate-pulse" />
               <span className="brand-gradient-text font-semibold">
                 Let's Start Something Amazing
               </span>
@@ -160,7 +160,7 @@ const Contact: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <a
                 href="#contact-form"
-                className="brand-button"
+                className="brand-button aesthetic-glow"
               >
                 Send Message
                 <Send className="ml-3 h-6 w-6" />
@@ -170,7 +170,7 @@ const Contact: React.FC = () => {
                 href="https://wa.me/919686314869"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="brand-button-outline"
+                className="brand-button-outline glass-effect"
               >
                 WhatsApp Us
                 <MessageCircle className="ml-3 h-6 w-6" />
@@ -185,7 +185,7 @@ const Contact: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
             {/* Contact Form */}
-            <div className="minimal-card p-10 rounded-3xl">
+            <div className="minimal-card p-10 rounded-3xl glass-effect aesthetic-glow">
               <h2 className="text-4xl font-bold text-foreground text-glow mb-10">
                 Send us a Message
               </h2>
@@ -311,7 +311,7 @@ const Contact: React.FC = () => {
 
                   <button
                     type="submit"
-                    className="w-full brand-button"
+                    className="w-full brand-button aesthetic-glow"
                   >
                     Send Message
                     <Send className="ml-3 h-6 w-6" />
@@ -359,7 +359,7 @@ const Contact: React.FC = () => {
                       href={method.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group flex items-center p-6 minimal-card rounded-2xl hover:border-primary/40 transition-all duration-500 transform hover:-translate-y-2"
+                      className="group flex items-center p-6 minimal-card rounded-2xl hover:border-primary/40 transition-all duration-500 transform hover:-translate-y-2 glass-effect aesthetic-glow"
                     >
                       <div className={`w-16 h-16 bg-gradient-to-br ${method.color} rounded-2xl flex items-center justify-center mr-6 shadow-xl group-hover:shadow-2xl transition-all duration-500 group-hover:scale-110`}>
                         <method.icon className="h-8 w-8 text-white" />
@@ -403,7 +403,7 @@ const Contact: React.FC = () => {
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="minimal-card rounded-2xl overflow-hidden"
+                className="minimal-card rounded-2xl overflow-hidden glass-effect aesthetic-glow"
               >
                 <button
                   onClick={() => toggleFaq(index)}
@@ -446,7 +446,7 @@ const Contact: React.FC = () => {
             </p>
           </div>
           
-          <div className="minimal-card rounded-3xl overflow-hidden">
+          <div className="minimal-card rounded-3xl overflow-hidden glass-effect aesthetic-glow">
             <div className="h-[500px]">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.983962!2d76.107463!3d12.983962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU5JzAyLjMiTiA3NsKwMDYnMjYuOSJF!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"

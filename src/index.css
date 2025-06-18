@@ -52,7 +52,7 @@
   }
   
   body {
-    @apply text-foreground;
+    @apply text-foreground bg-background;
     overflow-x: hidden;
     transition: background 0.3s ease, color 0.3s ease;
   }
@@ -96,9 +96,18 @@
 
 /* Custom animations */
 @keyframes float {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  33% { transform: translateY(-10px) rotate(1deg); }
-  66% { transform: translateY(-5px) rotate(-1deg); }
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg) scale(1); 
+  }
+  25% { 
+    transform: translateY(-20px) rotate(1deg) scale(1.05); 
+  }
+  50% { 
+    transform: translateY(-10px) rotate(-1deg) scale(1.02); 
+  }
+  75% { 
+    transform: translateY(-15px) rotate(0.5deg) scale(1.03); 
+  }
 }
 
 @keyframes fadeIn {
@@ -116,8 +125,22 @@
   to { transform: translateX(calc(-100% - var(--gap))); }
 }
 
+@keyframes gridMove {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(60px, 60px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { 
+    box-shadow: 0 0 20px rgba(0, 181, 255, 0.3);
+  }
+  50% { 
+    box-shadow: 0 0 40px rgba(0, 181, 255, 0.6);
+  }
+}
+
 .animate-float {
-  animation: float 6s ease-in-out infinite;
+  animation: float 8s ease-in-out infinite;
 }
 
 .animate-fade-in {
@@ -130,6 +153,10 @@
 
 .animate-marquee {
   animation: marquee var(--duration) linear infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
 }
 
 /* Minimalist card styles */
@@ -405,4 +432,32 @@
   .animate-marquee {
     animation-duration: 20s;
   }
+}
+
+/* Glass morphism effects */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.light .glass-effect {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Aesthetic enhancements */
+.aesthetic-glow {
+  box-shadow: 
+    0 0 20px rgba(0, 181, 255, 0.1),
+    0 0 40px rgba(1, 249, 198, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.light .aesthetic-glow {
+  box-shadow: 
+    0 0 20px rgba(0, 181, 255, 0.05),
+    0 0 40px rgba(1, 249, 198, 0.03),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }

@@ -10,7 +10,7 @@ import {
   Target,
   Zap
 } from 'lucide-react';
-import DynamicBackground from '../components/DynamicBackground';
+import AestheticBackground from '../components/AestheticBackground';
 import AnimatedCounter from '../components/AnimatedCounter';
 
 const About: React.FC = () => {
@@ -136,13 +136,13 @@ const About: React.FC = () => {
     <div className="pt-16 overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <DynamicBackground variant="about" />
+        <AestheticBackground variant="about" />
         
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in">
             {/* Badge with glow */}
-            <div className="page-badge brand-glow">
-              <Zap className="w-5 h-5 mr-3 animate-pulse" />
+            <div className="page-badge brand-glow animate-pulse-glow">
+              <Zap className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 animate-pulse" />
               <span className="brand-gradient-text font-semibold">
                 Meet the Team Behind the Magic
               </span>
@@ -321,21 +321,21 @@ const About: React.FC = () => {
       {/* CTA Section */}
       <section className="section-padding brand-gradient">
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="heading-secondary text-[#0B1120] mb-10">
+          <h2 className="heading-secondary text-white mb-10">
             Ready to Work with Our Team?
           </h2>
-          <p className="text-xl text-[#0B1120]/80 mb-16 leading-relaxed max-w-4xl mx-auto">
+          <p className="text-xl text-white/90 mb-16 leading-relaxed max-w-4xl mx-auto">
             Let's discuss how our expertise and passion can help transform your business. 
             Every great partnership starts with a conversation.
           </p>
           <div className="flex flex-col sm:flex-row gap-8 justify-center">
-            <button className="inline-flex items-center px-12 py-6 bg-[#0B1120] text-foreground font-bold rounded-lg hover:bg-[#0F172A] transition-all duration-500 transform hover:scale-110 shadow-2xl text-lg">
+            <button className="inline-flex items-center px-12 py-6 bg-white text-slate-dark font-bold rounded-lg hover:bg-gray-100 transition-all duration-500 transform hover:scale-110 shadow-2xl text-lg">
               <Users className="mr-3 h-6 w-6" />
               Meet the Team
             </button>
             <a
               href="/contact"
-              className="inline-flex items-center px-12 py-6 border-2 border-[#0B1120] text-[#0B1120] font-bold rounded-lg hover:bg-[#0B1120] hover:text-foreground transition-all duration-500 transform hover:scale-110 text-lg"
+              className="inline-flex items-center px-12 py-6 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-slate-dark transition-all duration-500 transform hover:scale-110 text-lg"
             >
               <Target className="mr-3 h-6 w-6" />
               Start a Project

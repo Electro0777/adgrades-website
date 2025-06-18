@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ExternalLink, ArrowRight, Filter, Zap } from 'lucide-react';
-import DynamicBackground from '../components/DynamicBackground';
+import AestheticBackground from '../components/AestheticBackground';
 
 const Portfolio: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -204,13 +204,13 @@ const Portfolio: React.FC = () => {
     <div className="pt-16">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <DynamicBackground variant="portfolio" />
+        <AestheticBackground variant="portfolio" />
         
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in">
             {/* Badge with glow */}
-            <div className="page-badge brand-glow">
-              <Zap className="w-5 h-5 mr-3 animate-pulse" />
+            <div className="page-badge brand-glow animate-pulse-glow">
+              <Zap className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 animate-pulse" />
               <span className="brand-gradient-text font-semibold">
                 Our Success Stories
               </span>
@@ -277,7 +277,7 @@ const Portfolio: React.FC = () => {
             {filteredClients.map((client, index) => (
               <div
                 key={client.name}
-                className="group minimal-card rounded-3xl overflow-hidden hover:border-primary/40 shadow-xl hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-4 hover:scale-[1.03]"
+                className="group minimal-card rounded-3xl overflow-hidden hover:border-primary/40 shadow-xl hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-4 hover:scale-[1.03] glass-effect aesthetic-glow"
               >
                 {/* Image container with overlay */}
                 <div className="relative overflow-hidden">
@@ -353,7 +353,7 @@ const Portfolio: React.FC = () => {
             {filteredProjects.map((project, index) => (
               <div
                 key={project.id}
-                className="group minimal-card rounded-3xl overflow-hidden hover:border-primary/40 shadow-xl hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-4 hover:scale-[1.03]"
+                className="group minimal-card rounded-3xl overflow-hidden hover:border-primary/40 shadow-xl hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-4 hover:scale-[1.03] glass-effect aesthetic-glow"
               >
                 {/* Project Image */}
                 <div className="relative overflow-hidden">
@@ -429,7 +429,7 @@ const Portfolio: React.FC = () => {
                   </div>
 
                   {/* View Project Button */}
-                  <button className="w-full flex items-center justify-center px-8 py-4 brand-gradient text-white font-semibold rounded-2xl transition-all duration-500 transform hover:scale-105 shadow-xl">
+                  <button className="w-full flex items-center justify-center px-8 py-4 brand-gradient text-white font-semibold rounded-2xl transition-all duration-500 transform hover:scale-105 shadow-xl aesthetic-glow">
                     View Full Case Study
                     <ArrowRight className="ml-3 h-5 w-5" />
                   </button>
@@ -451,16 +451,16 @@ const Portfolio: React.FC = () => {
       {/* CTA Section */}
       <section className="section-padding brand-gradient">
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="heading-secondary text-[#0B1120] mb-10">
+          <h2 className="heading-secondary text-white mb-10">
             Ready to Be Our Next Success Story?
           </h2>
-          <p className="text-xl text-[#0B1120]/80 mb-16 leading-relaxed max-w-4xl mx-auto">
+          <p className="text-xl text-white/90 mb-16 leading-relaxed max-w-4xl mx-auto">
             Let's discuss how we can achieve similar results for your business. 
             Every great project starts with a conversation.
           </p>
           <a
             href="/contact"
-            className="inline-flex items-center px-12 py-6 bg-[#0B1120] text-foreground font-bold rounded-lg hover:bg-[#0F172A] transition-all duration-500 transform hover:scale-110 shadow-2xl text-lg"
+            className="inline-flex items-center px-12 py-6 bg-white text-slate-dark font-bold rounded-lg hover:bg-gray-100 transition-all duration-500 transform hover:scale-110 shadow-2xl text-lg aesthetic-glow"
           >
             Start Your Project
             <ArrowRight className="ml-3 h-6 w-6" />

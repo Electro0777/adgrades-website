@@ -30,20 +30,13 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
 
   useEffect(() => {
     const root = window.document.documentElement;
-    const body = window.document.body;
     
     if (isDark) {
       root.classList.add('dark');
       localStorage.setItem('theme', 'dark');
-      // Dark mode: Deep slate gradient
-      body.style.background = 'linear-gradient(135deg, #0B1120 0%, #0F172A 100%)';
-      body.style.color = '#F1F5F9';
     } else {
       root.classList.remove('dark');
       localStorage.setItem('theme', 'light');
-      // Light mode: Clean white to light gray gradient
-      body.style.background = 'linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 50%, #F1F5F9 100%)';
-      body.style.color = '#1E293B';
     }
   }, [isDark]);
 

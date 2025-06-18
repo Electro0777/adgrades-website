@@ -13,7 +13,7 @@ import {
   DollarSign,
   Briefcase
 } from 'lucide-react';
-import DynamicBackground from '../components/DynamicBackground';
+import AestheticBackground from '../components/AestheticBackground';
 
 const Careers: React.FC = () => {
   const [applicationData, setApplicationData] = useState({
@@ -160,13 +160,13 @@ const Careers: React.FC = () => {
     <div className="pt-16">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <DynamicBackground variant="careers" />
+        <AestheticBackground variant="careers" />
         
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in">
             {/* Badge with glow */}
-            <div className="page-badge brand-glow">
-              <Zap className="w-5 h-5 mr-3 animate-pulse" />
+            <div className="page-badge brand-glow animate-pulse-glow">
+              <Zap className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 animate-pulse" />
               <span className="brand-gradient-text font-semibold">
                 Join Our Growing Team
               </span>
@@ -187,7 +187,7 @@ const Careers: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <a
                 href="#open-positions"
-                className="brand-button"
+                className="brand-button aesthetic-glow"
               >
                 View Open Positions
                 <Briefcase className="ml-3 h-6 w-6" />
@@ -195,7 +195,7 @@ const Careers: React.FC = () => {
               
               <a
                 href="#application-form"
-                className="brand-button-outline"
+                className="brand-button-outline glass-effect"
               >
                 Apply Now
                 <Send className="ml-3 h-6 w-6" />
@@ -224,7 +224,7 @@ const Careers: React.FC = () => {
             {cultureValues.map((value, index) => (
               <div
                 key={value.title}
-                className="group text-center p-10 minimal-card rounded-3xl hover:border-primary/40 transition-all duration-700 transform hover:-translate-y-4 hover:scale-[1.03]"
+                className="group text-center p-10 minimal-card rounded-3xl hover:border-primary/40 transition-all duration-700 transform hover:-translate-y-4 hover:scale-[1.03] glass-effect aesthetic-glow"
               >
                 <div className="w-20 h-20 bg-primary/20 rounded-3xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-xl">
                   <value.icon className="h-10 w-10 text-primary" />
@@ -260,7 +260,7 @@ const Careers: React.FC = () => {
             {openPositions.map((position, index) => (
               <div
                 key={position.title}
-                className="minimal-card rounded-3xl hover:border-primary/40 shadow-xl hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-4 hover:scale-[1.02] overflow-hidden"
+                className="minimal-card rounded-3xl hover:border-primary/40 shadow-xl hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-4 hover:scale-[1.02] overflow-hidden glass-effect aesthetic-glow"
               >
                 <div className="p-10">
                   <div className="flex items-start justify-between mb-6">
@@ -313,7 +313,7 @@ const Careers: React.FC = () => {
                     </ul>
                   </div>
 
-                  <button className="w-full brand-gradient text-white font-semibold py-4 px-8 rounded-2xl transition-all duration-500 transform hover:scale-105 shadow-xl">
+                  <button className="w-full brand-gradient text-white font-semibold py-4 px-8 rounded-2xl transition-all duration-500 transform hover:scale-105 shadow-xl aesthetic-glow">
                     Apply Now
                   </button>
                 </div>
@@ -355,7 +355,7 @@ const Careers: React.FC = () => {
                 alt="AdGrades team working together"
                 className="rounded-3xl shadow-2xl hover:shadow-3xl transition-shadow duration-700"
               />
-              <div className="absolute -bottom-8 -right-8 bg-card/80 backdrop-blur-xl p-8 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 border border-border/50">
+              <div className="absolute -bottom-8 -right-8 bg-card/80 backdrop-blur-xl p-8 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 border border-border glass-effect aesthetic-glow">
                 <div className="flex items-center space-x-4">
                   <Users className="h-10 w-10 text-primary" />
                   <div>
@@ -384,7 +384,7 @@ const Careers: React.FC = () => {
             </p>
           </div>
 
-          <div className="minimal-card rounded-3xl p-10">
+          <div className="minimal-card rounded-3xl p-10 glass-effect aesthetic-glow">
             {isSubmitted ? (
               <div className="text-center py-16">
                 <CheckCircle className="h-20 w-20 text-secondary mx-auto mb-6" />
@@ -519,7 +519,7 @@ const Careers: React.FC = () => {
 
                 <button
                   type="submit"
-                  className="w-full brand-button"
+                  className="w-full brand-button aesthetic-glow"
                 >
                   Submit Application
                   <Send className="ml-3 h-6 w-6" />
