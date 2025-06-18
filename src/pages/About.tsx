@@ -91,7 +91,7 @@ const About: React.FC = () => {
     {
       name: "Likitesh Gowda B E",
       role: "COO",
-      image: "/likith.jpeg",
+      image: "/likit.jpg",
       bio: "Likitesh is the one who makes sure everything behind the scenes at AdGrades runs smoothly. From managing day-to-day operations to keeping projects on track, he ensures the team is always aligned and focused. He's the kind of leader who makes complex processes feel simple and seamless.",
       linkedin: "http://linkedin.com/in/likiteshgowda",
     },
@@ -129,8 +129,7 @@ const About: React.FC = () => {
     {
       name: "Pavanbkrishna",
       role: "Ads Manager",
-      image:
-        "https://drive.google.com/uc?export=view&id=1vWdek2qW_yBwScRrTNonWkn627iVhvdU",
+      image: "/pavan.jpg",
       bio: "Knows Google & Meta ads better than their own employees.",
       linkedin: "https://www.linkedin.com/in/pavan-bk-",
     },
@@ -152,8 +151,7 @@ const About: React.FC = () => {
     {
       name: "Hemanth",
       role: "Marketing Team Member",
-      image:
-        "https://images.pexels.com/photos/1680172/pexels-photo-1680172.jpeg?w=400&h=400&fit=crop&crop=face",
+      image: "/hemanth.jpg",
       bio: "Knows exactly how to grab attention & hold it.",
       linkedin: "#",
     },
