@@ -96,9 +96,9 @@ const Home: React.FC = () => {
 
   return (
     <div className="pt-16 overflow-x-hidden">
-      {/* Hero Section - Mobile Responsive */}
+      {/* Hero Section with Vortex Background - Mobile Responsive */}
       <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
-        <DynamicBackground variant="home" />
+        <DynamicBackground variant="home" useVortex={true} />
         
         <div className="relative z-10 max-w-5xl mx-auto text-center">
           <div className="animate-fade-in">
