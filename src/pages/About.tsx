@@ -48,32 +48,32 @@ const About: React.FC = () => {
 
   const team = [
     {
-      name: 'Chandan',
+      name: 'Chandan B Krishna',
       role: 'Founder, CEO, Marketing Strategist',
-      image: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?w=400&h=400&fit=crop&crop=face',
+      image: 'https://drive.google.com/uc?export=view&id=1Kl5QS-F_TlTN_KXh_1wIdl3rCEZaMYDp',
       bio: 'Chandan is the visionary force behind AdGrades, leading the agency with a passion for creativity, strategy, and results. With a sharp eye for market trends and a deep understanding of brand building, Chandan specializes in crafting marketing solutions that not only boost visibility but also drive profitability.',
-      linkedin: '#'
+      linkedin: 'https://www.linkedin.com/in/chandan-b-krishna-91562a279/'
     },
     {
-      name: 'Maneesh',
+      name: 'Maneesh C Gowda',
       role: 'CTO',
-      image: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?w=400&h=400&fit=crop&crop=face',
+      image: 'https://drive.google.com/uc?export=view&id=1X_bSYHzSqXralgo7VaO0JiyWuTRI3MdA',
       bio: 'Maneesh is the tech brain behind AdGrades. From writing smart code to building tools that power our marketing campaigns, he makes sure the technology we use is fast, reliable, and effective. He\'s the one who turns ideas into real, working digital tools that power our marketing strategies.',
-      linkedin: '#'
+      linkedin: 'https://www.linkedin.com/in/maneesh-c-gowda-27942b258'
     },
     {
-      name: 'Likith',
+      name: 'Likitesh Gowda B E',
       role: 'COO',
-      image: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?w=400&h=400&fit=crop&crop=face',
-      bio: 'Likith is the one who makes sure everything behind the scenes at AdGrades runs smoothly. From managing day-to-day operations to keeping projects on track, he ensures the team is always aligned and focused. He\'s the kind of leader who makes complex processes feel simple and seamless.',
-      linkedin: '#'
+      image: 'https://drive.google.com/uc?export=view&id=1EDZZLHuPVRmwz5fHuz_iY3sJgfbeYtF0',
+      bio: 'Likitesh is the one who makes sure everything behind the scenes at AdGrades runs smoothly. From managing day-to-day operations to keeping projects on track, he ensures the team is always aligned and focused. He\'s the kind of leader who makes complex processes feel simple and seamless.',
+      linkedin: 'http://linkedin.com/in/likiteshgowda'
     },
     {
-      name: 'Ashish',
+      name: 'Ashish Gowda P',
       role: 'CDO - Chief Design Officer',
-      image: 'https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?w=400&h=400&fit=crop&crop=face',
+      image: 'https://drive.google.com/uc?export=view&id=12ODCIfKbLIF-tVMsA986-zMpJGWgtNni',
       bio: 'Ashish is the creative eye at AdGrades, bringing ideas to life through pixel-perfect designs that not only look amazing—but actually drive results. From branding and UI/UX to ad creatives and everything in between, he makes sure every visual we deliver speaks the brand\'s language and connects with its audience.',
-      linkedin: '#'
+      linkedin: 'https://www.linkedin.com/in/ashish-gowda-a3542f546165h41531r865'
     },
     {
       name: 'Sumith',
@@ -85,9 +85,9 @@ const About: React.FC = () => {
     {
       name: 'Chandu M',
       role: 'Content Lead',
-      image: 'https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?w=400&h=400&fit=crop&crop=face',
+      image: 'https://drive.google.com/uc?export=view&id=1IpbrIkOlZQvRHb13kf5QrP50m1jsyDHz',
       bio: 'Chandu is the voice behind the brand, the one who turns ideas into words that connect, inspire, and convert. As the Content Lead, she crafts powerful messaging across platforms that speaks directly to the audience and drives real action. She understands that great content isn\'t just about sounding good—it\'s about making an impact.',
-      linkedin: '#'
+      linkedin: 'https://www.linkedin.com/in/chandu-m-35b920295'
     },
     {
       name: 'Nikhil',
@@ -97,11 +97,11 @@ const About: React.FC = () => {
       linkedin: '#'
     },
     {
-      name: 'Pavan',
+      name: 'Pavanbkrishna',
       role: 'Ads Manager',
-      image: 'https://images.pexels.com/photos/1300402/pexels-photo-1300402.jpeg?w=400&h=400&fit=crop&crop=face',
+      image: 'https://drive.google.com/uc?export=view&id=1vWdek2qW_yBwScRrTNonWkn627iVhvdU',
       bio: 'Knows Google & Meta ads better than their own employees.',
-      linkedin: '#'
+      linkedin: 'https://www.linkedin.com/in/pavan-bk-'
     },
     {
       name: 'Karthik',
@@ -111,11 +111,11 @@ const About: React.FC = () => {
       linkedin: '#'
     },
     {
-      name: 'Harshith',
+      name: 'Harshith S',
       role: 'Research and Development Head',
-      image: 'https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg?w=400&h=400&fit=crop&crop=face',
+      image: 'https://drive.google.com/uc?export=view&id=1yh4gDol76bqbKeZIuUVKqLn_18zyrXqy',
       bio: 'Finds what\'s next before the internet does.',
-      linkedin: '#'
+      linkedin: 'https://www.linkedin.com/in/harshith-s-895813266'
     },
     {
       name: 'Hemanth',
@@ -125,11 +125,11 @@ const About: React.FC = () => {
       linkedin: '#'
     },
     {
-      name: 'Inchara',
+      name: 'Inchara D',
       role: 'Design Team Member',
-      image: 'https://images.pexels.com/photos/1542085/pexels-photo-1542085.jpeg?w=400&h=400&fit=crop&crop=face',
+      image: 'https://drive.google.com/uc?export=view&id=1wBdddmHf5FfNN45kkO9QQ2El8RhnsFHe',
       bio: 'Designs that make people stop scrolling & start buying.',
-      linkedin: '#'
+      linkedin: 'https://www.linkedin.com/in/inchara-gowda-252429258'
     }
   ];
 
@@ -298,6 +298,11 @@ const About: React.FC = () => {
                     src={member.image}
                     alt={member.name}
                     className="w-24 h-24 rounded-full object-cover mx-auto mb-6 group-hover:scale-110 transition-transform duration-500 shadow-xl"
+                    onError={(e) => {
+                      // Fallback to placeholder if Google Drive image fails to load
+                      const target = e.target as HTMLImageElement;
+                      target.src = `https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?w=400&h=400&fit=crop&crop=face`;
+                    }}
                   />
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors duration-500">
@@ -311,6 +316,8 @@ const About: React.FC = () => {
                 </p>
                 <a
                   href={member.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center w-12 h-12 bg-primary hover:bg-primary/80 text-white rounded-full transition-all duration-500 hover:scale-110 shadow-xl"
                 >
                   <Linkedin className="h-5 w-5" />
