@@ -148,8 +148,7 @@ const Portfolio: React.FC = () => {
       id: 4,
       title: 'Uplifto Tech Services Growth',
       category: 'Digital Marketing',
-      client: '
-',
+      client: 'Uplifto',
       challenge: 'Tech startup needed to establish market presence and generate B2B leads',
       solution: 'Implemented targeted lead generation campaigns with strategic social media positioning',
       result: '300% increase in qualified B2B leads and established strong industry presence in 4 months',
