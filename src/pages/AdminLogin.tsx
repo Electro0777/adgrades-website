@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Lock, User, Eye, EyeOff, Shield, AlertCircle, Home } from 'lucide-react';
 import { authenticateAdmin, createAdminSession, isAdminAuthenticated } from '../utils/auth';
-import DynamicBackground from '../components/DynamicBackground';
+import AestheticBackground from '../components/AestheticBackground';
 
 const AdminLogin: React.FC = () => {
   const [credentials, setCredentials] = useState({ username: '', password: '' });
@@ -45,7 +45,7 @@ const AdminLogin: React.FC = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      <DynamicBackground variant="contact" />
+      <AestheticBackground variant="contact" />
       
       {/* Back to Home Button */}
       <div className="absolute top-6 left-6 z-20">
