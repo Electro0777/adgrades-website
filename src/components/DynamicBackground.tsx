@@ -1,37 +1,17 @@
 import React from 'react';
 import { useTheme } from '../contexts/ThemeContext';
-import VortexBackground from './VortexBackground';
 
 interface DynamicBackgroundProps {
   variant?: 'home' | 'about' | 'services' | 'portfolio' | 'contact' | 'careers';
   className?: string;
-  useVortex?: boolean;
 }
 
 const DynamicBackground: React.FC<DynamicBackgroundProps> = ({ 
   variant = 'home', 
-  className = '',
-  useVortex = false
+  className = '' 
 }) => {
   const { isDark } = useTheme();
 
-  // Use Vortex background for home page or when explicitly requested
-  if (useVortex || variant === 'home') {
-    return (
-      <VortexBackground
-        containerClassName={`fixed inset-0 overflow-hidden -z-10 ${className}`}
-        particleCount={isDark ? 700 : 500}
-        rangeY={120}
-        baseHue={200} // AdGrades cyan
-        baseSpeed={0.1}
-        rangeSpeed={1.2}
-        baseRadius={1}
-        rangeRadius={2}
-      />
-    );
-  }
-
-  // Fallback to original orb-based background for other pages
   return (
     <div className={`fixed inset-0 overflow-hidden -z-10 ${className}`}>
       {/* Base gradient background */}
