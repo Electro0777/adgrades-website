@@ -1,136 +1,169 @@
-import React from 'react';
-import { 
-  Lightbulb, 
-  Eye, 
-  BarChart3, 
-  Heart, 
-  Linkedin, 
+import React from "react";
+import {
+  Lightbulb,
+  Eye,
+  BarChart3,
+  Heart,
+  Linkedin,
   Award,
   Users,
   Target,
   Zap,
-  ArrowRight
-} from 'lucide-react';
-import VortexBackground from '../components/VortexBackground';
-import AnimatedCounter from '../components/AnimatedCounter';
+  ArrowRight,
+} from "lucide-react";
+import VortexBackground from "../components/VortexBackground";
+import AnimatedCounter from "../components/AnimatedCounter";
 
 const About: React.FC = () => {
   const milestones = [
-    { year: '2023', title: 'AdGrades Founded', description: 'AdGrades was born on May 2, 2023 with a mission to help startups succeed' },
-    { year: '2023', title: 'First Success', description: 'Closed 5 successful clients for Google Ads and Analytics' },
-    { year: '2023', title: 'Team Growth', description: 'The team scaled to 15 members with experts in each field' },
-    { year: '2024', title: 'Major Expansion', description: 'Closed another 15 clients and expanded our service offerings' },
-    { year: '2024', title: 'Innovation Focus', description: 'Now scaling with a blend of offline and online marketing to bring revolutionary strategies for brands' }
+    {
+      year: "2023",
+      title: "AdGrades Founded",
+      description:
+        "AdGrades was born on May 2, 2023 with a mission to help startups succeed",
+    },
+    {
+      year: "2023",
+      title: "First Success",
+      description: "Closed 5 successful clients for Google Ads and Analytics",
+    },
+    {
+      year: "2023",
+      title: "Team Growth",
+      description: "The team scaled to 15 members with experts in each field",
+    },
+    {
+      year: "2024",
+      title: "Major Expansion",
+      description:
+        "Closed another 15 clients and expanded our service offerings",
+    },
+    {
+      year: "2024",
+      title: "Innovation Focus",
+      description:
+        "Now scaling with a blend of offline and online marketing to bring revolutionary strategies for brands",
+    },
   ];
 
   const values = [
     {
       icon: Lightbulb,
-      title: 'Creativity',
-      description: 'We believe innovative thinking and creative solutions are the keys to standing out in today\'s competitive landscape.'
+      title: "Creativity",
+      description:
+        "We believe innovative thinking and creative solutions are the keys to standing out in today's competitive landscape.",
     },
     {
       icon: Eye,
-      title: 'Transparency',
-      description: 'We maintain open, honest communication with our clients, providing clear reporting and regular updates on all projects.'
+      title: "Transparency",
+      description:
+        "We maintain open, honest communication with our clients, providing clear reporting and regular updates on all projects.",
     },
     {
       icon: BarChart3,
-      title: 'Data-Driven',
-      description: 'Every decision we make is backed by data and analytics, ensuring our strategies deliver measurable results.'
+      title: "Data-Driven",
+      description:
+        "Every decision we make is backed by data and analytics, ensuring our strategies deliver measurable results.",
     },
     {
       icon: Heart,
-      title: 'Local Focus',
-      description: 'We\'re committed to supporting local businesses and startups, helping them compete with larger enterprises.'
-    }
+      title: "Local Focus",
+      description:
+        "We're committed to supporting local businesses and startups, helping them compete with larger enterprises.",
+    },
   ];
 
   const team = [
     {
-      name: 'Chandan B Krishna',
-      role: 'Founder, CEO, Marketing Strategist',
-      image: 'https://drive.google.com/uc?export=view&id=1Kl5QS-F_TlTN_KXh_1wIdl3rCEZaMYDp',
-      bio: 'Chandan is the visionary force behind AdGrades, leading the agency with a passion for creativity, strategy, and results. With a sharp eye for market trends and a deep understanding of brand building, Chandan specializes in crafting marketing solutions that not only boost visibility but also drive profitability.',
-      linkedin: 'https://www.linkedin.com/in/chandan-b-krishna-91562a279/'
+      name: "Chandan B Krishna",
+      role: "Founder, CEO, Marketing Strategist",
+      image: "/chandan.jpg",
+      bio: "Chandan is the visionary force behind AdGrades, leading the agency with a passion for creativity, strategy, and results. With a sharp eye for market trends and a deep understanding of brand building, Chandan specializes in crafting marketing solutions that not only boost visibility but also drive profitability.",
+      linkedin: "https://www.linkedin.com/in/chandan-b-krishna-91562a279/",
     },
     {
-      name: 'Maneesh C Gowda',
-      role: 'CTO',
-      image: 'https://drive.google.com/uc?export=view&id=1X_bSYHzSqXralgo7VaO0JiyWuTRI3MdA',
-      bio: 'Maneesh is the tech brain behind AdGrades. From writing smart code to building tools that power our marketing campaigns, he makes sure the technology we use is fast, reliable, and effective. He\'s the one who turns ideas into real, working digital tools that power our marketing strategies.',
-      linkedin: 'https://www.linkedin.com/in/maneesh-c-gowda-27942b258'
+      name: "Maneesh C Gowda",
+      role: "CTO",
+      image: "/maneesh.jpg",
+      bio: "Maneesh is the tech brain behind AdGrades. From writing smart code to building tools that power our marketing campaigns, he makes sure the technology we use is fast, reliable, and effective. He's the one who turns ideas into real, working digital tools that power our marketing strategies.",
+      linkedin: "https://www.linkedin.com/in/maneesh-c-gowda-27942b258",
     },
     {
-      name: 'Likitesh Gowda B E',
-      role: 'COO',
-      image: 'https://drive.google.com/uc?export=view&id=1EDZZLHuPVRmwz5fHuz_iY3sJgfbeYtF0',
-      bio: 'Likitesh is the one who makes sure everything behind the scenes at AdGrades runs smoothly. From managing day-to-day operations to keeping projects on track, he ensures the team is always aligned and focused. He\'s the kind of leader who makes complex processes feel simple and seamless.',
-      linkedin: 'http://linkedin.com/in/likiteshgowda'
+      name: "Likitesh Gowda B E",
+      role: "COO",
+      image: "/likith.jpeg",
+      bio: "Likitesh is the one who makes sure everything behind the scenes at AdGrades runs smoothly. From managing day-to-day operations to keeping projects on track, he ensures the team is always aligned and focused. He's the kind of leader who makes complex processes feel simple and seamless.",
+      linkedin: "http://linkedin.com/in/likiteshgowda",
     },
     {
-      name: 'Ashish Gowda P',
-      role: 'CDO - Chief Design Officer',
-      image: 'https://drive.google.com/uc?export=view&id=12ODCIfKbLIF-tVMsA986-zMpJGWgtNni',
-      bio: 'Ashish is the creative eye at AdGrades, bringing ideas to life through pixel-perfect designs that not only look amazing—but actually drive results. From branding and UI/UX to ad creatives and everything in between, he makes sure every visual we deliver speaks the brand\'s language and connects with its audience.',
-      linkedin: 'https://www.linkedin.com/in/ashish-gowda-a3542f546165h41531r865'
+      name: "Ashish Gowda P",
+      role: "CDO - Chief Design Officer",
+      image: "/ashish.jpg",
+      bio: "Ashish is the creative eye at AdGrades, bringing ideas to life through pixel-perfect designs that not only look amazing—but actually drive results. From branding and UI/UX to ad creatives and everything in between, he makes sure every visual we deliver speaks the brand's language and connects with its audience.",
+      linkedin:
+        "https://www.linkedin.com/in/ashish-gowda-a3542f546165h41531r865",
     },
     {
-      name: 'Sumith',
-      role: 'CFO',
-      image: 'https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?w=400&h=400&fit=crop&crop=face',
-      bio: 'Sumith is the logical person at AdGrades—the one who makes sure every rupee spent is a smart investment. From managing costs to analyzing performance, Sumith ensures that our strategies are not just creative, but financially sound.',
-      linkedin: '#'
+      name: "Sumith",
+      role: "CFO",
+      image:
+        "https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?w=400&h=400&fit=crop&crop=face",
+      bio: "Sumith is the logical person at AdGrades—the one who makes sure every rupee spent is a smart investment. From managing costs to analyzing performance, Sumith ensures that our strategies are not just creative, but financially sound.",
+      linkedin: "#",
     },
     {
-      name: 'Chandu M',
-      role: 'Content Lead',
-      image: 'https://drive.google.com/uc?export=view&id=1IpbrIkOlZQvRHb13kf5QrP50m1jsyDHz',
-      bio: 'Chandu is the voice behind the brand, the one who turns ideas into words that connect, inspire, and convert. As the Content Lead, she crafts powerful messaging across platforms that speaks directly to the audience and drives real action. She understands that great content isn\'t just about sounding good—it\'s about making an impact.',
-      linkedin: 'https://www.linkedin.com/in/chandu-m-35b920295'
+      name: "Chandu M",
+      role: "Content Lead",
+      image: "/chandu.jpg",
+      bio: "Chandu is the voice behind the brand, the one who turns ideas into words that connect, inspire, and convert. As the Content Lead, she crafts powerful messaging across platforms that speaks directly to the audience and drives real action. She understands that great content isn't just about sounding good—it's about making an impact.",
+      linkedin: "https://www.linkedin.com/in/chandu-m-35b920295",
     },
     {
-      name: 'Nikhil',
-      role: 'Video Editing Lead',
-      image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?w=400&h=400&fit=crop&crop=face',
-      bio: 'Nikhil is the storyteller behind the screen, turning raw footage into scroll-stopping videos that feel more like cinema than content. As the Video Editing Lead, he brings brands to life through dynamic visuals, clean cuts, and creative storytelling. His edits don\'t just look good, they tell a story, spark emotion, and drive action.',
-      linkedin: '#'
+      name: "Nikhil",
+      role: "Video Editing Lead",
+      image:
+        "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?w=400&h=400&fit=crop&crop=face",
+      bio: "Nikhil is the storyteller behind the screen, turning raw footage into scroll-stopping videos that feel more like cinema than content. As the Video Editing Lead, he brings brands to life through dynamic visuals, clean cuts, and creative storytelling. His edits don't just look good, they tell a story, spark emotion, and drive action.",
+      linkedin: "#",
     },
     {
-      name: 'Pavanbkrishna',
-      role: 'Ads Manager',
-      image: 'https://drive.google.com/uc?export=view&id=1vWdek2qW_yBwScRrTNonWkn627iVhvdU',
-      bio: 'Knows Google & Meta ads better than their own employees.',
-      linkedin: 'https://www.linkedin.com/in/pavan-bk-'
+      name: "Pavanbkrishna",
+      role: "Ads Manager",
+      image:
+        "https://drive.google.com/uc?export=view&id=1vWdek2qW_yBwScRrTNonWkn627iVhvdU",
+      bio: "Knows Google & Meta ads better than their own employees.",
+      linkedin: "https://www.linkedin.com/in/pavan-bk-",
     },
     {
-      name: 'Karthik',
-      role: 'Offline Marketing Manager',
-      image: 'https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?w=400&h=400&fit=crop&crop=face',
-      bio: 'Makes sure offline marketing isn\'t dead—it\'s just evolving.',
-      linkedin: '#'
+      name: "Karthik",
+      role: "Offline Marketing Manager",
+      image:
+        "https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?w=400&h=400&fit=crop&crop=face",
+      bio: "Makes sure offline marketing isn't dead—it's just evolving.",
+      linkedin: "#",
     },
     {
-      name: 'Harshith S',
-      role: 'Research and Development Head',
-      image: 'https://drive.google.com/uc?export=view&id=1yh4gDol76bqbKeZIuUVKqLn_18zyrXqy',
-      bio: 'Finds what\'s next before the internet does.',
-      linkedin: 'https://www.linkedin.com/in/harshith-s-895813266'
+      name: "Harshith S",
+      role: "Research and Development Head",
+      image: "/harshith.jpg",
+      bio: "Finds what's next before the internet does.",
+      linkedin: "https://www.linkedin.com/in/harshith-s-895813266",
     },
     {
-      name: 'Hemanth',
-      role: 'Marketing Team Member',
-      image: 'https://images.pexels.com/photos/1680172/pexels-photo-1680172.jpeg?w=400&h=400&fit=crop&crop=face',
-      bio: 'Knows exactly how to grab attention & hold it.',
-      linkedin: '#'
+      name: "Hemanth",
+      role: "Marketing Team Member",
+      image:
+        "https://images.pexels.com/photos/1680172/pexels-photo-1680172.jpeg?w=400&h=400&fit=crop&crop=face",
+      bio: "Knows exactly how to grab attention & hold it.",
+      linkedin: "#",
     },
     {
-      name: 'Inchara D',
-      role: 'Design Team Member',
-      image: 'https://drive.google.com/uc?export=view&id=1wBdddmHf5FfNN45kkO9QQ2El8RhnsFHe',
-      bio: 'Designs that make people stop scrolling & start buying.',
-      linkedin: 'https://www.linkedin.com/in/inchara-gowda-252429258'
-    }
+      name: "Inchara D",
+      role: "Design Team Member",
+      image: "/inchara.jpg",
+      bio: "Designs that make people stop scrolling & start buying.",
+      linkedin: "https://www.linkedin.com/in/inchara-gowda-252429258",
+    },
   ];
 
   return (
@@ -149,33 +182,35 @@ const About: React.FC = () => {
                 Meet the Team Behind the Magic
               </span>
             </div>
-            
+
             {/* Title with Hero Glow */}
             <h1 className="heading-primary text-foreground hero-title-glow mb-8 leading-tight">
-              We're{' '}
-              <span className="brand-gradient-text">
-                AdGrades
-              </span>
+              We're <span className="brand-gradient-text">AdGrades</span>
             </h1>
-            
+
             <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed description-text">
-              A passionate team of marketers, designers, and developers dedicated to helping 
-              startups and growing businesses become industry leaders through strategic marketing 
-              and exceptional creativity.
+              A passionate team of marketers, designers, and developers
+              dedicated to helping startups and growing businesses become
+              industry leaders through strategic marketing and exceptional
+              creativity.
             </p>
-            
+
             <div className="grid grid-cols-2 gap-8 max-w-md mx-auto">
               <div className="text-center">
                 <div className="text-4xl md:text-5xl font-bold brand-gradient-text mb-3">
                   <AnimatedCounter end={12} suffix="+" />
                 </div>
-                <p className="text-muted-foreground font-semibold">Happy Clients</p>
+                <p className="text-muted-foreground font-semibold">
+                  Happy Clients
+                </p>
               </div>
               <div className="text-center">
                 <div className="text-4xl md:text-5xl font-bold brand-gradient-text mb-3">
                   <AnimatedCounter end={12} suffix="" />
                 </div>
-                <p className="text-muted-foreground font-semibold">Team Members</p>
+                <p className="text-muted-foreground font-semibold">
+                  Team Members
+                </p>
               </div>
             </div>
           </div>
@@ -187,13 +222,11 @@ const About: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-24">
             <h2 className="heading-secondary text-foreground mb-8">
-              Our{' '}
-              <span className="brand-gradient-text">
-                Journey
-              </span>
+              Our <span className="brand-gradient-text">Journey</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed description-text">
-              From a startup idea to a growing agency, here's how we've evolved alongside our clients.
+              From a startup idea to a growing agency, here's how we've evolved
+              alongside our clients.
             </p>
           </div>
 
@@ -205,12 +238,14 @@ const About: React.FC = () => {
                 <div
                   key={`${milestone.year}-${index}`}
                   className={`flex items-center ${
-                    index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                    index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                   }`}
                 >
-                  <div className={`w-full md:w-1/2 ${
-                    index % 2 === 0 ? 'md:pr-16 md:text-right' : 'md:pl-16'
-                  }`}>
+                  <div
+                    className={`w-full md:w-1/2 ${
+                      index % 2 === 0 ? "md:pr-16 md:text-right" : "md:pl-16"
+                    }`}
+                  >
                     <div className="minimal-card p-10 hover:border-primary/40 transition-all duration-700 transform hover:-translate-y-3">
                       <div className="text-4xl font-bold text-primary mb-4">
                         {milestone.year}
@@ -241,13 +276,11 @@ const About: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-24">
             <h2 className="heading-secondary text-foreground mb-8">
-              Our Core{' '}
-              <span className="brand-gradient-text">
-                Values
-              </span>
+              Our Core <span className="brand-gradient-text">Values</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed description-text">
-              These principles guide everything we do and define how we serve our clients.
+              These principles guide everything we do and define how we serve
+              our clients.
             </p>
           </div>
 
@@ -277,13 +310,11 @@ const About: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-24">
             <h2 className="heading-secondary text-foreground mb-8">
-              Meet Our{' '}
-              <span className="brand-gradient-text">
-                Team
-              </span>
+              Meet Our <span className="brand-gradient-text">Team</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed description-text">
-              The talented individuals behind AdGrades who make the magic happen every day.
+              The talented individuals behind AdGrades who make the magic happen
+              every day.
             </p>
           </div>
 
@@ -335,8 +366,8 @@ const About: React.FC = () => {
             Ready to Work with Our Team?
           </h2>
           <p className="text-xl text-white/90 mb-16 leading-relaxed max-w-4xl mx-auto description-text">
-            Let's discuss how our expertise and passion can help transform your business. 
-            Every great partnership starts with a conversation.
+            Let's discuss how our expertise and passion can help transform your
+            business. Every great partnership starts with a conversation.
           </p>
           <div className="flex flex-col sm:flex-row gap-8 justify-center">
             <button className="inline-flex items-center px-12 py-6 bg-white text-slate-dark font-bold rounded-lg hover:bg-gray-100 transition-all duration-500 transform hover:scale-110 shadow-2xl text-lg">
