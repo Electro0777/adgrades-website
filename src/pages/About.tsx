@@ -141,15 +141,16 @@ const About: React.FC = () => {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in">
-            {/* Badge */}
-            <div className="page-badge">
+            {/* Badge with Hero Glow */}
+            <div className="page-badge hero-badge-glow">
               <Zap className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" />
               <span className="brand-gradient-text font-semibold">
                 Meet the Team Behind the Magic
               </span>
             </div>
             
-            <h1 className="heading-primary text-foreground mb-8 leading-tight">
+            {/* Title with Hero Glow */}
+            <h1 className="heading-primary text-foreground hero-title-glow mb-8 leading-tight">
               We're{' '}
               <span className="brand-gradient-text">
                 AdGrades
@@ -181,7 +182,7 @@ const About: React.FC = () => {
       </section>
 
       {/* Company Story Timeline */}
-      <section className="section-padding bg-card/20">
+      <section className="section-padding content-overlay">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-24">
             <h2 className="heading-secondary text-foreground mb-8">
@@ -235,7 +236,7 @@ const About: React.FC = () => {
       </section>
 
       {/* Core Values */}
-      <section className="section-padding">
+      <section className="section-padding content-overlay">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-24">
             <h2 className="heading-secondary text-foreground mb-8">
@@ -271,7 +272,7 @@ const About: React.FC = () => {
       </section>
 
       {/* Team Section */}
-      <section className="section-padding bg-card/20">
+      <section className="section-padding content-overlay">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-24">
             <h2 className="heading-secondary text-foreground mb-8">
