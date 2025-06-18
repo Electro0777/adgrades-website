@@ -14,7 +14,6 @@ import {
   Briefcase
 } from 'lucide-react';
 import DynamicBackground from '../components/DynamicBackground';
-import GlareCard from '../components/GlareCard';
 
 const Careers: React.FC = () => {
   const [applicationData, setApplicationData] = useState({
@@ -159,28 +158,36 @@ const Careers: React.FC = () => {
 
   return (
     <div className="pt-16">
-      {/* Hero Section with Dynamic Background */}
+      {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <DynamicBackground variant="careers" />
         
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in">
-            {/* Enhanced Badge */}
-            <div className="inline-flex items-center px-8 py-4 bg-card/30 backdrop-blur-xl border border-primary/30 rounded-full text-primary text-sm font-medium mb-8 hover:bg-card/40 transition-all duration-500 shadow-lg hover:shadow-primary/20 hover:scale-105">
+            {/* Badge */}
+            <div className="page-badge">
               <Zap className="w-5 h-5 mr-3 animate-pulse" />
-              <span className="bg-professional-gradient bg-clip-text text-transparent font-semibold">
+              <span className="brand-gradient-text font-semibold">
                 Join Our Growing Team
               </span>
             </div>
             
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-card-foreground mb-8 leading-tight tracking-tight font-display">
-              Join the{' '}
-              <span className="bg-professional-gradient bg-clip-text text-transparent drop-shadow-2xl">
-                AdGrades Team
-              </span>
-            </h1>
+            {/* Title with Logo */}
+            <div className="flex items-center justify-center mb-8">
+              <img
+                src="/Asset 2.png"
+                alt="AdGrades Logo"
+                className="h-12 sm:h-16 w-auto mr-4 sm:mr-6"
+              />
+              <h1 className="heading-primary text-foreground text-glow leading-tight">
+                Join the{' '}
+                <span className="brand-gradient-text brand-glow">
+                  AdGrades Team
+                </span>
+              </h1>
+            </div>
             
-            <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-muted-foreground text-glow mb-12 max-w-4xl mx-auto leading-relaxed">
               Be part of a dynamic team that's revolutionizing digital marketing. 
               We're looking for passionate individuals who want to make a real impact.
             </p>
@@ -188,94 +195,85 @@ const Careers: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <a
                 href="#open-positions"
-                className="group inline-flex items-center px-10 py-5 bg-professional-gradient text-white font-semibold rounded-full transition-all duration-500 transform hover:scale-110 hover:shadow-2xl hover:shadow-primary/30 shadow-xl relative overflow-hidden"
+                className="brand-button"
               >
-                <div className="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
-                <span className="relative">View Open Positions</span>
-                <Briefcase className="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform relative" />
+                View Open Positions
+                <Briefcase className="ml-3 h-6 w-6" />
               </a>
               
               <a
                 href="#application-form"
-                className="group inline-flex items-center px-10 py-5 bg-card/40 backdrop-blur-xl hover:bg-card/60 border border-border hover:border-primary/40 text-card-foreground font-semibold rounded-full transition-all duration-500 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                className="brand-button-outline"
               >
-                <Send className="mr-3 h-6 w-6" />
                 Apply Now
+                <Send className="ml-3 h-6 w-6" />
               </a>
             </div>
           </div>
         </div>
-        
-        {/* Enhanced scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-8 h-12 border-2 border-primary/40 rounded-full flex justify-center backdrop-blur-sm bg-card/20">
-            <div className="w-1.5 h-4 bg-professional-gradient rounded-full mt-2 animate-pulse" />
-          </div>
-        </div>
       </section>
 
-      {/* Enhanced Culture & Values */}
-      <section className="py-32 bg-gradient-to-b from-background to-card/20">
+      {/* Culture & Values */}
+      <section className="section-padding bg-card/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-24">
-            <h2 className="text-4xl md:text-6xl font-bold text-card-foreground mb-8 font-display">
+            <h2 className="heading-secondary text-foreground text-glow mb-8">
               Our Culture &{' '}
-              <span className="bg-professional-gradient bg-clip-text text-transparent drop-shadow-lg">
+              <span className="brand-gradient-text brand-glow">
                 Values
               </span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-muted-foreground text-glow max-w-4xl mx-auto leading-relaxed">
               At AdGrades, we've built a culture that fosters creativity, collaboration, and personal growth.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {cultureValues.map((value, index) => (
-              <GlareCard
+              <div
                 key={value.title}
-                className="group text-center p-10 bg-card/60 backdrop-blur-xl rounded-3xl border border-border/50 hover:border-primary/40 transition-all duration-700 transform hover:-translate-y-4 hover:scale-[1.03] hover:shadow-2xl hover:shadow-primary/15"
-                style={{ animationDelay: `${index * 100}ms` }}
+                className="group text-center p-10 minimal-card rounded-3xl hover:border-primary/40 transition-all duration-700 transform hover:-translate-y-4 hover:scale-[1.03]"
               >
                 <div className="w-20 h-20 bg-primary/20 rounded-3xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-xl">
                   <value.icon className="h-10 w-10 text-primary" />
                 </div>
-                <h3 className="text-2xl font-semibold text-card-foreground mb-6 group-hover:text-primary transition-colors duration-500">
+                <h3 className="text-2xl font-semibold text-foreground text-glow mb-6 group-hover:text-primary transition-colors duration-500">
                   {value.title}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed text-lg">
                   {value.description}
                 </p>
-              </GlareCard>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Enhanced Open Positions */}
-      <section id="open-positions" className="py-32 bg-gradient-to-r from-card/40 via-card/30 to-card/40 backdrop-blur-xl">
+      {/* Open Positions */}
+      <section id="open-positions" className="section-padding">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-24">
-            <h2 className="text-4xl md:text-6xl font-bold text-card-foreground mb-8 font-display">
+            <h2 className="heading-secondary text-foreground text-glow mb-8">
               Open{' '}
-              <span className="bg-professional-gradient bg-clip-text text-transparent drop-shadow-lg">
+              <span className="brand-gradient-text brand-glow">
                 Positions
               </span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-muted-foreground text-glow max-w-4xl mx-auto leading-relaxed">
               Explore exciting career opportunities and find the perfect role to grow your career with us.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             {openPositions.map((position, index) => (
-              <GlareCard
+              <div
                 key={position.title}
-                className="bg-card/60 backdrop-blur-xl rounded-3xl border border-border/50 hover:border-primary/40 shadow-xl hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-4 hover:scale-[1.02] overflow-hidden hover:shadow-primary/15"
+                className="minimal-card rounded-3xl hover:border-primary/40 shadow-xl hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-4 hover:scale-[1.02] overflow-hidden"
               >
                 <div className="p-10">
                   <div className="flex items-start justify-between mb-6">
                     <div>
-                      <h3 className="text-2xl font-bold text-card-foreground mb-3">
+                      <h3 className="text-2xl font-bold text-foreground text-glow mb-3">
                         {position.title}
                       </h3>
                       <div className="flex items-center space-x-6 text-sm text-muted-foreground">
@@ -310,41 +308,41 @@ const Careers: React.FC = () => {
                   </p>
 
                   <div className="mb-8">
-                    <h4 className="font-bold text-card-foreground mb-4 text-lg">
+                    <h4 className="font-bold text-foreground text-glow mb-4 text-lg">
                       Requirements:
                     </h4>
                     <ul className="space-y-3">
                       {position.requirements.map((req, reqIndex) => (
                         <li key={reqIndex} className="flex items-start text-muted-foreground">
-                          <CheckCircle className="h-5 w-5 text-success mr-3 mt-0.5 flex-shrink-0" />
+                          <CheckCircle className="h-5 w-5 text-secondary mr-3 mt-0.5 flex-shrink-0" />
                           {req}
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  <button className="w-full bg-professional-gradient text-white font-semibold py-4 px-8 rounded-2xl transition-all duration-500 transform hover:scale-105 shadow-xl hover:shadow-primary/30">
+                  <button className="w-full brand-gradient text-white font-semibold py-4 px-8 rounded-2xl transition-all duration-500 transform hover:scale-105 shadow-xl">
                     Apply Now
                   </button>
                 </div>
-              </GlareCard>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Enhanced Benefits */}
-      <section className="py-32 bg-gradient-to-b from-background to-card/20">
+      {/* Benefits */}
+      <section className="section-padding bg-card/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div>
-              <h2 className="text-4xl md:text-6xl font-bold text-card-foreground mb-10 font-display">
+              <h2 className="heading-secondary text-foreground text-glow mb-10">
                 Why Work at{' '}
-                <span className="bg-professional-gradient bg-clip-text text-transparent drop-shadow-lg">
+                <span className="brand-gradient-text brand-glow">
                   AdGrades?
                 </span>
               </h2>
-              <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
+              <p className="text-xl text-muted-foreground text-glow mb-12 leading-relaxed">
                 We believe in taking care of our team members and providing an environment 
                 where everyone can thrive both professionally and personally.
               </p>
@@ -352,7 +350,7 @@ const Careers: React.FC = () => {
               <div className="space-y-6">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start group">
-                    <CheckCircle className="h-6 w-6 text-success mr-4 mt-1 flex-shrink-0 group-hover:scale-110 transition-transform duration-500" />
+                    <CheckCircle className="h-6 w-6 text-secondary mr-4 mt-1 flex-shrink-0 group-hover:scale-110 transition-transform duration-500" />
                     <span className="text-muted-foreground leading-relaxed text-lg">{benefit}</span>
                   </div>
                 ))}
@@ -369,7 +367,7 @@ const Careers: React.FC = () => {
                 <div className="flex items-center space-x-4">
                   <Users className="h-10 w-10 text-primary" />
                   <div>
-                    <div className="font-bold text-card-foreground text-lg">15+ Team Members</div>
+                    <div className="font-bold text-foreground text-glow text-lg">15+ Team Members</div>
                     <div className="text-muted-foreground">And Growing!</div>
                   </div>
                 </div>
@@ -379,26 +377,26 @@ const Careers: React.FC = () => {
         </div>
       </section>
 
-      {/* Enhanced Application Form */}
-      <section id="application-form" className="py-32 bg-gradient-to-r from-card/40 via-card/30 to-card/40 backdrop-blur-xl">
+      {/* Application Form */}
+      <section id="application-form" className="section-padding">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-6xl font-bold text-card-foreground mb-6 font-display">
+            <h2 className="heading-secondary text-foreground text-glow mb-6">
               Join Our{' '}
-              <span className="bg-professional-gradient bg-clip-text text-transparent drop-shadow-lg">
+              <span className="brand-gradient-text brand-glow">
                 Team
               </span>
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl text-muted-foreground text-glow">
               Don't see the perfect role? Send us your information and we'll keep you in mind for future opportunities.
             </p>
           </div>
 
-          <GlareCard className="bg-card/60 backdrop-blur-xl rounded-3xl border border-border/50 p-10">
+          <div className="minimal-card rounded-3xl p-10">
             {isSubmitted ? (
               <div className="text-center py-16">
-                <CheckCircle className="h-20 w-20 text-success mx-auto mb-6" />
-                <h3 className="text-2xl font-semibold text-card-foreground mb-3">
+                <CheckCircle className="h-20 w-20 text-secondary mx-auto mb-6" />
+                <h3 className="text-2xl font-semibold text-foreground text-glow mb-3">
                   Application Submitted Successfully!
                 </h3>
                 <p className="text-muted-foreground text-lg">
@@ -409,7 +407,7 @@ const Careers: React.FC = () => {
               <form onSubmit={handleSubmit} className="space-y-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-semibold text-card-foreground mb-3">
+                    <label htmlFor="name" className="block text-sm font-semibold text-foreground text-glow mb-3">
                       Full Name *
                     </label>
                     <input
@@ -419,12 +417,12 @@ const Careers: React.FC = () => {
                       required
                       value={applicationData.name}
                       onChange={handleInputChange}
-                      className="w-full px-6 py-4 bg-muted/60 backdrop-blur-sm border border-border rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent text-card-foreground placeholder-muted-foreground transition-all duration-500"
+                      className="w-full px-6 py-4 bg-muted/60 backdrop-blur-sm border border-border rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent text-foreground placeholder-muted-foreground transition-all duration-500"
                       placeholder="John Doe"
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-semibold text-card-foreground mb-3">
+                    <label htmlFor="email" className="block text-sm font-semibold text-foreground text-glow mb-3">
                       Email Address *
                     </label>
                     <input
@@ -434,7 +432,7 @@ const Careers: React.FC = () => {
                       required
                       value={applicationData.email}
                       onChange={handleInputChange}
-                      className="w-full px-6 py-4 bg-muted/60 backdrop-blur-sm border border-border rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent text-card-foreground placeholder-muted-foreground transition-all duration-500"
+                      className="w-full px-6 py-4 bg-muted/60 backdrop-blur-sm border border-border rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent text-foreground placeholder-muted-foreground transition-all duration-500"
                       placeholder="john@example.com"
                     />
                   </div>
@@ -442,7 +440,7 @@ const Careers: React.FC = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-semibold text-card-foreground mb-3">
+                    <label htmlFor="phone" className="block text-sm font-semibold text-foreground text-glow mb-3">
                       Phone Number
                     </label>
                     <input
@@ -451,12 +449,12 @@ const Careers: React.FC = () => {
                       name="phone"
                       value={applicationData.phone}
                       onChange={handleInputChange}
-                      className="w-full px-6 py-4 bg-muted/60 backdrop-blur-sm border border-border rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent text-card-foreground placeholder-muted-foreground transition-all duration-500"
+                      className="w-full px-6 py-4 bg-muted/60 backdrop-blur-sm border border-border rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent text-foreground placeholder-muted-foreground transition-all duration-500"
                       placeholder="+91 98765 43210"
                     />
                   </div>
                   <div>
-                    <label htmlFor="position" className="block text-sm font-semibold text-card-foreground mb-3">
+                    <label htmlFor="position" className="block text-sm font-semibold text-foreground text-glow mb-3">
                       Position of Interest
                     </label>
                     <select
@@ -464,7 +462,7 @@ const Careers: React.FC = () => {
                       name="position"
                       value={applicationData.position}
                       onChange={handleInputChange}
-                      className="w-full px-6 py-4 bg-muted/60 backdrop-blur-sm border border-border rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent text-card-foreground transition-all duration-500"
+                      className="w-full px-6 py-4 bg-muted/60 backdrop-blur-sm border border-border rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent text-foreground transition-all duration-500"
                     >
                       <option value="">Select a position</option>
                       <option value="digital-marketing">Digital Marketing Specialist</option>
@@ -478,7 +476,7 @@ const Careers: React.FC = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
-                    <label htmlFor="experience" className="block text-sm font-semibold text-card-foreground mb-3">
+                    <label htmlFor="experience" className="block text-sm font-semibold text-foreground text-glow mb-3">
                       Years of Experience
                     </label>
                     <select
@@ -486,7 +484,7 @@ const Careers: React.FC = () => {
                       name="experience"
                       value={applicationData.experience}
                       onChange={handleInputChange}
-                      className="w-full px-6 py-4 bg-muted/60 backdrop-blur-sm border border-border rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent text-card-foreground transition-all duration-500"
+                      className="w-full px-6 py-4 bg-muted/60 backdrop-blur-sm border border-border rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent text-foreground transition-all duration-500"
                     >
                       <option value="">Select experience level</option>
                       <option value="0-1">0-1 years (Entry Level)</option>
@@ -496,7 +494,7 @@ const Careers: React.FC = () => {
                     </select>
                   </div>
                   <div>
-                    <label htmlFor="portfolio" className="block text-sm font-semibold text-card-foreground mb-3">
+                    <label htmlFor="portfolio" className="block text-sm font-semibold text-foreground text-glow mb-3">
                       Portfolio/LinkedIn URL
                     </label>
                     <input
@@ -505,14 +503,14 @@ const Careers: React.FC = () => {
                       name="portfolio"
                       value={applicationData.portfolio}
                       onChange={handleInputChange}
-                      className="w-full px-6 py-4 bg-muted/60 backdrop-blur-sm border border-border rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent text-card-foreground placeholder-muted-foreground transition-all duration-500"
+                      className="w-full px-6 py-4 bg-muted/60 backdrop-blur-sm border border-border rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent text-foreground placeholder-muted-foreground transition-all duration-500"
                       placeholder="https://linkedin.com/in/johndoe"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-semibold text-card-foreground mb-3">
+                  <label htmlFor="message" className="block text-sm font-semibold text-foreground text-glow mb-3">
                     Tell us about yourself *
                   </label>
                   <textarea
@@ -522,21 +520,21 @@ const Careers: React.FC = () => {
                     required
                     value={applicationData.message}
                     onChange={handleInputChange}
-                    className="w-full px-6 py-4 bg-muted/60 backdrop-blur-sm border border-border rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent text-card-foreground placeholder-muted-foreground resize-none transition-all duration-500"
+                    className="w-full px-6 py-4 bg-muted/60 backdrop-blur-sm border border-border rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent text-foreground placeholder-muted-foreground resize-none transition-all duration-500"
                     placeholder="Tell us about your experience, skills, and why you'd like to join AdGrades..."
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full flex items-center justify-center px-10 py-5 bg-professional-gradient text-white font-semibold rounded-2xl transition-all duration-500 transform hover:scale-105 shadow-xl hover:shadow-primary/30"
+                  className="w-full brand-button"
                 >
                   Submit Application
                   <Send className="ml-3 h-6 w-6" />
                 </button>
               </form>
             )}
-          </GlareCard>
+          </div>
         </div>
       </section>
     </div>

@@ -62,59 +62,67 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   return (
     <div className={`min-h-screen text-foreground transition-colors duration-300 font-sans overflow-x-hidden ${isDark ? 'dark' : 'light'}`}>
-      {/* Navigation */}
+      {/* Navigation - Fixed header expansion */}
       <nav className={`fixed w-full z-50 transition-all duration-500 ${
-        isScrolled ? 'py-2' : 'py-4'
+        isScrolled ? 'py-1' : 'py-4'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className={`nav-glass rounded-2xl px-6 py-4 transition-all duration-500 ${
-            isScrolled ? 'shadow-2xl' : 'shadow-xl'
+          <div className={`nav-glass rounded-2xl px-4 sm:px-6 transition-all duration-500 ${
+            isScrolled ? 'py-2 shadow-2xl backdrop-blur-3xl' : 'py-4 shadow-xl backdrop-blur-2xl'
           }`}>
-            <div className="flex justify-between items-center h-12">
+            <div className="flex justify-between items-center">
               {/* Logo */}
               <Link to="/" className="flex items-center space-x-3 group">
                 <img
                   src={isDark ? "/Asset 2.png" : "/Asset 1.png"}
                   alt="AdGrades Logo"
-                  className="h-8 sm:h-10 w-auto object-contain transition-all duration-300 group-hover:brightness-110"
+                  className={`w-auto object-contain transition-all duration-300 group-hover:brightness-110 ${
+                    isScrolled ? 'h-8' : 'h-10'
+                  }`}
                 />
               </Link>
 
               {/* Desktop Navigation */}
-              <div className="hidden lg:flex items-center space-x-8">
+              <div className="hidden lg:flex items-center space-x-1 xl:space-x-2">
                 {navItems.map((item) => (
                   <Link
                     key={item.name}
                     to={item.path}
-                    className={`font-medium transition-all duration-300 relative group px-3 py-2 rounded-lg flex items-center text-glow ${
+                    className={`font-medium transition-all duration-300 relative group px-3 py-2 rounded-lg flex items-center text-glow whitespace-nowrap ${
                       location.pathname === item.path
-                        ? 'text-primary'
-                        : 'text-foreground hover:text-primary'
+                        ? 'text-primary bg-primary/10'
+                        : 'text-foreground hover:text-primary hover:bg-primary/5'
                     } ${
                       item.isSpecial 
-                        ? 'text-secondary hover:text-primary' 
+                        ? 'text-secondary hover:text-primary bg-secondary/10 hover:bg-secondary/20' 
                         : ''
+                    } ${
+                      isScrolled ? 'text-sm' : 'text-base'
                     }`}
                   >
-                    {item.icon && <item.icon className="w-4 h-4 mr-2" />}
-                    {item.name}
+                    {item.icon && <item.icon className="w-4 h-4 mr-2 flex-shrink-0" />}
+                    <span className="truncate">{item.name}</span>
                   </Link>
                 ))}
               </div>
 
-              {/* Right side buttons - Fixed alignment */}
-              <div className="hidden lg:flex items-center space-x-4">
+              {/* Right side buttons - Fixed alignment and single line */}
+              <div className="hidden lg:flex items-center space-x-3">
                 <button
                   onClick={toggleTheme}
-                  className="p-2.5 rounded-lg text-muted-foreground hover:text-primary transition-all duration-300 flex items-center justify-center"
+                  className={`p-2 rounded-lg text-muted-foreground hover:text-primary transition-all duration-300 flex items-center justify-center flex-shrink-0 ${
+                    isScrolled ? 'w-8 h-8' : 'w-10 h-10'
+                  }`}
                   aria-label="Toggle dark mode"
                 >
-                  {isDark ? <Sun size={18} /> : <Moon size={18} />}
+                  {isDark ? <Sun size={isScrolled ? 16 : 18} /> : <Moon size={isScrolled ? 16 : 18} />}
                 </button>
                 
                 <Link 
                   to="/contact" 
-                  className="brand-button flex items-center justify-center"
+                  className={`brand-button flex items-center justify-center whitespace-nowrap flex-shrink-0 ${
+                    isScrolled ? 'px-4 py-2 text-sm' : 'px-6 py-3 text-base'
+                  }`}
                 >
                   Start a Project
                 </Link>

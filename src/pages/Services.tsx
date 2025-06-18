@@ -28,6 +28,8 @@ const Services: React.FC = () => {
         { icon: BarChart3, step: 'Performance Analysis', description: 'Track metrics and optimize campaigns' }
       ],
       success: 'Increased follower engagement by 400% for TechFlow in just 3 months',
+      gradient: 'from-blue-500 to-cyan-500',
+      iconBg: 'bg-gradient-to-br from-blue-500 to-cyan-500'
     },
     {
       icon: Palette,
@@ -39,6 +41,8 @@ const Services: React.FC = () => {
         { icon: BarChart3, step: 'Brand Implementation', description: 'Apply across all touchpoints' }
       ],
       success: 'Helped DesignStudio achieve 300% increase in brand recognition',
+      gradient: 'from-purple-500 to-pink-500',
+      iconBg: 'bg-gradient-to-br from-purple-500 to-pink-500'
     },
     {
       icon: Search,
@@ -50,6 +54,8 @@ const Services: React.FC = () => {
         { icon: BarChart3, step: 'Performance Tracking', description: 'Monitor rankings and organic traffic' }
       ],
       success: 'Achieved #1 rankings for 15+ keywords for local business client',
+      gradient: 'from-green-500 to-emerald-500',
+      iconBg: 'bg-gradient-to-br from-green-500 to-emerald-500'
     },
     {
       icon: Mail,
@@ -61,6 +67,8 @@ const Services: React.FC = () => {
         { icon: BarChart3, step: 'Automation Setup', description: 'Create automated drip sequences' }
       ],
       success: 'Generated $2M in revenue through email campaigns for e-commerce client',
+      gradient: 'from-orange-500 to-red-500',
+      iconBg: 'bg-gradient-to-br from-orange-500 to-red-500'
     },
     {
       icon: TrendingUp,
@@ -72,6 +80,8 @@ const Services: React.FC = () => {
         { icon: BarChart3, step: 'Optimization', description: 'Continuous testing and improvement' }
       ],
       success: 'Delivered 500% ROAS for GrowthCo\'s product launch campaign',
+      gradient: 'from-yellow-500 to-orange-500',
+      iconBg: 'bg-gradient-to-br from-yellow-500 to-orange-500'
     },
     {
       icon: Code,
@@ -83,6 +93,8 @@ const Services: React.FC = () => {
         { icon: BarChart3, step: 'Testing & Launch', description: 'Quality assurance and deployment' }
       ],
       success: 'Improved conversion rates by 250% with new website for SaaS client',
+      gradient: 'from-indigo-500 to-purple-500',
+      iconBg: 'bg-gradient-to-br from-indigo-500 to-purple-500'
     }
   ];
 
@@ -102,12 +114,20 @@ const Services: React.FC = () => {
               </span>
             </div>
             
-            <h1 className="heading-primary text-foreground text-glow mb-8 leading-tight">
-              Services That Drive{' '}
-              <span className="brand-gradient-text brand-glow">
-                Growth
-              </span>
-            </h1>
+            {/* Title with Logo */}
+            <div className="flex items-center justify-center mb-8">
+              <img
+                src="/Asset 2.png"
+                alt="AdGrades Logo"
+                className="h-12 sm:h-16 w-auto mr-4 sm:mr-6"
+              />
+              <h1 className="heading-primary text-foreground text-glow leading-tight">
+                Services That Drive{' '}
+                <span className="brand-gradient-text brand-glow">
+                  Growth
+                </span>
+              </h1>
+            </div>
             
             <p className="text-xl md:text-2xl text-muted-foreground text-glow mb-12 max-w-4xl mx-auto leading-relaxed">
               Our comprehensive marketing and design services are strategically designed to transform 
@@ -135,22 +155,24 @@ const Services: React.FC = () => {
         </div>
       </section>
 
-      {/* Services Sections */}
+      {/* Services Sections - Fixed alignment */}
       <section className="section-padding">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {services.map((service, index) => (
             <div
               key={service.title}
-              className={`mb-32 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}
+              className="mb-32"
             >
-              <div className={`grid grid-cols-1 lg:grid-cols-2 gap-20 items-center ${
-                index % 2 === 1 ? 'lg:text-right' : ''
+              <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center ${
+                index % 2 === 1 ? 'lg:flex-row-reverse' : ''
               }`}>
-                {/* Content */}
-                <div className={`${index % 2 === 1 ? 'lg:order-2' : ''}`}>
-                  <div className="flex items-center mb-10">
-                    <div className="w-20 h-20 rounded-3xl brand-gradient flex items-center justify-center mr-6 shadow-xl">
-                      <service.icon className="h-10 w-10 text-[#0B1120]" />
+                {/* Content - Consistent alignment */}
+                <div className={`${index % 2 === 1 ? 'lg:order-2 lg:text-right' : 'lg:order-1'}`}>
+                  <div className={`flex items-center mb-10 ${index % 2 === 1 ? 'lg:justify-end' : ''}`}>
+                    <div className={`w-20 h-20 rounded-3xl ${service.iconBg} flex items-center justify-center shadow-xl ${
+                      index % 2 === 1 ? 'lg:order-2 lg:ml-6 mr-0' : 'mr-6'
+                    }`}>
+                      <service.icon className="h-10 w-10 text-white" />
                     </div>
                     <h2 className="text-3xl md:text-5xl font-bold text-foreground text-glow">
                       {service.title}
@@ -161,16 +183,20 @@ const Services: React.FC = () => {
                     {service.description}
                   </p>
 
-                  {/* Process */}
+                  {/* Process - Consistent alignment */}
                   <div className="mb-12">
                     <h3 className="text-2xl font-semibold text-foreground text-glow mb-8">
                       Our 3-Step Process
                     </h3>
                     <div className="space-y-8">
                       {service.process.map((step, stepIndex) => (
-                        <div key={stepIndex} className="flex items-start group">
-                          <div className="w-16 h-16 rounded-2xl brand-gradient flex items-center justify-center mr-6 flex-shrink-0 shadow-xl">
-                            <step.icon className="h-8 w-8 text-[#0B1120]" />
+                        <div key={stepIndex} className={`flex items-start group ${
+                          index % 2 === 1 ? 'lg:flex-row-reverse lg:text-right' : ''
+                        }`}>
+                          <div className={`w-16 h-16 rounded-2xl ${service.iconBg} flex items-center justify-center flex-shrink-0 shadow-xl ${
+                            index % 2 === 1 ? 'lg:ml-6 mr-0' : 'mr-6'
+                          }`}>
+                            <step.icon className="h-8 w-8 text-white" />
                           </div>
                           <div>
                             <h4 className="font-bold text-foreground text-glow mb-3 text-lg">
@@ -187,8 +213,10 @@ const Services: React.FC = () => {
 
                   {/* Success Story */}
                   <div className="minimal-card p-8 mb-12">
-                    <div className="flex items-start">
-                      <CheckCircle className="h-8 w-8 text-secondary mr-4 flex-shrink-0 mt-1" />
+                    <div className={`flex items-start ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
+                      <CheckCircle className={`h-8 w-8 text-secondary flex-shrink-0 mt-1 ${
+                        index % 2 === 1 ? 'lg:ml-4 mr-0' : 'mr-4'
+                      }`} />
                       <div>
                         <h4 className="font-bold text-foreground text-glow mb-3 text-lg">
                           Client Success
@@ -200,20 +228,22 @@ const Services: React.FC = () => {
                     </div>
                   </div>
 
-                  <Link
-                    to="/contact"
-                    className="brand-button"
-                  >
-                    Let's Talk
-                    <ArrowRight className="ml-3 h-6 w-6" />
-                  </Link>
+                  <div className={index % 2 === 1 ? 'lg:text-right' : ''}>
+                    <Link
+                      to="/contact"
+                      className="brand-button inline-flex"
+                    >
+                      Let's Talk
+                      <ArrowRight className="ml-3 h-6 w-6" />
+                    </Link>
+                  </div>
                 </div>
 
-                {/* Visual */}
-                <div className={`${index % 2 === 1 ? 'lg:order-1' : ''}`}>
+                {/* Visual - Consistent positioning */}
+                <div className={`${index % 2 === 1 ? 'lg:order-1' : 'lg:order-2'}`}>
                   <div className="relative group">
-                    <div className="w-full h-[500px] brand-gradient rounded-3xl shadow-2xl flex items-center justify-center transition-all duration-700 group-hover:shadow-3xl group-hover:scale-105">
-                      <service.icon className="h-32 w-32 text-[#0B1120]/30" />
+                    <div className={`w-full h-[500px] bg-gradient-to-br ${service.gradient} rounded-3xl shadow-2xl flex items-center justify-center transition-all duration-700 group-hover:shadow-3xl group-hover:scale-105`}>
+                      <service.icon className="h-32 w-32 text-white/30" />
                     </div>
                     <div className="absolute -bottom-8 -right-8 bg-card/80 backdrop-blur-xl p-8 rounded-3xl shadow-2xl border border-border">
                       <div className="text-3xl font-bold text-foreground text-glow">

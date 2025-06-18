@@ -14,7 +14,6 @@ import {
   Zap
 } from 'lucide-react';
 import DynamicBackground from '../components/DynamicBackground';
-import GlareCard from '../components/GlareCard';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -60,7 +59,7 @@ const Contact: React.FC = () => {
       description: 'Quick responses for urgent inquiries',
       action: 'Message us',
       link: 'https://wa.me/919686314869',
-      color: 'from-success to-green-600'
+      color: 'from-green-500 to-green-600'
     },
     {
       icon: Instagram,
@@ -76,7 +75,7 @@ const Contact: React.FC = () => {
       description: 'Professional networking and insights',
       action: 'Connect with us',
       link: 'https://www.linkedin.com/company/ad-grades',
-      color: 'from-primary to-blue-700'
+      color: 'from-blue-500 to-blue-700'
     }
   ];
 
@@ -132,28 +131,36 @@ const Contact: React.FC = () => {
 
   return (
     <div className="pt-16">
-      {/* Hero Section with Dynamic Background */}
+      {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <DynamicBackground variant="contact" />
         
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in">
-            {/* Enhanced Badge */}
-            <div className="inline-flex items-center px-8 py-4 bg-card/30 backdrop-blur-xl border border-primary/30 rounded-full text-primary text-sm font-medium mb-8 hover:bg-card/40 transition-all duration-500 shadow-lg hover:shadow-primary/20 hover:scale-105">
+            {/* Badge */}
+            <div className="page-badge">
               <Zap className="w-5 h-5 mr-3 animate-pulse" />
-              <span className="bg-professional-gradient bg-clip-text text-transparent font-semibold">
+              <span className="brand-gradient-text font-semibold">
                 Let's Start Something Amazing
               </span>
             </div>
             
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-card-foreground mb-8 leading-tight tracking-tight font-display">
-              Let's Chat About Your{' '}
-              <span className="bg-professional-gradient bg-clip-text text-transparent drop-shadow-2xl">
-                Next Project
-              </span>
-            </h1>
+            {/* Title with Logo */}
+            <div className="flex items-center justify-center mb-8">
+              <img
+                src="/Asset 2.png"
+                alt="AdGrades Logo"
+                className="h-12 sm:h-16 w-auto mr-4 sm:mr-6"
+              />
+              <h1 className="heading-primary text-foreground text-glow leading-tight">
+                Let's Chat About Your{' '}
+                <span className="brand-gradient-text brand-glow">
+                  Next Project
+                </span>
+              </h1>
+            </div>
             
-            <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-muted-foreground text-glow mb-12 max-w-4xl mx-auto leading-relaxed">
               Ready to transform your business? We'd love to hear about your goals and 
               discuss how AdGrades can help you achieve remarkable growth.
             </p>
@@ -161,48 +168,40 @@ const Contact: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <a
                 href="#contact-form"
-                className="group inline-flex items-center px-10 py-5 bg-professional-gradient text-white font-semibold rounded-full transition-all duration-500 transform hover:scale-110 hover:shadow-2xl hover:shadow-primary/30 shadow-xl relative overflow-hidden"
+                className="brand-button"
               >
-                <div className="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
-                <span className="relative">Send Message</span>
-                <Send className="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform relative" />
+                Send Message
+                <Send className="ml-3 h-6 w-6" />
               </a>
               
               <a
                 href="https://wa.me/919686314869"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center px-10 py-5 bg-card/40 backdrop-blur-xl hover:bg-card/60 border border-border hover:border-primary/40 text-card-foreground font-semibold rounded-full transition-all duration-500 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                className="brand-button-outline"
               >
-                <MessageCircle className="mr-3 h-6 w-6" />
                 WhatsApp Us
+                <MessageCircle className="ml-3 h-6 w-6" />
               </a>
             </div>
           </div>
         </div>
-        
-        {/* Enhanced scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-8 h-12 border-2 border-primary/40 rounded-full flex justify-center backdrop-blur-sm bg-card/20">
-            <div className="w-1.5 h-4 bg-professional-gradient rounded-full mt-2 animate-pulse" />
-          </div>
-        </div>
       </section>
 
-      {/* Enhanced Contact Form and Info */}
-      <section id="contact-form" className="py-32 bg-gradient-to-b from-background to-card/20">
+      {/* Contact Form and Info */}
+      <section id="contact-form" className="section-padding">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
-            {/* Enhanced Contact Form */}
-            <GlareCard className="bg-card/60 backdrop-blur-xl p-10 rounded-3xl border border-border/50">
-              <h2 className="text-4xl font-bold text-card-foreground mb-10 font-display">
+            {/* Contact Form */}
+            <div className="minimal-card p-10 rounded-3xl">
+              <h2 className="text-4xl font-bold text-foreground text-glow mb-10">
                 Send us a Message
               </h2>
               
               {isSubmitted ? (
                 <div className="text-center py-16">
-                  <CheckCircle className="h-20 w-20 text-success mx-auto mb-6" />
-                  <h3 className="text-2xl font-semibold text-card-foreground mb-3">
+                  <CheckCircle className="h-20 w-20 text-secondary mx-auto mb-6" />
+                  <h3 className="text-2xl font-semibold text-foreground text-glow mb-3">
                     Message Sent Successfully!
                   </h3>
                   <p className="text-muted-foreground text-lg">
@@ -213,7 +212,7 @@ const Contact: React.FC = () => {
                 <form onSubmit={handleSubmit} className="space-y-8">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-semibold text-card-foreground mb-3">
+                      <label htmlFor="name" className="block text-sm font-semibold text-foreground text-glow mb-3">
                         Full Name *
                       </label>
                       <input
@@ -223,12 +222,12 @@ const Contact: React.FC = () => {
                         required
                         value={formData.name}
                         onChange={handleInputChange}
-                        className="w-full px-6 py-4 bg-muted/60 backdrop-blur-sm border border-border rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent text-card-foreground placeholder-muted-foreground transition-all duration-500"
+                        className="w-full px-6 py-4 bg-muted/60 backdrop-blur-sm border border-border rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent text-foreground placeholder-muted-foreground transition-all duration-500"
                         placeholder="John Doe"
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-sm font-semibold text-card-foreground mb-3">
+                      <label htmlFor="email" className="block text-sm font-semibold text-foreground text-glow mb-3">
                         Email Address *
                       </label>
                       <input
@@ -238,14 +237,14 @@ const Contact: React.FC = () => {
                         required
                         value={formData.email}
                         onChange={handleInputChange}
-                        className="w-full px-6 py-4 bg-muted/60 backdrop-blur-sm border border-border rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent text-card-foreground placeholder-muted-foreground transition-all duration-500"
+                        className="w-full px-6 py-4 bg-muted/60 backdrop-blur-sm border border-border rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent text-foreground placeholder-muted-foreground transition-all duration-500"
                         placeholder="john@example.com"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label htmlFor="company" className="block text-sm font-semibold text-card-foreground mb-3">
+                    <label htmlFor="company" className="block text-sm font-semibold text-foreground text-glow mb-3">
                       Company Name
                     </label>
                     <input
@@ -254,14 +253,14 @@ const Contact: React.FC = () => {
                       name="company"
                       value={formData.company}
                       onChange={handleInputChange}
-                      className="w-full px-6 py-4 bg-muted/60 backdrop-blur-sm border border-border rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent text-card-foreground placeholder-muted-foreground transition-all duration-500"
+                      className="w-full px-6 py-4 bg-muted/60 backdrop-blur-sm border border-border rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent text-foreground placeholder-muted-foreground transition-all duration-500"
                       placeholder="Your Company"
                     />
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
-                      <label htmlFor="service" className="block text-sm font-semibold text-card-foreground mb-3">
+                      <label htmlFor="service" className="block text-sm font-semibold text-foreground text-glow mb-3">
                         Service Interested In
                       </label>
                       <select
@@ -269,7 +268,7 @@ const Contact: React.FC = () => {
                         name="service"
                         value={formData.service}
                         onChange={handleInputChange}
-                        className="w-full px-6 py-4 bg-muted/60 backdrop-blur-sm border border-border rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent text-card-foreground transition-all duration-500"
+                        className="w-full px-6 py-4 bg-muted/60 backdrop-blur-sm border border-border rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent text-foreground transition-all duration-500"
                       >
                         <option value="">Select a service</option>
                         <option value="social-media">Social Media Marketing</option>
@@ -282,7 +281,7 @@ const Contact: React.FC = () => {
                       </select>
                     </div>
                     <div>
-                      <label htmlFor="budget" className="block text-sm font-semibold text-card-foreground mb-3">
+                      <label htmlFor="budget" className="block text-sm font-semibold text-foreground text-glow mb-3">
                         Project Budget
                       </label>
                       <select
@@ -290,7 +289,7 @@ const Contact: React.FC = () => {
                         name="budget"
                         value={formData.budget}
                         onChange={handleInputChange}
-                        className="w-full px-6 py-4 bg-muted/60 backdrop-blur-sm border border-border rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent text-card-foreground transition-all duration-500"
+                        className="w-full px-6 py-4 bg-muted/60 backdrop-blur-sm border border-border rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent text-foreground transition-all duration-500"
                       >
                         <option value="">Select budget range</option>
                         <option value="5k-10k">₹50K - ₹1L</option>
@@ -303,7 +302,7 @@ const Contact: React.FC = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-semibold text-card-foreground mb-3">
+                    <label htmlFor="message" className="block text-sm font-semibold text-foreground text-glow mb-3">
                       Project Details *
                     </label>
                     <textarea
@@ -313,26 +312,26 @@ const Contact: React.FC = () => {
                       required
                       value={formData.message}
                       onChange={handleInputChange}
-                      className="w-full px-6 py-4 bg-muted/60 backdrop-blur-sm border border-border rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent text-card-foreground placeholder-muted-foreground resize-none transition-all duration-500"
+                      className="w-full px-6 py-4 bg-muted/60 backdrop-blur-sm border border-border rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent text-foreground placeholder-muted-foreground resize-none transition-all duration-500"
                       placeholder="Tell us about your project goals, timeline, and any specific requirements..."
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full flex items-center justify-center px-10 py-5 bg-professional-gradient text-white font-semibold rounded-2xl transition-all duration-500 transform hover:scale-105 shadow-xl hover:shadow-primary/30"
+                    className="w-full brand-button"
                   >
                     Send Message
                     <Send className="ml-3 h-6 w-6" />
                   </button>
                 </form>
               )}
-            </GlareCard>
+            </div>
 
-            {/* Enhanced Contact Information */}
+            {/* Contact Information */}
             <div className="space-y-10">
               <div>
-                <h2 className="text-4xl font-bold text-card-foreground mb-10 font-display">
+                <h2 className="text-4xl font-bold text-foreground text-glow mb-10">
                   Get in Touch
                 </h2>
                 <div className="space-y-8">
@@ -342,7 +341,7 @@ const Contact: React.FC = () => {
                         <info.icon className="h-8 w-8 text-primary" />
                       </div>
                       <div>
-                        <h3 className="font-bold text-card-foreground mb-3 text-lg">
+                        <h3 className="font-bold text-foreground text-glow mb-3 text-lg">
                           {info.title}
                         </h3>
                         {info.details.map((detail, detailIndex) => (
@@ -356,36 +355,35 @@ const Contact: React.FC = () => {
                 </div>
               </div>
 
-              {/* Enhanced Direct Contact Methods */}
+              {/* Direct Contact Methods */}
               <div>
-                <h3 className="text-2xl font-semibold text-card-foreground mb-8">
+                <h3 className="text-2xl font-semibold text-foreground text-glow mb-8">
                   Connect with Us
                 </h3>
                 <div className="grid grid-cols-1 gap-6">
                   {contactMethods.map((method, index) => (
-                    <GlareCard key={method.title}>
-                      <a
-                        href={method.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group flex items-center p-6 bg-card/60 backdrop-blur-xl rounded-2xl border border-border/50 hover:border-primary/40 hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2"
-                      >
-                        <div className={`w-16 h-16 bg-gradient-to-br ${method.color} rounded-2xl flex items-center justify-center mr-6 shadow-xl group-hover:shadow-2xl transition-all duration-500 group-hover:scale-110`}>
-                          <method.icon className="h-8 w-8 text-white" />
-                        </div>
-                        <div className="flex-1">
-                          <h4 className="font-bold text-card-foreground text-lg">
-                            {method.title}
-                          </h4>
-                          <p className="text-muted-foreground">
-                            {method.description}
-                          </p>
-                        </div>
-                        <span className="text-primary font-semibold group-hover:text-primary/80">
-                          {method.action} →
-                        </span>
-                      </a>
-                    </GlareCard>
+                    <a
+                      key={method.title}
+                      href={method.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex items-center p-6 minimal-card rounded-2xl hover:border-primary/40 transition-all duration-500 transform hover:-translate-y-2"
+                    >
+                      <div className={`w-16 h-16 bg-gradient-to-br ${method.color} rounded-2xl flex items-center justify-center mr-6 shadow-xl group-hover:shadow-2xl transition-all duration-500 group-hover:scale-110`}>
+                        <method.icon className="h-8 w-8 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="font-bold text-foreground text-glow text-lg">
+                          {method.title}
+                        </h4>
+                        <p className="text-muted-foreground">
+                          {method.description}
+                        </p>
+                      </div>
+                      <span className="text-primary font-semibold group-hover:text-primary/80">
+                        {method.action} →
+                      </span>
+                    </a>
                   ))}
                 </div>
               </div>
@@ -394,32 +392,32 @@ const Contact: React.FC = () => {
         </div>
       </section>
 
-      {/* Enhanced FAQs Section */}
-      <section className="py-32 bg-gradient-to-r from-card/40 via-card/30 to-card/40 backdrop-blur-xl">
+      {/* FAQs Section */}
+      <section className="section-padding bg-card/20">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-6xl font-bold text-card-foreground mb-6 font-display">
+            <h2 className="heading-secondary text-foreground text-glow mb-6">
               Frequently Asked{' '}
-              <span className="bg-professional-gradient bg-clip-text text-transparent drop-shadow-lg">
+              <span className="brand-gradient-text brand-glow">
                 Questions
               </span>
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl text-muted-foreground text-glow">
               Get answers to common questions about our services and process.
             </p>
           </div>
           
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <GlareCard
+              <div
                 key={index}
-                className="bg-card/60 backdrop-blur-xl rounded-2xl overflow-hidden border border-border/50"
+                className="minimal-card rounded-2xl overflow-hidden"
               >
                 <button
                   onClick={() => toggleFaq(index)}
                   className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-card/40 transition-colors duration-300"
                 >
-                  <h3 className="text-xl font-semibold text-card-foreground pr-6">
+                  <h3 className="text-xl font-semibold text-foreground text-glow pr-6">
                     {faq.question}
                   </h3>
                   {openFaq === index ? (
@@ -435,28 +433,28 @@ const Contact: React.FC = () => {
                     </p>
                   </div>
                 )}
-              </GlareCard>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Enhanced Map Section */}
-      <section className="py-32 bg-gradient-to-b from-background to-card/20">
+      {/* Map Section */}
+      <section className="section-padding">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-6xl font-bold text-card-foreground mb-6 font-display">
+            <h2 className="heading-secondary text-foreground text-glow mb-6">
               Visit Our{' '}
-              <span className="bg-professional-gradient bg-clip-text text-transparent drop-shadow-lg">
+              <span className="brand-gradient-text brand-glow">
                 Office
               </span>
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl text-muted-foreground text-glow">
               Located in Hassan, Karnataka, we're always ready for a coffee chat.
             </p>
           </div>
           
-          <GlareCard className="bg-card/60 backdrop-blur-xl rounded-3xl overflow-hidden border border-border/50">
+          <div className="minimal-card rounded-3xl overflow-hidden">
             <div className="h-[500px]">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.983962!2d76.107463!3d12.983962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU5JzAyLjMiTiA3NsKwMDYnMjYuOSJF!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
@@ -470,7 +468,7 @@ const Contact: React.FC = () => {
                 className="rounded-3xl"
               />
             </div>
-          </GlareCard>
+          </div>
         </div>
       </section>
     </div>

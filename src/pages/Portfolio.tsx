@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { ExternalLink, ArrowRight, Filter, Zap } from 'lucide-react';
 import DynamicBackground from '../components/DynamicBackground';
-import GlareCard from '../components/GlareCard';
 
 const Portfolio: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -203,49 +202,50 @@ const Portfolio: React.FC = () => {
 
   return (
     <div className="pt-16">
-      {/* Hero Section with Dynamic Background */}
+      {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <DynamicBackground variant="portfolio" />
         
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in">
-            {/* Enhanced Badge */}
-            <div className="inline-flex items-center px-8 py-4 bg-card/30 backdrop-blur-xl border border-primary/30 rounded-full text-primary text-sm font-medium mb-8 hover:bg-card/40 transition-all duration-500 shadow-lg hover:shadow-primary/20 hover:scale-105">
+            {/* Badge */}
+            <div className="page-badge">
               <Zap className="w-5 h-5 mr-3 animate-pulse" />
-              <span className="bg-professional-gradient bg-clip-text text-transparent font-semibold">
+              <span className="brand-gradient-text font-semibold">
                 Our Success Stories
               </span>
             </div>
             
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-card-foreground mb-8 leading-tight tracking-tight font-display">
-              Client{' '}
-              <span className="bg-professional-gradient bg-clip-text text-transparent drop-shadow-2xl">
-                Success Stories
-              </span>
-            </h1>
+            {/* Title with Logo */}
+            <div className="flex items-center justify-center mb-8">
+              <img
+                src="/Asset 2.png"
+                alt="AdGrades Logo"
+                className="h-12 sm:h-16 w-auto mr-4 sm:mr-6"
+              />
+              <h1 className="heading-primary text-foreground text-glow leading-tight">
+                Client{' '}
+                <span className="brand-gradient-text brand-glow">
+                  Success Stories
+                </span>
+              </h1>
+            </div>
             
-            <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-muted-foreground text-glow mb-12 max-w-4xl mx-auto leading-relaxed">
               Explore how we've helped businesses across industries achieve remarkable growth 
               through strategic marketing, stunning design, and innovative technology solutions.
             </p>
           </div>
         </div>
-        
-        {/* Enhanced scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-8 h-12 border-2 border-primary/40 rounded-full flex justify-center backdrop-blur-sm bg-card/20">
-            <div className="w-1.5 h-4 bg-professional-gradient rounded-full mt-2 animate-pulse" />
-          </div>
-        </div>
       </section>
 
-      {/* Enhanced Filter Bar */}
+      {/* Filter Bar */}
       <section className="py-8 bg-card/40 backdrop-blur-2xl sticky top-16 z-40 border-b border-border/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <Filter className="h-6 w-6 text-muted-foreground" />
-              <span className="text-card-foreground font-semibold text-lg">Filter by:</span>
+              <span className="text-foreground font-semibold text-lg text-glow">Filter by:</span>
             </div>
             <div className="flex flex-wrap gap-4">
               {categories.map((category) => (
@@ -254,7 +254,7 @@ const Portfolio: React.FC = () => {
                   onClick={() => setActiveFilter(category)}
                   className={`px-8 py-3 rounded-full font-semibold transition-all duration-500 ${
                     activeFilter === category
-                      ? 'bg-professional-gradient text-white shadow-xl transform scale-110'
+                      ? 'brand-gradient text-white shadow-xl transform scale-110'
                       : 'bg-card/60 text-muted-foreground hover:bg-primary/10 hover:text-primary hover:scale-105 border border-border/50 backdrop-blur-sm'
                   }`}
                 >
@@ -266,28 +266,28 @@ const Portfolio: React.FC = () => {
         </div>
       </section>
 
-      {/* Enhanced Our Clients Section */}
-      <section className="py-32 bg-gradient-to-b from-background to-card/20">
+      {/* Our Clients Section */}
+      <section className="section-padding bg-card/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-24">
-            <h2 className="text-4xl md:text-6xl font-bold text-card-foreground mb-8 font-display">
+            <h2 className="heading-secondary text-foreground text-glow mb-8">
               Our Trusted{' '}
-              <span className="bg-professional-gradient bg-clip-text text-transparent drop-shadow-lg">
+              <span className="brand-gradient-text brand-glow">
                 Clients
               </span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-muted-foreground text-glow max-w-4xl mx-auto leading-relaxed">
               We're proud to work with amazing brands across various industries.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-32">
             {filteredClients.map((client, index) => (
-              <GlareCard
+              <div
                 key={client.name}
-                className="group bg-card/60 backdrop-blur-xl rounded-3xl overflow-hidden border border-border/50 hover:border-primary/40 shadow-xl hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-4 hover:scale-[1.03] hover:shadow-primary/15"
+                className="group minimal-card rounded-3xl overflow-hidden hover:border-primary/40 shadow-xl hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-4 hover:scale-[1.03]"
               >
-                {/* Enhanced Image container with overlay */}
+                {/* Image container with overlay */}
                 <div className="relative overflow-hidden">
                   <img
                     src={client.image}
@@ -295,17 +295,17 @@ const Portfolio: React.FC = () => {
                     className="w-full h-56 object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   
-                  {/* Enhanced Gradient overlay */}
+                  {/* Gradient overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                   
-                  {/* Enhanced Category badge */}
+                  {/* Category badge */}
                   <div className="absolute top-6 left-6 transform -translate-y-3 group-hover:translate-y-0 transition-transform duration-500">
                     <span className="bg-primary/90 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold shadow-xl">
                       {client.category}
                     </span>
                   </div>
                   
-                  {/* Enhanced Hover action button */}
+                  {/* Hover action button */}
                   <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transform translate-y-3 group-hover:translate-y-0 transition-all duration-500">
                     <button className="bg-white/90 hover:bg-white text-gray-900 p-3 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110">
                       <ExternalLink className="h-5 w-5" />
@@ -313,16 +313,16 @@ const Portfolio: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Enhanced Content */}
+                {/* Content */}
                 <div className="p-8">
-                  <h3 className="text-2xl font-bold text-card-foreground mb-3 group-hover:text-primary transition-colors duration-500">
+                  <h3 className="text-2xl font-bold text-foreground text-glow mb-3 group-hover:text-primary transition-colors duration-500">
                     {client.name}
                   </h3>
                   <p className="text-muted-foreground mb-6 leading-relaxed text-lg">
                     {client.description}
                   </p>
                   
-                  {/* Enhanced Tags */}
+                  {/* Tags */}
                   {client.tags.length > 0 && (
                     <div className="flex flex-wrap gap-3">
                       {client.tags.map((tag, index) => (
@@ -336,38 +336,34 @@ const Portfolio: React.FC = () => {
                     </div>
                   )}
                 </div>
-                
-                {/* Enhanced border glow on hover */}
-                <div className="absolute inset-0 rounded-3xl border-2 border-primary/0 group-hover:border-primary/30 transition-colors duration-700 pointer-events-none" />
-              </GlareCard>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Enhanced Case Studies Section */}
-      <section className="py-32 bg-gradient-to-r from-card/40 via-card/30 to-card/40 backdrop-blur-xl">
+      {/* Case Studies Section */}
+      <section className="section-padding">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-24">
-            <h2 className="text-4xl md:text-6xl font-bold text-card-foreground mb-8 font-display">
+            <h2 className="heading-secondary text-foreground text-glow mb-8">
               Detailed{' '}
-              <span className="bg-professional-gradient bg-clip-text text-transparent drop-shadow-lg">
+              <span className="brand-gradient-text brand-glow">
                 Case Studies
               </span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-muted-foreground text-glow max-w-4xl mx-auto leading-relaxed">
               Deep dive into our most successful projects and the strategies that drove results.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {filteredProjects.map((project, index) => (
-              <GlareCard
+              <div
                 key={project.id}
-                className="group bg-card/60 backdrop-blur-xl rounded-3xl overflow-hidden border border-border/50 hover:border-primary/40 shadow-xl hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-4 hover:scale-[1.03] hover:shadow-primary/15"
-                style={{ animationDelay: `${index * 100}ms` }}
+                className="group minimal-card rounded-3xl overflow-hidden hover:border-primary/40 shadow-xl hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-4 hover:scale-[1.03]"
               >
-                {/* Enhanced Project Image */}
+                {/* Project Image */}
                 <div className="relative overflow-hidden">
                   <img
                     src={project.image}
@@ -387,11 +383,11 @@ const Portfolio: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Enhanced Project Details */}
+                {/* Project Details */}
                 <div className="p-10">
                   <div className="flex items-start justify-between mb-8">
                     <div>
-                      <h3 className="text-2xl font-bold text-card-foreground mb-3 group-hover:text-primary transition-colors duration-500">
+                      <h3 className="text-2xl font-bold text-foreground text-glow mb-3 group-hover:text-primary transition-colors duration-500">
                         {project.title}
                       </h3>
                       <p className="text-primary font-semibold text-lg">
@@ -400,10 +396,10 @@ const Portfolio: React.FC = () => {
                     </div>
                   </div>
 
-                  {/* Enhanced Project Details */}
+                  {/* Project Details */}
                   <div className="space-y-6 mb-8">
                     <div>
-                      <h4 className="font-bold text-card-foreground text-sm mb-2">
+                      <h4 className="font-bold text-foreground text-glow text-sm mb-2">
                         Challenge
                       </h4>
                       <p className="text-muted-foreground leading-relaxed">
@@ -411,24 +407,24 @@ const Portfolio: React.FC = () => {
                       </p>
                     </div>
                     <div>
-                      <h4 className="font-bold text-card-foreground text-sm mb-2">
+                      <h4 className="font-bold text-foreground text-glow text-sm mb-2">
                         Solution
                       </h4>
                       <p className="text-muted-foreground leading-relaxed">
                         {project.solution}
                       </p>
                     </div>
-                    <div className="bg-success/10 p-6 rounded-2xl border border-success/20 backdrop-blur-sm">
-                      <h4 className="font-bold text-success text-sm mb-2">
+                    <div className="bg-secondary/10 p-6 rounded-2xl border border-secondary/20 backdrop-blur-sm">
+                      <h4 className="font-bold text-secondary text-sm mb-2">
                         Result
                       </h4>
-                      <p className="text-success/90 leading-relaxed">
+                      <p className="text-secondary/90 leading-relaxed">
                         {project.result}
                       </p>
                     </div>
                   </div>
 
-                  {/* Enhanced Tags */}
+                  {/* Tags */}
                   <div className="flex flex-wrap gap-3 mb-8">
                     {project.tags.map((tag) => (
                       <span
@@ -440,22 +436,19 @@ const Portfolio: React.FC = () => {
                     ))}
                   </div>
 
-                  {/* Enhanced View Project Button */}
-                  <button className="w-full flex items-center justify-center px-8 py-4 bg-professional-gradient text-white font-semibold rounded-2xl transition-all duration-500 transform hover:scale-105 shadow-xl hover:shadow-primary/30">
+                  {/* View Project Button */}
+                  <button className="w-full flex items-center justify-center px-8 py-4 brand-gradient text-white font-semibold rounded-2xl transition-all duration-500 transform hover:scale-105 shadow-xl">
                     View Full Case Study
                     <ArrowRight className="ml-3 h-5 w-5" />
                   </button>
                 </div>
-                
-                {/* Enhanced border glow on hover */}
-                <div className="absolute inset-0 rounded-3xl border-2 border-primary/0 group-hover:border-primary/30 transition-colors duration-700 pointer-events-none" />
-              </GlareCard>
+              </div>
             ))}
           </div>
 
           {filteredProjects.length === 0 && filteredClients.length === 0 && (
             <div className="text-center py-20">
-              <p className="text-2xl text-muted-foreground">
+              <p className="text-2xl text-muted-foreground text-glow">
                 No projects found for the selected category.
               </p>
             </div>
@@ -463,21 +456,19 @@ const Portfolio: React.FC = () => {
         </div>
       </section>
 
-      {/* Enhanced CTA Section */}
-      <section className="py-32 bg-professional-gradient text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-black/20" />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-transparent to-secondary/20" />
+      {/* CTA Section */}
+      <section className="section-padding brand-gradient">
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-6xl font-bold mb-10 font-display drop-shadow-lg">
+          <h2 className="heading-secondary text-[#0B1120] mb-10">
             Ready to Be Our Next Success Story?
           </h2>
-          <p className="text-xl mb-16 opacity-95 leading-relaxed max-w-4xl mx-auto">
+          <p className="text-xl text-[#0B1120]/80 mb-16 leading-relaxed max-w-4xl mx-auto">
             Let's discuss how we can achieve similar results for your business. 
             Every great project starts with a conversation.
           </p>
           <a
             href="/contact"
-            className="inline-flex items-center px-12 py-6 bg-white text-primary font-bold rounded-full hover:bg-gray-100 transition-all duration-500 transform hover:scale-110 shadow-2xl hover:shadow-3xl text-lg"
+            className="inline-flex items-center px-12 py-6 bg-[#0B1120] text-foreground font-bold rounded-lg hover:bg-[#0F172A] transition-all duration-500 transform hover:scale-110 shadow-2xl text-lg"
           >
             Start Your Project
             <ArrowRight className="ml-3 h-6 w-6" />
