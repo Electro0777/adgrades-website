@@ -20,8 +20,7 @@ const getClientLogo = (name: string): string => {
     'Nataraj Dance Studios': 'https://images.pexels.com/photos/3621104/pexels-photo-3621104.jpeg?w=100&h=100&fit=crop',
     'Pureblend Foods': 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?w=100&h=100&fit=crop',
     'SP Enterprises': 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?w=100&h=100&fit=crop',
-    'AS Tech Industries': 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?w=100&h=100&fit=crop',
-    'Hitarth Water Tech Solutions': 'https://images.pexels.com/photos/416978/pexels-photo-416978.jpeg?w=100&h=100&fit=crop'
+    'AS Tech Industries': 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?w=100&h=100&fit=crop'
   };
   
   return logoMap[name] || '';

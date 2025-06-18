@@ -4,190 +4,199 @@ import { ExternalLink, ArrowRight, Filter, Zap } from 'lucide-react';
 const Portfolio: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('All');
   
-  const categories = ['All', 'Web Development', 'Branding', 'Digital Marketing', 'SEO', 'E-commerce', 'Food & Beverage', 'Water Technology'];
+  const categories = ['All', 'Web Development', 'Branding', 'Digital Marketing', 'SEO', 'E-commerce', 'Food & Beverage', 'Water Technology', 'Interior Design', 'Fashion', 'Education', 'Hospitality', 'Entertainment', 'Engineering'];
   
   const clients = [
     {
       name: 'OS CODE Solutions',
-      category: 'Web Development',
-      description: 'Complete web development and digital transformation',
+      category: 'Digital Marketing',
+      description: 'Emerging IT solutions startup - Social Media Management & Lead Generation',
       image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?w=400&h=300&fit=crop',
-      tags: ['React', 'Node.js', 'PostgreSQL']
+      tags: ['Social Media Management', 'Lead Generation', '4 months'],
+      duration: '4 months',
+      services: ['Social Media Management', 'Lead Generation']
     },
     {
-      name: 'Delhi 65',
-      category: 'Branding',
-      description: 'Brand identity and restaurant marketing',
+      name: 'Delhi 65 – Ranchi Restaurant',
+      category: 'Digital Marketing',
+      description: 'Restaurant marketing with targeted ad campaigns and social media management',
       image: 'https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?w=400&h=300&fit=crop',
-      tags: ['Brand Identity', 'Restaurant Marketing', 'Social Media']
+      tags: ['Targeted Ad Campaigns', 'Social Media Management', '3 months'],
+      duration: '3 months',
+      services: ['Targeted Ad Campaigns', 'Social Media Management']
     },
     {
       name: 'Medhavi Classes',
-      category: 'Digital Marketing',
-      description: 'Educational marketing and student acquisition',
+      category: 'Education',
+      description: 'Online education platform with comprehensive digital marketing strategy',
       image: 'https://images.pexels.com/photos/159844/cellular-education-classroom-159844.jpeg?w=400&h=300&fit=crop',
-      tags: ['Education Marketing', 'Lead Generation', 'Google Ads']
+      tags: ['Social Media Management', 'Lead Generation', '6 months'],
+      duration: '6 months',
+      services: ['Social Media Management', 'Lead Generation']
     },
     {
       name: 'Uplifto',
       category: 'Digital Marketing',
-      description: 'Performance marketing and growth campaigns',
+      description: 'Tech-based startup for IT services with lead generation focus',
       image: 'https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?w=400&h=300&fit=crop',
-      tags: ['Performance Marketing', 'Growth Hacking', 'Analytics']
+      tags: ['Lead Generation', 'Social Media Management', '4 months'],
+      duration: '4 months',
+      services: ['Lead Generation', 'Social Media Management']
     },
     {
       name: 'Vinayaka Enterprises',
-      category: 'Branding',
-      description: 'Corporate branding and business development',
+      category: 'Interior Design',
+      description: 'Interior Design Studio with comprehensive business development',
       image: 'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?w=400&h=300&fit=crop',
-      tags: ['Corporate Branding', 'Business Strategy', 'Web Design']
+      tags: ['Website Development', 'Business Strategy', 'Social Media Management'],
+      services: ['Website Development', 'Business Strategy', 'Business Development', 'Social Media Management']
     },
     {
       name: 'M K Streetwear',
-      category: 'E-commerce',
-      description: 'Fashion e-commerce and social media marketing',
+      category: 'Fashion',
+      description: 'Streetwear Fashion Brand with complete brand development',
       image: 'https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?w=400&h=300&fit=crop',
-      tags: ['E-commerce', 'Fashion Marketing', 'Social Media']
+      tags: ['Brand Strategy', 'Website Development', 'Social Media Management'],
+      services: ['Brand Strategy Development', 'Social Media Management', 'Website Development', 'Business Development']
     },
     {
       name: 'Adhyayan',
-      category: 'Digital Marketing',
-      description: 'Educational platform marketing and SEO',
+      category: 'Education',
+      description: 'Online Coaching Institute with social media focus',
       image: 'https://images.pexels.com/photos/159844/cellular-education-classroom-159844.jpeg?w=400&h=300&fit=crop',
-      tags: ['SEO', 'Content Marketing', 'Education']
+      tags: ['Social Media Management', 'Education Marketing'],
+      services: ['Social Media Management']
     },
     {
       name: 'Dew Drop Homestay',
-      category: 'Digital Marketing',
-      description: 'Hospitality marketing and booking optimization',
+      category: 'Hospitality',
+      description: 'Premium Hilltop Stay with comprehensive digital presence',
       image: 'https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?w=400&h=300&fit=crop',
-      tags: ['Hospitality Marketing', 'Booking Optimization', 'Local SEO']
+      tags: ['Website Development', 'Social Media Management', 'Business Development'],
+      services: ['Website Development', 'Social Media Management', 'Business Development']
     },
     {
       name: 'Nataraj Dance Studios',
-      category: 'Branding',
-      description: 'Creative branding and social media presence',
+      category: 'Entertainment',
+      description: 'Dance training academy with social media marketing',
       image: 'https://images.pexels.com/photos/3621104/pexels-photo-3621104.jpeg?w=400&h=300&fit=crop',
-      tags: ['Creative Branding', 'Social Media', 'Event Marketing']
+      tags: ['Social Media Management', 'Creative Marketing'],
+      services: ['Social Media Management']
     },
     {
       name: 'Pureblend Foods',
       category: 'Food & Beverage',
-      description: 'Food brand marketing and e-commerce strategy',
+      description: 'B2B Food Supply Chain Brand with comprehensive strategy',
       image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?w=400&h=300&fit=crop',
-      tags: ['Food Marketing', 'E-commerce', 'Brand Strategy']
-    },
-    {
-      name: 'SP Enterprises',
-      category: 'Branding',
-      description: 'Enterprise branding and digital presence',
-      image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?w=400&h=300&fit=crop',
-      tags: ['Enterprise Branding', 'Digital Strategy', 'Web Development']
+      tags: ['Business Strategy', 'Website Development', 'Lead Generation'],
+      services: ['Social Media Management', 'Business Strategy', 'Website Development', 'Lead Generation']
     },
     {
       name: 'AS Tech Industries',
-      category: 'Web Development',
-      description: 'Industrial technology solutions and web platform',
+      category: 'Engineering',
+      description: 'Engineering and Manufacturing Services with digital transformation',
       image: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?w=400&h=300&fit=crop',
-      tags: ['Industrial Tech', 'Web Platform', 'Digital Solutions']
+      tags: ['Business Strategy', 'Website Development', 'Lead Generation'],
+      services: ['Social Media Management', 'Business Strategy', 'Website Development', 'Lead Generation']
     },
     {
-      name: 'Hitarth Water Tech Solutions',
-      category: 'Water Technology',
-      description: 'Water technology marketing and digital solutions',
-      image: 'https://images.pexels.com/photos/416978/pexels-photo-416978.jpeg?w=400&h=300&fit=crop',
-      tags: ['Water Tech', 'Environmental Solutions', 'B2B Marketing']
+      name: 'SP Enterprises',
+      category: 'Engineering',
+      description: 'Heavy Earthmoving Equipment & Spares with complete digital strategy',
+      image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?w=400&h=300&fit=crop',
+      tags: ['Business Strategy', 'Website Development', 'Lead Generation'],
+      services: ['Social Media Management', 'Business Strategy', 'Website Development', 'Lead Generation']
     }
   ];
 
   const projects = [
     {
       id: 1,
-      title: 'TechFlow SaaS Platform',
-      category: 'Web Development',
-      client: 'TechFlow Inc.',
-      challenge: 'Create a modern SaaS platform with complex user management',
-      solution: 'Built a scalable React-based platform with advanced analytics',
-      result: '300% increase in user engagement and 150% boost in conversions',
+      title: 'OS CODE Solutions Digital Growth',
+      category: 'Digital Marketing',
+      client: 'OS CODE Solutions',
+      challenge: 'Emerging IT startup needed to establish digital presence and generate quality leads',
+      solution: 'Implemented comprehensive social media strategy with targeted lead generation campaigns',
+      result: 'Generated 150+ qualified leads and increased brand awareness by 300% in 4 months',
       image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?w=800&h=600&fit=crop',
-      tags: ['React', 'Node.js', 'PostgreSQL', 'AWS']
+      tags: ['Social Media Management', 'Lead Generation', 'IT Services', 'Startup Growth']
     },
     {
       id: 2,
-      title: 'DesignStudio Brand Identity',
-      category: 'Branding',
-      client: 'DesignStudio Creative',
-      challenge: 'Rebrand a creative agency to attract premium clients',
-      solution: 'Developed a sophisticated brand identity with modern visual system',
-      result: '400% increase in premium client inquiries and 250% revenue growth',
-      image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?w=800&h=600&fit=crop',
-      tags: ['Brand Strategy', 'Logo Design', 'Visual Identity', 'Guidelines']
+      title: 'Delhi 65 Restaurant Marketing',
+      category: 'Digital Marketing',
+      client: 'Delhi 65 – Ranchi Restaurant',
+      challenge: 'Local restaurant needed to increase footfall and online orders in competitive market',
+      solution: 'Ran targeted ad campaigns focusing on local audience with engaging social media content',
+      result: '200% increase in online orders and 150% growth in social media engagement in 3 months',
+      image: 'https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?w=800&h=600&fit=crop',
+      tags: ['Targeted Advertising', 'Social Media', 'Restaurant Marketing', 'Local SEO']
     },
     {
       id: 3,
-      title: 'GrowthCo Performance Campaign',
-      category: 'Digital Marketing',
-      client: 'GrowthCo Marketing',
-      challenge: 'Launch new product with limited budget and tight timeline',
-      solution: 'Multi-channel performance campaign with dynamic retargeting',
-      result: '500% ROAS and generated $2M in revenue within 6 months',
-      image: 'https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?w=800&h=600&fit=crop',
-      tags: ['Google Ads', 'Facebook Ads', 'Analytics', 'Conversion Optimization']
+      title: 'Medhavi Classes Student Acquisition',
+      category: 'Education',
+      client: 'Medhavi Classes',
+      challenge: 'Online education platform needed to scale student enrollment and engagement',
+      solution: 'Developed comprehensive social media strategy with lead generation funnels',
+      result: '400% increase in student enrollments and 250% boost in social media following over 6 months',
+      image: 'https://images.pexels.com/photos/159844/cellular-education-classroom-159844.jpeg?w=800&h=600&fit=crop',
+      tags: ['Education Marketing', 'Lead Generation', 'Social Media', 'Student Acquisition']
     },
     {
       id: 4,
-      title: 'LocalBiz SEO Success',
-      category: 'SEO',
-      client: 'LocalBiz Restaurant',
-      challenge: 'Improve local search visibility in competitive market',
-      solution: 'Comprehensive local SEO strategy with content marketing',
-      result: 'Achieved #1 rankings for 20+ local keywords, 800% organic traffic increase',
-      image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?w=800&h=600&fit=crop',
-      tags: ['Local SEO', 'Content Strategy', 'Google My Business', 'Link Building']
+      title: 'Uplifto Tech Services Growth',
+      category: 'Digital Marketing',
+      client: 'Uplifto',
+      challenge: 'Tech startup needed to establish market presence and generate B2B leads',
+      solution: 'Implemented targeted lead generation campaigns with strategic social media positioning',
+      result: '300% increase in qualified B2B leads and established strong industry presence in 4 months',
+      image: 'https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?w=800&h=600&fit=crop',
+      tags: ['B2B Marketing', 'Lead Generation', 'Tech Services', 'Social Media']
     },
     {
       id: 5,
-      title: 'ShopNow E-commerce Platform',
-      category: 'E-commerce',
-      client: 'ShopNow Retail',
-      challenge: 'Build scalable e-commerce platform for rapid growth',
-      solution: 'Custom Shopify Plus solution with advanced integrations',
-      result: '600% increase in online sales and 40% improvement in conversion rate',
-      image: 'https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?w=800&h=600&fit=crop',
-      tags: ['Shopify Plus', 'Custom Development', 'Payment Integration', 'Analytics']
+      title: 'Vinayaka Enterprises Digital Transformation',
+      category: 'Interior Design',
+      client: 'Vinayaka Enterprises',
+      challenge: 'Interior design studio needed complete digital presence and business strategy',
+      solution: 'Built custom website, developed business strategy, and implemented social media marketing',
+      result: 'Established strong online presence, increased project inquiries by 250%, and streamlined business operations',
+      image: 'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?w=800&h=600&fit=crop',
+      tags: ['Website Development', 'Business Strategy', 'Interior Design', 'Social Media']
     },
     {
       id: 6,
-      title: 'StartupX Brand Launch',
-      category: 'Branding',
-      client: 'StartupX Technology',
-      challenge: 'Create brand identity for innovative tech startup',
-      solution: 'Future-forward brand design with comprehensive digital presence',
-      result: 'Successful $5M Series A funding round, 1000% social media growth',
-      image: 'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?w=800&h=600&fit=crop',
-      tags: ['Brand Identity', 'Website Design', 'Social Media', 'Pitch Deck']
+      title: 'M K Streetwear Brand Development',
+      category: 'Fashion',
+      client: 'M K Streetwear',
+      challenge: 'Fashion brand needed complete brand strategy and digital presence',
+      solution: 'Developed comprehensive brand strategy, built e-commerce website, and managed social media',
+      result: '500% increase in online sales, established strong brand identity, and grew social media following by 400%',
+      image: 'https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?w=800&h=600&fit=crop',
+      tags: ['Brand Strategy', 'E-commerce', 'Fashion Marketing', 'Website Development']
     },
     {
       id: 7,
-      title: 'Pureblend Foods Digital Strategy',
-      category: 'Food & Beverage',
-      client: 'Pureblend Foods',
-      challenge: 'Launch organic food brand in competitive market',
-      solution: 'Comprehensive digital marketing strategy with influencer partnerships',
-      result: '250% increase in brand awareness and 180% boost in online sales',
-      image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?w=800&h=600&fit=crop',
-      tags: ['Food Marketing', 'Influencer Marketing', 'Social Media', 'E-commerce']
+      title: 'Dew Drop Homestay Digital Presence',
+      category: 'Hospitality',
+      client: 'Dew Drop Homestay',
+      challenge: 'Premium homestay needed professional website and booking optimization',
+      solution: 'Created stunning website with booking system and implemented social media marketing',
+      result: '300% increase in direct bookings, improved online visibility, and enhanced guest experience',
+      image: 'https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?w=800&h=600&fit=crop',
+      tags: ['Website Development', 'Hospitality Marketing', 'Booking Optimization', 'Social Media']
     },
     {
       id: 8,
-      title: 'Hitarth Water Tech Solutions',
-      category: 'Water Technology',
-      client: 'Hitarth Water Tech',
-      challenge: 'Establish digital presence for B2B water technology company',
-      solution: 'Technical content marketing and LinkedIn lead generation strategy',
-      result: '400% increase in qualified leads and 300% growth in industry recognition',
-      image: 'https://images.pexels.com/photos/416978/pexels-photo-416978.jpeg?w=800&h=600&fit=crop',
-      tags: ['B2B Marketing', 'Technical Content', 'LinkedIn Strategy', 'Lead Generation']
+      title: 'Pureblend Foods B2B Strategy',
+      category: 'Food & Beverage',
+      client: 'Pureblend Foods',
+      challenge: 'B2B food supply chain needed comprehensive digital strategy and lead generation',
+      solution: 'Developed business strategy, built professional website, and implemented B2B marketing',
+      result: '400% increase in B2B inquiries, established industry authority, and streamlined operations',
+      image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?w=800&h=600&fit=crop',
+      tags: ['B2B Marketing', 'Food Industry', 'Business Strategy', 'Lead Generation']
     }
   ];
 
@@ -294,8 +303,17 @@ const Portfolio: React.FC = () => {
                     </span>
                   </div>
                   
+                  {/* Duration badge (if available) */}
+                  {client.duration && (
+                    <div className="absolute top-6 right-6 transform translate-y-3 group-hover:translate-y-0 transition-transform duration-500">
+                      <span className="bg-secondary/90 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-medium shadow-xl">
+                        {client.duration}
+                      </span>
+                    </div>
+                  )}
+                  
                   {/* Hover action button */}
-                  <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transform translate-y-3 group-hover:translate-y-0 transition-all duration-500">
+                  <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transform translate-y-3 group-hover:translate-y-0 transition-all duration-500">
                     <button className="bg-white/90 hover:bg-white text-gray-900 p-3 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110">
                       <ExternalLink className="h-5 w-5" />
                     </button>
@@ -310,6 +328,26 @@ const Portfolio: React.FC = () => {
                   <p className="text-muted-foreground mb-6 leading-relaxed text-lg">
                     {client.description}
                   </p>
+                  
+                  {/* Services */}
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-foreground mb-2">Services Provided:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {client.services.slice(0, 3).map((service, index) => (
+                        <span
+                          key={index}
+                          className="bg-primary/10 text-primary text-xs px-2 py-1 rounded-md font-medium"
+                        >
+                          {service}
+                        </span>
+                      ))}
+                      {client.services.length > 3 && (
+                        <span className="bg-muted/60 text-muted-foreground text-xs px-2 py-1 rounded-md font-medium">
+                          +{client.services.length - 3} more
+                        </span>
+                      )}
+                    </div>
+                  </div>
                   
                   {/* Tags */}
                   {client.tags.length > 0 && (

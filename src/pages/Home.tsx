@@ -54,19 +54,18 @@ const Home: React.FC = () => {
   ];
 
   const clients = [
-    { name: 'OS CODE Solutions', category: 'Technology' },
-    { name: 'Delhi 65', category: 'Restaurant' },
-    { name: 'Medhavi Classes', category: 'Education' },
-    { name: 'Uplifto', category: 'Marketing' },
-    { name: 'Vinayaka Enterprises', category: 'Business' },
-    { name: 'M K Streetwear', category: 'Fashion' },
-    { name: 'Adhyayan', category: 'Education' },
-    { name: 'Dew Drop Homestay', category: 'Hospitality' },
-    { name: 'Nataraj Dance Studios', category: 'Entertainment' },
-    { name: 'Pureblend Foods', category: 'Food & Beverage' },
-    { name: 'SP Enterprises', category: 'Business' },
-    { name: 'AS Tech Industries', category: 'Technology' },
-    { name: 'Hitarth Water Tech Solutions', category: 'Water Technology' }
+    { name: 'OS CODE Solutions', category: 'IT Solutions', description: 'Emerging IT solutions startup' },
+    { name: 'Delhi 65', category: 'Restaurant', description: 'Ranchi Restaurant' },
+    { name: 'Medhavi Classes', category: 'Education', description: 'Online education platform' },
+    { name: 'Uplifto', category: 'Tech Services', description: 'Tech-based startup for IT services' },
+    { name: 'Vinayaka Enterprises', category: 'Interior Design', description: 'Interior Design Studio' },
+    { name: 'M K Streetwear', category: 'Fashion', description: 'Streetwear Fashion Brand' },
+    { name: 'Adhyayan', category: 'Education', description: 'Online Coaching Institute' },
+    { name: 'Dew Drop Homestay', category: 'Hospitality', description: 'Premium Hilltop Stay' },
+    { name: 'Nataraj Dance Studios', category: 'Entertainment', description: 'Dance training academy' },
+    { name: 'Pureblend Foods', category: 'Food & Beverage', description: 'B2B Food Supply Chain Brand' },
+    { name: 'SP Enterprises', category: 'Heavy Equipment', description: 'Heavy Earthmoving Equipment & Spares' },
+    { name: 'AS Tech Industries', category: 'Engineering', description: 'Engineering and Manufacturing Services' }
   ];
 
   const firstRow = clients.slice(0, Math.ceil(clients.length / 2));
@@ -148,7 +147,7 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
             <div className="text-center p-4 sm:p-6 rounded-2xl bg-card/60 backdrop-blur-sm border border-border">
               <div className="text-2xl sm:text-4xl md:text-6xl font-bold brand-gradient-text mb-2 sm:mb-3">
-                <AnimatedCounter end={25} suffix="+" />
+                <AnimatedCounter end={12} suffix="+" />
               </div>
               <p className="text-muted-foreground font-medium text-sm sm:text-base">Happy Clients</p>
             </div>
