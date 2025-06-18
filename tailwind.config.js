@@ -60,6 +60,20 @@ export default {
         'neon-blue': '#008CFF',
         'off-white': '#F4F7FA',
         'charcoal-black': '#0F111A',
+        // Silver colors
+        silver: {
+          DEFAULT: '#C0C0C0',
+          50: '#F8F8F8',
+          100: '#F0F0F0',
+          200: '#E5E5E5',
+          300: '#D4D4D4',
+          400: '#C0C0C0',
+          500: '#A0A0A0',
+          600: '#8C8C8C',
+          700: '#737373',
+          800: '#525252',
+          900: '#404040',
+        },
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
@@ -76,12 +90,14 @@ export default {
         'gradient-drift': 'gradientDrift 15s ease-in-out infinite',
         'gradient-radial': 'gradientDriftRadial 20s ease-in-out infinite',
         'gradient-pulse': 'gradientPulse 4s ease-in-out infinite',
+        'silver-glow': 'silverGlow 3s ease-in-out infinite',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'professional-gradient': 'linear-gradient(135deg, #3B82F6 0%, #6366F1 50%, #06B6D4 100%)',
         'subtle-gradient': 'linear-gradient(135deg, hsl(var(--card)) 0%, hsl(var(--muted)) 100%)',
         'gradient-drift': 'linear-gradient(45deg, var(--electric-blue), var(--neon-blue), var(--off-white), var(--charcoal-black))',
+        'silver-gradient': 'linear-gradient(135deg, #E5E5E5 0%, #C0C0C0 25%, #FFFFFF 50%, #C0C0C0 75%, #A0A0A0 100%)',
       },
       backdropBlur: {
         xs: '2px',
@@ -98,6 +114,10 @@ export default {
       maxWidth: {
         '8xl': '88rem',
         '9xl': '96rem',
+      },
+      boxShadow: {
+        'silver-glow': '0 0 20px rgba(192, 192, 192, 0.4), 0 0 40px rgba(192, 192, 192, 0.3), 0 0 60px rgba(192, 192, 192, 0.2)',
+        'silver-glow-intense': '0 0 30px rgba(192, 192, 192, 0.6), 0 0 60px rgba(192, 192, 192, 0.5), 0 0 90px rgba(192, 192, 192, 0.4)',
       },
     },
   },
