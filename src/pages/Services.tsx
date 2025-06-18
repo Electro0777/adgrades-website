@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Share2, 
@@ -7,192 +7,96 @@ import {
   Mail, 
   TrendingUp, 
   Code,
+  CheckCircle,
   ArrowRight,
+  BarChart3,
   Target,
   Lightbulb,
-  Zap,
-  MessageCircle,
-  Users,
-  Globe,
-  Megaphone,
-  Eye,
-  Rocket,
-  Database,
-  Monitor,
-  Smartphone,
-  Settings,
-  Tv,
-  Radio,
-  Calendar,
-  Star,
-  Building
+  Zap
 } from 'lucide-react';
 import VortexBackground from '../components/VortexBackground';
 
 const Services: React.FC = () => {
-  const [showFloatingCTA, setShowFloatingCTA] = useState(false);
-
-  React.useEffect(() => {
-    const handleScroll = () => {
-      setShowFloatingCTA(window.scrollY > 800);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const digitalServices = [
+  const services = [
     {
       icon: Share2,
       title: 'Social Media Marketing',
-      tagline: '"We make scrolling stop & wallets open."',
-      description: 'We don\'t just post—we create conversations, build communities, and drive real sales. Every post, reel, and story is designed to convert.',
-      gradient: 'from-blue-500 to-cyan-500'
-    },
-    {
-      icon: Search,
-      title: 'SEO (Search Engine Optimization)',
-      tagline: '"Google loves us. Your competitors hate us."',
-      description: 'From keyword strategy to backlinks—we don\'t aim to just rank, we aim to dominate.',
-      gradient: 'from-green-500 to-emerald-500'
-    },
-    {
-      icon: Lightbulb,
-      title: 'Content Marketing',
-      tagline: '"Your brand, but make it ✨ compelling ✨."',
-      description: 'Blogs, videos, memes, storytelling—we craft content that connects and converts.',
-      gradient: 'from-purple-500 to-pink-500'
+      description: 'Strategic social media management that builds communities and drives engagement across all platforms.',
+      process: [
+        { icon: Target, step: 'Strategy Development', description: 'Audience research and platform selection' },
+        { icon: Lightbulb, step: 'Content Creation', description: 'Engaging posts and visual content' },
+        { icon: BarChart3, step: 'Performance Analysis', description: 'Track metrics and optimize campaigns' }
+      ],
+      success: 'Increased follower engagement by 400% for TechFlow in just 3 months',
+      gradient: 'from-blue-500 to-cyan-500',
+      iconBg: 'bg-gradient-to-br from-blue-500 to-cyan-500'
     },
     {
       icon: Palette,
-      title: 'Graphic Design',
-      tagline: '"We make Picasso jealous."',
-      description: 'We design visuals that aren\'t just pretty—they drive clicks, shares, and sales.',
-      gradient: 'from-orange-500 to-red-500'
+      title: 'Brand Identity & Design',
+      description: 'Create a memorable brand identity that stands out in the marketplace. From logo design to complete brand guidelines, we develop cohesive visual systems that communicate your values and resonate with your target audience.',
+      process: [
+        { icon: Target, step: 'Brand Discovery', description: 'Understand your vision and market position' },
+        { icon: Lightbulb, step: 'Design Development', description: 'Create visual identity and guidelines' },
+        { icon: BarChart3, step: 'Brand Implementation', description: 'Apply across all touchpoints' }
+      ],
+      success: 'Helped DesignStudio achieve 300% increase in brand recognition',
+      gradient: 'from-purple-500 to-pink-500',
+      iconBg: 'bg-gradient-to-br from-purple-500 to-pink-500'
     },
     {
-      icon: TrendingUp,
-      title: 'Google & Meta Ads (PPC & Performance Marketing)',
-      tagline: '"Spending wisely > Spending more."',
-      description: 'Laser-focused ads that maximize ROI by turning clicks into paying customers.',
-      gradient: 'from-yellow-500 to-orange-500'
+      icon: Search,
+      title: 'SEO Optimization',
+      description: 'Get found by customers who are actively searching for your products or services. Our comprehensive SEO strategy includes technical optimization, content marketing, and link building to improve your organic search visibility.',
+      process: [
+        { icon: Target, step: 'SEO Audit', description: 'Comprehensive website and competitor analysis' },
+        { icon: Lightbulb, step: 'Content Optimization', description: 'Keyword research and content strategy' },
+        { icon: BarChart3, step: 'Performance Tracking', description: 'Monitor rankings and organic traffic' }
+      ],
+      success: 'Achieved #1 rankings for 15+ keywords for local business client',
+      gradient: 'from-green-500 to-emerald-500',
+      iconBg: 'bg-gradient-to-br from-green-500 to-emerald-500'
     },
     {
       icon: Mail,
       title: 'Email Marketing',
-      tagline: '"Not spam. Just money-making emails."',
-      description: 'Automated email sequences that build trust and drive consistent conversions.',
-      gradient: 'from-indigo-500 to-purple-500'
+      description: 'Nurture leads and retain customers with personalized email campaigns that deliver results. Our email marketing strategies focus on segmentation, automation, and compelling content that drives engagement and conversions.',
+      process: [
+        { icon: Target, step: 'List Building', description: 'Grow and segment your email audience' },
+        { icon: Lightbulb, step: 'Campaign Creation', description: 'Design and write compelling emails' },
+        { icon: BarChart3, step: 'Automation Setup', description: 'Create automated drip sequences' }
+      ],
+      success: 'Generated $2M in revenue through email campaigns for e-commerce client',
+      gradient: 'from-orange-500 to-red-500',
+      iconBg: 'bg-gradient-to-br from-orange-500 to-red-500'
     },
     {
-      icon: Target,
-      title: 'Lead Generation',
-      tagline: '"Because followers don\'t pay bills. Leads do."',
-      description: 'Campaigns that deliver qualified prospects ready to buy.',
-      gradient: 'from-teal-500 to-cyan-500'
+      icon: TrendingUp,
+      title: 'Performance Advertising',
+      description: 'Maximize your advertising ROI with data-driven campaigns across Google, Facebook, and other platforms. Our performance marketing experts optimize every aspect of your campaigns to drive qualified leads and sales.',
+      process: [
+        { icon: Target, step: 'Campaign Strategy', description: 'Audience targeting and platform selection' },
+        { icon: Lightbulb, step: 'Ad Creation', description: 'Design compelling ad creatives and copy' },
+        { icon: BarChart3, step: 'Optimization', description: 'Continuous testing and improvement' }
+      ],
+      success: 'Delivered 500% ROAS for GrowthCo\'s product launch campaign',
+      gradient: 'from-yellow-500 to-orange-500',
+      iconBg: 'bg-gradient-to-br from-yellow-500 to-orange-500'
+    },
+    {
+      icon: Code,
+      title: 'Web & App Development',
+      description: 'Build beautiful, functional websites and applications that provide exceptional user experiences. Our development team creates responsive, fast-loading sites optimized for conversions and user engagement.',
+      process: [
+        { icon: Target, step: 'Planning & Design', description: 'User experience and interface design' },
+        { icon: Lightbulb, step: 'Development', description: 'Build with modern technologies' },
+        { icon: BarChart3, step: 'Testing & Launch', description: 'Quality assurance and deployment' }
+      ],
+      success: 'Improved conversion rates by 250% with new website for SaaS client',
+      gradient: 'from-indigo-500 to-purple-500',
+      iconBg: 'bg-gradient-to-br from-indigo-500 to-purple-500'
     }
   ];
-
-  const softwareServices = [
-    {
-      icon: Database,
-      title: 'CRM / ERP Development',
-      tagline: '"Your business, but on autopilot."',
-      description: 'Custom software to streamline operations, manage sales, and drive growth.',
-      gradient: 'from-slate-500 to-gray-600'
-    },
-    {
-      icon: Globe,
-      title: 'Website & E-Commerce Development',
-      tagline: '"If your website isn\'t selling, is it even a website?"',
-      description: 'Fully responsive, high-converting sites that sell even while you sleep.',
-      gradient: 'from-blue-600 to-indigo-600'
-    },
-    {
-      icon: Settings,
-      title: 'No-Code Platforms',
-      tagline: '"Build like a pro. No coding required."',
-      description: 'We help you launch scalable systems faster with no-code and low-code solutions.',
-      gradient: 'from-emerald-500 to-teal-600'
-    }
-  ];
-
-  const offlineServices = [
-    {
-      icon: Eye,
-      title: 'Hoardings & Outdoor Ads',
-      tagline: '"Because size matters (for ads, obviously)."',
-      description: 'Billboard-level impact for street-level visibility and brand recall.',
-      gradient: 'from-red-500 to-pink-500'
-    },
-    {
-      icon: Tv,
-      title: 'TV / Radio Ads',
-      tagline: '"Your grandma\'s favorite marketing? We still make it cool."',
-      description: 'Traditional media with modern messaging—broadcast your brand to the masses.',
-      gradient: 'from-purple-600 to-indigo-600'
-    },
-    {
-      icon: Calendar,
-      title: 'Event Marketing & Brand Activations',
-      tagline: '"We turn brand activations into viral experiences."',
-      description: 'Memorable in-person moments that build loyalty and excitement.',
-      gradient: 'from-orange-500 to-yellow-500'
-    }
-  ];
-
-  const otherServices = [
-    {
-      icon: Star,
-      title: 'Influencer Marketing',
-      tagline: '"We find the right faces to sell your stuff."',
-      description: 'We collaborate with influencers who actually convert—not just collect likes.',
-      gradient: 'from-pink-500 to-rose-500'
-    },
-    {
-      icon: Building,
-      title: 'Account-Based Marketing (ABM)',
-      tagline: '"For B2B clients who want to close deals, not just collect leads."',
-      description: 'Hyper-personalized campaigns to engage and convert high-ticket decision-makers.',
-      gradient: 'from-gray-600 to-slate-700'
-    }
-  ];
-
-  const ServiceCard = ({ service, index }: { service: any; index: number }) => (
-    <div className="group relative bg-card/60 backdrop-blur-sm rounded-3xl p-8 border border-border/50 hover:border-primary/40 transition-all duration-700 transform hover:-translate-y-2 hover:scale-[1.02] shadow-lg hover:shadow-2xl">
-      {/* Icon */}
-      <div className={`w-16 h-16 bg-gradient-to-br ${service.gradient} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-xl`}>
-        <service.icon className="h-8 w-8 text-white" />
-      </div>
-      
-      {/* Title */}
-      <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-500">
-        {service.title}
-      </h3>
-      
-      {/* Tagline */}
-      <p className="text-lg font-semibold text-primary mb-4 italic">
-        {service.tagline}
-      </p>
-      
-      {/* Description */}
-      <p className="text-muted-foreground leading-relaxed mb-6 service-description">
-        {service.description}
-      </p>
-      
-      {/* CTA */}
-      <Link
-        to="/contact"
-        className="inline-flex items-center text-primary hover:text-secondary font-semibold transition-colors duration-300 group-hover:translate-x-2"
-      >
-        Get Started
-        <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-      </Link>
-      
-      {/* Hover gradient overlay */}
-      <div className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-700 pointer-events-none`} />
-    </div>
-  );
 
   return (
     <div className="pt-16">
@@ -201,28 +105,27 @@ const Services: React.FC = () => {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in">
-            {/* Badge */}
+            {/* Badge with Hero Glow */}
             <div className="page-badge hero-badge-glow">
-              <Rocket className="w-5 h-5 mr-3" />
+              <Zap className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" />
               <span className="brand-gradient-text font-semibold">
-                SERVICES – What We Do
+                Comprehensive Marketing Solutions
               </span>
             </div>
             
-            {/* Title */}
+            {/* Title with Hero Glow */}
             <h1 className="heading-primary text-foreground hero-title-glow mb-8 leading-tight">
+              Services That Drive{' '}
               <span className="brand-gradient-text">
-                SERVICES
-              </span>{' '}
-              – What We Do
+                Growth
+              </span>
             </h1>
             
-            {/* Hook */}
-            <p className="text-2xl md:text-3xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed font-medium description-text">
-              Think of us as your marketing <span className="text-primary font-bold">SWAT team</span>. 
-              Fast, precise, and impossible to ignore.
+            <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed description-text">
+              Our comprehensive marketing and design services are strategically designed to transform 
+              startups into industry leaders through data-driven campaigns and exceptional creativity.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
@@ -230,15 +133,15 @@ const Services: React.FC = () => {
                 to="/contact"
                 className="brand-button"
               >
-                Let's Dominate Together
-                <Zap className="ml-3 h-6 w-6" />
+                Get Started Today
+                <ArrowRight className="ml-3 h-6 w-6" />
               </Link>
               
               <Link
                 to="/portfolio"
                 className="brand-button-outline"
               >
-                See Our Victories
+                View Our Work
                 <ArrowRight className="ml-3 h-6 w-6" />
               </Link>
             </div>
@@ -246,147 +149,121 @@ const Services: React.FC = () => {
         </div>
       </section>
 
-      {/* Digital Marketing Section */}
+      {/* Services Sections - Mobile Responsive */}
       <section className="section-padding content-overlay">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Section Header */}
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center px-6 py-3 bg-primary/10 rounded-full mb-8">
-              <Megaphone className="w-6 h-6 text-primary mr-3" />
-              <span className="text-primary font-bold text-lg">1️⃣ DIGITAL MARKETING</span>
+          {services.map((service, index) => (
+            <div
+              key={service.title}
+              className="mb-16 sm:mb-20 lg:mb-24"
+            >
+              <div className={`grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center ${
+                index % 2 === 1 ? 'lg:flex-row-reverse' : ''
+              }`}>
+                {/* Content */}
+                <div className={`${index % 2 === 1 ? 'lg:order-2' : 'lg:order-1'}`}>
+                  <div className="flex items-center mb-6 sm:mb-8">
+                    <div className={`w-12 h-12 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl ${service.iconBg} flex items-center justify-center shadow-xl mr-4 sm:mr-6`}>
+                      <service.icon className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
+                    </div>
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground">
+                      {service.title}
+                    </h2>
+                  </div>
+                  
+                  <p className="text-base sm:text-lg text-muted-foreground mb-8 sm:mb-10 leading-relaxed service-description">
+                    {service.description}
+                  </p>
+
+                  {/* Process - Mobile Responsive */}
+                  <div className="mb-8 sm:mb-10">
+                    <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-4 sm:mb-6">
+                      Our 3-Step Process
+                    </h3>
+                    <div className="space-y-4 sm:space-y-6">
+                      {service.process.map((step, stepIndex) => (
+                        <div key={stepIndex} className="flex items-start">
+                          <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl ${service.iconBg} flex items-center justify-center flex-shrink-0 shadow-lg mr-3 sm:mr-4`}>
+                            <step.icon className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-foreground mb-1 sm:mb-2 text-sm sm:text-base">
+                              {step.step}
+                            </h4>
+                            <p className="text-muted-foreground leading-relaxed text-sm sm:text-base description-text">
+                              {step.description}
+                            </p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Success Story - Mobile Responsive */}
+                  <div className="minimal-card p-4 sm:p-6 mb-6 sm:mb-8">
+                    <div className="flex items-start">
+                      <CheckCircle className="h-5 w-5 sm:h-6 sm:w-6 text-secondary flex-shrink-0 mt-0.5 sm:mt-1 mr-3 sm:mr-4" />
+                      <div>
+                        <h4 className="font-semibold text-foreground mb-1 sm:mb-2 text-sm sm:text-base">
+                          Client Success
+                        </h4>
+                        <p className="text-muted-foreground leading-relaxed text-sm sm:text-base description-text">
+                          {service.success}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <Link
+                    to="/contact"
+                    className="brand-button inline-flex"
+                  >
+                    Let's Talk
+                    <ArrowRight className="ml-2 sm:ml-3 h-5 w-5 sm:h-6 sm:w-6" />
+                  </Link>
+                </div>
+
+                {/* Visual - Mobile Responsive */}
+                <div className={`${index % 2 === 1 ? 'lg:order-1' : 'lg:order-2'}`}>
+                  <div className="relative group">
+                    <div className={`w-full h-[300px] sm:h-[350px] lg:h-[400px] bg-gradient-to-br ${service.gradient} rounded-xl sm:rounded-2xl shadow-xl flex items-center justify-center transition-all duration-500 group-hover:shadow-2xl group-hover:scale-105`}>
+                      <service.icon className="h-16 w-16 sm:h-20 sm:w-20 lg:h-24 lg:w-24 text-white/30" />
+                    </div>
+                    <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 bg-card/90 backdrop-blur-xl p-4 sm:p-6 rounded-xl sm:rounded-2xl shadow-xl border border-border">
+                      <div className="text-xl sm:text-2xl font-bold text-foreground">
+                        {index + 1}
+                      </div>
+                      <div className="text-muted-foreground font-medium text-sm sm:text-base">
+                        Core Service
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Dominate the{' '}
-              <span className="brand-gradient-text">Digital Space</span>
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
-          </div>
-
-          {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {digitalServices.map((service, index) => (
-              <ServiceCard key={service.title} service={service} index={index} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Software Solutions Section */}
-      <section className="section-padding content-overlay">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Section Header */}
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center px-6 py-3 bg-secondary/10 rounded-full mb-8">
-              <Code className="w-6 h-6 text-secondary mr-3" />
-              <span className="text-secondary font-bold text-lg">2️⃣ SOFTWARE SOLUTIONS</span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Automate, Scale, &{' '}
-              <span className="brand-gradient-text">Sell</span>
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-secondary to-primary mx-auto rounded-full" />
-          </div>
-
-          {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {softwareServices.map((service, index) => (
-              <ServiceCard key={service.title} service={service} index={index} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Offline Marketing Section */}
-      <section className="section-padding content-overlay">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Section Header */}
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center px-6 py-3 bg-orange-500/10 rounded-full mb-8">
-              <Tv className="w-6 h-6 text-orange-500 mr-3" />
-              <span className="text-orange-500 font-bold text-lg">3️⃣ OFFLINE MARKETING</span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Because Not Everything{' '}
-              <span className="brand-gradient-text">Happens Online</span>
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-red-500 mx-auto rounded-full" />
-          </div>
-
-          {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {offlineServices.map((service, index) => (
-              <ServiceCard key={service.title} service={service} index={index} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Other Services Section */}
-      <section className="section-padding content-overlay">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Section Header */}
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center px-6 py-3 bg-purple-500/10 rounded-full mb-8">
-              <Star className="w-6 h-6 text-purple-500 mr-3" />
-              <span className="text-purple-500 font-bold text-lg">4️⃣ OTHER SERVICES</span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Because We Go{' '}
-              <span className="brand-gradient-text">Beyond the Basics</span>
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full" />
-          </div>
-
-          {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            {otherServices.map((service, index) => (
-              <ServiceCard key={service.title} service={service} index={index} />
-            ))}
-          </div>
+          ))}
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="section-padding brand-gradient">
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-10">
-            Ready to Stop Being Invisible?
+          <h2 className="heading-secondary text-white mb-10">
+            Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-white/90 mb-16 max-w-4xl mx-auto description-text">
-            Let's turn your business into the talk of the town (and the internet). 
-            Your competitors won't know what hit them.
+            Let's discuss which services will have the biggest impact on your growth. 
+            Schedule a free strategy session with our team.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-12 py-6 bg-white text-slate-dark font-bold rounded-full hover:bg-gray-100 transition-all duration-500 transform hover:scale-110 shadow-2xl text-lg"
-            >
-              Let's Talk Business
-              <MessageCircle className="ml-3 h-6 w-6" />
-            </Link>
-            <Link
-              to="/portfolio"
-              className="inline-flex items-center px-12 py-6 border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-slate-dark transition-all duration-500 transform hover:scale-110 text-lg"
-            >
-              See Our Wins
-              <Target className="ml-3 h-6 w-6" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Floating CTA Button */}
-      {showFloatingCTA && (
-        <div className="fixed bottom-8 right-8 z-50 animate-fade-in">
           <Link
             to="/contact"
-            className="flex items-center px-6 py-4 brand-gradient text-white font-bold rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-110 animate-button-pulse"
+            className="inline-flex items-center px-12 py-6 bg-white text-slate-dark font-bold rounded-lg hover:bg-gray-100 transition-all duration-500 transform hover:scale-110 shadow-2xl text-lg"
           >
-            <MessageCircle className="w-5 h-5 mr-2" />
-            Let's Talk
+            Get Your Free Strategy Session
+            <ArrowRight className="ml-3 h-6 w-6" />
           </Link>
         </div>
-      )}
+      </section>
     </div>
   );
 };

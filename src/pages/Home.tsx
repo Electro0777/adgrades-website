@@ -74,22 +74,34 @@ const Home: React.FC = () => {
 
   const testimonials = [
     {
-      quote: "AdGrades transformed our startup from unknown to industry leader. Their strategic approach is absolutely unmatched.",
-      author: "Sarah Chen",
-      role: "CEO, TechFlow",
-      avatar: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?w=400&h=400&fit=crop&crop=face"
+      quote: "AdGrades has been instrumental in boosting our digital reach. Their team truly understands the education sector. We've seen a sharp rise in engagement and visibility. Highly professional and results-driven service.",
+      author: "Pranav Jha",
+      role: "Owner, Medhavi Classes"
     },
     {
-      quote: "The ROI on our campaigns has been incredible. They truly understand performance marketing like no other agency.",
-      author: "Michael Rodriguez",
-      role: "Marketing Director, GrowthCo",
-      avatar: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?w=400&h=400&fit=crop&crop=face"
+      quote: "We started with zero online presence. AdGrades built our brand identity from scratch. Now, our restaurant is recognized both online and offline. Couldn't have asked for a better marketing partner.",
+      author: "Shreyas Bhadani",
+      role: "Owner, Delhi 65 Restaurant"
     },
     {
-      quote: "Our brand identity and website exceeded all expectations. Professional, creative, and completely results-driven.",
-      author: "Emma Thompson",
-      role: "Founder, DesignStudio",
-      avatar: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?w=400&h=400&fit=crop&crop=face"
+      quote: "AdGrades helped shape our creative brand online. Their strategies brought in real clients and recognition. They captured our studio's essence beautifully. A dependable and creative team to work with.",
+      author: "Abhishek",
+      role: "Owner, Natraj Studios"
+    },
+    {
+      quote: "AdGrades gave our brand a clear voice in the digital space. Their strategies were sharp, effective, and well-aligned with our goals. We saw real traction across platforms in a short time. Truly impressed with their expertise.",
+      author: "Harsh Kumar",
+      role: "Co-founder, OS Code"
+    },
+    {
+      quote: "We went from being hidden to fully booked. AdGrades brought in real customers through smart ads. They told our story in a way people connected with. Thanks to them, every weekend is now packed.",
+      author: "Suresh",
+      role: "Owner, Dewdrop Homestays"
+    },
+    {
+      quote: "We needed visibility in a niche market, and AdGrades delivered. Their campaigns showcased our laser cutting work with style. Leads, inquiries, and recognition have grown consistently. Smart, reliable, and creative team.",
+      author: "Balakrishna",
+      role: "Owner, Vinayaka Enterprises"
     }
   ];
 
@@ -164,7 +176,7 @@ const Home: React.FC = () => {
             </div>
             <div className="text-center p-4 sm:p-6 rounded-2xl bg-card/60 backdrop-blur-sm border border-border">
               <div className="text-2xl sm:text-4xl md:text-6xl font-bold brand-gradient-text mb-2 sm:mb-3">
-                <AnimatedCounter end={15} suffix="" />
+                <AnimatedCounter end={12} suffix="" />
               </div>
               <p className="text-muted-foreground font-medium text-sm sm:text-base">Team Members</p>
             </div>
@@ -283,19 +295,12 @@ const Home: React.FC = () => {
                 <blockquote className="text-muted-foreground mb-6 sm:mb-8 italic leading-relaxed text-sm sm:text-base description-text">
                   "{testimonial.quote}"
                 </blockquote>
-                <div className="flex items-center">
-                  <img
-                    src={testimonial.avatar}
-                    alt={testimonial.author}
-                    className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover mr-3 sm:mr-4"
-                  />
-                  <div>
-                    <div className="font-semibold text-foreground text-sm sm:text-base">
-                      {testimonial.author}
-                    </div>
-                    <div className="text-muted-foreground text-xs sm:text-sm">
-                      {testimonial.role}
-                    </div>
+                <div>
+                  <div className="font-semibold text-foreground text-sm sm:text-base">
+                    {testimonial.author}
+                  </div>
+                  <div className="text-muted-foreground text-xs sm:text-sm">
+                    {testimonial.role}
                   </div>
                 </div>
               </div>
