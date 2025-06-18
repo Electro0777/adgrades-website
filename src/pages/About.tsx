@@ -49,49 +49,49 @@ const About: React.FC = () => {
       name: 'Chandan',
       role: 'Founder, CEO, Marketing Strategist',
       image: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?w=400&h=400&fit=crop&crop=face',
-      bio: 'Making brands famous & profitable at the same time.',
+      bio: 'Chandan is the visionary force behind AdGrades, leading the agency with a passion for creativity, strategy, and results. With a sharp eye for market trends and a deep understanding of brand building, Chandan specializes in crafting marketing solutions that not only boost visibility but also drive profitability.',
       linkedin: '#'
     },
     {
       name: 'Maneesh',
       role: 'CTO',
       image: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?w=400&h=400&fit=crop&crop=face',
-      bio: 'Turns caffeine into code & builds marketing tech that WORKS.',
+      bio: 'Maneesh is the tech brain behind AdGrades. From writing smart code to building tools that power our marketing campaigns, he makes sure the technology we use is fast, reliable, and effective. He\'s the one who turns ideas into real, working digital tools that power our marketing strategies.',
       linkedin: '#'
     },
     {
       name: 'Likith',
       role: 'COO',
       image: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?w=400&h=400&fit=crop&crop=face',
-      bio: 'Keeps everything running smoother than a well-optimized funnel.',
+      bio: 'Likith is the one who makes sure everything behind the scenes at AdGrades runs smoothly. From managing day-to-day operations to keeping projects on track, he ensures the team is always aligned and focused. He\'s the kind of leader who makes complex processes feel simple and seamless.',
       linkedin: '#'
     },
     {
       name: 'Ashish',
       role: 'CDO - Chief Design Officer',
       image: 'https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?w=400&h=400&fit=crop&crop=face',
-      bio: 'Pixel-perfect designs that don\'t just look good, they SELL.',
+      bio: 'Ashish is the creative eye at AdGrades, bringing ideas to life through pixel-perfect designs that not only look amazing—but actually drive results. From branding and UI/UX to ad creatives and everything in between, he makes sure every visual we deliver speaks the brand\'s language and connects with its audience.',
       linkedin: '#'
     },
     {
       name: 'Sumith',
       role: 'CFO',
       image: 'https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?w=400&h=400&fit=crop&crop=face',
-      bio: 'Turns budgets into ROI-generating machines.',
+      bio: 'Sumith is the logical person at AdGrades—the one who makes sure every rupee spent is a smart investment. From managing costs to analyzing performance, Sumith ensures that our strategies are not just creative, but financially sound.',
       linkedin: '#'
     },
     {
-      name: 'Chandu',
+      name: 'Chandu M',
       role: 'Content Lead',
       image: 'https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?w=400&h=400&fit=crop&crop=face',
-      bio: 'Writes words that make people take action.',
+      bio: 'Chandu is the voice behind the brand, the one who turns ideas into words that connect, inspire, and convert. As the Content Lead, she crafts powerful messaging across platforms that speaks directly to the audience and drives real action. She understands that great content isn\'t just about sounding good—it\'s about making an impact.',
       linkedin: '#'
     },
     {
       name: 'Nikhil',
       role: 'Video Editing Lead',
       image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?w=400&h=400&fit=crop&crop=face',
-      bio: 'Makes brands look like they belong on Netflix, not just Instagram.',
+      bio: 'Nikhil is the storyteller behind the screen, turning raw footage into scroll-stopping videos that feel more like cinema than content. As the Video Editing Lead, he brings brands to life through dynamic visuals, clean cuts, and creative storytelling. His edits don\'t just look good, they tell a story, spark emotion, and drive action.',
       linkedin: '#'
     },
     {
@@ -161,13 +161,13 @@ const About: React.FC = () => {
             <div className="grid grid-cols-2 gap-8 max-w-md mx-auto">
               <div className="text-center">
                 <div className="text-4xl md:text-5xl font-bold brand-gradient-text mb-3">
-                  <AnimatedCounter end={25} suffix="+" />
+                  <AnimatedCounter end={12} suffix="+" />
                 </div>
                 <p className="text-muted-foreground font-semibold">Happy Clients</p>
               </div>
               <div className="text-center">
                 <div className="text-4xl md:text-5xl font-bold brand-gradient-text mb-3">
-                  <AnimatedCounter end={15} suffix="" />
+                  <AnimatedCounter end={12} suffix="" />
                 </div>
                 <p className="text-muted-foreground font-semibold">Team Members</p>
               </div>
@@ -300,7 +300,7 @@ const About: React.FC = () => {
                 <p className="text-primary font-medium text-sm mb-4">
                   {member.role}
                 </p>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                <p className="text-muted-foreground text-sm leading-relaxed mb-6 min-h-[4rem]">
                   {member.bio}
                 </p>
                 <a
