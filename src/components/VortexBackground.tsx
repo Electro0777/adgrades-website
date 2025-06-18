@@ -227,7 +227,7 @@ const VortexBackground: React.FC<VortexBackgroundProps> = ({ className = '' }) =
 
   return (
     <div className={`fixed inset-0 overflow-hidden pointer-events-none ${className}`}>
-      {/* Base gradient background - DARK THEME */}
+      {/* Base gradient background - PROPERLY DARK */}
       <div className={`absolute inset-0 transition-all duration-1000 ${
         isDark 
           ? 'bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'
