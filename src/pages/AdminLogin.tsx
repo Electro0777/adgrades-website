@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Lock, User, Eye, EyeOff, Shield, AlertCircle } from 'lucide-react';
+import { Lock, User, Eye, EyeOff, Shield, AlertCircle, Home } from 'lucide-react';
 import { authenticateAdmin, createAdminSession, isAdminAuthenticated } from '../utils/auth';
 import DynamicBackground from '../components/DynamicBackground';
 
@@ -46,6 +46,17 @@ const AdminLogin: React.FC = () => {
   return (
     <div className="min-h-screen flex items-center justify-center relative overflow-hidden">
       <DynamicBackground variant="contact" />
+      
+      {/* Back to Home Button */}
+      <div className="absolute top-6 left-6 z-20">
+        <button
+          onClick={() => navigate('/')}
+          className="flex items-center px-4 py-2 bg-card/80 backdrop-blur-xl text-card-foreground hover:text-primary hover:bg-card/90 rounded-xl transition-all duration-300 border border-border/50 shadow-lg"
+        >
+          <Home className="h-5 w-5 mr-2" />
+          Back to Home
+        </button>
+      </div>
       
       <div className="relative z-10 w-full max-w-md mx-auto px-4">
         <div className="bg-card/80 backdrop-blur-2xl rounded-3xl shadow-2xl border border-border/50 p-8">
@@ -139,6 +150,26 @@ const AdminLogin: React.FC = () => {
             <div className="text-xs text-muted-foreground space-y-1">
               <div>Username: <code className="bg-muted px-2 py-1 rounded">admin</code></div>
               <div>Password: <code className="bg-muted px-2 py-1 rounded">admin123</code></div>
+            </div>
+          </div>
+
+          {/* Quick Access Links */}
+          <div className="mt-6 text-center">
+            <p className="text-xs text-muted-foreground mb-3">Quick Access:</p>
+            <div className="flex justify-center space-x-4">
+              <button
+                onClick={() => navigate('/verify')}
+                className="text-xs text-primary hover:text-primary/80 transition-colors"
+              >
+                Certificate Verification
+              </button>
+              <span className="text-xs text-muted-foreground">•</span>
+              <button
+                onClick={() => navigate('/')}
+                className="text-xs text-primary hover:text-primary/80 transition-colors"
+              >
+                Main Website
+              </button>
             </div>
           </div>
         </div>
