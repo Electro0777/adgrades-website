@@ -73,11 +73,6 @@
   -webkit-text-fill-color: transparent;
 }
 
-/* Professional gradient for buttons and elements */
-.professional-gradient {
-  background: linear-gradient(135deg, #00B5FF 0%, #01F9C6 100%);
-}
-
 /* AdGrades brand glow effect - reduced for gradient text */
 .brand-glow {
   text-shadow: 0 0 8px rgba(1, 249, 198, 0.2);
@@ -109,44 +104,6 @@
   to { transform: translateX(calc(-100% - var(--gap))); }
 }
 
-/* Animated gradient drift background */
-@keyframes gradientDrift {
-  0% {
-    background-position: 0% 50%;
-  }
-  25% {
-    background-position: 100% 50%;
-  }
-  50% {
-    background-position: 100% 100%;
-  }
-  75% {
-    background-position: 0% 100%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes gradientDriftRadial {
-  0% {
-    background-position: 0% 0%;
-    transform: rotate(0deg) scale(1);
-  }
-  33% {
-    background-position: 100% 50%;
-    transform: rotate(120deg) scale(1.1);
-  }
-  66% {
-    background-position: 50% 100%;
-    transform: rotate(240deg) scale(0.9);
-  }
-  100% {
-    background-position: 0% 0%;
-    transform: rotate(360deg) scale(1);
-  }
-}
-
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
@@ -161,88 +118,6 @@
 
 .animate-marquee {
   animation: marquee var(--duration) linear infinite;
-}
-
-/* Hero gradient background */
-.hero-gradient-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-  background: linear-gradient(
-    45deg,
-    #00BFFF 0%,
-    #008CFF 25%,
-    #F4F7FA 50%,
-    #0F111A 75%,
-    #7C8CF8 100%
-  );
-  background-size: 400% 400%;
-  animation: gradientDrift 15s ease-in-out infinite;
-  opacity: 0.15;
-}
-
-.dark .hero-gradient-bg {
-  background: linear-gradient(
-    45deg,
-    #00BFFF 0%,
-    #008CFF 25%,
-    #0F111A 50%,
-    #7C8CF8 75%,
-    #00B5FF 100%
-  );
-  background-size: 400% 400%;
-  animation: gradientDrift 15s ease-in-out infinite;
-  opacity: 0.1;
-}
-
-/* Alternative radial gradient for variety */
-.hero-gradient-radial {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-  background: radial-gradient(
-    ellipse at center,
-    #00BFFF 0%,
-    #008CFF 30%,
-    #F4F7FA 60%,
-    #0F111A 100%
-  );
-  background-size: 300% 300%;
-  animation: gradientDriftRadial 20s ease-in-out infinite;
-  opacity: 0.12;
-}
-
-.dark .hero-gradient-radial {
-  background: radial-gradient(
-    ellipse at center,
-    #00BFFF 0%,
-    #008CFF 30%,
-    #0F111A 60%,
-    #7C8CF8 100%
-  );
-  background-size: 300% 300%;
-  animation: gradientDriftRadial 20s ease-in-out infinite;
-  opacity: 0.08;
-}
-
-/* Accessibility: Respect reduced motion preference */
-@media (prefers-reduced-motion: reduce) {
-  .hero-gradient-bg,
-  .hero-gradient-radial {
-    animation: none;
-    background-position: 0% 50%;
-  }
-  
-  .animate-float,
-  .animate-marquee {
-    animation: none;
-  }
 }
 
 /* Minimalist card styles */
