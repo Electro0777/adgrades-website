@@ -111,10 +111,10 @@ const Home: React.FC = () => {
         
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in">
-            {/* Enhanced Silver Badge with Glowing Effect */}
-            <div className="silver-badge animate-silver-glow inline-flex items-center px-4 sm:px-8 py-3 sm:py-4 rounded-full text-xs sm:text-sm font-medium mb-6 sm:mb-8 hover:scale-105 transition-all duration-500 shadow-lg relative z-10">
-              <Zap className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 animate-pulse text-gray-600" />
-              <span className="font-semibold text-gray-700 dark:text-gray-600 relative z-10">
+            {/* Enhanced Silver Badge with Transparent Background and Glowing Text/Border */}
+            <div className="silver-badge animate-silver-glow inline-flex items-center px-4 sm:px-8 py-3 sm:py-4 rounded-full text-xs sm:text-sm font-medium mb-6 sm:mb-8 hover:scale-105 transition-all duration-500 relative z-10">
+              <Zap className="silver-icon w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 animate-pulse" />
+              <span className="silver-text relative z-10">
                 Transforming Businesses Since 2023
               </span>
             </div>

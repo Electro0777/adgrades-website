@@ -100,16 +100,17 @@
 
 @keyframes silverGlow {
   0%, 100% { 
-    box-shadow: 0 0 20px rgba(192, 192, 192, 0.4), 
-                0 0 40px rgba(192, 192, 192, 0.3), 
-                0 0 60px rgba(192, 192, 192, 0.2),
-                inset 0 0 20px rgba(255, 255, 255, 0.1);
+    border-color: rgba(192, 192, 192, 0.2);
+    text-shadow: 0 0 10px rgba(192, 192, 192, 0.2), 
+                 0 0 20px rgba(192, 192, 192, 0.1);
+    box-shadow: 0 0 0 1px rgba(192, 192, 192, 0.2);
   }
   50% { 
-    box-shadow: 0 0 30px rgba(192, 192, 192, 0.6), 
-                0 0 60px rgba(192, 192, 192, 0.5), 
-                0 0 90px rgba(192, 192, 192, 0.4),
-                inset 0 0 30px rgba(255, 255, 255, 0.2);
+    border-color: rgba(192, 192, 192, 0.4);
+    text-shadow: 0 0 15px rgba(192, 192, 192, 0.3), 
+                 0 0 30px rgba(192, 192, 192, 0.2),
+                 0 0 45px rgba(192, 192, 192, 0.1);
+    box-shadow: 0 0 0 1px rgba(192, 192, 192, 0.4);
   }
 }
 
@@ -234,40 +235,37 @@
   animation: silverGlow 3s ease-in-out infinite;
 }
 
-/* Silver Badge Styles */
+/* Silver Badge Styles - Transparent with glowing text and border only */
 .silver-badge {
-  background: linear-gradient(135deg, 
-    rgba(229, 229, 229, 0.9) 0%, 
-    rgba(192, 192, 192, 0.95) 25%, 
-    rgba(255, 255, 255, 0.9) 50%, 
-    rgba(192, 192, 192, 0.95) 75%, 
-    rgba(160, 160, 160, 0.9) 100%
-  );
-  border: 2px solid rgba(192, 192, 192, 0.6);
-  color: #4A5568;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: transparent;
+  border: 2px solid rgba(192, 192, 192, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   position: relative;
   overflow: hidden;
+}
+
+.silver-badge .silver-text {
+  color: #8C8C8C;
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(192, 192, 192, 0.2);
+}
+
+.silver-badge .silver-icon {
+  color: #8C8C8C;
+  filter: drop-shadow(0 0 8px rgba(192, 192, 192, 0.2));
 }
 
 .silver-badge::before {
   content: '';
   position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  background: linear-gradient(45deg, 
-    transparent, 
-    rgba(255, 255, 255, 0.8), 
-    transparent, 
-    rgba(192, 192, 192, 0.6), 
-    transparent
-  );
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  background: transparent;
   border-radius: inherit;
   z-index: -1;
-  animation: glassShimmer 3s ease-in-out infinite;
 }
 
 .silver-badge::after {
@@ -280,7 +278,7 @@
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.1),
     transparent
   );
   transition: transform 0.6s;
@@ -291,65 +289,36 @@
   animation: glare 0.8s ease-out;
 }
 
+.silver-badge:hover .silver-text {
+  text-shadow: 0 0 15px rgba(192, 192, 192, 0.3), 
+               0 0 30px rgba(192, 192, 192, 0.2);
+}
+
+.silver-badge:hover .silver-icon {
+  filter: drop-shadow(0 0 12px rgba(192, 192, 192, 0.3));
+}
+
 .dark .silver-badge {
-  background: linear-gradient(135deg, 
-    rgba(160, 160, 160, 0.8) 0%, 
-    rgba(192, 192, 192, 0.85) 25%, 
-    rgba(220, 220, 220, 0.8) 50%, 
-    rgba(192, 192, 192, 0.85) 75%, 
-    rgba(140, 140, 140, 0.8) 100%
-  );
-  border: 2px solid rgba(192, 192, 192, 0.5);
-  color: #2D3748;
+  border: 2px solid rgba(192, 192, 192, 0.25);
 }
 
-/* Gradient Background Classes */
-.gradient-drift-bg {
-  background: linear-gradient(
-    45deg,
-    var(--electric-blue),
-    var(--neon-blue),
-    var(--off-white),
-    var(--charcoal-black),
-    var(--electric-blue)
-  );
-  background-size: 400% 400%;
+.dark .silver-badge .silver-text {
+  color: #A0A0A0;
+  text-shadow: 0 0 10px rgba(192, 192, 192, 0.15);
 }
 
-.gradient-drift-bg-light {
-  background: linear-gradient(
-    135deg,
-    #00BFFF,
-    #008CFF,
-    #F4F7FA,
-    #E8F4FD,
-    #00BFFF
-  );
-  background-size: 400% 400%;
+.dark .silver-badge .silver-icon {
+  color: #A0A0A0;
+  filter: drop-shadow(0 0 8px rgba(192, 192, 192, 0.15));
 }
 
-.gradient-drift-bg-dark {
-  background: linear-gradient(
-    135deg,
-    #0F111A,
-    #008CFF,
-    #00BFFF,
-    #1A1F2E,
-    #0F111A
-  );
-  background-size: 400% 400%;
+.dark .silver-badge:hover .silver-text {
+  text-shadow: 0 0 15px rgba(192, 192, 192, 0.25), 
+               0 0 30px rgba(192, 192, 192, 0.15);
 }
 
-.gradient-radial-drift {
-  background: radial-gradient(
-    circle at center,
-    var(--electric-blue) 0%,
-    var(--neon-blue) 25%,
-    var(--off-white) 50%,
-    var(--charcoal-black) 75%,
-    var(--electric-blue) 100%
-  );
-  background-size: 300% 300%;
+.dark .silver-badge:hover .silver-icon {
+  filter: drop-shadow(0 0 12px rgba(192, 192, 192, 0.25));
 }
 
 /* Enhanced Glass Effect */
@@ -583,4 +552,55 @@
     rgba(0, 0, 0, 0.1),
     rgba(0, 0, 0, 0.05)
   );
+}
+
+/* Light mode enhancement: subtle color overlays */
+.absolute.inset-0.bg-gradient-to-tr {
+  background: linear-gradient(
+    to top right,
+    rgba(59, 130, 246, 0.02),
+    transparent,
+    rgba(99, 102, 241, 0.02)
+  );
+}
+
+.dark .absolute.inset-0.bg-gradient-to-tr {
+  opacity: 0.5;
+}
+
+.absolute.inset-0.bg-gradient-to-bl {
+  background: linear-gradient(
+    to bottom left,
+    rgba(168, 85, 247, 0.01),
+    transparent,
+    rgba(59, 130, 246, 0.01)
+  );
+}
+
+.dark .absolute.inset-0.bg-gradient-to-bl {
+  opacity: 0.3;
+}
+
+/* Enhanced gradient overlay for better text readability */
+.absolute.inset-0.bg-gradient-to-b {
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    transparent,
+    rgba(255, 255, 255, 0.3)
+  );
+}
+
+/* Light mode specific enhancements */
+.absolute.inset-0.bg-gradient-to-r {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.1),
+    transparent,
+    rgba(255, 255, 255, 0.1)
+  );
+}
+
+.dark .absolute.inset-0.bg-gradient-to-r {
+  opacity: 0;
 }
