@@ -337,7 +337,7 @@ const About: React.FC = () => {
               Meet the Team
             </button>
             <a
-              href="https://calendly.com/adgrades/free-strategy-session"
+              href="https://calendly.com/chandanbkrishna077/adgrades"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center px-12 py-6 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-slate-dark transition-all duration-500 transform hover:scale-110 text-lg"

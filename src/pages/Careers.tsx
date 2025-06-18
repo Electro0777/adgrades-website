@@ -572,7 +572,7 @@ const Careers: React.FC = () => {
             Let's discuss how you can contribute to our mission and grow your career with AdGrades.
           </p>
           <a
-            href="https://calendly.com/adgrades/free-strategy-session"
+            href="https://calendly.com/chandanbkrishna077/adgrades"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center px-12 py-6 bg-white text-slate-dark font-bold rounded-lg hover:bg-gray-100 transition-all duration-500 transform hover:scale-110 shadow-2xl text-lg"

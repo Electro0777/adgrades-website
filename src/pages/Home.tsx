@@ -327,7 +327,7 @@ const Home: React.FC = () => {
               <Target className="ml-2 sm:ml-3 h-4 w-4 sm:h-5 sm:w-5" />
             </Link>
             <a
-              href="https://calendly.com/adgrades/free-strategy-session"
+              href="https://calendly.com/chandanbkrishna077/adgrades"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-slate-dark transition-all duration-300 w-full sm:w-auto"
