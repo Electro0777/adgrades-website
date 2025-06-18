@@ -115,6 +115,26 @@
   100% { transform: translate(60px, 60px); }
 }
 
+@keyframes buttonPulse {
+  0%, 100% { 
+    transform: scale(1);
+    box-shadow: 0 4px 15px rgba(0, 181, 255, 0.2);
+  }
+  50% { 
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 181, 255, 0.4);
+  }
+}
+
+@keyframes buttonGlow {
+  0%, 100% { 
+    box-shadow: 0 0 20px rgba(0, 181, 255, 0.3), 0 4px 15px rgba(0, 181, 255, 0.2);
+  }
+  50% { 
+    box-shadow: 0 0 30px rgba(1, 249, 198, 0.4), 0 8px 25px rgba(0, 181, 255, 0.3);
+  }
+}
+
 .animate-float {
   animation: float 8s ease-in-out infinite;
 }
@@ -129,6 +149,27 @@
 
 .animate-marquee {
   animation: marquee var(--duration) linear infinite;
+}
+
+.animate-button-pulse {
+  animation: buttonPulse 2s ease-in-out infinite;
+}
+
+.animate-button-glow {
+  animation: buttonGlow 3s ease-in-out infinite;
+}
+
+/* Content overlay for non-hero sections */
+.content-overlay {
+  background: rgba(11, 17, 32, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.light .content-overlay {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 /* Minimalist card styles */
@@ -157,24 +198,47 @@
   border-color: rgba(0, 181, 255, 0.3);
 }
 
-/* Clean button styles */
+/* Enhanced button styles with unique animations */
 .brand-button {
   background: linear-gradient(135deg, #00B5FF 0%, #01F9C6 100%);
   color: #FFFFFF;
   font-weight: 600;
   padding: 0.75rem 2rem;
-  border-radius: 0.5rem;
-  transition: all 0.3s ease;
+  border-radius: 9999px; /* Fully rounded */
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   border: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 181, 255, 0.2);
 }
 
+.brand-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s;
+}
+
+.brand-button:hover::before {
+  left: 100%;
+}
+
 .brand-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 181, 255, 0.3);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 35px rgba(0, 181, 255, 0.4);
+  background: linear-gradient(135deg, #0099E6 0%, #00E6B8 100%);
+}
+
+.brand-button:active {
+  transform: translateY(-1px) scale(1.02);
+  transition: all 0.1s;
 }
 
 .brand-button-outline {
@@ -183,17 +247,41 @@
   border: 2px solid #00B5FF;
   font-weight: 600;
   padding: 0.75rem 2rem;
-  border-radius: 0.5rem;
-  transition: all 0.3s ease;
+  border-radius: 9999px; /* Fully rounded */
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.brand-button-outline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(135deg, #00B5FF 0%, #01F9C6 100%);
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1;
+}
+
+.brand-button-outline:hover::before {
+  width: 100%;
 }
 
 .brand-button-outline:hover {
-  background: rgba(0, 181, 255, 0.1);
+  color: white;
   border-color: #01F9C6;
-  transform: translateY(-2px);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 35px rgba(0, 181, 255, 0.3);
+}
+
+.brand-button-outline:active {
+  transform: translateY(-1px) scale(1.02);
+  transition: all 0.1s;
 }
 
 /* Light mode button adjustments */
@@ -203,7 +291,7 @@
 }
 
 .light .brand-button-outline:hover {
-  background: rgba(0, 181, 255, 0.1);
+  color: white;
   border-color: #01F9C6;
 }
 

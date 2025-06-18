@@ -88,7 +88,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   <Link
                     key={item.name}
                     to={item.path}
-                    className={`font-medium transition-all duration-300 relative group px-2 xl:px-3 py-2 rounded-lg flex items-center text-glow whitespace-nowrap ${
+                    className={`font-medium transition-all duration-300 relative group px-2 xl:px-3 py-2 rounded-lg flex items-center whitespace-nowrap ${
                       location.pathname === item.path
                         ? 'text-primary bg-primary/10'
                         : 'text-foreground hover:text-primary hover:bg-primary/5'
@@ -171,7 +171,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                       key={item.name}
                       to={item.path}
                       onClick={() => setIsMenuOpen(false)}
-                      className={`flex items-center px-3 sm:px-4 py-3 sm:py-4 rounded-xl font-medium transition-all duration-300 text-glow ${
+                      className={`flex items-center px-3 sm:px-4 py-3 sm:py-4 rounded-xl font-medium transition-all duration-300 ${
                         location.pathname === item.path
                           ? 'text-primary bg-primary/10'
                           : 'text-foreground hover:text-primary hover:bg-primary/5'
@@ -202,11 +202,20 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         )}
       </nav>
 
-      {/* Main Content */}
-      <main className="overflow-x-hidden">{children}</main>
+      {/* Main Content with Overlay for Non-Hero Sections */}
+      <main className="overflow-x-hidden">
+        {React.Children.map(children, (child, index) => {
+          if (React.isValidElement(child)) {
+            return React.cloneElement(child as React.ReactElement<any>, {
+              key: index
+            });
+          }
+          return child;
+        })}
+      </main>
 
-      {/* Footer - Mobile Responsive */}
-      <footer className="bg-card/80 border-t border-border overflow-x-hidden">
+      {/* Footer with Content Overlay */}
+      <footer className="content-overlay border-t border-border overflow-x-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Brand - Mobile Responsive */}
@@ -218,27 +227,27 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   className="h-8 sm:h-10 w-auto object-contain"
                 />
               </div>
-              <p className="text-muted-foreground text-glow mb-6 sm:mb-8 max-w-md leading-relaxed text-sm sm:text-base">
+              <p className="text-muted-foreground mb-6 sm:mb-8 max-w-md leading-relaxed text-sm sm:text-base description-text">
                 We help startups become the next big name through creative marketing, data-driven ads, and stunning web design.
               </p>
               
               {/* Contact Info - Mobile Responsive */}
               <div className="space-y-3 mb-6 sm:mb-8">
-                <div className="flex items-start text-muted-foreground text-glow text-sm sm:text-base">
+                <div className="flex items-start text-muted-foreground text-sm sm:text-base">
                   <Phone className="h-4 w-4 mr-3 mt-0.5 text-primary flex-shrink-0" />
                   <div>
                     <div>+91 80736 98913</div>
                     <div>+91 9686314869</div>
                   </div>
                 </div>
-                <div className="flex items-start text-muted-foreground text-glow text-sm sm:text-base">
+                <div className="flex items-start text-muted-foreground text-sm sm:text-base">
                   <Mail className="h-4 w-4 mr-3 mt-0.5 text-primary flex-shrink-0" />
                   <div>
                     <div>info@adgrades.in</div>
                     <div>adgradesweb@gmail.com</div>
                   </div>
                 </div>
-                <div className="flex items-start text-muted-foreground text-glow text-sm sm:text-base">
+                <div className="flex items-start text-muted-foreground text-sm sm:text-base">
                   <MapPin className="h-4 w-4 mr-3 mt-1 text-primary flex-shrink-0" />
                   <div>
                     <div>Vinayaka Industries</div>
@@ -252,13 +261,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
             {/* Quick Links - Mobile Responsive */}
             <div className="col-span-1">
-              <h4 className="font-semibold text-foreground text-glow mb-6 text-base sm:text-lg">Quick Links</h4>
+              <h4 className="font-semibold text-foreground mb-6 text-base sm:text-lg">Quick Links</h4>
               <ul className="space-y-3">
                 {navItems.map((item) => (
                   <li key={item.name}>
                     <Link
                       to={item.path}
-                      className="text-muted-foreground hover:text-primary transition-colors duration-300 flex items-center text-glow text-sm sm:text-base"
+                      className="text-muted-foreground hover:text-primary transition-colors duration-300 flex items-center text-sm sm:text-base"
                     >
                       {item.icon && <item.icon className="w-4 h-4 mr-2" />}
                       {item.name}
@@ -270,7 +279,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
             {/* Social Links & Hours - Mobile Responsive */}
             <div className="col-span-1">
-              <h4 className="font-semibold text-foreground text-glow mb-6 text-base sm:text-lg">Connect & Hours</h4>
+              <h4 className="font-semibold text-foreground mb-6 text-base sm:text-lg">Connect & Hours</h4>
               <div className="flex space-x-3 sm:space-x-4 mb-6">
                 <a
                   href="https://www.linkedin.com/company/ad-grades"
@@ -299,7 +308,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 </a>
               </div>
               
-              <div className="text-sm text-muted-foreground text-glow">
+              <div className="text-sm text-muted-foreground">
                 <div className="font-medium text-foreground mb-2">Business Hours</div>
                 <div>Mon - Sat: 9:00 AM - 9:00 PM</div>
                 <div>Sun: 9:00 AM - 1:30 PM</div>
@@ -308,14 +317,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           </div>
 
           <div className="border-t border-border mt-8 sm:mt-12 pt-6 sm:pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-muted-foreground text-glow text-xs sm:text-sm text-center md:text-left">
+            <p className="text-muted-foreground text-xs sm:text-sm text-center md:text-left">
               © {new Date().getFullYear()} AdGrades. All rights reserved.
             </p>
             <div className="flex space-x-4 sm:space-x-6">
-              <a href="#" className="text-muted-foreground hover:text-primary text-xs sm:text-sm transition-colors duration-300 text-glow">
+              <a href="#" className="text-muted-foreground hover:text-primary text-xs sm:text-sm transition-colors duration-300">
                 Privacy Policy
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary text-xs sm:text-sm transition-colors duration-300 text-glow">
+              <a href="#" className="text-muted-foreground hover:text-primary text-xs sm:text-sm transition-colors duration-300">
                 Terms of Service
               </a>
             </div>
