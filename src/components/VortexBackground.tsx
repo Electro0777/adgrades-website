@@ -51,7 +51,7 @@ const VortexBackground: React.FC<VortexBackgroundProps> = ({ className = '' }) =
     const createParticle = () => {
       const colors = isDark 
         ? ['rgba(0, 181, 255, 0.6)', 'rgba(1, 249, 198, 0.6)', 'rgba(59, 130, 246, 0.4)', 'rgba(139, 92, 246, 0.4)']
-        : ['rgba(0, 181, 255, 0.3)', 'rgba(1, 249, 198, 0.3)', 'rgba(96, 165, 250, 0.2)', 'rgba(167, 139, 250, 0.2)'];
+        : ['rgba(0, 181, 255, 0.4)', 'rgba(1, 249, 198, 0.4)', 'rgba(96, 165, 250, 0.3)', 'rgba(167, 139, 250, 0.3)'];
       
       const angle = Math.random() * Math.PI * 2;
       const distance = Math.random() * Math.min(canvas.width, canvas.height) * 0.6;
@@ -227,11 +227,11 @@ const VortexBackground: React.FC<VortexBackgroundProps> = ({ className = '' }) =
 
   return (
     <div className={`fixed inset-0 overflow-hidden pointer-events-none ${className}`}>
-      {/* Base gradient background */}
+      {/* Base gradient background - DARK THEME */}
       <div className={`absolute inset-0 transition-all duration-1000 ${
         isDark 
-          ? 'bg-gradient-to-br from-slate-900 via-slate-800 to-indigo-900'
-          : 'bg-gradient-to-br from-white via-blue-50 to-indigo-50'
+          ? 'bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'
+          : 'bg-gradient-to-br from-slate-50 via-white to-blue-50'
       }`}>
         
         {/* Animated canvas for vortex and particles */}
@@ -246,7 +246,7 @@ const VortexBackground: React.FC<VortexBackgroundProps> = ({ className = '' }) =
           {/* Floating blob 1 */}
           <div 
             className={`absolute top-1/4 left-1/4 w-96 h-96 rounded-full animate-float ${
-              isDark ? 'opacity-5' : 'opacity-3'
+              isDark ? 'opacity-3' : 'opacity-2'
             }`}
             style={{
               background: isDark 
@@ -261,7 +261,7 @@ const VortexBackground: React.FC<VortexBackgroundProps> = ({ className = '' }) =
           {/* Floating blob 2 */}
           <div 
             className={`absolute bottom-1/3 right-1/3 w-80 h-80 rounded-full animate-float ${
-              isDark ? 'opacity-4' : 'opacity-2'
+              isDark ? 'opacity-2' : 'opacity-1'
             }`}
             style={{
               background: isDark
@@ -276,7 +276,7 @@ const VortexBackground: React.FC<VortexBackgroundProps> = ({ className = '' }) =
 
         {/* Subtle mesh gradient overlay */}
         <div 
-          className={`absolute inset-0 ${isDark ? 'opacity-[0.02]' : 'opacity-[0.015]'}`}
+          className={`absolute inset-0 ${isDark ? 'opacity-[0.015]' : 'opacity-[0.01]'}`}
           style={{
             background: `
               radial-gradient(circle at 20% 20%, #00B5FF 0%, transparent 50%),
