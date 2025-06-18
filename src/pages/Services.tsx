@@ -118,7 +118,7 @@ const Services: React.FC = () => {
               </span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed description-text">
               Our comprehensive marketing and design services are strategically designed to transform 
               startups into industry leaders through data-driven campaigns and exceptional creativity.
             </p>
@@ -166,7 +166,7 @@ const Services: React.FC = () => {
                     </h2>
                   </div>
                   
-                  <p className="text-base sm:text-lg text-muted-foreground mb-8 sm:mb-10 leading-relaxed">
+                  <p className="text-base sm:text-lg text-muted-foreground mb-8 sm:mb-10 leading-relaxed service-description">
                     {service.description}
                   </p>
 
@@ -185,7 +185,7 @@ const Services: React.FC = () => {
                             <h4 className="font-semibold text-foreground mb-1 sm:mb-2 text-sm sm:text-base">
                               {step.step}
                             </h4>
-                            <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+                            <p className="text-muted-foreground leading-relaxed text-sm sm:text-base description-text">
                               {step.description}
                             </p>
                           </div>
@@ -202,7 +202,7 @@ const Services: React.FC = () => {
                         <h4 className="font-semibold text-foreground mb-1 sm:mb-2 text-sm sm:text-base">
                           Client Success
                         </h4>
-                        <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+                        <p className="text-muted-foreground leading-relaxed text-sm sm:text-base description-text">
                           {service.success}
                         </p>
                       </div>
@@ -246,7 +246,7 @@ const Services: React.FC = () => {
           <h2 className="heading-secondary text-white mb-10">
             Ready to Transform Your Business?
           </h2>
-          <p className="text-xl text-white/90 mb-16 max-w-4xl mx-auto">
+          <p className="text-xl text-white/90 mb-16 max-w-4xl mx-auto description-text">
             Let's discuss which services will have the biggest impact on your growth. 
             Schedule a free strategy session with our team.
           </p>

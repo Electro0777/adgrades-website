@@ -149,7 +149,7 @@ const Contact: React.FC = () => {
               </span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed description-text">
               Ready to transform your business? We'd love to hear about your goals and 
               discuss how AdGrades can help you achieve remarkable growth.
             </p>
@@ -365,7 +365,7 @@ const Contact: React.FC = () => {
                         <h4 className="font-bold text-foreground text-lg">
                           {method.title}
                         </h4>
-                        <p className="text-muted-foreground">
+                        <p className="text-muted-foreground description-text">
                           {method.description}
                         </p>
                       </div>
@@ -391,7 +391,7 @@ const Contact: React.FC = () => {
                 Questions
               </span>
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl text-muted-foreground description-text">
               Get answers to common questions about our services and process.
             </p>
           </div>
@@ -417,7 +417,7 @@ const Contact: React.FC = () => {
                 </button>
                 {openFaq === index && (
                   <div className="px-8 pb-6">
-                    <p className="text-muted-foreground leading-relaxed text-lg">
+                    <p className="text-muted-foreground leading-relaxed text-lg description-text">
                       {faq.answer}
                     </p>
                   </div>
@@ -438,7 +438,7 @@ const Contact: React.FC = () => {
                 Office
               </span>
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl text-muted-foreground description-text">
               Located in Hassan, Karnataka, we're always ready for a coffee chat.
             </p>
           </div>

@@ -405,3 +405,45 @@
     animation-duration: 20s;
   }
 }
+
+/* Text justification for better readability */
+.text-justified {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* Apply justified text to paragraphs in content areas */
+.content-area p,
+.description-text,
+.bio-text,
+.service-description,
+.project-description {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+}
+
+/* Ensure proper line height for justified text */
+.content-area p,
+.description-text,
+.bio-text,
+.service-description,
+.project-description {
+  line-height: 1.6;
+}
+
+/* Mobile adjustments for justified text */
+@media (max-width: 640px) {
+  .content-area p,
+  .description-text,
+  .bio-text,
+  .service-description,
+  .project-description {
+    text-align: left;
+    hyphens: none;
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+  }
+}

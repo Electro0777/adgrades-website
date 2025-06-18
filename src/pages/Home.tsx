@@ -115,7 +115,7 @@ const Home: React.FC = () => {
               Become Industry Leaders
             </h1>
             
-            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed px-4 description-text">
               Creative marketing, data-driven advertising, and stunning web design that transforms 
               your vision into market-leading success stories.
             </p>
@@ -181,7 +181,7 @@ const Home: React.FC = () => {
               Services That Drive{' '}
               <span className="brand-gradient-text">Growth</span>
             </h2>
-            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-4 description-text">
               Comprehensive marketing and design solutions that transform startups into industry leaders.
             </p>
           </div>
@@ -198,7 +198,7 @@ const Home: React.FC = () => {
                 <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">
                   {service.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base">
+                <p className="text-muted-foreground leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base service-description">
                   {service.description}
                 </p>
                 <Link
@@ -222,7 +222,7 @@ const Home: React.FC = () => {
               Trusted by{' '}
               <span className="brand-gradient-text">Amazing Clients</span>
             </h2>
-            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-4 description-text">
               We're proud to work with innovative businesses across various industries.
             </p>
           </div>
@@ -275,7 +275,7 @@ const Home: React.FC = () => {
                     <Star key={i} className="h-4 w-4 sm:h-5 sm:w-5 text-secondary fill-current" />
                   ))}
                 </div>
-                <blockquote className="text-muted-foreground mb-6 sm:mb-8 italic leading-relaxed text-sm sm:text-base">
+                <blockquote className="text-muted-foreground mb-6 sm:mb-8 italic leading-relaxed text-sm sm:text-base description-text">
                   "{testimonial.quote}"
                 </blockquote>
                 <div className="flex items-center">
@@ -305,7 +305,7 @@ const Home: React.FC = () => {
           <h2 className="heading-secondary text-white mb-6 sm:mb-8">
             Ready to Grow Your Brand?
           </h2>
-          <p className="text-lg sm:text-xl text-white/90 mb-8 sm:mb-12 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-white/90 mb-8 sm:mb-12 max-w-3xl mx-auto description-text">
             Let's discuss how we can transform your business into the next big success story.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">

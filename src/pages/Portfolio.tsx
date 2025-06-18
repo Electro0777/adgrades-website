@@ -229,7 +229,7 @@ const Portfolio: React.FC = () => {
               </span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed description-text">
               Explore how we've helped businesses across industries achieve remarkable growth 
               through strategic marketing, stunning design, and innovative technology solutions.
             </p>
@@ -274,7 +274,7 @@ const Portfolio: React.FC = () => {
                 Clients
               </span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed description-text">
               We're proud to work with amazing brands across various industries.
             </p>
           </div>
@@ -325,7 +325,7 @@ const Portfolio: React.FC = () => {
                   <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-500">
                     {client.name}
                   </h3>
-                  <p className="text-muted-foreground mb-6 leading-relaxed text-lg">
+                  <p className="text-muted-foreground mb-6 leading-relaxed text-lg project-description">
                     {client.description}
                   </p>
                   
@@ -379,7 +379,7 @@ const Portfolio: React.FC = () => {
                 Case Studies
               </span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed description-text">
               Deep dive into our most successful projects and the strategies that drove results.
             </p>
           </div>
@@ -429,7 +429,7 @@ const Portfolio: React.FC = () => {
                       <h4 className="font-bold text-foreground text-sm mb-2">
                         Challenge
                       </h4>
-                      <p className="text-muted-foreground leading-relaxed">
+                      <p className="text-muted-foreground leading-relaxed project-description">
                         {project.challenge}
                       </p>
                     </div>
@@ -437,7 +437,7 @@ const Portfolio: React.FC = () => {
                       <h4 className="font-bold text-foreground text-sm mb-2">
                         Solution
                       </h4>
-                      <p className="text-muted-foreground leading-relaxed">
+                      <p className="text-muted-foreground leading-relaxed project-description">
                         {project.solution}
                       </p>
                     </div>
@@ -445,7 +445,7 @@ const Portfolio: React.FC = () => {
                       <h4 className="font-bold text-secondary text-sm mb-2">
                         Result
                       </h4>
-                      <p className="text-secondary/90 leading-relaxed">
+                      <p className="text-secondary/90 leading-relaxed project-description">
                         {project.result}
                       </p>
                     </div>
@@ -489,7 +489,7 @@ const Portfolio: React.FC = () => {
           <h2 className="heading-secondary text-white mb-10">
             Ready to Be Our Next Success Story?
           </h2>
-          <p className="text-xl text-white/90 mb-16 leading-relaxed max-w-4xl mx-auto">
+          <p className="text-xl text-white/90 mb-16 leading-relaxed max-w-4xl mx-auto description-text">
             Let's discuss how we can achieve similar results for your business. 
             Every great project starts with a conversation.
           </p>

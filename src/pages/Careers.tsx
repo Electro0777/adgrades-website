@@ -176,7 +176,7 @@ const Careers: React.FC = () => {
               </span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed description-text">
               Be part of a dynamic team that's revolutionizing digital marketing. 
               We're looking for passionate individuals who want to make a real impact.
             </p>
@@ -212,7 +212,7 @@ const Careers: React.FC = () => {
                 Values
               </span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed description-text">
               At AdGrades, we've built a culture that fosters creativity, collaboration, and personal growth.
             </p>
           </div>
@@ -229,7 +229,7 @@ const Careers: React.FC = () => {
                 <h3 className="text-2xl font-semibold text-foreground mb-6 group-hover:text-primary transition-colors duration-500">
                   {value.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed text-lg">
+                <p className="text-muted-foreground leading-relaxed text-lg description-text">
                   {value.description}
                 </p>
               </div>
@@ -248,7 +248,7 @@ const Careers: React.FC = () => {
                 Positions
               </span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed description-text">
               Explore exciting career opportunities and find the perfect role to grow your career with us.
             </p>
           </div>
@@ -292,7 +292,7 @@ const Careers: React.FC = () => {
                     </span>
                   </div>
 
-                  <p className="text-muted-foreground mb-8 leading-relaxed text-lg">
+                  <p className="text-muted-foreground mb-8 leading-relaxed text-lg description-text">
                     {position.description}
                   </p>
 
@@ -304,7 +304,7 @@ const Careers: React.FC = () => {
                       {position.requirements.map((req, reqIndex) => (
                         <li key={reqIndex} className="flex items-start text-muted-foreground">
                           <CheckCircle className="h-5 w-5 text-secondary mr-3 mt-0.5 flex-shrink-0" />
-                          {req}
+                          <span className="description-text">{req}</span>
                         </li>
                       ))}
                     </ul>
@@ -331,7 +331,7 @@ const Careers: React.FC = () => {
                   AdGrades?
                 </span>
               </h2>
-              <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
+              <p className="text-xl text-muted-foreground mb-12 leading-relaxed description-text">
                 We believe in taking care of our team members and providing an environment 
                 where everyone can thrive both professionally and personally.
               </p>
@@ -340,7 +340,7 @@ const Careers: React.FC = () => {
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start group">
                     <CheckCircle className="h-6 w-6 text-secondary mr-4 mt-1 flex-shrink-0 group-hover:scale-110 transition-transform duration-500" />
-                    <span className="text-muted-foreground leading-relaxed text-lg">{benefit}</span>
+                    <span className="text-muted-foreground leading-relaxed text-lg description-text">{benefit}</span>
                   </div>
                 ))}
               </div>
@@ -376,7 +376,7 @@ const Careers: React.FC = () => {
                 Team
               </span>
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl text-muted-foreground description-text">
               Don't see the perfect role? Send us your information and we'll keep you in mind for future opportunities.
             </p>
           </div>

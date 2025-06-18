@@ -152,7 +152,7 @@ const About: React.FC = () => {
               </span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed description-text">
               A passionate team of marketers, designers, and developers dedicated to helping 
               startups and growing businesses become industry leaders through strategic marketing 
               and exceptional design.
@@ -186,7 +186,7 @@ const About: React.FC = () => {
                 Journey
               </span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed description-text">
               From a startup idea to a growing agency, here's how we've evolved alongside our clients.
             </p>
           </div>
@@ -212,7 +212,7 @@ const About: React.FC = () => {
                       <h3 className="text-2xl font-semibold text-foreground mb-4">
                         {milestone.title}
                       </h3>
-                      <p className="text-muted-foreground leading-relaxed text-lg">
+                      <p className="text-muted-foreground leading-relaxed text-lg description-text">
                         {milestone.description}
                       </p>
                     </div>
@@ -240,7 +240,7 @@ const About: React.FC = () => {
                 Values
               </span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed description-text">
               These principles guide everything we do and define how we serve our clients.
             </p>
           </div>
@@ -257,7 +257,7 @@ const About: React.FC = () => {
                 <h3 className="text-2xl font-semibold text-foreground mb-6 group-hover:text-primary transition-colors duration-500">
                   {value.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed text-lg">
+                <p className="text-muted-foreground leading-relaxed text-lg description-text">
                   {value.description}
                 </p>
               </div>
@@ -276,7 +276,7 @@ const About: React.FC = () => {
                 Team
               </span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed description-text">
               The talented individuals behind AdGrades who make the magic happen every day.
             </p>
           </div>
@@ -300,7 +300,7 @@ const About: React.FC = () => {
                 <p className="text-primary font-medium text-sm mb-4">
                   {member.role}
                 </p>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-6 min-h-[4rem]">
+                <p className="text-muted-foreground text-sm leading-relaxed mb-6 min-h-[4rem] bio-text">
                   {member.bio}
                 </p>
                 <a
@@ -321,7 +321,7 @@ const About: React.FC = () => {
           <h2 className="heading-secondary text-white mb-10">
             Ready to Work with Our Team?
           </h2>
-          <p className="text-xl text-white/90 mb-16 leading-relaxed max-w-4xl mx-auto">
+          <p className="text-xl text-white/90 mb-16 leading-relaxed max-w-4xl mx-auto description-text">
             Let's discuss how our expertise and passion can help transform your business. 
             Every great partnership starts with a conversation.
           </p>
