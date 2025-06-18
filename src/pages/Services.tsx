@@ -177,7 +177,7 @@ const Services: React.FC = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-center">
           {title}
         </h2>
-        <p className="text-xl text-muted-foreground max-w-2xl mx-auto description-text text-center">
+        <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-center">
           {subtitle}
         </p>
       </div>
