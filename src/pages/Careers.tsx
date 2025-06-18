@@ -164,28 +164,20 @@ const Careers: React.FC = () => {
         
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in">
-            {/* Badge */}
-            <div className="page-badge">
+            {/* Badge with glow */}
+            <div className="page-badge brand-glow">
               <Zap className="w-5 h-5 mr-3 animate-pulse" />
               <span className="brand-gradient-text font-semibold">
                 Join Our Growing Team
               </span>
             </div>
             
-            {/* Title with Logo */}
-            <div className="flex items-center justify-center mb-8">
-              <img
-                src="/Asset 2.png"
-                alt="AdGrades Logo"
-                className="h-12 sm:h-16 w-auto mr-4 sm:mr-6"
-              />
-              <h1 className="heading-primary text-foreground text-glow leading-tight">
-                Join the{' '}
-                <span className="brand-gradient-text brand-glow">
-                  AdGrades Team
-                </span>
-              </h1>
-            </div>
+            <h1 className="heading-primary text-foreground text-glow mb-8 leading-tight">
+              Join the{' '}
+              <span className="brand-gradient-text brand-glow">
+                AdGrades Team
+              </span>
+            </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground text-glow mb-12 max-w-4xl mx-auto leading-relaxed">
               Be part of a dynamic team that's revolutionizing digital marketing. 

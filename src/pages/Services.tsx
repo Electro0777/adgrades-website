@@ -106,28 +106,20 @@ const Services: React.FC = () => {
         
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in">
-            {/* Badge */}
-            <div className="page-badge">
+            {/* Badge with glow */}
+            <div className="page-badge brand-glow">
               <Zap className="w-5 h-5 mr-3 animate-pulse" />
               <span className="brand-gradient-text font-semibold">
                 Comprehensive Marketing Solutions
               </span>
             </div>
             
-            {/* Title with Logo */}
-            <div className="flex items-center justify-center mb-8">
-              <img
-                src="/Asset 2.png"
-                alt="AdGrades Logo"
-                className="h-12 sm:h-16 w-auto mr-4 sm:mr-6"
-              />
-              <h1 className="heading-primary text-foreground text-glow leading-tight">
-                Services That Drive{' '}
-                <span className="brand-gradient-text brand-glow">
-                  Growth
-                </span>
-              </h1>
-            </div>
+            <h1 className="heading-primary text-foreground text-glow mb-8 leading-tight">
+              Services That Drive{' '}
+              <span className="brand-gradient-text brand-glow">
+                Growth
+              </span>
+            </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground text-glow mb-12 max-w-4xl mx-auto leading-relaxed">
               Our comprehensive marketing and design services are strategically designed to transform 
@@ -155,51 +147,45 @@ const Services: React.FC = () => {
         </div>
       </section>
 
-      {/* Services Sections - Fixed alignment */}
+      {/* Services Sections - Optimized and clean */}
       <section className="section-padding">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {services.map((service, index) => (
             <div
               key={service.title}
-              className="mb-32"
+              className="mb-24"
             >
-              <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center ${
+              <div className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${
                 index % 2 === 1 ? 'lg:flex-row-reverse' : ''
               }`}>
-                {/* Content - Consistent alignment */}
-                <div className={`${index % 2 === 1 ? 'lg:order-2 lg:text-right' : 'lg:order-1'}`}>
-                  <div className={`flex items-center mb-10 ${index % 2 === 1 ? 'lg:justify-end' : ''}`}>
-                    <div className={`w-20 h-20 rounded-3xl ${service.iconBg} flex items-center justify-center shadow-xl ${
-                      index % 2 === 1 ? 'lg:order-2 lg:ml-6 mr-0' : 'mr-6'
-                    }`}>
-                      <service.icon className="h-10 w-10 text-white" />
+                {/* Content */}
+                <div className={`${index % 2 === 1 ? 'lg:order-2' : 'lg:order-1'}`}>
+                  <div className="flex items-center mb-8">
+                    <div className={`w-16 h-16 rounded-2xl ${service.iconBg} flex items-center justify-center shadow-xl mr-6`}>
+                      <service.icon className="h-8 w-8 text-white" />
                     </div>
-                    <h2 className="text-3xl md:text-5xl font-bold text-foreground text-glow">
+                    <h2 className="text-3xl md:text-4xl font-bold text-foreground text-glow">
                       {service.title}
                     </h2>
                   </div>
                   
-                  <p className="text-xl text-muted-foreground text-glow mb-12 leading-relaxed">
+                  <p className="text-lg text-muted-foreground text-glow mb-10 leading-relaxed">
                     {service.description}
                   </p>
 
-                  {/* Process - Consistent alignment */}
-                  <div className="mb-12">
-                    <h3 className="text-2xl font-semibold text-foreground text-glow mb-8">
+                  {/* Process */}
+                  <div className="mb-10">
+                    <h3 className="text-xl font-semibold text-foreground text-glow mb-6">
                       Our 3-Step Process
                     </h3>
-                    <div className="space-y-8">
+                    <div className="space-y-6">
                       {service.process.map((step, stepIndex) => (
-                        <div key={stepIndex} className={`flex items-start group ${
-                          index % 2 === 1 ? 'lg:flex-row-reverse lg:text-right' : ''
-                        }`}>
-                          <div className={`w-16 h-16 rounded-2xl ${service.iconBg} flex items-center justify-center flex-shrink-0 shadow-xl ${
-                            index % 2 === 1 ? 'lg:ml-6 mr-0' : 'mr-6'
-                          }`}>
-                            <step.icon className="h-8 w-8 text-white" />
+                        <div key={stepIndex} className="flex items-start">
+                          <div className={`w-12 h-12 rounded-xl ${service.iconBg} flex items-center justify-center flex-shrink-0 shadow-lg mr-4`}>
+                            <step.icon className="h-6 w-6 text-white" />
                           </div>
                           <div>
-                            <h4 className="font-bold text-foreground text-glow mb-3 text-lg">
+                            <h4 className="font-semibold text-foreground text-glow mb-2">
                               {step.step}
                             </h4>
                             <p className="text-muted-foreground leading-relaxed">
@@ -212,13 +198,11 @@ const Services: React.FC = () => {
                   </div>
 
                   {/* Success Story */}
-                  <div className="minimal-card p-8 mb-12">
-                    <div className={`flex items-start ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
-                      <CheckCircle className={`h-8 w-8 text-secondary flex-shrink-0 mt-1 ${
-                        index % 2 === 1 ? 'lg:ml-4 mr-0' : 'mr-4'
-                      }`} />
+                  <div className="minimal-card p-6 mb-8">
+                    <div className="flex items-start">
+                      <CheckCircle className="h-6 w-6 text-secondary flex-shrink-0 mt-1 mr-4" />
                       <div>
-                        <h4 className="font-bold text-foreground text-glow mb-3 text-lg">
+                        <h4 className="font-semibold text-foreground text-glow mb-2">
                           Client Success
                         </h4>
                         <p className="text-muted-foreground leading-relaxed">
@@ -228,25 +212,23 @@ const Services: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className={index % 2 === 1 ? 'lg:text-right' : ''}>
-                    <Link
-                      to="/contact"
-                      className="brand-button inline-flex"
-                    >
-                      Let's Talk
-                      <ArrowRight className="ml-3 h-6 w-6" />
-                    </Link>
-                  </div>
+                  <Link
+                    to="/contact"
+                    className="brand-button inline-flex"
+                  >
+                    Let's Talk
+                    <ArrowRight className="ml-3 h-6 w-6" />
+                  </Link>
                 </div>
 
-                {/* Visual - Consistent positioning */}
+                {/* Visual */}
                 <div className={`${index % 2 === 1 ? 'lg:order-1' : 'lg:order-2'}`}>
                   <div className="relative group">
-                    <div className={`w-full h-[500px] bg-gradient-to-br ${service.gradient} rounded-3xl shadow-2xl flex items-center justify-center transition-all duration-700 group-hover:shadow-3xl group-hover:scale-105`}>
-                      <service.icon className="h-32 w-32 text-white/30" />
+                    <div className={`w-full h-[400px] bg-gradient-to-br ${service.gradient} rounded-2xl shadow-xl flex items-center justify-center transition-all duration-500 group-hover:shadow-2xl group-hover:scale-105`}>
+                      <service.icon className="h-24 w-24 text-white/30" />
                     </div>
-                    <div className="absolute -bottom-8 -right-8 bg-card/80 backdrop-blur-xl p-8 rounded-3xl shadow-2xl border border-border">
-                      <div className="text-3xl font-bold text-foreground text-glow">
+                    <div className="absolute -bottom-6 -right-6 bg-card/90 backdrop-blur-xl p-6 rounded-2xl shadow-xl border border-border">
+                      <div className="text-2xl font-bold text-foreground text-glow">
                         {index + 1}
                       </div>
                       <div className="text-muted-foreground font-medium">

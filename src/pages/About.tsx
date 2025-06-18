@@ -140,8 +140,8 @@ const About: React.FC = () => {
         
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in">
-            {/* Badge */}
-            <div className="page-badge">
+            {/* Badge with glow */}
+            <div className="page-badge brand-glow">
               <Zap className="w-5 h-5 mr-3 animate-pulse" />
               <span className="brand-gradient-text font-semibold">
                 Meet the Team Behind the Magic

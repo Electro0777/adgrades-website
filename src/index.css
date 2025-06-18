@@ -73,13 +73,14 @@
   -webkit-text-fill-color: transparent;
 }
 
-/* AdGrades brand glow effect - subtle for text */
+/* AdGrades brand glow effect - reduced for gradient text */
 .brand-glow {
-  text-shadow: 0 0 12px rgba(1, 249, 198, 0.3);
+  text-shadow: 0 0 8px rgba(1, 249, 198, 0.2);
 }
 
+/* Reduced glow for normal text */
 .text-glow {
-  text-shadow: 0 0 8px rgba(241, 245, 249, 0.2);
+  text-shadow: 0 0 4px rgba(241, 245, 249, 0.1);
 }
 
 /* Custom animations */
@@ -257,7 +258,7 @@
   }
 }
 
-/* Badge styles */
+/* Badge styles with glow */
 .page-badge {
   display: inline-flex;
   align-items: center;
@@ -271,6 +272,7 @@
   font-weight: 500;
   margin-bottom: 2rem;
   transition: all 0.5s ease;
+  box-shadow: 0 0 20px rgba(0, 181, 255, 0.15);
 }
 
 .page-badge:hover {
