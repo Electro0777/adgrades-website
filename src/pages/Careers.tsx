@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { 
   Users, 
   Heart, 
@@ -11,7 +12,9 @@ import {
   MapPin,
   Clock,
   DollarSign,
-  Briefcase
+  Briefcase,
+  Shield,
+  ArrowRight
 } from 'lucide-react';
 import VortexBackground from '../components/VortexBackground';
 
@@ -206,8 +209,36 @@ const Careers: React.FC = () => {
         </div>
       </section>
 
+      {/* Verify Certificate Section - Only on Careers Page */}
+      <section className="section-padding content-overlay">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="heading-secondary text-foreground mb-8">
+              Verify Employee{' '}
+              <span className="brand-gradient-text">
+                Certificates
+              </span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed description-text">
+              Verify the authenticity of AdGrades employee certificates and achievements.
+            </p>
+          </div>
+
+          <div className="text-center">
+            <Link
+              to="/verify"
+              className="inline-flex items-center px-8 py-4 bg-secondary/20 text-secondary border-2 border-secondary font-semibold rounded-2xl hover:bg-secondary hover:text-white transition-all duration-500 transform hover:scale-105 shadow-xl"
+            >
+              <Shield className="mr-3 h-6 w-6" />
+              Verify Certificate
+              <ArrowRight className="ml-3 h-6 w-6" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Culture & Values */}
-      <section className="section-padding bg-card/20">
+      <section className="section-padding content-overlay">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-24">
             <h2 className="heading-secondary text-foreground mb-8">
@@ -243,7 +274,7 @@ const Careers: React.FC = () => {
       </section>
 
       {/* Open Positions */}
-      <section id="open-positions" className="section-padding">
+      <section id="open-positions" className="section-padding content-overlay">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-24">
             <h2 className="heading-secondary text-foreground mb-8">
@@ -325,7 +356,7 @@ const Careers: React.FC = () => {
       </section>
 
       {/* Benefits */}
-      <section className="section-padding bg-card/20">
+      <section className="section-padding content-overlay">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div>
@@ -371,7 +402,7 @@ const Careers: React.FC = () => {
       </section>
 
       {/* Application Form */}
-      <section id="application-form" className="section-padding">
+      <section id="application-form" className="section-padding content-overlay">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="heading-secondary text-foreground mb-6">
@@ -528,6 +559,27 @@ const Careers: React.FC = () => {
               </form>
             )}
           </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="section-padding brand-gradient">
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="heading-secondary text-white mb-10">
+            Ready to Join Our Team?
+          </h2>
+          <p className="text-xl text-white/90 mb-16 max-w-4xl mx-auto description-text">
+            Let's discuss how you can contribute to our mission and grow your career with AdGrades.
+          </p>
+          <a
+            href="https://calendly.com/adgrades/free-strategy-session"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center px-12 py-6 bg-white text-slate-dark font-bold rounded-lg hover:bg-gray-100 transition-all duration-500 transform hover:scale-110 shadow-2xl text-lg"
+          >
+            Get Your Free Strategy Session
+            <ArrowRight className="ml-3 h-6 w-6" />
+          </a>
         </div>
       </section>
     </div>

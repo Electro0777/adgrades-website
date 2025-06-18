@@ -8,10 +8,11 @@ import {
   Award,
   Users,
   Target,
-  Zap
+  Zap,
+  ArrowRight
 } from 'lucide-react';
-import AnimatedCounter from '../components/AnimatedCounter';
 import VortexBackground from '../components/VortexBackground';
+import AnimatedCounter from '../components/AnimatedCounter';
 
 const About: React.FC = () => {
   const milestones = [
@@ -160,7 +161,7 @@ const About: React.FC = () => {
             <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed description-text">
               A passionate team of marketers, designers, and developers dedicated to helping 
               startups and growing businesses become industry leaders through strategic marketing 
-              and exceptional design.
+              and exceptional creativity.
             </p>
             
             <div className="grid grid-cols-2 gap-8 max-w-md mx-auto">
@@ -336,11 +337,13 @@ const About: React.FC = () => {
               Meet the Team
             </button>
             <a
-              href="/contact"
+              href="https://calendly.com/adgrades/free-strategy-session"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center px-12 py-6 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-slate-dark transition-all duration-500 transform hover:scale-110 text-lg"
             >
               <Target className="mr-3 h-6 w-6" />
-              Start a Project
+              Get Your Free Strategy Session
             </a>
           </div>
         </div>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Sun, Moon, Instagram, Linkedin, MessageCircle, Mail, Phone, MapPin, Shield } from 'lucide-react';
+import { Menu, X, Sun, Moon, Instagram, Linkedin, MessageCircle, Mail, Phone, MapPin } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
 
 interface LayoutProps {
@@ -57,7 +57,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     { name: 'About Us', path: '/about' },
     { name: 'Contact Us', path: '/contact' },
     { name: 'Careers', path: '/careers' },
-    { name: 'Verify Certificate', path: '/verify', icon: Shield, isSpecial: true },
   ];
 
   return (
@@ -93,14 +92,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         ? 'text-primary bg-primary/10'
                         : 'text-foreground hover:text-primary hover:bg-primary/5'
                     } ${
-                      item.isSpecial 
-                        ? 'text-secondary hover:text-primary bg-secondary/10 hover:bg-secondary/20' 
-                        : ''
-                    } ${
                       isScrolled ? 'text-sm' : 'text-base'
                     }`}
                   >
-                    {item.icon && <item.icon className="w-4 h-4 mr-2 flex-shrink-0" />}
                     <span className="truncate">{item.name}</span>
                   </Link>
                 ))}
@@ -175,13 +169,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         location.pathname === item.path
                           ? 'text-primary bg-primary/10'
                           : 'text-foreground hover:text-primary hover:bg-primary/5'
-                      } ${
-                        item.isSpecial 
-                          ? 'text-secondary hover:text-primary' 
-                          : ''
                       }`}
                     >
-                      {item.icon && <item.icon className="w-5 h-5 mr-3" />}
                       <span className="text-base sm:text-lg">{item.name}</span>
                     </Link>
                   ))}
@@ -269,7 +258,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                       to={item.path}
                       className="text-muted-foreground hover:text-primary transition-colors duration-300 flex items-center text-sm sm:text-base"
                     >
-                      {item.icon && <item.icon className="w-4 h-4 mr-2" />}
                       {item.name}
                     </Link>
                   </li>

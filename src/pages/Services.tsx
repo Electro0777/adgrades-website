@@ -169,15 +169,15 @@ const Services: React.FC = () => {
     sectionNumber: string;
   }) => (
     <div className="mb-20">
-      {/* Section Header */}
+      {/* Section Header - CENTERED */}
       <div className="text-center mb-16">
         <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/20 rounded-2xl mb-6">
           <span className="text-2xl font-bold text-primary">{sectionNumber}</span>
         </div>
-        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-center">
           {title}
         </h2>
-        <p className="text-xl text-muted-foreground max-w-2xl mx-auto description-text">
+        <p className="text-xl text-muted-foreground max-w-2xl mx-auto description-text text-center">
           {subtitle}
         </p>
       </div>
@@ -333,13 +333,15 @@ const Services: React.FC = () => {
             Let's discuss which services will have the biggest impact on your growth. 
             Schedule a free strategy session with our team.
           </p>
-          <Link
-            to="/contact"
+          <a
+            href="https://calendly.com/adgrades/free-strategy-session"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center px-12 py-6 bg-white text-slate-dark font-bold rounded-lg hover:bg-gray-100 transition-all duration-500 transform hover:scale-110 shadow-2xl text-lg"
           >
             Get Your Free Strategy Session
             <ArrowRight className="ml-3 h-6 w-6" />
-          </Link>
+          </a>
         </div>
       </section>
     </div>

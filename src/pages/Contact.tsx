@@ -11,7 +11,8 @@ import {
   CheckCircle,
   ChevronDown,
   ChevronUp,
-  Zap
+  Zap,
+  ArrowRight
 } from 'lucide-react';
 import VortexBackground from '../components/VortexBackground';
 
@@ -463,6 +464,27 @@ const Contact: React.FC = () => {
               />
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="section-padding brand-gradient">
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="heading-secondary text-white mb-10">
+            Ready to Start Your Project?
+          </h2>
+          <p className="text-xl text-white/90 mb-16 max-w-4xl mx-auto description-text">
+            Let's discuss your goals and create a strategy that drives real results for your business.
+          </p>
+          <a
+            href="https://calendly.com/adgrades/free-strategy-session"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center px-12 py-6 bg-white text-slate-dark font-bold rounded-lg hover:bg-gray-100 transition-all duration-500 transform hover:scale-110 shadow-2xl text-lg"
+          >
+            Get Your Free Strategy Session
+            <ArrowRight className="ml-3 h-6 w-6" />
+          </a>
         </div>
       </section>
     </div>

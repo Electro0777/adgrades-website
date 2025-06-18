@@ -148,7 +148,8 @@ const Portfolio: React.FC = () => {
       id: 4,
       title: 'Uplifto Tech Services Growth',
       category: 'Digital Marketing',
-      client: 'Uplifto',
+      client: '
+',
       challenge: 'Tech startup needed to establish market presence and generate B2B leads',
       solution: 'Implemented targeted lead generation campaigns with strategic social media positioning',
       result: '300% increase in qualified B2B leads and established strong industry presence in 4 months',
@@ -269,7 +270,7 @@ const Portfolio: React.FC = () => {
       </section>
 
       {/* Our Clients Section */}
-      <section className="section-padding bg-card/20">
+      <section className="section-padding content-overlay">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-24">
             <h2 className="heading-secondary text-foreground mb-8">
@@ -374,7 +375,7 @@ const Portfolio: React.FC = () => {
       </section>
 
       {/* Case Studies Section */}
-      <section className="section-padding">
+      <section className="section-padding content-overlay">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-24">
             <h2 className="heading-secondary text-foreground mb-8">
@@ -498,10 +499,12 @@ const Portfolio: React.FC = () => {
             Every great project starts with a conversation.
           </p>
           <a
-            href="/contact"
+            href="https://calendly.com/adgrades/free-strategy-session"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center px-12 py-6 bg-white text-slate-dark font-bold rounded-lg hover:bg-gray-100 transition-all duration-500 transform hover:scale-110 shadow-2xl text-lg"
           >
-            Start Your Project
+            Get Your Free Strategy Session
             <ArrowRight className="ml-3 h-6 w-6" />
           </a>
         </div>
