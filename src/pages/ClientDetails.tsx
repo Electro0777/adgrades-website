@@ -55,11 +55,11 @@ const ClientDetails: React.FC = () => {
               <div className="minimal-card p-8 rounded-3xl h-full">
                 <div className="flex flex-col items-center">
                   {/* Client Logo */}
-                  <div className="w-32 h-full bg-card/50 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-xl border border-border mb-6">
+                  <div className="w-40 h-full lg:w-60 lg:h-full bg-card/50 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-xl border border-border mb-6">
                     <img
                       src={clientData.image}
                       alt={clientData.name}
-                      className="w-full h-full p-2 object-contain"
+                      className="w-full h-full p-2 object-contain rounded-2xl"
                     />
                   </div>
 
