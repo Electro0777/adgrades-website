@@ -31,36 +31,36 @@ const ClientCard: React.FC<ClientCardProps> = ({ name, category, logo }) => {
   const clientLogo = logo || getClientLogo(name);
   
   return (
-    <div className="relative mx-3 sm:mx-6 w-48 sm:w-64 cursor-pointer overflow-hidden rounded-2xl border border-border bg-card/50 backdrop-blur-sm p-4 sm:p-6 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-primary/10 hover:border-primary/30 group flex-shrink-0">
+    <div className="relative mx-2 sm:mx-3 lg:mx-6 w-40 sm:w-48 lg:w-64 cursor-pointer overflow-hidden rounded-xl sm:rounded-2xl border border-border bg-card/50 backdrop-blur-sm p-3 sm:p-4 lg:p-6 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-primary/10 hover:border-primary/30 group flex-shrink-0">
       <div className="flex flex-col items-center text-center">
-        {/* Logo/Image */}
-        <div className="mb-3 sm:mb-4 flex h-12 w-12 sm:h-16 sm:w-16 items-center justify-center rounded-xl bg-professional-gradient shadow-lg overflow-hidden group-hover:scale-110 transition-transform duration-300">
+        {/* Logo/Image - Mobile Responsive */}
+        <div className="mb-2 sm:mb-3 lg:mb-4 flex h-10 w-10 sm:h-12 sm:w-12 lg:h-16 lg:w-16 items-center justify-center rounded-lg sm:rounded-xl bg-professional-gradient shadow-lg overflow-hidden group-hover:scale-110 transition-transform duration-300">
           {clientLogo ? (
             <img 
               src={clientLogo} 
               alt={name} 
-              className="h-full w-full rounded-xl object-cover" 
+              className="h-full w-full rounded-lg sm:rounded-xl object-cover" 
             />
           ) : (
-            <span className="text-sm sm:text-lg font-bold text-white">
+            <span className="text-xs sm:text-sm lg:text-lg font-bold text-white">
               {name.split(' ').map(word => word[0]).join('').slice(0, 2)}
             </span>
           )}
         </div>
         
-        {/* Client Name */}
-        <h3 className="mb-2 text-sm sm:text-lg font-semibold text-card-foreground group-hover:text-primary transition-colors duration-300 text-center leading-tight">
+        {/* Client Name - Mobile Responsive */}
+        <h3 className="mb-1 sm:mb-2 text-xs sm:text-sm lg:text-lg font-semibold text-card-foreground group-hover:text-primary transition-colors duration-300 text-center leading-tight">
           {name}
         </h3>
         
-        {/* Category */}
-        <span className="rounded-full bg-primary/20 px-2 sm:px-3 py-1 text-xs font-medium text-primary text-center">
+        {/* Category - Mobile Responsive */}
+        <span className="rounded-full bg-primary/20 px-2 sm:px-3 py-0.5 sm:py-1 text-xs font-medium text-primary text-center">
           {category}
         </span>
       </div>
       
       {/* Hover effect overlay */}
-      <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary/5 to-secondary/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+      <div className="absolute inset-0 rounded-xl sm:rounded-2xl bg-gradient-to-r from-primary/5 to-secondary/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
     </div>
   );
 };

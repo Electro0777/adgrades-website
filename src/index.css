@@ -249,9 +249,9 @@
   border-color: rgba(0, 181, 255, 0.4);
 }
 
-/* Clean typography */
+/* Clean typography - Mobile Responsive */
 .heading-primary {
-  font-size: clamp(2.5rem, 8vw, 6rem);
+  font-size: clamp(2rem, 8vw, 6rem);
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.02em;
@@ -263,33 +263,47 @@
   line-height: 1.2;
 }
 
-/* Responsive utilities */
+/* Mobile-specific typography adjustments */
 @media (max-width: 640px) {
   .heading-primary {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    line-height: 1.2;
   }
   
   .heading-secondary {
     font-size: 1.5rem;
+    line-height: 1.3;
   }
 }
 
-/* Clean section spacing */
+/* Clean section spacing - Mobile Responsive */
 .section-padding {
-  padding: 5rem 0;
+  padding: 3rem 0;
+}
+
+@media (min-width: 640px) {
+  .section-padding {
+    padding: 4rem 0;
+  }
 }
 
 @media (min-width: 768px) {
   .section-padding {
-    padding: 8rem 0;
+    padding: 5rem 0;
   }
 }
 
-/* Badge styles with glow */
+@media (min-width: 1024px) {
+  .section-padding {
+    padding: 6rem 0;
+  }
+}
+
+/* Badge styles with glow - Mobile Responsive */
 .page-badge {
   display: inline-flex;
   align-items: center;
-  padding: 0.75rem 2rem;
+  padding: 0.5rem 1.5rem;
   background: rgba(15, 23, 42, 0.3);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(0, 181, 255, 0.3);
@@ -297,9 +311,16 @@
   color: #00B5FF;
   font-size: 0.875rem;
   font-weight: 500;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   transition: all 0.5s ease;
   box-shadow: 0 0 20px rgba(0, 181, 255, 0.15);
+}
+
+@media (min-width: 640px) {
+  .page-badge {
+    padding: 0.75rem 2rem;
+    margin-bottom: 2rem;
+  }
 }
 
 .page-badge:hover {
@@ -323,4 +344,65 @@
 /* Theme transition for smooth switching */
 * {
   transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+/* Mobile-specific improvements */
+@media (max-width: 768px) {
+  /* Ensure proper spacing on mobile */
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* Mobile-friendly button sizes */
+  .brand-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+  }
+  
+  .brand-button-outline {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+  }
+  
+  /* Mobile navigation improvements */
+  .mobile-menu {
+    box-shadow: -10px 0 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Mobile card spacing */
+  .minimal-card {
+    margin-bottom: 1rem;
+  }
+  
+  /* Mobile text sizing */
+  .text-xl {
+    font-size: 1.125rem;
+  }
+  
+  .text-2xl {
+    font-size: 1.25rem;
+  }
+}
+
+/* Touch-friendly interactive elements */
+@media (hover: none) and (pointer: coarse) {
+  .brand-button:hover,
+  .brand-button-outline:hover,
+  .minimal-card:hover,
+  .service-card:hover {
+    transform: none;
+  }
+  
+  .brand-button:active,
+  .brand-button-outline:active {
+    transform: scale(0.98);
+  }
+}
+
+/* Improved mobile marquee */
+@media (max-width: 640px) {
+  .animate-marquee {
+    animation-duration: 20s;
+  }
 }
