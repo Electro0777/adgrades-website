@@ -274,7 +274,7 @@ export const clientsData: ClientData[] = [
     about:
       "MK Streetwear is a rising online fashion brand redefining urban style with bold designs and uncompromising attitude. Built for the trendsetters and the street culture community, the brand blends statement pieces with comfort and originality. From curated collections to limited drops, MK Streetwear reflects individuality and edge — made for those who wear their identity out loud. With a focus on quality, design, and culture, it's more than a brand — it’s a movement in the making.",
     howWeHelped:
-      "Ad Grades worked with MK Streetwear to shape a bold identity that stands out in the saturated online fashion space. We led their *Brand Strategy Development*, giving the brand a strong tone, visual direction, and clear market positioning. Our team designed a sleek, mobile-optimized *Website* that matched their urban aesthetic, and managed their *Social Media* to build hype, drop engagement, and foster a loyal community. The result: increased traffic, stronger conversions, and a brand voice that hits as hard as the fashion it represents.",
+      "Ad Grades worked with MK Streetwear to shape a bold identity that stands out in the saturated online fashion space. We led their Brand Strategy Development, giving the brand a strong tone, visual direction, and clear market positioning. Our team designed a sleek, mobile-optimized Website that matched their urban aesthetic, and managed their Social Media to build hype, drop engagement, and foster a loyal community. The result: increased traffic, stronger conversions, and a brand voice that hits as hard as the fashion it represents.",
     year: "2024",
     results: [
       {

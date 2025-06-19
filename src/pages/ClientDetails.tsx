@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { ArrowLeft, Calendar, Users, Award } from "lucide-react";
+import { ArrowLeft, Calendar, Award } from "lucide-react";
 import VortexBackground from "../components/VortexBackground";
 import { clientsData } from "../data/clientsData";
 
@@ -105,13 +105,19 @@ const ClientDetails: React.FC = () => {
             </div>
 
             {/* Description and Results Column */}
-            <div className="lg:col-span-2">
-              <div className="minimal-card p-8 rounded-3xl mb-8">
+            <div className="lg:col-span-2">              <div className="minimal-card p-8 rounded-3xl mb-8">
                 <h2 className="text-xl font-bold text-foreground mb-4">
-                  About <span className="brand-gradient-text">Project</span>
+                  About <span className="brand-gradient-text">{clientData.name}</span>
                 </h2>
                 <p className="text-muted-foreground mb-6">
-                  {clientData.fullDescription || clientData.description}
+                  {clientData.about}
+                </p>
+                
+                <h2 className="text-xl font-bold text-foreground mb-4">
+                  How We <span className="brand-gradient-text">Helped</span>
+                </h2>
+                <p className="text-muted-foreground mb-6">
+                  {clientData.howWeHelped}
                 </p>
 
                 {/* Results */}
@@ -141,24 +147,6 @@ const ClientDetails: React.FC = () => {
                   </>
                 )}
               </div>
-
-              {/* Testimonial */}
-              {clientData.testimonial && (
-                <div className="minimal-card p-6 rounded-3xl">
-                  <div className="flex items-center mb-4">
-                    <Users className="w-5 h-5 text-primary mr-2" />
-                    <h3 className="text-lg font-semibold text-foreground">
-                      Client Testimonial
-                    </h3>
-                  </div>
-                  <blockquote className="text-lg text-foreground font-medium mb-4 italic">
-                    "{clientData.testimonial.quote}"
-                  </blockquote>
-                  <cite className="text-sm text-muted-foreground font-medium block text-right">
-                    — {clientData.testimonial.author}
-                  </cite>
-                </div>
-              )}
             </div>
           </div>
         </div>
