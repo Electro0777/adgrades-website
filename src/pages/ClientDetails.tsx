@@ -105,14 +105,15 @@ const ClientDetails: React.FC = () => {
             </div>
 
             {/* Description and Results Column */}
-            <div className="lg:col-span-2">              <div className="minimal-card p-8 rounded-3xl mb-8">
+            <div className="lg:col-span-2">
+              {" "}
+              <div className="minimal-card p-8 rounded-3xl mb-8">
                 <h2 className="text-xl font-bold text-foreground mb-4">
-                  About <span className="brand-gradient-text">{clientData.name}</span>
+                  About{" "}
+                  <span className="brand-gradient-text">{clientData.name}</span>
                 </h2>
-                <p className="text-muted-foreground mb-6">
-                  {clientData.about}
-                </p>
-                
+                <p className="text-muted-foreground mb-6">{clientData.about}</p>
+
                 <h2 className="text-xl font-bold text-foreground mb-4">
                   How We <span className="brand-gradient-text">Helped</span>
                 </h2>

@@ -1,6 +1,6 @@
 // Client data shared between Portfolio and ClientDetails components
 
-interface ClientData {
+export interface ClientData {
   id: string;
   name: string;
   category: string;
@@ -24,7 +24,7 @@ interface ClientData {
   };
 }
 
-interface ProjectData {
+export interface ProjectData {
   id: number;
   title: string;
   category: string;

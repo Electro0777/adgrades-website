@@ -1,12 +1,6 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  Users, 
-  Heart, 
-  Zap, 
-  Target, 
-  Coffee, 
-  Award,
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import {
   Send,
   CheckCircle,
   MapPin,
@@ -14,151 +8,54 @@ import {
   DollarSign,
   Briefcase,
   Shield,
-  ArrowRight
-} from 'lucide-react';
-import VortexBackground from '../components/VortexBackground';
+  ArrowRight,
+  Zap,
+  Users,
+} from "lucide-react";
+import VortexBackground from "../components/VortexBackground";
+import { cultureValues, openPositions, benefits } from "../data/careersData";
 
 const Careers: React.FC = () => {
   const [applicationData, setApplicationData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    position: '',
-    experience: '',
-    portfolio: '',
-    message: ''
+    name: "",
+    email: "",
+    phone: "",
+    position: "",
+    experience: "",
+    portfolio: "",
+    message: "",
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
     setApplicationData({
       ...applicationData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Application submitted:', applicationData);
+    console.log("Application submitted:", applicationData);
     setIsSubmitted(true);
-    
+
     setTimeout(() => {
       setIsSubmitted(false);
       setApplicationData({
-        name: '',
-        email: '',
-        phone: '',
-        position: '',
-        experience: '',
-        portfolio: '',
-        message: ''
+        name: "",
+        email: "",
+        phone: "",
+        position: "",
+        experience: "",
+        portfolio: "",
+        message: "",
       });
     }, 3000);
   };
-
-  const cultureValues = [
-    {
-      icon: Zap,
-      title: 'Innovation First',
-      description: 'We embrace new ideas and cutting-edge technologies to stay ahead of the curve.'
-    },
-    {
-      icon: Users,
-      title: 'Team Collaboration',
-      description: 'We believe in the power of teamwork and support each other to achieve greatness.'
-    },
-    {
-      icon: Target,
-      title: 'Results Driven',
-      description: 'We focus on delivering measurable results that make a real impact for our clients.'
-    },
-    {
-      icon: Heart,
-      title: 'Work-Life Balance',
-      description: 'We prioritize mental health and ensure our team has time for what matters most.'
-    },
-    {
-      icon: Coffee,
-      title: 'Fun Environment',
-      description: 'Work should be enjoyable! We create a positive, energetic atmosphere every day.'
-    },
-    {
-      icon: Award,
-      title: 'Growth Opportunities',
-      description: 'We invest in our team\'s professional development and career advancement.'
-    }
-  ];
-
-  const openPositions = [
-    {
-      title: 'Senior Digital Marketing Specialist',
-      department: 'Marketing',
-      type: 'Full-time',
-      location: 'Remote / Hybrid',
-      salary: '$60,000 - $80,000',
-      description: 'Lead digital marketing campaigns across multiple channels and mentor junior team members.',
-      requirements: [
-        '5+ years of digital marketing experience',
-        'Expertise in Google Ads, Facebook Ads, and Analytics',
-        'Strong analytical and communication skills',
-        'Experience with marketing automation tools'
-      ]
-    },
-    {
-      title: 'UI/UX Designer',
-      department: 'Design',
-      type: 'Full-time',
-      location: 'On-site',
-      salary: '$55,000 - $75,000',
-      description: 'Create stunning user interfaces and experiences for web and mobile applications.',
-      requirements: [
-        '3+ years of UI/UX design experience',
-        'Proficiency in Figma, Adobe Creative Suite',
-        'Strong portfolio showcasing web and mobile designs',
-        'Understanding of user-centered design principles'
-      ]
-    },
-    {
-      title: 'Content Marketing Manager',
-      department: 'Marketing',
-      type: 'Full-time',
-      location: 'Remote',
-      salary: '$50,000 - $65,000',
-      description: 'Develop and execute content strategies that drive engagement and conversions.',
-      requirements: [
-        '4+ years of content marketing experience',
-        'Excellent writing and editing skills',
-        'Experience with SEO and content management systems',
-        'Social media marketing expertise'
-      ]
-    },
-    {
-      title: 'Frontend Developer',
-      department: 'Development',
-      type: 'Full-time',
-      location: 'Hybrid',
-      salary: '$65,000 - $85,000',
-      description: 'Build responsive, high-performance web applications using modern technologies.',
-      requirements: [
-        '3+ years of frontend development experience',
-        'Proficiency in React, TypeScript, and modern CSS',
-        'Experience with responsive design and web performance',
-        'Knowledge of version control (Git) and agile methodologies'
-      ]
-    }
-  ];
-
-  const benefits = [
-    'Competitive salary and performance bonuses',
-    'Comprehensive health, dental, and vision insurance',
-    'Flexible working hours and remote work options',
-    'Professional development budget (₹1,50,000/year)',
-    'Modern equipment and tools',
-    'Team building events and company retreats',
-    'Unlimited PTO policy',
-    'Stock options for senior positions'
-  ];
-
   return (
     <div className="pt-16">
       {/* Vortex Background */}
@@ -175,32 +72,25 @@ const Careers: React.FC = () => {
                 Join Our Growing Team
               </span>
             </div>
-            
+
             <h1 className="heading-primary text-foreground mb-8 leading-tight">
-              Join the{' '}
-              <span className="brand-gradient-text">
-                AdGrades Team
-              </span>
+              Join the{" "}
+              <span className="brand-gradient-text">AdGrades Team</span>
             </h1>
-            
+
             <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed description-text">
-              Be part of a dynamic team that's revolutionizing digital marketing. 
-              We're looking for passionate individuals who want to make a real impact.
+              Be part of a dynamic team that's revolutionizing digital
+              marketing. We're looking for passionate individuals who want to
+              make a real impact.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <a
-                href="#open-positions"
-                className="brand-button"
-              >
+              <a href="#open-positions" className="brand-button">
                 View Open Positions
                 <Briefcase className="ml-3 h-6 w-6" />
               </a>
-              
-              <a
-                href="#application-form"
-                className="brand-button-outline"
-              >
+
+              <a href="#application-form" className="brand-button-outline">
                 Apply Now
                 <Send className="ml-3 h-6 w-6" />
               </a>
@@ -214,13 +104,12 @@ const Careers: React.FC = () => {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="heading-secondary text-foreground mb-8">
-              Verify Employee{' '}
-              <span className="brand-gradient-text">
-                Certificates
-              </span>
+              Verify Employee{" "}
+              <span className="brand-gradient-text">Certificates</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed description-text">
-              Verify the authenticity of AdGrades employee certificates and achievements.
+              Verify the authenticity of AdGrades employee certificates and
+              achievements.
             </p>
           </div>
 
@@ -242,18 +131,16 @@ const Careers: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-24">
             <h2 className="heading-secondary text-foreground mb-8">
-              Our Culture &{' '}
-              <span className="brand-gradient-text">
-                Values
-              </span>
+              Our Culture & <span className="brand-gradient-text">Values</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed description-text">
-              At AdGrades, we've built a culture that fosters creativity, collaboration, and personal growth.
+              At AdGrades, we've built a culture that fosters creativity,
+              collaboration, and personal growth.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            {cultureValues.map((value, index) => (
+            {cultureValues.map((value) => (
               <div
                 key={value.title}
                 className="group text-center p-10 minimal-card rounded-3xl hover:border-primary/40 transition-all duration-700 transform hover:-translate-y-4 hover:scale-[1.03]"
@@ -278,18 +165,16 @@ const Careers: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-24">
             <h2 className="heading-secondary text-foreground mb-8">
-              Open{' '}
-              <span className="brand-gradient-text">
-                Positions
-              </span>
+              Open <span className="brand-gradient-text">Positions</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed description-text">
-              Explore exciting career opportunities and find the perfect role to grow your career with us.
+              Explore exciting career opportunities and find the perfect role to
+              grow your career with us.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-            {openPositions.map((position, index) => (
+            {openPositions.map((position) => (
               <div
                 key={position.title}
                 className="minimal-card rounded-3xl hover:border-primary/40 shadow-xl hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-4 hover:scale-[1.02] overflow-hidden"
@@ -337,7 +222,10 @@ const Careers: React.FC = () => {
                     </h4>
                     <ul className="space-y-3">
                       {position.requirements.map((req, reqIndex) => (
-                        <li key={reqIndex} className="flex items-start text-muted-foreground">
+                        <li
+                          key={reqIndex}
+                          className="flex items-start text-muted-foreground"
+                        >
                           <CheckCircle className="h-5 w-5 text-secondary mr-3 mt-0.5 flex-shrink-0" />
                           <span className="description-text">{req}</span>
                         </li>
@@ -361,21 +249,22 @@ const Careers: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div>
               <h2 className="heading-secondary text-foreground mb-10">
-                Why Work at{' '}
-                <span className="brand-gradient-text">
-                  AdGrades?
-                </span>
+                Why Work at{" "}
+                <span className="brand-gradient-text">AdGrades?</span>
               </h2>
               <p className="text-xl text-muted-foreground mb-12 leading-relaxed description-text">
-                We believe in taking care of our team members and providing an environment 
-                where everyone can thrive both professionally and personally.
+                We believe in taking care of our team members and providing an
+                environment where everyone can thrive both professionally and
+                personally.
               </p>
-              
+
               <div className="space-y-6">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start group">
                     <CheckCircle className="h-6 w-6 text-secondary mr-4 mt-1 flex-shrink-0 group-hover:scale-110 transition-transform duration-500" />
-                    <span className="text-muted-foreground leading-relaxed text-lg description-text">{benefit}</span>
+                    <span className="text-muted-foreground leading-relaxed text-lg description-text">
+                      {benefit}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -391,7 +280,9 @@ const Careers: React.FC = () => {
                 <div className="flex items-center space-x-4">
                   <Users className="h-10 w-10 text-primary" />
                   <div>
-                    <div className="font-bold text-foreground text-lg">15+ Team Members</div>
+                    <div className="font-bold text-foreground text-lg">
+                      15+ Team Members
+                    </div>
                     <div className="text-muted-foreground">And Growing!</div>
                   </div>
                 </div>
@@ -402,17 +293,18 @@ const Careers: React.FC = () => {
       </section>
 
       {/* Application Form */}
-      <section id="application-form" className="section-padding content-overlay">
+      <section
+        id="application-form"
+        className="section-padding content-overlay"
+      >
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="heading-secondary text-foreground mb-6">
-              Join Our{' '}
-              <span className="brand-gradient-text">
-                Team
-              </span>
+              Join Our <span className="brand-gradient-text">Team</span>
             </h2>
             <p className="text-xl text-muted-foreground description-text">
-              Don't see the perfect role? Send us your information and we'll keep you in mind for future opportunities.
+              Don't see the perfect role? Send us your information and we'll
+              keep you in mind for future opportunities.
             </p>
           </div>
 
@@ -424,14 +316,18 @@ const Careers: React.FC = () => {
                   Application Submitted Successfully!
                 </h3>
                 <p className="text-muted-foreground text-lg">
-                  We'll review your application and get back to you within 5 business days.
+                  We'll review your application and get back to you within 5
+                  business days.
                 </p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-semibold text-foreground mb-3">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-semibold text-foreground mb-3"
+                    >
                       Full Name *
                     </label>
                     <input
@@ -446,7 +342,10 @@ const Careers: React.FC = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-semibold text-foreground mb-3">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-semibold text-foreground mb-3"
+                    >
                       Email Address *
                     </label>
                     <input
@@ -464,7 +363,10 @@ const Careers: React.FC = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-semibold text-foreground mb-3">
+                    <label
+                      htmlFor="phone"
+                      className="block text-sm font-semibold text-foreground mb-3"
+                    >
                       Phone Number
                     </label>
                     <input
@@ -478,7 +380,10 @@ const Careers: React.FC = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="position" className="block text-sm font-semibold text-foreground mb-3">
+                    <label
+                      htmlFor="position"
+                      className="block text-sm font-semibold text-foreground mb-3"
+                    >
                       Position of Interest
                     </label>
                     <select
@@ -489,10 +394,16 @@ const Careers: React.FC = () => {
                       className="w-full px-6 py-4 bg-muted/60 backdrop-blur-sm border border-border rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent text-foreground transition-all duration-500"
                     >
                       <option value="">Select a position</option>
-                      <option value="digital-marketing">Digital Marketing Specialist</option>
+                      <option value="digital-marketing">
+                        Digital Marketing Specialist
+                      </option>
                       <option value="ui-ux-designer">UI/UX Designer</option>
-                      <option value="content-manager">Content Marketing Manager</option>
-                      <option value="frontend-developer">Frontend Developer</option>
+                      <option value="content-manager">
+                        Content Marketing Manager
+                      </option>
+                      <option value="frontend-developer">
+                        Frontend Developer
+                      </option>
                       <option value="other">Other / General Application</option>
                     </select>
                   </div>
@@ -500,7 +411,10 @@ const Careers: React.FC = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
-                    <label htmlFor="experience" className="block text-sm font-semibold text-foreground mb-3">
+                    <label
+                      htmlFor="experience"
+                      className="block text-sm font-semibold text-foreground mb-3"
+                    >
                       Years of Experience
                     </label>
                     <select
@@ -518,7 +432,10 @@ const Careers: React.FC = () => {
                     </select>
                   </div>
                   <div>
-                    <label htmlFor="portfolio" className="block text-sm font-semibold text-foreground mb-3">
+                    <label
+                      htmlFor="portfolio"
+                      className="block text-sm font-semibold text-foreground mb-3"
+                    >
                       Portfolio/LinkedIn URL
                     </label>
                     <input
@@ -534,7 +451,10 @@ const Careers: React.FC = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-semibold text-foreground mb-3">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-semibold text-foreground mb-3"
+                  >
                     Tell us about yourself *
                   </label>
                   <textarea
@@ -549,10 +469,7 @@ const Careers: React.FC = () => {
                   />
                 </div>
 
-                <button
-                  type="submit"
-                  className="w-full brand-button"
-                >
+                <button type="submit" className="w-full brand-button">
                   Submit Application
                   <Send className="ml-3 h-6 w-6" />
                 </button>
@@ -569,7 +486,8 @@ const Careers: React.FC = () => {
             Ready to Join Our Team?
           </h2>
           <p className="text-xl text-white/90 mb-16 max-w-4xl mx-auto description-text">
-            Let's discuss how you can contribute to our mission and grow your career with AdGrades.
+            Let's discuss how you can contribute to our mission and grow your
+            career with AdGrades.
           </p>
           <a
             href="https://calendly.com/chandanbkrishna077/adgrades"
