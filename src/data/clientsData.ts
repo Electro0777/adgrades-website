@@ -1,6 +1,6 @@
 // Client data shared between Portfolio and ClientDetails components
 
-interface ClientData {
+export interface ClientData {
   id: string;
   name: string;
   category: string;
@@ -10,7 +10,8 @@ interface ClientData {
   tags: string[];
   duration: string;
   services: string[];
-  fullDescription?: string;
+  about: string; // Company overview
+  howWeHelped: string; // How Ad Grades helped
   year?: string;
   results?: {
     metric: string;
@@ -23,7 +24,7 @@ interface ClientData {
   };
 }
 
-interface ProjectData {
+export interface ProjectData {
   id: number;
   title: string;
   category: string;
@@ -53,8 +54,10 @@ export const clientsData: ClientData[] = [
       "Social Media Marketing",
       "Web Development",
     ],
-    fullDescription:
-      "OS CODE Solutions is an innovative IT solutions startup focused on providing cutting-edge technology services to businesses. We helped them establish their digital presence and build a strong brand identity in the competitive tech market.",
+    about:
+      "OS Code Solutions is a tech-driven company offering smart digital solutions for businesses looking to scale and streamline. From custom software and ERP systems to automation and workflow optimization, they specialize in turning complex operational needs into seamless digital processes. Known for their practical approach and innovation-first mindset, OS Code Solutions helps businesses become more efficient, responsive, and future-ready. Their strong commitment to client satisfaction and technical excellence has made them a trusted partner for startups and enterprises alike.",
+    howWeHelped:
+      "Ad Grades teamed up with OS Code Solutions to translate their technical expertise into a compelling online presence. Through strategic *Social Media Management*, we simplified complex offerings into engaging, easy-to-understand content that resonated with their target audience. In parallel, our *Lead Generation campaigns* focused on connecting with business decision-makers and industry-specific prospects — delivering high-quality leads that aligned with OS Code’s service capabilities. Together, these efforts strengthened their brand positioning and opened doors to new business opportunities in competitive digital markets.",
     year: "2024",
     results: [
       {
@@ -95,8 +98,10 @@ export const clientsData: ClientData[] = [
       "Performance Advertising",
       "Brand Photography",
     ],
-    fullDescription:
-      "Delhi 65 is a popular restaurant in Ranchi known for its authentic North Indian cuisine. We helped them enhance their digital marketing strategy and increase their customer base through targeted social media campaigns.",
+    about:
+      "Delhi 65 is a vibrant multicuisine restaurant known for its diverse flavors and welcoming atmosphere. Offering a rich blend of North Indian, South Indian, Chinese, and continental dishes, it caters to a wide audience seeking quality dining experiences. Whether it's a casual family dinner or a weekend gathering with friends, Delhi 65 delivers delicious food with a memorable experience. With a commitment to taste, variety, and service, it’s quickly becoming a standout destination in the city’s culinary landscape. The restaurant also regularly updates its menu and ambience to match evolving customer preferences, making every visit feel fresh and exciting.",
+    howWeHelped:
+      "At Ad Grades, we worked closely with Delhi 65 to bring their brand to life online through dynamic *Social Media Management* and focused *Targeted Ad Campaigns*. Our creative content captured the essence of their cuisine and ambiance, helping build a strong digital presence that resonated with local audiences. Through precise audience targeting and mouth-watering visuals, we drove higher engagement and real-time footfall, turning online interest into repeat diners. We also introduced time-bound promotional campaigns that significantly boosted daily customer inflow and kept the brand top-of-mind in a competitive food space.",
     year: "2024",
     results: [
       {
@@ -133,8 +138,10 @@ export const clientsData: ClientData[] = [
     tags: ["Social Media Management", "Lead Generation", "6 months"],
     duration: "6 months",
     services: ["Digital Marketing", "Student Acquisition", "Content Strategy"],
-    fullDescription:
-      "Medhavi Classes is a leading online education platform providing quality coaching for competitive exams. We helped them expand their digital reach and improve student engagement through comprehensive digital marketing strategies.",
+    about:
+      "Medhavi Classes is a modern educational platform dedicated to transforming how students learn. By focusing on practical understanding rather than rote memorization, Medhavi helps students develop strong foundational clarity and real-world problem-solving skills. Their courses are designed to simplify complex academic subjects, making learning more engaging and meaningful. With experienced mentors and a student-first approach, Medhavi has quickly built a reputation for delivering results that go beyond just marks — building confidence, curiosity, and clarity in every learner. Today, Medhavi stands as a trusted name for students who seek both academic excellence and personal growth.",
+    howWeHelped:
+      "Ad Grades joined hands with Medhavi Classes to turn their powerful educational mission into a strong digital brand. We provided end-to-end *Social Media Management, creating engaging content, visuals, and student-focused messaging that truly reflected Medhavi’s identity. Alongside this, our **Lead Generation strategies* helped bring in a steady stream of qualified student inquiries by targeting the right audience through paid campaigns and optimized funnels. As a result, Medhavi saw significant growth in both visibility and admissions — positioning them as a go-to choice for practical academic learning. Our collaboration helped Medhavi reach more students online while staying true to their core mission of meaningful education.",
     year: "2023",
     results: [
       {
@@ -171,8 +178,10 @@ export const clientsData: ClientData[] = [
     tags: ["Lead Generation", "Social Media Management", "4 months"],
     duration: "4 months",
     services: ["Lead Generation", "Social Media Management", "B2B Marketing"],
-    fullDescription:
-      "Uplifto is an innovative tech startup providing IT solutions to businesses. We developed targeted lead generation strategies to help them connect with potential clients and establish their presence in the B2B market.",
+    about:
+      "Uplifto is a modern hybrid agency that merges digital creativity with smart business tech to help brands grow with purpose. From brand storytelling and content strategy to workflow automation and digital tools, Uplifto is built for businesses that want both visibility and efficiency. With a unique mix of creative insight and technical know-how, they work across industries to solve real challenges while building long-term brand value. Their adaptable, results-driven approach makes them a go-to partner for startups and scaling businesses alike.",
+    howWeHelped:
+      "At Ad Grades, we helped Uplifto sharpen their brand voice and expand their outreach with strategic *Social Media Management* and *Lead Generation*. We created content that reflected their dual personality — creative and tech-savvy — while targeting the right business audiences through smart, data-backed campaigns. Our lead funnels brought in relevant, conversion-ready prospects, while consistent social content built trust and engagement around the Uplifto name. This partnership helped position Uplifto as not just a service provider, but a brand that uplifts others through innovation and design.",
     year: "2024",
     results: [
       {
@@ -218,8 +227,10 @@ export const clientsData: ClientData[] = [
       "Social Media Management",
       "Business Development",
     ],
-    fullDescription:
-      "Vinayaka Enterprises is a leading interior design studio focusing on residential and commercial projects. We built their complete online presence and implemented strategic business development initiatives to help them attract high-value clients.",
+    about:
+      "Vinayaka Enterprises is an innovative Interior Design Studio that blends aesthetics with function to create spaces that inspire. Specializing in residential, commercial, and custom interior solutions, their work is defined by craftsmanship, detail, and design that speaks to individual lifestyle needs. Beyond interiors, Vinayaka also extends into *comprehensive business development*, helping clients structure their ventures with a strong foundation in branding, strategy, and identity. Their multi-dimensional approach ensures that every space they design — and every business they support — grows with purpose and character.",
+    howWeHelped:
+      "Ad Grades partnered with Vinayaka Enterprises to strengthen their digital and strategic presence from the ground up. We delivered a clean, responsive *Website* that reflected their design sensibility and business vision. Our support in *Business Strategy* and *Development* helped them streamline their services, define clear market positioning, and connect with potential clients in a more structured way. The result was not just a polished online presence, but a smarter, growth-ready business framework that aligned with their long-term goals.",
     year: "2023",
     results: [
       {
@@ -260,8 +271,10 @@ export const clientsData: ClientData[] = [
       "Website Development",
       "Business Development",
     ],
-    fullDescription:
-      "M K Streetwear is an emerging fashion brand focusing on urban streetwear. We developed their complete brand identity, e-commerce website, and social media strategy to establish them in the competitive fashion market.",
+    about:
+      "MK Streetwear is a rising online fashion brand redefining urban style with bold designs and uncompromising attitude. Built for the trendsetters and the street culture community, the brand blends statement pieces with comfort and originality. From curated collections to limited drops, MK Streetwear reflects individuality and edge — made for those who wear their identity out loud. With a focus on quality, design, and culture, it's more than a brand — it’s a movement in the making.",
+    howWeHelped:
+      "Ad Grades worked with MK Streetwear to shape a bold identity that stands out in the saturated online fashion space. We led their Brand Strategy Development, giving the brand a strong tone, visual direction, and clear market positioning. Our team designed a sleek, mobile-optimized Website that matched their urban aesthetic, and managed their Social Media to build hype, drop engagement, and foster a loyal community. The result: increased traffic, stronger conversions, and a brand voice that hits as hard as the fashion it represents.",
     year: "2024",
     results: [
       {
@@ -301,8 +314,10 @@ export const clientsData: ClientData[] = [
       "Content Marketing",
       "Student Acquisition",
     ],
-    fullDescription:
-      "Adhyayan is an online coaching institute providing specialized education for competitive exams. We developed their social media presence to help them reach more students and establish credibility in the education sector.",
+    about:
+      "Adhyayan is a coaching and motivation platform dedicated to empowering students and young individuals with the clarity, mindset, and direction they need to succeed. Combining academic guidance with real-life motivation, Adhyayan focuses on holistic growth — helping learners build confidence, discipline, and mental strength alongside their studies. With daily content that educates and inspires, Adhyayan has built a loyal following of individuals striving to better themselves every day. It’s not just about marks or motivation — it’s about mindset, movement, and meaningful progress.",
+    howWeHelped:
+      "Ad Grades partnered with Adhyayan to transform their vision into a consistent and powerful digital presence. Through tailored *Social Media Management*, we developed content that resonated emotionally — combining educational value, motivational messaging, and personal branding. From reels to infographics to interactive posts, every piece was designed to spark action and build community. This helped Adhyayan expand its reach, deepen engagement, and build a recognizable identity in the online learning and motivation space.",
     year: "2024",
     results: [
       {
@@ -347,8 +362,10 @@ export const clientsData: ClientData[] = [
       "Business Development",
       "Travel Marketing",
     ],
-    fullDescription:
-      "Dew Drop Homestay is a premium hospitality property located in a scenic hilltop destination. We developed their complete digital presence including website, booking system, and social media strategy to attract tourists and travel enthusiasts.",
+    about:
+      "Dew Drop Homestay offers a peaceful retreat for travelers seeking comfort, authenticity, and a home away from home. Nestled in a scenic location, it combines cozy living with personalized hospitality — perfect for families, solo explorers, and weekend wanderers. Whether it’s the thoughtfully designed rooms, local experiences, or warm host interactions, every stay at Dew Drop is designed to feel personal and memorable. It’s more than just a stay — it’s a slow, serene escape from the everyday rush.",
+    howWeHelped:
+      "Ad Grades collaborated with Dew Drop Homestay to bring their warm, welcoming vibe online through intuitive *Website Development, engaging **Social Media Management, and focused **Business Development* support. We crafted a user-friendly website with strong visuals and easy booking integration, while our social content highlighted the calm experience, guest reviews, and local charm. Our business development insights also helped streamline their offerings and position the homestay more effectively for tourism growth and seasonal visibility.",
     year: "2023",
     results: [
       {
@@ -388,8 +405,10 @@ export const clientsData: ClientData[] = [
       "Event Promotion",
       "Video Content Creation",
     ],
-    fullDescription:
-      "Nataraj Dance Studios is a premier dance academy specializing in classical and contemporary dance forms. We developed their social media presence and video content strategy to showcase their expertise and attract dance enthusiasts.",
+    about:
+      "Natraj Dance Studios is a premier dance academy that blends traditional and contemporary styles to inspire the next generation of performers. Known for its disciplined training environment and passionate instructors, the studio offers classes in classical, Bollywood, freestyle, and fusion forms. With a focus on creativity, expression, and skill-building, Natraj has become a trusted space for learners of all ages to grow and shine on and off the stage. Its vibrant student community and regular stage performances make it more than a studio — it’s a celebration of movement and culture.",
+    howWeHelped:
+      "Ad Grades partnered with Natraj Dance Studios to craft a digital presence that matched the energy and elegance of their on-ground performances. Through engaging *Social Media Management*, we highlighted their training sessions, student showcases, and behind-the-scenes moments in a way that connected emotionally with their audience. Our content strategy focused on storytelling — turning every reel, post, and testimonial into a reflection of the studio’s spirit. This helped boost online visibility, attract new enrollments, and build a loyal digital following that now dances along with the brand.",
     year: "2024",
     results: [
       {
@@ -430,8 +449,10 @@ export const clientsData: ClientData[] = [
       "Content Strategy",
       "Lead Generation",
     ],
-    fullDescription:
-      "Pureblend Foods is a B2B food supply chain brand providing quality ingredients to restaurants and food businesses. We helped them establish their brand credibility and expand their client base through targeted B2B marketing.",
+    about:
+      "Pureblend Foods is a B2B food supply chain brand specializing in high-quality, scalable sourcing solutions for retailers, wholesalers, and foodservice companies. With a sharp focus on consistency, compliance, and customer satisfaction, they connect trusted producers with growing businesses through an efficient, transparent supply network. Their strength lies in simplifying bulk food procurement while maintaining purity, standards, and timely delivery. Pureblend isn’t just a supplier — it’s a dependable partner in your food business growth journey.",
+    howWeHelped:
+      "Ad Grades partnered with Pureblend Foods to give their B2B brand a digital edge through *Social Media Management, **Business Strategy, and a professional **Website Development*. We built a modern website that clearly communicated their value proposition and made their offerings accessible to business buyers. On social media, we focused on brand trust, supply transparency, and industry insights to attract the right decision-makers. Our strategy support refined their market positioning and helped generate interest from larger food service clients and distributors.",
     year: "2023-2024",
     results: [
       {
@@ -473,8 +494,10 @@ export const clientsData: ClientData[] = [
       "Content Strategy",
       "Industry Networking",
     ],
-    fullDescription:
-      "AS Tech Industries provides comprehensive engineering and manufacturing services to various industries. We helped them establish their technical expertise and attract high-value industrial clients through strategic digital marketing.",
+    about:
+      "AS Tech Industries is a forward-looking engineering and manufacturing company delivering precision, performance, and process innovation. Specializing in industrial-grade components and custom fabrication, the company supports sectors like automotive, machinery, and infrastructure with dependable, quality-first solutions. Driven by a commitment to excellence and continuous improvement, AS Tech is also embracing digital transformation to modernize operations and stay future-ready. Their work bridges the gap between traditional engineering and smart manufacturing.",
+    howWeHelped:
+      "Ad Grades supported AS Tech Industries in redefining their brand for the digital age through *Website Development, **Social Media Management, and **Business Strategy*. We created a sharp, industry-appropriate website that clearly presented their services and technical expertise, while our social content highlighted their projects, capabilities, and transformation journey. On the strategy front, we helped reposition AS Tech as a digitally evolving brand — not just a manufacturer, but a modern industrial partner built for the next phase of growth.",
     year: "2023-2024",
     results: [
       {
@@ -506,8 +529,7 @@ export const clientsData: ClientData[] = [
     description:
       "Heavy Earthmoving Equipment & Spares with complete digital strategy",
     logo: "./client/splogo.png",
-    image:
-      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?w=400&h=300&fit=crop",
+    image: "https://images.pexels.com/photos/1238864/pexels-photo-1238864.jpeg",
     tags: ["Business Strategy", "Website Development", "Lead Generation"],
     duration: "5 months",
     services: [
@@ -516,8 +538,10 @@ export const clientsData: ClientData[] = [
       "B2B Lead Generation",
       "Content Strategy",
     ],
-    fullDescription:
-      "SP Enterprises specializes in heavy earthmoving equipment and spare parts supply. We helped them establish a strong digital presence in the industrial equipment market through comprehensive digital marketing.",
+    about:
+      "SP Enterprises is a trusted name in the heavy earthmoving equipment and spares sector, delivering durable machinery and critical components to infrastructure, mining, and construction industries. Known for reliability, supply strength, and technical know-how, they support mission-critical operations across challenging terrains and timelines. With an extensive product line and deep industry knowledge, SP Enterprises ensures clients get the right equipment, at the right time, with no compromise on quality. They’re more than just a supplier — they’re a backbone to heavy-duty progress.",
+    howWeHelped:
+      "Ad Grades worked with SP Enterprises to bring their industrial credibility into the digital spotlight through *Website Development, **Social Media Management, and **Business Strategy*. We developed a streamlined website tailored for B2B engagement, showcasing their inventory, sectors served, and service reliability. Our content strategy focused on building authority in the industry, using platforms to highlight machinery insights, client success stories, and technical updates. With strategic positioning and digital clarity, we helped SP Enterprises attract new leads, strengthen brand trust, and stand out in a competitive heavy equipment market.",
     year: "2024",
     results: [
       {
