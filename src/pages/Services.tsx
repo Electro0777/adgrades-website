@@ -23,139 +23,223 @@ const Services: React.FC = () => {
     selectedCategory === "all"
       ? services
       : services.filter((service) => service.category === selectedCategory);
-
   return (
-    <div className="min-h-screen pt-16 sm:pt-20 lg:pt-24">
+    <div className="min-h-screen pt-14 sm:pt-16 lg:pt-20 bg-background">
       {" "}
       {/* Hero Section */}
-      <section className="py-8 sm:py-12 md:py-16 lg:py-20 relative overflow-hidden">
+      <section className="py-4 sm:py-6 md:py-8 lg:py-12 relative overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 lg:w-80 lg:h-80 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-48 h-48 lg:w-64 lg:h-64 bg-gradient-to-br from-secondary/10 to-accent/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/4 left-1/4 w-48 h-48 lg:w-64 lg:h-64 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-32 h-32 lg:w-48 lg:h-48 bg-gradient-to-br from-secondary/10 to-accent/10 rounded-full blur-3xl"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
             {/* Badge */}
             <motion.div
-              className="inline-flex items-center bg-secondary/10 rounded-full px-4 py-1.5 sm:px-6 sm:py-2 mb-4 sm:mb-6"
+              className="inline-flex items-center bg-secondary/10 rounded-full px-3 py-1 sm:px-4 sm:py-1.5 mb-3 sm:mb-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <Zap className="w-4 h-4 sm:w-5 sm:h-5 text-secondary mr-1.5 sm:mr-2" />
-              <span className="text-secondary font-semibold text-sm sm:text-base">
+              <Zap className="w-3 h-3 sm:w-4 sm:h-4 text-secondary mr-1 sm:mr-1.5" />
+              <span className="text-secondary font-semibold text-xs sm:text-sm">
                 Premium Services
               </span>
-            </motion.div>
+            </motion.div>{" "}
             {/* Title */}
             <motion.h1
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground mb-4 sm:mb-6 lg:mb-8"
-              initial={{ opacity: 0, y: 20 }}
+              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-2 sm:mb-3"
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
             >
               Elevate Your{" "}
               <span className="gradient-text">Digital Presence</span>
-            </motion.h1>{" "}
+            </motion.h1>
             {/* Description */}
             <motion.p
-              className="text-base sm:text-lg lg:text-xl xl:text-2xl text-muted-foreground max-w-4xl mx-auto mb-4 sm:mb-6 lg:mb-8"
-              initial={{ opacity: 0, y: 20 }}
+              className="text-xs sm:text-sm md:text-base text-muted-foreground max-w-2xl mx-auto mb-3 sm:mb-4"
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
             >
               From concept to launch, we deliver exceptional digital solutions
               that drive growth, enhance user experience, and transform your
               business.
-            </motion.p>
+            </motion.p>{" "}
             {/* CTA Buttons */}
             <motion.div
-              className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center"
-              initial={{ opacity: 0, y: 20 }}
+              className="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center items-center"
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <Link
-                to="/contact"
-                className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-3.5 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-full hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                Start Your Project
-                <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
-              </Link>
-              <Link
-                to="/portfolio"
-                className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-3.5 border-2 border-primary text-primary font-semibold rounded-full hover:bg-primary hover:text-white transition-all duration-300"
+                <Link
+                  to="/contact"
+                  className="group relative inline-flex items-center justify-center px-4 py-2 sm:px-6 sm:py-3 text-xs sm:text-sm font-semibold rounded-full bg-gradient-to-r from-primary to-secondary text-primary-foreground overflow-hidden transition-all duration-300"
+                >
+                  {/* Animated background */}
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-secondary to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    initial={{ x: "-100%" }}
+                    whileHover={{ x: "0%" }}
+                    transition={{ duration: 0.3 }}
+                  />
+                  <Zap className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5 relative z-10 group-hover:animate-pulse" />
+                  <span className="relative z-10">Start Your Project</span>
+                  <ArrowRight className="ml-1.5 h-3 w-3 sm:h-4 sm:w-4 relative z-10 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </motion.div>
+
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                <Play className="mr-2 w-4 h-4 sm:w-5 sm:h-5" />
-                View Our Work
-              </Link>
+                <Link
+                  to="/clients"
+                  className="group inline-flex items-center justify-center px-4 py-2 sm:px-6 sm:py-3 text-xs sm:text-sm font-semibold rounded-full border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300"
+                >
+                  <Play className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5" />
+                  <span>View Our Work</span>
+                  <ArrowRight className="ml-1.5 h-3 w-3 sm:h-4 sm:w-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </motion.div>
             </motion.div>
           </div>
         </div>
       </section>{" "}
       {/* Service Categories Filter */}
-      <section className="py-6 sm:py-8 lg:py-10 relative">
-        <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
+      <section className="py-4 sm:py-6 lg:py-8 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {" "}
-          <div className="text-center mb-6 sm:mb-8">
-            <div className="inline-flex items-center bg-accent/10 rounded-full px-4 py-1.5 sm:px-6 sm:py-2 mb-2 sm:mb-4">
-              <Filter className="w-4 h-4 sm:w-5 sm:h-5 text-accent mr-1.5 sm:mr-2" />
-              <span className="text-accent font-semibold text-sm sm:text-base">
-                Service Categories
+          <motion.div
+            className="text-center mb-4 sm:mb-6"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <motion.div
+              className="inline-flex items-center gap-2 px-3 py-1 sm:px-4 sm:py-1.5 bg-card/60 rounded-full mb-2 sm:mb-3 text-muted-foreground backdrop-blur-sm border border-border/50"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <Filter className="w-3 h-3 sm:w-4 sm:h-4" />
+              <span className="text-xs sm:text-sm font-medium">
+                Filter by category
               </span>
-            </div>
-          </div>{" "}
+            </motion.div>
+            <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-2">
+              Service <span className="gradient-text">Categories</span>
+            </h2>
+            <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto px-2">
+              Choose from our comprehensive range of digital services designed
+              to transform your business
+            </p>
+          </motion.div>
           {/* Category Filters */}
-          <div className="flex flex-wrap justify-center gap-1.5 sm:gap-2 lg:gap-3 mb-6 sm:mb-8">
-            <button
+          <motion.div
+            className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-6 sm:mb-8"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+          >
+            <motion.button
               onClick={() => setSelectedCategory("all")}
-              className={`px-4 py-2 sm:px-6 sm:py-2.5 rounded-full font-semibold text-sm sm:text-base transition-all duration-300 ${
+              className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-full font-semibold transition-all duration-300 text-xs sm:text-sm ${
                 selectedCategory === "all"
-                  ? "bg-gradient-to-r from-primary to-secondary text-white shadow-lg"
-                  : "bg-card text-foreground border border-border hover:border-primary/50 hover:bg-primary/5"
+                  ? "bg-primary text-white shadow-lg transform scale-105"
+                  : "bg-card/60 text-muted-foreground hover:bg-primary/10 hover:text-primary hover:scale-105 border border-border/50 backdrop-blur-sm"
               }`}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
               All Services
-            </button>
-            {serviceCategories.map((category) => (
-              <button
+            </motion.button>
+            {serviceCategories.map((category, index) => (
+              <motion.button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`px-4 py-2 sm:px-6 sm:py-2.5 rounded-full font-semibold text-sm sm:text-base transition-all duration-300 ${
+                className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-full font-semibold transition-all duration-300 text-xs sm:text-sm ${
                   selectedCategory === category.id
-                    ? "bg-gradient-to-r from-primary to-secondary text-white shadow-lg"
-                    : "bg-card text-foreground border border-border hover:border-primary/50 hover:bg-primary/5"
+                    ? "bg-primary text-white shadow-lg transform scale-105"
+                    : "bg-card/60 text-muted-foreground hover:bg-primary/10 hover:text-primary hover:scale-105 border border-border/50 backdrop-blur-sm"
                 }`}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.3, delay: 0.1 * index }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                viewport={{ once: true }}
               >
                 {category.title}
-              </button>
+              </motion.button>
             ))}
-          </div>
+          </motion.div>
+          <motion.div
+            className="text-center text-xs sm:text-sm text-muted-foreground"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            viewport={{ once: true }}
+          >
+            Showing {filteredServices.length} service
+            {filteredServices.length !== 1 ? "s" : ""}
+            {selectedCategory !== "all" &&
+              ` in ${
+                serviceCategories.find((cat) => cat.id === selectedCategory)
+                  ?.title
+              }`}
+          </motion.div>
         </div>
       </section>{" "}
       {/* Services Grid */}
-      <section className="py-8 sm:py-12 lg:py-16 relative">
-        <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
-          {" "}
-          <div className="text-center mb-6 sm:mb-8 lg:mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-2 sm:mb-3">
+      <section className="py-4 sm:py-6 md:py-8 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-4 sm:mb-6">
+            <motion.h2
+              className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-1 sm:mb-2"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
               Our <span className="gradient-text">Premium Services</span>
-            </h2>
-            <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto">
+            </motion.h2>
+            <motion.p
+              className="text-xs sm:text-sm text-muted-foreground max-w-2xl mx-auto"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
               Comprehensive solutions designed to accelerate your digital
               transformation
-            </p>
-          </div>
+            </motion.p>
+          </div>{" "}
           {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+          <motion.div
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
             {filteredServices.map((service, index) => {
               const IconComponent = service.icon;
               return (
                 <motion.div
                   key={service.id}
-                  className="group relative bg-gradient-to-br from-card to-card/50 backdrop-blur-xl border border-border/50 rounded-2xl lg:rounded-3xl p-4 sm:p-6 lg:p-8 hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:border-primary/50 cursor-pointer"
+                  className="group relative bg-card/60 backdrop-blur-sm border border-border/50 rounded-xl p-4 sm:p-6 hover:shadow-xl transition-all duration-500 hover:scale-105 hover:border-primary/50 cursor-pointer"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -163,119 +247,159 @@ const Services: React.FC = () => {
                     duration: 0.5,
                     delay: index * 0.1,
                   }}
+                  whileHover={{ y: -5 }}
                   onClick={() => setSelectedService(service)}
                 >
                   {/* Background Pattern */}
                   <div className="absolute inset-0 opacity-5">
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary to-secondary rounded-full transform translate-x-16 -translate-y-16"></div>
-                  </div>{" "}
-                  {/* Icon */}
-                  <div className="relative z-10 mb-3 sm:mb-4">
-                    <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gradient-to-br from-primary to-secondary rounded-xl lg:rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <IconComponent className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-white" />
-                    </div>
+                    <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-primary to-secondary rounded-full transform translate-x-12 -translate-y-12"></div>
                   </div>
+
+                  {/* Icon */}
+                  <motion.div
+                    className="relative z-10 mb-3"
+                    whileHover={{ scale: 1.1, rotate: 5 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <IconComponent className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
+                    </div>
+                  </motion.div>
+
                   {/* Content */}
                   <div className="relative z-10">
-                    {" "}
-                    <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-foreground mb-1.5 sm:mb-2 group-hover:text-primary transition-colors">
+                    <h3 className="text-base sm:text-lg font-bold text-foreground mb-1.5 group-hover:text-primary transition-colors">
                       {service.title}
                     </h3>
-                    <p className="text-muted-foreground text-sm sm:text-base leading-relaxed mb-3 sm:mb-4">
+                    <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed mb-3">
                       {service.shortDescription}
-                    </p>{" "}
+                    </p>
+
                     {/* Features */}
-                    <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
+                    <motion.div
+                      className="flex flex-wrap gap-1.5 mb-3"
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 + 0.3 }}
+                      viewport={{ once: true }}
+                    >
                       {service.features.slice(0, 3).map((feature) => (
                         <span
                           key={feature}
-                          className="inline-flex items-center px-2 py-0.5 sm:px-3 sm:py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20"
+                          className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20"
                         >
                           {feature}
                         </span>
                       ))}
-                    </div>{" "}
+                    </motion.div>
+
                     {/* Pricing & Timeline */}
-                    <div className="flex items-center justify-between mb-3 sm:mb-4">
+                    <div className="flex items-center justify-between mb-3">
                       <div>
-                        <p className="text-xs sm:text-sm text-muted-foreground">
+                        <p className="text-xs text-muted-foreground">
                           Starting at
                         </p>
-                        <p className="text-sm sm:text-base font-semibold text-foreground">
+                        <p className="text-sm font-semibold text-foreground">
                           {service.pricing.basic}
                         </p>
                       </div>
                       <div className="text-right">
-                        <p className="text-xs sm:text-sm text-muted-foreground">
+                        <p className="text-xs text-muted-foreground">
                           Timeline
                         </p>
-                        <p className="text-sm sm:text-base font-semibold text-foreground">
+                        <p className="text-sm font-semibold text-foreground">
                           {service.timeline}
                         </p>
                       </div>
                     </div>
+
                     {/* CTA */}
                     <div className="flex items-center justify-between">
-                      <Link
-                        to="/contact"
-                        className="inline-flex items-center text-primary hover:text-secondary font-semibold transition-colors text-sm sm:text-base"
+                      <motion.div
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
                       >
-                        Get Started
-                        <ArrowRight className="ml-1.5 w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-2 transition-transform" />
-                      </Link>
-                      <button
+                        <Link
+                          to="/contact"
+                          className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-full hover:scale-105 transition-all duration-300 text-xs sm:text-sm"
+                        >
+                          Get Started
+                          <ArrowRight className="ml-1.5 w-3 h-3 group-hover:translate-x-2 transition-transform" />
+                        </Link>
+                      </motion.div>
+                      <motion.button
                         className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium"
                         onClick={(e) => {
                           e.stopPropagation();
                           setSelectedService(service);
                         }}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
                       >
                         Learn More
-                      </button>
+                      </motion.button>
                     </div>
                   </div>
                   {/* Hover Effect */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl lg:rounded-3xl"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
                 </motion.div>
               );
             })}
-          </div>
+          </motion.div>
         </div>
       </section>{" "}
       {/* CTA Section */}
-      <section className="py-8 sm:py-12 lg:py-16 relative overflow-hidden">
+      <section className="py-6 sm:py-8 lg:py-12 relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-3 sm:px-4 lg:px-8 relative z-10 text-center">
           <motion.div
-            className="bg-gradient-to-br from-card to-card/50 backdrop-blur-xl border border-border/50 rounded-3xl lg:rounded-[2rem] p-6 sm:p-8 lg:p-12 xl:p-16"
+            className="bg-gradient-to-br from-card to-card/50 backdrop-blur-xl border border-border/50 rounded-2xl lg:rounded-3xl p-4 sm:p-6 lg:p-8 xl:p-10"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-2 sm:mb-3">
               Ready to{" "}
               <span className="gradient-text">Transform Your Business</span>?
             </h2>
-            <p className="text-base sm:text-lg lg:text-xl text-muted-foreground mb-4 sm:mb-6 lg:mb-8 max-w-2xl mx-auto">
+            <p className="text-xs sm:text-sm lg:text-base text-muted-foreground mb-3 sm:mb-4 lg:mb-6 max-w-2xl mx-auto">
               Let's discuss your project and create something amazing together.
               Get started with a free consultation today.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
-              <Link
-                to="/contact"
-                className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-3.5 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-full hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+            </p>{" "}
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center items-center">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                Start Your Project
-                <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
-              </Link>
-              <Link
-                to="/portfolio"
-                className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-3.5 border-2 border-primary text-primary font-semibold rounded-full hover:bg-primary hover:text-white transition-all duration-300"
+                <Link
+                  to="/contact"
+                  className="group relative inline-flex items-center justify-center px-4 py-2 sm:px-6 sm:py-3 text-xs sm:text-sm font-semibold rounded-full bg-gradient-to-r from-primary to-secondary text-primary-foreground overflow-hidden transition-all duration-300"
+                >
+                  {/* Animated background */}
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-secondary to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    initial={{ x: "-100%" }}
+                    whileHover={{ x: "0%" }}
+                    transition={{ duration: 0.3 }}
+                  />
+                  <span className="relative z-10">Start Your Project</span>
+                  <ArrowRight className="ml-1.5 h-3 w-3 sm:h-4 sm:w-4 relative z-10 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                <ExternalLink className="mr-2 w-4 h-4 sm:w-5 sm:h-5" />
-                View Portfolio
-              </Link>
+                <Link
+                  to="/clients"
+                  className="group inline-flex items-center justify-center px-4 py-2 sm:px-6 sm:py-3 text-xs sm:text-sm font-semibold rounded-full border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                >
+                  {" "}
+                  <ExternalLink className="mr-1.5 w-3 h-3 sm:w-4 sm:h-4" />
+                  View Portfolio
+                  <ArrowRight className="ml-1.5 h-3 w-3 sm:h-4 sm:w-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </motion.div>
             </div>
           </motion.div>
         </div>
@@ -319,7 +443,6 @@ const Services: React.FC = () => {
                 <p className="text-muted-foreground text-base sm:text-lg leading-relaxed">
                   {selectedService.fullDescription}
                 </p>
-
                 {/* Features */}
                 <div>
                   <h4 className="font-semibold text-foreground mb-3">
@@ -336,7 +459,6 @@ const Services: React.FC = () => {
                     ))}
                   </div>
                 </div>
-
                 {/* Technologies */}
                 <div>
                   <h4 className="font-semibold text-foreground mb-3">
@@ -352,25 +474,31 @@ const Services: React.FC = () => {
                       </span>
                     ))}
                   </div>
-                </div>
-
+                </div>{" "}
                 {/* CTA */}
                 <div className="pt-4 border-t border-border">
                   <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                    <Link
-                      to="/contact"
-                      className="flex-1 inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-full hover:scale-105 transition-all duration-300"
-                      onClick={() => setSelectedService(null)}
+                    <motion.div
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
                     >
-                      Get Started
-                      <ArrowRight className="ml-2 w-4 h-4" />
-                    </Link>
-                    <button
+                      <Link
+                        to="/contact"
+                        className="flex-1 inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-primary to-secondary text-primary-foreground font-semibold rounded-full hover:scale-105 transition-all duration-300 shadow-lg"
+                        onClick={() => setSelectedService(null)}
+                      >
+                        Get Started
+                        <ArrowRight className="ml-2 w-4 h-4" />
+                      </Link>
+                    </motion.div>
+                    <motion.button
                       onClick={() => setSelectedService(null)}
-                      className="flex-1 inline-flex items-center justify-center px-6 py-3 border-2 border-border text-foreground font-semibold rounded-full hover:border-primary hover:text-primary transition-all duration-300"
+                      className="flex-1 inline-flex items-center justify-center px-6 py-3 border-2 border-primary text-primary font-semibold rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
                     >
                       Close
-                    </button>
+                    </motion.button>
                   </div>
                 </div>
               </div>
