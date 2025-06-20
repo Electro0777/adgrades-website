@@ -392,7 +392,7 @@ const Services: React.FC = () => {
               >
                 <Link
                   to="/clients"
-                  className="group inline-flex items-center justify-center px-4 py-2 sm:px-6 sm:py-3 text-xs sm:text-sm font-semibold rounded-full border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                  className="group inline-flex items-center justify-center px-4 py-2 sm:px-6 sm:py-3 text-xs sm:text-sm font-semibold rounded-full border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300"
                 >
                   {" "}
                   <ExternalLink className="mr-1.5 w-3 h-3 sm:w-4 sm:h-4" />
@@ -493,7 +493,7 @@ const Services: React.FC = () => {
                     </motion.div>
                     <motion.button
                       onClick={() => setSelectedService(null)}
-                      className="flex-1 inline-flex items-center justify-center px-6 py-3 border-2 border-primary text-primary font-semibold rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                      className="flex-1 inline-flex items-center justify-center px-6 py-3 border-2 border-primary text-primary font-semibold rounded-full hover:bg-primary hover:text-white transition-all duration-300"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
