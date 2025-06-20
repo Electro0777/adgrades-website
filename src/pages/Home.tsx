@@ -185,7 +185,7 @@ const Home: React.FC = () => {
               >
                 <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 mr-2 text-primary" />
               </motion.div>
-              <span className="text-sm sm:text-base font-semibold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              <span className="text-sm sm:text-base font-semibold gradient-text">
                 🚀 Transforming Businesses Since 2023
               </span>
             </motion.div>
@@ -205,9 +205,9 @@ const Home: React.FC = () => {
                   transition={{ duration: 0.6, delay: 0.4 }}
                 >
                   {heroData.subtitle}
-                </motion.span>
+                </motion.span>{" "}
                 <motion.span
-                  className="block bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent relative"
+                  className="block gradient-text-large relative"
                   initial={{ opacity: 0, x: 50 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.6 }}
@@ -323,15 +323,13 @@ const Home: React.FC = () => {
               <span className="text-accent font-semibold text-sm sm:text-base">
                 Our Impact
               </span>
-            </div>
+            </div>{" "}
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-2 sm:mb-4">
-              Numbers That{" "}
-              <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                Matter
-              </span>
+              Results That <span className="gradient-text">Speak Volumes</span>
             </h2>
             <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto">
-              Real results from real partnerships
+              Proven impact through exceptional partnerships and innovative
+              solutions
             </p>
           </div>{" "}
           {/* Stats Grid */}
@@ -370,16 +368,15 @@ const Home: React.FC = () => {
 
                     {/* Content */}
                     <div className="relative z-10 text-center">
-                      {/* Number */}
+                      {/* Number */}{" "}
                       <div
-                        className={`text-2xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold bg-gradient-to-r ${gradients[index]} bg-clip-text text-transparent mb-2 sm:mb-3 lg:mb-4`}
+                        className={`text-2xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold gradient-stat-${index} mb-2 sm:mb-3 lg:mb-4`}
                       >
                         <AnimatedCounter
                           end={stat.number}
                           suffix={stat.suffix}
                         />
                       </div>
-
                       {/* Label */}
                       <p className="text-muted-foreground font-semibold text-xs sm:text-sm lg:text-base group-hover:text-foreground transition-colors">
                         {stat.label}
@@ -616,10 +613,7 @@ const Home: React.FC = () => {
               </span>
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground mb-3 sm:mb-4 lg:mb-6">
-              Trusted by{" "}
-              <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                Amazing Clients
-              </span>
+              Trusted by <span className="gradient-text">Amazing Clients</span>
             </h2>
             <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto">
               We're proud to partner with innovative businesses across various
@@ -649,7 +643,7 @@ const Home: React.FC = () => {
                   <img
                     src={client.logo}
                     alt={`${client.name} logo`}
-                    className="max-w-full max-h-full object-contain filter  group-hover:scale-110 transition-all duration-300"
+                    className="max-w-full max-h-full object-contain dark:filter dark:brightness-0 dark:invert group-hover:filter-none group-hover:scale-110 transition-all duration-300"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
                       target.style.display = "none";
