@@ -964,3 +964,21 @@
 .light .text-primary-foreground {
   color: white !important;
 }
+
+/* Secondary CTA button hover states - Ensure proper contrast */
+.light .hover\:text-primary-foreground:hover {
+  color: white !important;
+}
+
+.dark .hover\:text-primary-foreground:hover {
+  color: rgb(15, 15, 23) !important;
+}
+
+/* Ensure secondary buttons have proper text contrast when hovered */
+.light [class*="border-primary"][class*="hover:bg-primary"]:hover {
+  color: white !important;
+}
+
+.dark [class*="border-primary"][class*="hover:bg-primary"]:hover {
+  color: rgb(15, 15, 23) !important;
+}
