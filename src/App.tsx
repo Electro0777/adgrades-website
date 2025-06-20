@@ -1,11 +1,10 @@
-import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Layout from "./components/Layout";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
-import Portfolio from "./pages/Portfolio";
+import Clients from "./pages/Clients";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Careers from "./pages/Careers";
@@ -27,7 +26,7 @@ function App() {
                 <Home />
               </Layout>
             }
-          />
+          />{" "}
           <Route
             path="/services"
             element={
@@ -37,15 +36,15 @@ function App() {
             }
           />
           <Route
-            path="/portfolio"
+            path="/clients"
             element={
               <Layout>
-                <Portfolio />
+                <Clients />
               </Layout>
             }
-          />{" "}
+          />
           <Route
-            path="/portfolio/:client"
+            path="/clients/:client"
             element={
               <Layout>
                 <ClientDetails />

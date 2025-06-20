@@ -64,11 +64,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       document.body.style.overflow = "unset";
     };
   }, [isMenuOpen]);
-
   const navItems = [
     { name: "Home", path: "/" },
     { name: "Services", path: "/services" },
-    { name: "Clients", path: "/portfolio" },
+    { name: "Clients", path: "/clients" },
     { name: "About Us", path: "/about" },
     { name: "Contact Us", path: "/contact" },
     { name: "Careers", path: "/careers" },
