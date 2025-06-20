@@ -81,18 +81,19 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       }`}
     >
       {" "}
-      {/* Navigation - Mobile Responsive */}
+      {/* Navigation - Mobile Responsive */}{" "}
       <nav
         className={`fixed w-full z-50 transition-all duration-500 ${
-          isScrolled ? "py-1 sm:py-2" : "py-2 sm:py-4"
+          isScrolled ? "py-1 sm:py-2" : "py-1.5 sm:py-2 lg:py-4"
         }`}
       >
         <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
+          {" "}
           <div
             className={`nav-glass rounded-xl sm:rounded-2xl px-3 sm:px-4 lg:px-6 transition-all duration-500 ${
               isScrolled
-                ? "py-2 sm:py-3 shadow-2xl backdrop-blur-3xl"
-                : "py-3 sm:py-4 shadow-xl backdrop-blur-2xl"
+                ? "py-1.5 sm:py-2 lg:py-3 shadow-2xl backdrop-blur-3xl"
+                : "py-2 sm:py-3 lg:py-4 shadow-xl backdrop-blur-2xl"
             }`}
           >
             <div className="flex justify-between items-center">
@@ -132,39 +133,42 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
               {/* Right side buttons - Mobile Responsive */}
               <div className="flex items-center space-x-2 sm:space-x-3">
+                {" "}
                 <button
                   onClick={toggleTheme}
-                  className={`p-2 rounded-lg text-muted-foreground hover:text-primary transition-all duration-300 flex items-center justify-center flex-shrink-0 ${
-                    isScrolled ? "w-8 h-8" : "w-9 h-9 sm:w-10 sm:h-10"
+                  className={`rounded-lg text-muted-foreground hover:text-primary transition-all duration-300 flex items-center justify-center flex-shrink-0 ${
+                    isScrolled ? "p-1.5 w-7 h-7" : "p-2 w-8 h-8 sm:w-9 sm:h-9"
                   }`}
                   aria-label="Toggle dark mode"
                 >
                   {isDark ? (
-                    <Sun size={isScrolled ? 16 : 18} />
+                    <Sun size={isScrolled ? 14 : 16} />
                   ) : (
-                    <Moon size={isScrolled ? 16 : 18} />
+                    <Moon size={isScrolled ? 14 : 16} />
                   )}
-                </button>
-
-                {/* Desktop CTA Button */}
+                </button>{" "}
+                {/* Desktop CTA Button - Custom styling to avoid brand-button interference */}
                 <Link
                   to="/contact"
-                  className={`hidden lg:flex brand-button items-center justify-center whitespace-nowrap flex-shrink-0 ${
-                    isScrolled
-                      ? "px-3 py-2 text-sm"
-                      : "px-4 xl:px-6 py-2 xl:py-3 text-sm xl:text-base"
+                  className={`hidden lg:inline-flex items-center justify-center whitespace-nowrap flex-shrink-0 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-full transition-all duration-300 hover:shadow-lg hover:scale-105 ${
+                    isScrolled ? "px-3 py-1.5 text-xs" : "px-4 py-2 text-sm"
                   }`}
                 >
                   Start a Project
                 </Link>
-
-                {/* Mobile Menu Button */}
+                {/* Mobile Menu Button - Smaller and more proportional */}
                 <button
                   onClick={() => setIsMenuOpen(!isMenuOpen)}
-                  className="lg:hidden mobile-menu-button p-2 rounded-lg text-muted-foreground hover:text-primary transition-all duration-300"
+                  className={`lg:hidden mobile-menu-button rounded-lg text-muted-foreground hover:text-primary transition-all duration-300 flex items-center justify-center ${
+                    isScrolled ? "p-1.5 w-7 h-7" : "p-2 w-8 h-8"
+                  }`}
                   aria-label="Toggle menu"
                 >
-                  {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+                  {isMenuOpen ? (
+                    <X size={isScrolled ? 16 : 18} />
+                  ) : (
+                    <Menu size={isScrolled ? 16 : 18} />
+                  )}
                 </button>
               </div>
             </div>
@@ -185,15 +189,15 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     src={isDark ? "/Asset 2.png" : "/Asset 1.png"}
                     alt="AdGrades Logo"
                     className="h-6 sm:h-8 w-auto object-contain"
-                  />
+                  />{" "}
                   <button
                     onClick={() => setIsMenuOpen(false)}
                     className="p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
+                    aria-label="Close menu"
                   >
                     <X size={24} />
                   </button>
                 </div>
-
                 <div className="flex-1 px-4 sm:px-6 py-4 sm:py-6 space-y-2 overflow-y-auto">
                   {navItems.map((item) => (
                     <Link
@@ -212,13 +216,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                       )}
                     </Link>
                   ))}
-                </div>
-
+                </div>{" "}
                 <div className="p-4 sm:p-6 border-t border-border/50 space-y-4">
+                  {" "}
                   <Link
                     to="/contact"
                     onClick={() => setIsMenuOpen(false)}
-                    className="brand-button w-full text-center justify-center"
+                    className="w-full bg-gradient-to-r from-primary to-secondary text-white font-semibold px-4 py-3 rounded-full transition-all duration-300 hover:shadow-lg hover:scale-105 flex items-center justify-center"
                   >
                     Start a Project
                   </Link>

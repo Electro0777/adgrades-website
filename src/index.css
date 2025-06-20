@@ -4,47 +4,47 @@
 
 @layer base {
   :root {
-    /* Light mode colors - Clean and professional */
+    /* Light mode colors - Purple/Pink theme aligned */
     --background: 255 255 255; /* Pure white */
     --foreground: 30 41 59; /* Dark slate text */
-    --card: 248 250 252; /* Very light gray */
-    --card-foreground: 30 41 59;
-    --primary: 147 51 234; /* Purple */
-    --primary-foreground: 255 255 255;
-    --secondary: 236 72 153; /* Pink */
-    --secondary-foreground: 255 255 255;
-    --muted: 241 245 249;
-    --muted-foreground: 100 116 139;
-    --accent: 147 51 234;
-    --accent-foreground: 255 255 255;
-    --border: 226 232 240;
-    --input: 241 2450 252; /* Light input background */
-    --ring: 126 34 206; /* Darker ring color */
-    /* AdGrades Brand Colors - Better contrast for light mode */
-    --purple-brand: #7c3aed; /* Rich purple for better contrast */
-    --purple-brand-light: #9333ea; /* Lighter purple for decorative elements */
-    --pink-brand: #db2777; /* Rich pink for better contrast */
-    --pink-brand-light: #ec4899; /* Lighter pink for decorative elements */
-    --slate-dark: #0b1120;
-    --slate-darker: #0f172a;
+    --card: 248 250 252; /* Very light gray card background */
+    --card-foreground: 30 41 59; /* Dark text on light cards */
+    --primary: 147 51 234; /* Purple primary */
+    --primary-foreground: 255 255 255; /* White text on purple */
+    --secondary: 236 72 153; /* Pink secondary */
+    --secondary-foreground: 255 255 255; /* White text on pink */
+    --muted: 241 245 249; /* Very light gray */
+    --muted-foreground: 100 116 139; /* Muted text */
+    --accent: 147 51 234; /* Purple accent matching primary */
+    --accent-foreground: 255 255 255; /* White text on accent */
+    --border: 226 232 240; /* Light gray borders */
+    --input: 241 245 249; /* Light input background - fixed typo */
+    --ring: 147 51 234; /* Purple ring matching primary */
+    /* AdGrades Brand Colors - Purple/Pink theme */
+    --purple-brand: #9333ea; /* Vibrant purple */
+    --purple-brand-light: #a855f7; /* Lighter purple for gradients */
+    --pink-brand: #ec4899; /* Vibrant pink */
+    --pink-brand-light: #f472b6; /* Lighter pink for gradients */
+    --slate-dark: #1e293b; /* Dark slate for contrast */
+    --slate-darker: #0f172a; /* Darker slate */
   }
   .dark {
-    /* Dark mode colors - Rich purple theme */
-    --background: 15 15 23; /* Deep purple-black */
-    --foreground: 245 245 247; /* Light gray */
-    --card: 24 24 37; /* Dark purple card */
-    --card-foreground: 245 245 247;
-    --primary: 168 85 247; /* Bright purple */
-    --primary-foreground: 15 15 23;
-    --secondary: 244 114 182; /* Bright pink */
-    --secondary-foreground: 15 15 23;
-    --muted: 39 39 56; /* Muted purple */
-    --muted-foreground: 161 161 170;
-    --accent: 168 85 247;
-    --accent-foreground: 15 15 23;
-    --border: 39 39 56;
-    --input: 39 39 56;
-    --ring: 168 85 247;
+    /* Dark mode colors - Rich purple/pink theme */
+    --background: 15 15 23; /* Deep purple-black background */
+    --foreground: 245 245 247; /* Light gray text */
+    --card: 24 24 37; /* Dark purple card background */
+    --card-foreground: 245 245 247; /* Light text on dark cards */
+    --primary: 168 85 247; /* Bright purple primary */
+    --primary-foreground: 15 15 23; /* Dark text on bright backgrounds */
+    --secondary: 244 114 182; /* Bright pink secondary */
+    --secondary-foreground: 15 15 23; /* Dark text on bright backgrounds */
+    --muted: 39 39 56; /* Muted dark purple */
+    --muted-foreground: 161 161 170; /* Muted light text */
+    --accent: 168 85 247; /* Bright purple accent */
+    --accent-foreground: 15 15 23; /* Dark text on accent */
+    --border: 39 39 56; /* Dark purple borders */
+    --input: 39 39 56; /* Dark input background */
+    --ring: 168 85 247; /* Bright purple ring */
   }
 
   * {
@@ -62,42 +62,19 @@
   }
 }
 
-/* Brand gradient for AdGrades */
+/* Brand gradient for AdGrades - Purple/Pink theme */
 .brand-gradient {
-  background: linear-gradient(135deg, #0070cc 0%, #009688 100%);
+  background: linear-gradient(135deg, #9333ea 0%, #ec4899 100%);
 }
 
 /* Light mode specific brand gradient */
 .light .brand-gradient {
-  background: linear-gradient(135deg, #0070cc 0%, #009688 100%);
+  background: linear-gradient(135deg, #9333ea 0%, #ec4899 100%);
 }
 
-/* Dark mode keeps original vibrant colors */
+/* Dark mode with brighter purple/pink colors */
 .dark .brand-gradient {
-  background: linear-gradient(135deg, #00b5ff 0%, #01f9c6 100%);
-}
-
-.brand-gradient-text {
-  background: linear-gradient(135deg, #0070cc 0%, #009688 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* Light mode specific brand gradient text */
-.light .brand-gradient-text {
-  background: linear-gradient(135deg, #0070cc 0%, #009688 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* Dark mode keeps original vibrant colors */
-.dark .brand-gradient-text {
-  background: linear-gradient(135deg, #00b5ff 0%, #01f9c6 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background: linear-gradient(135deg, #a855f7 0%, #f472b6 100%);
 }
 
 /* Subtle texture overlay for cards in light mode */
@@ -116,47 +93,62 @@
   pointer-events: none;
 }
 
-/* Professional gradient for buttons and elements */
+/* Professional gradient for buttons and elements - Purple/Pink theme */
 .professional-gradient {
-  background: linear-gradient(135deg, #0070cc 0%, #009688 100%);
+  background: linear-gradient(135deg, #9333ea 0%, #ec4899 100%);
 }
 
 /* Light mode specific professional gradient */
 .light .professional-gradient {
-  background: linear-gradient(135deg, #0070cc 0%, #009688 100%);
+  background: linear-gradient(135deg, #9333ea 0%, #ec4899 100%);
 }
 
-/* Dark mode keeps original vibrant colors */
+/* Dark mode with brighter colors */
 .dark .professional-gradient {
-  background: linear-gradient(135deg, #00b5ff 0%, #01f9c6 100%);
+  background: linear-gradient(135deg, #a855f7 0%, #f472b6 100%);
 }
 
-/* Hero section glow effects - 15% intensity */
+/* Hero section glow effects - Purple/Pink theme */
 .hero-title-glow {
-  text-shadow: 0 0 15px rgba(0, 181, 255, 0.15), 0 0 30px rgba(1, 249, 198, 0.1),
-    0 0 45px rgba(0, 181, 255, 0.08);
+  text-shadow: 0 0 15px rgba(168, 85, 247, 0.15),
+    0 0 30px rgba(244, 114, 182, 0.1), 0 0 45px rgba(168, 85, 247, 0.08);
 }
 
 .hero-badge-glow {
-  text-shadow: 0 0 12px rgba(0, 181, 255, 0.15), 0 0 25px rgba(1, 249, 198, 0.1);
-  box-shadow: 0 0 15px rgba(0, 181, 255, 0.1), 0 0 30px rgba(1, 249, 198, 0.08),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  text-shadow: 0 0 12px rgba(168, 85, 247, 0.15),
+    0 0 25px rgba(244, 114, 182, 0.1);
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.1),
+    0 0 30px rgba(244, 114, 182, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 /* Light mode adjustments for glow */
 .light .hero-title-glow {
-  text-shadow: 0 0 12px rgba(0, 181, 255, 0.12),
-    0 0 25px rgba(1, 249, 198, 0.08), 0 0 40px rgba(0, 181, 255, 0.06);
+  text-shadow: 0 0 12px rgba(147, 51, 234, 0.12),
+    0 0 25px rgba(236, 72, 153, 0.08), 0 0 40px rgba(147, 51, 234, 0.06);
 }
 
 .light .hero-badge-glow {
-  text-shadow: 0 0 10px rgba(0, 181, 255, 0.12),
-    0 0 20px rgba(1, 249, 198, 0.08);
-  box-shadow: 0 0 12px rgba(0, 181, 255, 0.08), 0 0 25px rgba(1, 249, 198, 0.06),
-    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  text-shadow: 0 0 10px rgba(147, 51, 234, 0.12),
+    0 0 20px rgba(236, 72, 153, 0.08);
+  box-shadow: 0 0 12px rgba(147, 51, 234, 0.08),
+    0 0 25px rgba(236, 72, 153, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
-/* Custom animations */
+/* Marquee animation for components that still use it */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+.animate-marquee {
+  animation: marquee var(--duration) linear infinite;
+}
+
+/* Float animation for components that still use it */
 @keyframes float {
   0%,
   100% {
@@ -173,6 +165,16 @@
   }
 }
 
+.animate-float {
+  animation: float 8s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 8s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+/* Fade in animation for other pages */
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -184,98 +186,33 @@
   }
 }
 
-@keyframes slideUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.animate-fade-in {
+  animation: fadeIn 1s ease-out;
 }
 
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(calc(-100% - var(--gap)));
-  }
-}
-
-@keyframes gridMove {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(60px, 60px);
-  }
-}
-
+/* Button animations for other pages - Purple/Pink theme */
 @keyframes buttonPulse {
   0%,
   100% {
     transform: scale(1);
-    box-shadow: 0 4px 15px rgba(0, 181, 255, 0.2);
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.2);
   }
   50% {
     transform: scale(1.02);
-    box-shadow: 0 8px 25px rgba(0, 181, 255, 0.4);
+    box-shadow: 0 8px 25px rgba(168, 85, 247, 0.4);
   }
 }
 
 @keyframes buttonGlow {
   0%,
   100% {
-    box-shadow: 0 0 20px rgba(0, 181, 255, 0.3),
-      0 4px 15px rgba(0, 181, 255, 0.2);
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.3),
+      0 4px 15px rgba(168, 85, 247, 0.2);
   }
   50% {
-    box-shadow: 0 0 30px rgba(1, 249, 198, 0.4),
-      0 8px 25px rgba(0, 181, 255, 0.3);
+    box-shadow: 0 0 30px rgba(244, 114, 182, 0.4),
+      0 8px 25px rgba(168, 85, 247, 0.3);
   }
-}
-
-/* Light mode specific animations with better contrast */
-@keyframes lightButtonPulse {
-  0%,
-  100% {
-    transform: scale(1);
-    box-shadow: 0 4px 15px rgba(0, 112, 204, 0.25);
-  }
-  50% {
-    transform: scale(1.02);
-    box-shadow: 0 8px 25px rgba(0, 112, 204, 0.35);
-  }
-}
-
-@keyframes lightButtonGlow {
-  0%,
-  100% {
-    box-shadow: 0 0 20px rgba(0, 112, 204, 0.25),
-      0 4px 15px rgba(0, 112, 204, 0.2);
-  }
-  50% {
-    box-shadow: 0 0 30px rgba(0, 150, 136, 0.3),
-      0 8px 25px rgba(0, 112, 204, 0.25);
-  }
-}
-
-.animate-float {
-  animation: float 8s ease-in-out infinite;
-}
-
-.animate-fade-in {
-  animation: fadeIn 1s ease-out;
-}
-
-.animate-slide-up {
-  animation: slideUp 0.8s ease-out;
-}
-
-.animate-marquee {
-  animation: marquee var(--duration) linear infinite;
 }
 
 .animate-button-pulse {
@@ -284,122 +221,6 @@
 
 .animate-button-glow {
   animation: buttonGlow 3s ease-in-out infinite;
-}
-
-.light .animate-button-pulse {
-  animation: lightButtonPulse 2s ease-in-out infinite;
-}
-
-.light .animate-button-glow {
-  animation: lightButtonGlow 3s ease-in-out infinite;
-}
-
-/* Animation delay classes */
-.animate-delay-1s {
-  animation-delay: 1s;
-}
-
-.animate-delay-2s {
-  animation-delay: 2s;
-}
-
-/* Stats Section Animation Delays */
-.animate-delay-0 {
-  animation-delay: 0s;
-}
-.animate-delay-200 {
-  animation-delay: 0.2s;
-}
-.animate-delay-400 {
-  animation-delay: 0.4s;
-}
-.animate-delay-600 {
-  animation-delay: 0.6s;
-}
-.animate-delay-1000 {
-  animation-delay: 1s;
-}
-
-/* CTA Section Animation Delays */
-.animate-pulse-delay-2 {
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  animation-delay: 2s;
-}
-
-.animate-pulse-delay-4 {
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  animation-delay: 4s;
-}
-
-/* Enhanced floating animations */
-.animate-float-delayed {
-  animation: float 8s ease-in-out infinite;
-  animation-delay: 2s;
-}
-
-.animate-float-slow {
-  animation: float 10s ease-in-out infinite;
-  animation-delay: 1s;
-}
-
-/* Gradient animation */
-@keyframes gradient {
-  0%,
-  100% {
-    background-size: 200% 200%;
-    background-position: left center;
-  }
-  50% {
-    background-size: 200% 200%;
-    background-position: right center;
-  }
-}
-
-.animate-gradient {
-  background-size: 200% 200%;
-  animation: gradient 3s ease infinite;
-}
-
-/* SVG path drawing animation */
-@keyframes draw {
-  from {
-    stroke-dashoffset: 1000;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes draw-delayed {
-  from {
-    stroke-dashoffset: 1000;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-.animate-draw {
-  animation: draw 3s ease-in-out infinite;
-}
-
-.animate-draw-delayed {
-  animation: draw-delayed 3s ease-in-out infinite;
-  animation-delay: 1.5s;
-}
-
-/* Content overlay for non-hero sections */
-.content-overlay {
-  background: rgba(11, 17, 32, 0.85);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
-
-.light .content-overlay {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  border: 1px solid rgba(203, 213, 225, 0.3);
 }
 
 /* Minimalist card styles */
@@ -698,22 +519,28 @@
 
 /* Clean section spacing - Mobile Responsive */
 .section-padding {
-  padding: 3rem 0;
+  padding: 2rem 0;
 }
 
 @media (min-width: 640px) {
   .section-padding {
-    padding: 4rem 0;
+    padding: 3rem 0;
   }
 }
 
 @media (min-width: 768px) {
   .section-padding {
-    padding: 5rem 0;
+    padding: 4rem 0;
   }
 }
 
 @media (min-width: 1024px) {
+  .section-padding {
+    padding: 5rem 0;
+  }
+}
+
+@media (min-width: 1280px) {
   .section-padding {
     padding: 6rem 0;
   }
@@ -1019,4 +846,20 @@
     --muted-foreground: 51 65 85; /* Darker muted text */
     --border: 156 163 175; /* Darker borders */
   }
+}
+
+/* Button text color overrides for proper contrast */
+.light
+  [class*="bg-gradient-to-r"][class*="from-primary"][class*="to-secondary"] {
+  color: white !important;
+}
+
+.dark
+  [class*="bg-gradient-to-r"][class*="from-primary"][class*="to-secondary"] {
+  color: white !important;
+}
+
+/* Ensure CTA button text is always white for contrast */
+.light .text-primary-foreground {
+  color: white !important;
 }
