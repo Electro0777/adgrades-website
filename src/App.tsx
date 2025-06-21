@@ -12,6 +12,7 @@ import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/AdminDashboard";
 import CertificateVerification from "./pages/CertificateVerification";
 import ClientDetails from "./pages/ClientDetails";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -88,6 +89,8 @@ function App() {
               </ProtectedRoute>
             }
           />
+          {/* 404 Page - Catch All */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
     </ThemeProvider>

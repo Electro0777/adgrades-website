@@ -266,23 +266,27 @@ const Careers: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>      {/* Open Positions Section with Grid Layout */}
-      <section id="open-positions" className="py-6 sm:py-8 md:py-12 relative overflow-hidden">
+      </section>{" "}
+      {/* Open Positions Section with Grid Layout */}
+      <section
+        id="open-positions"
+        className="py-6 sm:py-8 md:py-12 relative overflow-hidden"
+      >
         {/* Background decoration elements */}
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-20 left-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-10 w-64 h-64 bg-secondary/5 rounded-full blur-3xl"></div>
         </div>
-        
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <motion.div 
+          <motion.div
             className="text-center mb-8 sm:mb-10"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <motion.div 
+            <motion.div
               className="inline-flex items-center bg-primary/10 rounded-full px-3 py-1 mb-3"
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -290,44 +294,51 @@ const Careers: React.FC = () => {
               viewport={{ once: true }}
             >
               <Briefcase className="w-4 h-4 text-primary mr-1.5" />
-              <span className="text-primary font-medium text-sm">Current Openings</span>
+              <span className="text-primary font-medium text-sm">
+                Current Openings
+              </span>
             </motion.div>
-            
+
             <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground">
               Join Our <span className="gradient-text">Dream Team</span>
             </h2>
             <p className="text-muted-foreground text-sm sm:text-base mt-2 max-w-2xl mx-auto">
-              Explore our current openings and find the perfect role that matches your skills and passion
+              Explore our current openings and find the perfect role that
+              matches your skills and passion
             </p>
-          </motion.div>          {/* Grid layout for open positions */}
+          </motion.div>{" "}
+          {/* Grid layout for open positions */}
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8">
             {openPositions.map((position, index) => (
               <motion.div
                 key={position.title}
                 className={`bg-card/40 backdrop-blur-sm rounded-xl border overflow-hidden hover:shadow-lg transition-all duration-300 h-full ${
-                  index % 3 === 0 
-                    ? "border-primary/20 hover:border-primary/40" 
-                    : index % 2 === 0 
-                    ? "border-secondary/20 hover:border-secondary/40" 
+                  index % 3 === 0
+                    ? "border-primary/20 hover:border-primary/40"
+                    : index % 2 === 0
+                    ? "border-secondary/20 hover:border-secondary/40"
                     : "border-accent/20 hover:border-accent/40"
                 }`}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                whileHover={{ y: -5, boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)" }}
+                whileHover={{
+                  y: -5,
+                  boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)",
+                }}
               >
                 {/* Card header with gradient */}
-                <div 
+                <div
                   className={`h-3 w-full ${
-                    index % 3 === 0 
-                      ? "bg-gradient-to-r from-primary to-primary/60" 
-                      : index % 2 === 0 
-                      ? "bg-gradient-to-r from-secondary to-secondary/60" 
+                    index % 3 === 0
+                      ? "bg-gradient-to-r from-primary to-primary/60"
+                      : index % 2 === 0
+                      ? "bg-gradient-to-r from-secondary to-secondary/60"
                       : "bg-gradient-to-r from-accent to-accent/60"
                   }`}
                 ></div>
-                
+
                 <div className="p-5 sm:p-6 flex flex-col h-[calc(100%-3px)]">
                   <div className="flex items-start justify-between mb-4">
                     <div className="pr-3">
@@ -339,14 +350,16 @@ const Careers: React.FC = () => {
                         {position.department}
                       </div>
                     </div>
-                    
-                    <div className={`flex-shrink-0 flex items-center justify-center rounded-full w-12 h-12 ${
-                      index % 3 === 0 
-                        ? "bg-primary/10 text-primary" 
-                        : index % 2 === 0 
-                        ? "bg-secondary/10 text-secondary" 
-                        : "bg-accent/10 text-accent"
-                    }`}>
+
+                    <div
+                      className={`flex-shrink-0 flex items-center justify-center rounded-full w-12 h-12 ${
+                        index % 3 === 0
+                          ? "bg-primary/10 text-primary"
+                          : index % 2 === 0
+                          ? "bg-secondary/10 text-secondary"
+                          : "bg-accent/10 text-accent"
+                      }`}
+                    >
                       {/* Icon based on department */}
                       {position.department === "Marketing" ? (
                         <Target className="h-5 w-5 sm:h-6 sm:w-6" />
@@ -361,11 +374,11 @@ const Careers: React.FC = () => {
                       )}
                     </div>
                   </div>
-                  
+
                   <p className="text-muted-foreground text-sm sm:text-base mb-5 line-clamp-3">
                     {position.description}
                   </p>
-                  
+
                   <div className="flex flex-wrap items-center gap-2 text-xs sm:text-sm text-muted-foreground mb-4 mt-auto">
                     <span className="flex items-center bg-background/80 px-2 py-1 rounded-full">
                       <Clock className="h-3 w-3 mr-1" />
@@ -380,31 +393,39 @@ const Careers: React.FC = () => {
                       {position.salary}
                     </span>
                   </div>
-                  
+
                   <div className="flex items-center justify-between pt-4 border-t border-border/30 mt-auto">
-                    <span className={`text-xs sm:text-sm font-medium ${
-                      index % 3 === 0 
-                        ? "text-primary" 
-                        : index % 2 === 0 
-                        ? "text-secondary" 
-                        : "text-accent"
-                    }`}>
-                      {index % 3 === 0 ? "New" : index % 2 === 0 ? "Featured" : "Trending"}
+                    <span
+                      className={`text-xs sm:text-sm font-medium ${
+                        index % 3 === 0
+                          ? "text-primary"
+                          : index % 2 === 0
+                          ? "text-secondary"
+                          : "text-accent"
+                      }`}
+                    >
+                      {index % 3 === 0
+                        ? "New"
+                        : index % 2 === 0
+                        ? "Featured"
+                        : "Trending"}
                     </span>
-                    
-                    <a 
-                      href="#application-form" 
+
+                    <a
+                      href="#application-form"
                       onClick={() => {
                         setApplicationData({
                           ...applicationData,
-                          position: position.title.toLowerCase().replace(/ /g, '-')
+                          position: position.title
+                            .toLowerCase()
+                            .replace(/ /g, "-"),
                         });
                       }}
                       className={`group inline-flex items-center text-sm sm:text-base font-medium ${
-                        index % 3 === 0 
-                          ? "text-primary" 
-                          : index % 2 === 0 
-                          ? "text-secondary" 
+                        index % 3 === 0
+                          ? "text-primary"
+                          : index % 2 === 0
+                          ? "text-secondary"
                           : "text-accent"
                       }`}
                     >
@@ -418,16 +439,17 @@ const Careers: React.FC = () => {
           </div>
         </div>
       </section>
-      
       {/* Application Form Section - Styled Uniquely */}
-      <section id="application-form" className="py-10 sm:py-12 md:py-16 relative">
+      <section
+        id="application-form"
+        className="py-10 sm:py-12 md:py-16 relative"
+      >
         {/* Background with gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background/90 z-0"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(var(--primary-rgb),0.05)_0,rgba(var(--background-rgb),0)_50%)] z-0"></div>
-        
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Header with decorative elements */}
-          <motion.div 
+          <motion.div
             className="text-center mb-12 relative"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -435,42 +457,45 @@ const Careers: React.FC = () => {
             viewport={{ once: true }}
           >
             {/* Decorative shapes */}
-            <motion.div 
+            <motion.div
               className="absolute left-1/4 -top-16 w-12 h-12 rounded-full border border-primary/20"
-              animate={{ 
+              animate={{
                 y: [0, 8, 0],
-                rotate: [0, 5, 0]
+                rotate: [0, 5, 0],
               }}
-              transition={{ 
-                duration: 4, 
+              transition={{
+                duration: 4,
                 repeat: Infinity,
-                ease: "easeInOut"
+                ease: "easeInOut",
               }}
             ></motion.div>
-            <motion.div 
+            <motion.div
               className="absolute right-1/4 -top-6 w-8 h-8 rounded-full border border-secondary/20"
-              animate={{ 
+              animate={{
                 y: [0, -8, 0],
-                rotate: [0, -5, 0]
+                rotate: [0, -5, 0],
               }}
-              transition={{ 
-                duration: 3.5, 
+              transition={{
+                duration: 3.5,
                 repeat: Infinity,
-                ease: "easeInOut"
+                ease: "easeInOut",
               }}
             ></motion.div>
-              <div className="inline-flex items-center bg-primary/10 rounded-full px-3 py-1 sm:px-4 sm:py-1.5 mb-3 sm:mb-4">
+            <div className="inline-flex items-center bg-primary/10 rounded-full px-3 py-1 sm:px-4 sm:py-1.5 mb-3 sm:mb-4">
               <Send className="w-3 h-3 sm:w-4 sm:h-4 text-primary mr-1.5" />
-              <span className="text-primary font-semibold text-xs sm:text-sm">Join Our Team</span>
+              <span className="text-primary font-semibold text-xs sm:text-sm">
+                Join Our Team
+              </span>
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
               Ready to <span className="gradient-text">Apply?</span>
             </h2>
             <p className="text-muted-foreground text-sm sm:text-base max-w-2xl mx-auto mb-2">
-              Take the first step towards joining our team. Fill out the form below, and we'll get back to you soon.
+              Take the first step towards joining our team. Fill out the form
+              below, and we'll get back to you soon.
             </p>
           </motion.div>
-            {/* Application Form with unique styling */}
+          {/* Application Form with unique styling */}
           <motion.div
             id="application-form"
             className="bg-card/30 backdrop-blur-md rounded-2xl border border-border/30 shadow-xl overflow-hidden mt-6 sm:mt-8"
@@ -478,7 +503,8 @@ const Careers: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-          >{isSubmitted ? (
+          >
+            {isSubmitted ? (
               <div className="bg-card/30 backdrop-blur-sm rounded-lg border border-border/50 p-8 sm:p-10">
                 <motion.div
                   className="text-center py-6 sm:py-8"
@@ -491,25 +517,31 @@ const Careers: React.FC = () => {
                     Application Submitted Successfully!
                   </h3>
                   <p className="text-muted-foreground text-sm">
-                    We'll review your application and get back to you within 5 business days.
+                    We'll review your application and get back to you within 5
+                    business days.
                   </p>
                   <motion.button
                     className="mt-6 px-6 py-2.5 bg-primary/10 text-primary rounded-lg text-sm font-medium hover:bg-primary/20 transition-colors duration-300"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                    onClick={() =>
+                      window.scrollTo({ top: 0, behavior: "smooth" })
+                    }
                   >
                     Back to Top
                   </motion.button>
                 </motion.div>
               </div>
-            ) : (              <div>
+            ) : (
+              <div>
                 {/* Form header with accent */}
                 <div className="bg-gradient-to-r from-primary to-secondary p-4 sm:p-6 rounded-t-lg">
                   <h3 className="text-white text-lg sm:text-xl font-bold flex items-center">
                     <Send className="w-5 h-5 mr-2" /> Apply Now
                   </h3>
-                  <p className="text-white/80 text-xs sm:text-sm mt-1">Fields marked with * are required</p>
+                  <p className="text-white/80 text-xs sm:text-sm mt-1">
+                    Fields marked with * are required
+                  </p>
                 </div>
                 <form
                   onSubmit={handleSubmit}
@@ -609,9 +641,11 @@ const Careers: React.FC = () => {
                       >
                         <option value="">Select a position</option>
                         {openPositions.map((position) => (
-                          <option 
-                            key={position.title} 
-                            value={position.title.toLowerCase().replace(/ /g, '-')}
+                          <option
+                            key={position.title}
+                            value={position.title
+                              .toLowerCase()
+                              .replace(/ /g, "-")}
                           >
                             {position.title}
                           </option>
@@ -678,7 +712,8 @@ const Careers: React.FC = () => {
               </div>
             )}
           </motion.div>
-        </div>      </section>
+        </div>{" "}
+      </section>
       {/* Benefits Section */}
       <section className="py-8 sm:py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
