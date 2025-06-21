@@ -71,56 +71,54 @@ const Clients: React.FC = () => {
     }));
 
   return (
-    <div className="min-h-screen pt-16 sm:pt-20 lg:pt-24">
-      {/* Hero Section - Aligned with Services page style */}
-      <section className="py-8 sm:py-12 md:py-16 lg:py-20 relative overflow-hidden">
+    <div className="min-h-screen pt-14 sm:pt-16 lg:pt-20 bg-background">
+      {/* Hero Section */}
+      <section className="py-6 sm:py-8 md:py-12 lg:py-16 relative overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 lg:w-80 lg:h-80 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-48 h-48 lg:w-64 lg:h-64 bg-gradient-to-br from-secondary/10 to-accent/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/4 left-1/4 w-48 h-48 lg:w-64 lg:h-64 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-32 h-32 lg:w-48 lg:h-48 bg-gradient-to-br from-secondary/10 to-accent/10 rounded-full blur-3xl"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
             {/* Badge */}
             <motion.div
-              className="inline-flex items-center bg-secondary/10 rounded-full px-4 py-1.5 sm:px-6 sm:py-2 mb-4 sm:mb-6"
+              className="inline-flex items-center bg-secondary/10 rounded-full px-3 py-1 sm:px-4 sm:py-1.5 mb-3 sm:mb-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-secondary mr-1.5 sm:mr-2" />
-              <span className="text-secondary font-semibold text-sm sm:text-base">
+              <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-secondary mr-1 sm:mr-1.5" />
+              <span className="text-secondary font-semibold text-xs sm:text-sm">
                 Trusted by Leading Brands
               </span>
             </motion.div>
 
             {/* Hero Title */}
             <motion.h1
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground mb-4 sm:mb-6"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 sm:mb-4"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Our <span className="gradient-text">Amazing</span>
-              <br />
-              <span className="gradient-text">Clients</span>
+              Our <span className="gradient-text">Amazing Clients</span>
             </motion.h1>
 
             {/* Hero Description */}
             <motion.p
-              className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-8 sm:mb-12 px-2"
+              className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto mb-6 sm:mb-8"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
               From startups to enterprises, we've helped businesses across
-              industries achieve remarkable digital transformation and growth
+              industries achieve remarkable digital transformation and growth.
             </motion.p>
 
             {/* Stats Grid */}
             <motion.div
-              className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6 max-w-4xl mx-auto"
+              className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
@@ -128,15 +126,15 @@ const Clients: React.FC = () => {
               {stats.map((stat, index) => (
                 <div
                   key={index}
-                  className="bg-card/60 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 border border-border/50 hover:border-primary/30 hover:bg-card/80 transition-all duration-300"
+                  className="bg-card/60 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-border/50 hover:border-primary/30 hover:bg-card/80 transition-all duration-300"
                 >
                   <stat.icon
-                    className={`w-6 h-6 sm:w-8 sm:h-8 ${stat.color} mx-auto mb-2 sm:mb-3`}
+                    className={`w-5 h-5 sm:w-6 sm:h-6 ${stat.color} mx-auto mb-2`}
                   />
-                  <div className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-1">
+                  <div className="text-lg sm:text-xl font-bold text-foreground mb-1">
                     {stat.number}
                   </div>
-                  <div className="text-xs sm:text-sm text-muted-foreground font-medium">
+                  <div className="text-xs text-muted-foreground font-medium">
                     {stat.label}
                   </div>
                 </div>
@@ -145,67 +143,104 @@ const Clients: React.FC = () => {
           </div>
         </div>
       </section>{" "}
-      {/* Filter Section - Aligned with Services page */}
-      <section className="py-6 sm:py-8 md:py-12">
+      {/* Filter Section */}
+      <section className="py-4 sm:py-6 lg:py-8 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-6 sm:mb-8">
-            <div className="inline-flex items-center gap-2 px-3 py-1 sm:px-4 sm:py-1.5 bg-card/60 rounded-full mb-2 sm:mb-3 text-muted-foreground backdrop-blur-sm border border-border/50">
+          <motion.div
+            className="text-center mb-4 sm:mb-6"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <motion.div
+              className="inline-flex items-center gap-2 px-3 py-1 sm:px-4 sm:py-1.5 bg-card/60 rounded-full mb-2 sm:mb-3 text-muted-foreground backdrop-blur-sm border border-border/50"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
               <Building className="w-3 h-3 sm:w-4 sm:h-4" />
               <span className="text-xs sm:text-sm font-medium">
                 Filter by industry
               </span>
-            </div>
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-2 sm:mb-3">
+            </motion.div>
+            <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-2">
               Industries We <span className="gradient-text">Serve</span>
             </h2>
             <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto px-2">
               Our expertise spans across multiple industries, bringing tailored
               solutions to meet unique business challenges
             </p>
-          </div>
+          </motion.div>
 
           {/* Filter Buttons */}
-          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-4 sm:mb-6">
+          <motion.div
+            className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-4 sm:mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+          >
             {categories.map((category, index) => (
               <motion.button
                 key={category}
                 initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
+                whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.3, delay: index * 0.05 }}
+                viewport={{ once: true }}
                 onClick={() => setActiveCategory(category)}
                 className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-full font-semibold transition-all duration-300 text-xs sm:text-sm ${
                   activeCategory === category
                     ? "bg-primary text-white shadow-lg transform scale-105"
                     : "bg-card/60 text-muted-foreground hover:bg-primary/10 hover:text-primary hover:scale-105 border border-border/50 backdrop-blur-sm"
                 }`}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
                 {category}
               </motion.button>
             ))}
-          </div>
+          </motion.div>
 
-          <div className="text-center text-xs sm:text-sm text-muted-foreground">
+          <motion.div
+            className="text-center text-xs sm:text-sm text-muted-foreground"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            viewport={{ once: true }}
+          >
             Showing {filteredClients.length} client
             {filteredClients.length !== 1 ? "s" : ""}
             {activeCategory !== "All" && ` in ${activeCategory}`}
-          </div>
+          </motion.div>
         </div>
       </section>{" "}
       {/* Clients Grid - Responsive Layout */}
       <section className="py-6 sm:py-8 md:py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
+          <motion.div
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
             {filteredClients.map((client, index) => (
               <motion.div
                 key={client.id}
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
                 className="h-fit"
+                whileHover={{ y: -5 }}
               >
-                <div
+                <motion.div
                   className="group bg-card/60 backdrop-blur-sm rounded-2xl overflow-hidden border border-border/50 hover:border-primary/30 transition-all duration-500 hover:shadow-xl cursor-pointer h-full flex flex-col"
                   onClick={() => navigate(`/clients/${client.id}`)}
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
                 >
                   {/* Client Image */}
                   <div className="relative overflow-hidden">
@@ -307,10 +342,10 @@ const Clients: React.FC = () => {
                       </div>
                     )}
                   </div>
-                </div>
+                </motion.div>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
 
           {/* Load More Button */}
           {filteredClients.length === 0 && (
@@ -331,7 +366,13 @@ const Clients: React.FC = () => {
       {/* Testimonials Section */}
       <section className="py-12 sm:py-16 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 sm:mb-12">
+          <motion.div
+            className="text-center mb-8 sm:mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
             <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-3">
               What Our Clients <span className="gradient-text">Say</span>
             </h2>
@@ -339,16 +380,24 @@ const Clients: React.FC = () => {
               Real feedback from real businesses that achieved remarkable
               results with our partnership
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+          >
             {featuredTestimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
+                viewport={{ once: true }}
                 className="bg-card/60 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-lg"
+                whileHover={{ y: -5, scale: 1.02 }}
               >
                 <div className="flex items-center gap-2 mb-4">
                   <div className="w-8 h-8 rounded-lg bg-white/80 p-1.5 flex items-center justify-center">
@@ -372,7 +421,7 @@ const Clients: React.FC = () => {
                       <div className="w-full h-full bg-primary/10 rounded flex items-center justify-center text-primary font-bold text-xs">
                         {testimonial.company.charAt(0)}
                       </div>
-                    )}{" "}
+                    )}
                   </div>
                   <div>
                     <div className="font-semibold text-foreground text-sm">
@@ -402,7 +451,7 @@ const Clients: React.FC = () => {
                 </div>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>{" "}
       {/* CTA Section */}
@@ -423,20 +472,39 @@ const Clients: React.FC = () => {
             <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8 max-w-2xl mx-auto">
               Let's discuss how we can help your business achieve similar
               results and become our next success story
-            </p>
+            </p>{" "}
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-              <button
-                onClick={() => navigate("/contact")}
-                className="px-6 py-3 sm:px-8 sm:py-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-all duration-300 transform hover:scale-105 shadow-lg text-sm sm:text-base"
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                Start Your Project
-              </button>
-              <button
-                onClick={() => navigate("/services")}
-                className="px-6 py-3 sm:px-8 sm:py-4 bg-transparent border-2 border-primary text-primary font-semibold rounded-lg hover:bg-primary hover:text-white transition-all duration-300 text-sm sm:text-base"
+                <button
+                  onClick={() => navigate("/contact")}
+                  className="group relative inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-lg font-semibold rounded-full bg-gradient-to-r from-primary to-secondary text-primary-foreground overflow-hidden transition-all duration-300"
+                >
+                  {/* Animated background */}
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-secondary to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    initial={{ x: "-100%" }}
+                    whileHover={{ x: "0%" }}
+                    transition={{ duration: 0.3 }}
+                  />
+                  <span className="relative z-10">Start Your Project</span>
+                  <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 relative z-10 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                View Our Services
-              </button>
+                <button
+                  onClick={() => navigate("/services")}
+                  className="group inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-lg font-semibold rounded-full border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300"
+                >
+                  <span>View Our Services</span>
+                  <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </motion.div>
             </div>
           </motion.div>
         </div>
