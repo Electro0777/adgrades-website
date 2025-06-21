@@ -141,7 +141,14 @@ const About: React.FC = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <button className="group inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-lg font-semibold rounded-full border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300">
+                <button
+                  onClick={() => {
+                    document.getElementById("team-section")?.scrollIntoView({
+                      behavior: "smooth",
+                    });
+                  }}
+                  className="group inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-lg font-semibold rounded-full border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                >
                   <Users className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                   <span>Meet the Team</span>
                   <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
@@ -426,7 +433,10 @@ const About: React.FC = () => {
         </div>
       </section>{" "}
       {/* Team Section */}
-      <section className="py-6 sm:py-8 md:py-12 lg:py-16 relative">
+      <section
+        id="team-section"
+        className="py-6 sm:py-8 md:py-12 lg:py-16 relative"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-6 sm:mb-8"
@@ -624,7 +634,14 @@ const About: React.FC = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <button className="group inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-lg font-semibold rounded-full border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300">
+                <button
+                  onClick={() => {
+                    document.getElementById("team-section")?.scrollIntoView({
+                      behavior: "smooth",
+                    });
+                  }}
+                  className="group inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-lg font-semibold rounded-full border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                >
                   <Users className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                   <span>Meet the Team</span>
                   <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
