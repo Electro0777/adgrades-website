@@ -44,7 +44,7 @@ export const clientsData: ClientData[] = [
     category: "IT Solutions",
     description:
       "Emerging IT solutions startup - Social Media Management & Lead Generation",
-    logo: "./client/oscode.png",
+    logo: "/client/oscode.png",
     image:
       "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?w=400&h=300&fit=crop",
     tags: ["Social Media Management", "Lead Generation", "4 months"],
@@ -88,7 +88,7 @@ export const clientsData: ClientData[] = [
     category: "Food & Beverage",
     description:
       "Restaurant marketing with targeted ad campaigns and social media management",
-    logo: "./client/delhi65.png",
+    logo: "/client/delhi65.png",
     image:
       "https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?w=400&h=300&fit=crop",
     tags: ["Targeted Ad Campaigns", "Social Media Management", "3 months"],
@@ -132,7 +132,7 @@ export const clientsData: ClientData[] = [
     category: "Education",
     description:
       "Online education platform with comprehensive digital marketing strategy",
-    logo: "./client/medhavi.png",
+    logo: "/client/medhavi.png",
     image:
       "https://images.pexels.com/photos/159844/cellular-education-classroom-159844.jpeg?w=400&h=300&fit=crop",
     tags: ["Social Media Management", "Lead Generation", "6 months"],
@@ -172,7 +172,7 @@ export const clientsData: ClientData[] = [
     category: "IT Services",
     description:
       "Tech-based startup for IT services with lead generation focus",
-    logo: "./client/upliftio.png",
+    logo: "/client/upliftio.png",
     image:
       "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?w=400&h=300&fit=crop",
     tags: ["Lead Generation", "Social Media Management", "4 months"],
@@ -212,7 +212,7 @@ export const clientsData: ClientData[] = [
     category: "Interior Design",
     description:
       "Interior Design Studio with comprehensive business development",
-    logo: "./client/vinayaka.jpg",
+    logo: "/client/vinayaka.jpg",
     image:
       "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?w=400&h=300&fit=crop",
     tags: [
@@ -260,7 +260,7 @@ export const clientsData: ClientData[] = [
     name: "M K Streetwear",
     category: "Fashion",
     description: "Streetwear Fashion Brand with complete brand development",
-    logo: "./client/mk.png",
+    logo: "/client/mk.png",
     image:
       "https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?w=400&h=300&fit=crop",
     tags: ["Brand Strategy", "Website Development", "Social Media Management"],
@@ -304,7 +304,7 @@ export const clientsData: ClientData[] = [
     name: "Adhyayan",
     category: "Education",
     description: "Online Coaching Institute with social media focus",
-    logo: "./client/aadhyan.jpg",
+    logo: "/client/aadhyan.jpg",
     image:
       "https://images.pexels.com/photos/159844/cellular-education-classroom-159844.jpeg?w=400&h=300&fit=crop",
     tags: ["Social Media Management", "Education Marketing"],
@@ -347,7 +347,7 @@ export const clientsData: ClientData[] = [
     name: "Dew Drop Homestay",
     category: "Hospitality",
     description: "Premium Hilltop Stay with comprehensive digital presence",
-    logo: "./client/dewdrop.png",
+    logo: "/client/dewdrop.png",
     image:
       "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?w=400&h=300&fit=crop",
     tags: [
@@ -395,7 +395,7 @@ export const clientsData: ClientData[] = [
     name: "Nataraj Dance Studios",
     category: "Entertainment",
     description: "Dance training academy with social media marketing",
-    logo: "./client/nataraj.png",
+    logo: "/client/nataraj.png",
     image:
       "https://media.istockphoto.com/id/1371152823/photo/natraj-images-god-shiva-as-nataraj.jpg?b=1&s=612x612&w=0&k=20&c=J_33eBtYQwYcCDSWyO-zmdUJk4TsFiqbLmLYP85dbLY=",
     tags: ["Social Media Management", "Creative Marketing"],
@@ -438,7 +438,7 @@ export const clientsData: ClientData[] = [
     name: "Pureblend Foods",
     category: "Food & Beverage",
     description: "B2B Food Supply Chain Brand with comprehensive strategy",
-    logo: "./client/pureblend.jpg",
+    logo: "/client/pureblend.jpg",
     image:
       "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?w=400&h=300&fit=crop",
     tags: ["Business Strategy", "Website Development", "Lead Generation"],
@@ -483,7 +483,7 @@ export const clientsData: ClientData[] = [
     category: "Engineering",
     description:
       "Engineering and Manufacturing Services with digital transformation",
-    logo: "./client/asti.png",
+    logo: "/client/asti.png",
     image:
       "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?w=400&h=300&fit=crop",
     tags: ["Business Strategy", "Website Development", "Lead Generation"],
@@ -528,7 +528,7 @@ export const clientsData: ClientData[] = [
     category: "Engineering",
     description:
       "Heavy Earthmoving Equipment & Spares with complete digital strategy",
-    logo: "./client/splogo.png",
+    logo: "/client/splogo.png",
     image: "https://images.pexels.com/photos/1238864/pexels-photo-1238864.jpeg",
     tags: ["Business Strategy", "Website Development", "Lead Generation"],
     duration: "5 months",
