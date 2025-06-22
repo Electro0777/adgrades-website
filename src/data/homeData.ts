@@ -184,31 +184,49 @@ export const testimonialData = {
     "Don't just take our word for it - hear from the businesses we've helped grow.",
   testimonials: [
     {
-      name: "Sarah Johnson",
-      company: "TechStart Inc.",
-      role: "CEO",
+      name: "Pranav Jha",
+      company: "Medhavi Classes",
+      role: "Owner",
       content:
-        "AdGrades transformed our digital presence completely. Our website traffic increased by 300% and lead generation improved dramatically.",
+        "Ad Grades has been instrumental in boosting our digital reach. Their team truly understands the education sector. We've seen a sharp rise in engagement and visibility. Highly professional and results-driven service.",
       rating: 5,
-      avatar: "/api/placeholder/60/60",
+      avatar: "/client/medhavi.png",
     },
     {
-      name: "Michael Chen",
-      company: "EcoLiving",
-      role: "Marketing Director",
+      name: "Shreyas Bhadani",
+      company: "Delhi 65 Restaurant",
+      role: "Owner",
       content:
-        "The social media campaigns they created for us were outstanding. Our engagement rates doubled within the first month.",
+        "We started with zero online presence. Ad Grades built our brand identity from scratch. Now, our restaurant is recognized both online and offline. Couldn’t have asked for a better marketing partner.",
       rating: 5,
-      avatar: "/api/placeholder/60/60",
+      avatar: "/client/delhi65.png",
     },
     {
-      name: "Emily Rodriguez",
-      company: "FitLife Studio",
-      role: "Founder",
+      name: "Abhishek",
+      company: "Natraj Studios",
+      role: "Owner",
       content:
-        "Professional, creative, and results-driven. AdGrades helped us reach our target audience effectively and increase conversions.",
+        "Ad Grades helped shape our creative brand online. Their strategies brought in real clients and recognition. They captured our studio’s essence beautifully. A dependable and creative team to work with.",
       rating: 5,
-      avatar: "/api/placeholder/60/60",
+      avatar: "/client/nataraj.png",
+    },
+    {
+      name: "Harsh Kumar",
+      company: "OS Code",
+      role: "Co-founder",
+      content:
+        "Ad Grades gave our brand a clear voice in the digital space. Their strategies were sharp, effective, and well-aligned with our goals. We saw real traction across platforms in a short time. Truly impressed with their expertise.",
+      rating: 5,
+      avatar: "/client/oscode.png",
+    },
+    {
+      name: "Suresh",
+      company: "Dewdrop Homestays",
+      role: "Owner",
+      content:
+        "We went from being hidden to fully booked. Ad Grades brought in real customers through smart ads. They told our story in a way people connected with. Thanks to them, every weekend is now packed.",
+      rating: 5,
+      avatar: "/client/dewdrop.png",
     },
   ],
 };
