@@ -30,7 +30,7 @@ const AdminLogin: React.FC = () => {
     } else {
       setError('Invalid username or password');
     }
-    
+
     setIsLoading(false);
   };
 
@@ -54,7 +54,7 @@ const AdminLogin: React.FC = () => {
           Back to Home
         </button>
       </div>
-      
+
       <div className="relative z-10 w-full max-w-md mx-auto px-4">
         <div className="bg-card/80 backdrop-blur-2xl rounded-3xl shadow-2xl border border-border/50 p-8">
           {/* Header */}
@@ -141,14 +141,7 @@ const AdminLogin: React.FC = () => {
             </button>
           </form>
 
-          {/* Demo Credentials */}
-          <div className="mt-8 p-4 bg-muted/30 rounded-xl border border-border/30">
-            <h3 className="text-sm font-semibold text-card-foreground mb-2">Default Login:</h3>
-            <div className="text-xs text-muted-foreground space-y-1">
-              <div>Username: <code className="bg-muted px-2 py-1 rounded">admin</code></div>
-              <div>Password: <code className="bg-muted px-2 py-1 rounded">admin123</code></div>
-            </div>
-          </div>
+
 
           {/* Quick Access Links */}
           <div className="mt-6 text-center">
