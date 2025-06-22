@@ -248,8 +248,14 @@ const Services: React.FC = () => {
                     delay: index * 0.1,
                   }}
                   whileHover={{ y: -5 }}
-                  onClick={() => setSelectedService(service)}
                 >
+                  {/* Make the whole card a link to the detail page */}
+                  <Link
+                    to={`/services/${service.id}`}
+                    className="absolute inset-0 z-20"
+                    tabIndex={-1}
+                    aria-label={`View details for ${service.title}`}
+                  ></Link>
                   {/* Background Pattern */}
                   <div className="absolute inset-0 opacity-5">
                     <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-primary to-secondary rounded-full transform translate-x-12 -translate-y-12"></div>
@@ -331,7 +337,7 @@ const Services: React.FC = () => {
                         className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium"
                         onClick={(e) => {
                           e.stopPropagation();
-                          setSelectedService(service);
+                          window.location.href = `/services/${service.id}`;
                         }}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}

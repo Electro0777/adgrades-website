@@ -12,6 +12,7 @@ import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/AdminDashboard";
 import CertificateVerification from "./pages/CertificateVerification";
 import ClientDetails from "./pages/ClientDetails";
+import ServiceDetail from "./pages/ServiceDetail";
 import NotFound from "./pages/NotFound";
 
 function App() {
@@ -73,6 +74,14 @@ function App() {
             element={
               <Layout>
                 <Careers />
+              </Layout>
+            }
+          />
+          <Route
+            path="/services/:serviceId"
+            element={
+              <Layout>
+                <ServiceDetail />
               </Layout>
             }
           />
