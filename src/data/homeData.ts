@@ -7,10 +7,10 @@ export const heroData = {
   primaryCTA: "Get Started Today",
   secondaryCTA: "View Our Work",
   stats: [
-    { number: 50, label: "Happy Clients", suffix: "+" },
-    { number: 100, label: "Projects Completed", suffix: "+" },
-    { number: 5, label: "Years Experience", suffix: "+" },
-    { number: 24, label: "Support Available", suffix: "/7" },
+    { number: 25, label: "Happy Clients", suffix: "+" },
+    { number: 15, label: "Team Members", suffix: "" },
+    { number: 90, label: "Success Rate", suffix: "%" },
+    { number: 2, label: "Years Experience", suffix: "+" },
   ],
 };
 
