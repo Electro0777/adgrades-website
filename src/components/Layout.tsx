@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
 import {
   Menu,
   X,
@@ -245,10 +246,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             </div>
           </div>
         )}
-      </nav>
-      {/* Main Content with Overlay for Non-Hero Sections */}
+      </nav>      {/* Main Content with Overlay for Non-Hero Sections */}
       <main className="overflow-x-hidden">
-        <div data-aos="fade-up" data-aos-duration="800">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeInOut' }}
+        >
           {React.Children.map(children, (child, index) => {
             if (React.isValidElement(child)) {
               return React.cloneElement(
@@ -260,7 +264,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             }
             return child;
           })}
-        </div>
+        </motion.div>
       </main>
       {/* Footer with Content Overlay */}
       <footer className="content-overlay border-t border-border overflow-x-hidden">
