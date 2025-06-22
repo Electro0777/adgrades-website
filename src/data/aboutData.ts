@@ -105,7 +105,7 @@ export const team = [
     name: "Nikhil",
     role: "Video Editing Lead",
     image:
-      "",
+      "/nikhil.jpg",
     bio: "Nikhil is the storyteller behind the screen, turning raw footage into scroll-stopping videos that feel more like cinema than content. As the Video Editing Lead, he brings brands to life through dynamic visuals, clean cuts, and creative storytelling. His edits don't just look good, they tell a story, spark emotion, and drive action.",
     linkedin: "#",
   },
@@ -120,7 +120,7 @@ export const team = [
     name: "Karthik",
     role: "Offline Marketing Manager",
     image:
-      "/",
+      "/karthik.jpg",
     bio: "Karthik brings life to brands beyond the screen. He plans and manages offline campaigns that connect directly with people—through events, print, and local promotions. With a hands-on approach and smart strategies, Karthik helps AdGrades create strong brand presence in the real world, where it truly matters.",
     linkedin: "#",
   },
