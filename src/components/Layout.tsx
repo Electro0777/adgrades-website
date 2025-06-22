@@ -248,17 +248,19 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       </nav>
       {/* Main Content with Overlay for Non-Hero Sections */}
       <main className="overflow-x-hidden">
-        {React.Children.map(children, (child, index) => {
-          if (React.isValidElement(child)) {
-            return React.cloneElement(
-              child as React.ReactElement<React.HTMLAttributes<HTMLElement>>,
-              {
-                key: index,
-              }
-            );
-          }
-          return child;
-        })}
+        <div data-aos="fade-up" data-aos-duration="800">
+          {React.Children.map(children, (child, index) => {
+            if (React.isValidElement(child)) {
+              return React.cloneElement(
+                child as React.ReactElement<React.HTMLAttributes<HTMLElement>>,
+                {
+                  key: index,
+                }
+              );
+            }
+            return child;
+          })}
+        </div>
       </main>
       {/* Footer with Content Overlay */}
       <footer className="content-overlay border-t border-border overflow-x-hidden">
