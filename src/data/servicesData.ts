@@ -102,6 +102,72 @@ export const serviceCategories: ServiceCategory[] = [
 
 export const services: Service[] = [
   {
+    id: "digital-marketing",
+    title: "Digital Marketing",
+    shortDescription:
+      "Multi-channel marketing campaigns that drive growth and maximize ROI",
+    fullDescription:
+      "Accelerate your business growth with our comprehensive digital marketing services. From social media to PPC advertising, we create campaigns that deliver measurable results.",
+    icon: BarChart3,
+    features: [
+      "Social Media Marketing",
+      "PPC Advertising",
+      "Email Marketing",
+      "Content Marketing",
+      "Conversion Optimization",
+      "Marketing Automation",
+    ],
+    benefits: [
+      "Increased brand awareness",
+      "Higher quality leads",
+      "Better ROI",
+      "Improved customer retention",
+      "Data-driven decisions",
+      "Scalable growth",
+    ],
+    technologies: [
+      "Google Ads",
+      "Facebook Ads",
+      "HubSpot",
+      "Mailchimp",
+      "Hootsuite",
+      "Unbounce",
+      "Hotjar",
+    ],
+    process: [
+      {
+        step: "Research",
+        description: "Market research and audience analysis",
+      },
+      {
+        step: "Strategy",
+        description: "Multi-channel marketing strategy development",
+      },
+      {
+        step: "Execution",
+        description: "Campaign creation and implementation",
+      },
+      {
+        step: "Optimization",
+        description: "Continuous testing and optimization",
+      },
+    ],
+    pricing: {
+      basic: "$2,000 - $5,000/month",
+      premium: "$5,000 - $15,000/month",
+      enterprise: "$15,000+/month",
+    },
+    deliverables: [
+      "Marketing strategy document",
+      "Campaign assets and creatives",
+      "Landing page optimization",
+      "Monthly performance reports",
+      "Ongoing strategy refinement",
+    ],
+    timeline: "Ongoing monthly service",
+    category: "marketing",
+  },
+  {
     id: "web-development",
     title: "Web Development",
     shortDescription:
@@ -367,72 +433,6 @@ export const services: Service[] = [
       "Ongoing recommendations",
     ],
     timeline: "3-6 months to see results",
-    category: "marketing",
-  },
-  {
-    id: "digital-marketing",
-    title: "Digital Marketing",
-    shortDescription:
-      "Multi-channel marketing campaigns that drive growth and maximize ROI",
-    fullDescription:
-      "Accelerate your business growth with our comprehensive digital marketing services. From social media to PPC advertising, we create campaigns that deliver measurable results.",
-    icon: BarChart3,
-    features: [
-      "Social Media Marketing",
-      "PPC Advertising",
-      "Email Marketing",
-      "Content Marketing",
-      "Conversion Optimization",
-      "Marketing Automation",
-    ],
-    benefits: [
-      "Increased brand awareness",
-      "Higher quality leads",
-      "Better ROI",
-      "Improved customer retention",
-      "Data-driven decisions",
-      "Scalable growth",
-    ],
-    technologies: [
-      "Google Ads",
-      "Facebook Ads",
-      "HubSpot",
-      "Mailchimp",
-      "Hootsuite",
-      "Unbounce",
-      "Hotjar",
-    ],
-    process: [
-      {
-        step: "Research",
-        description: "Market research and audience analysis",
-      },
-      {
-        step: "Strategy",
-        description: "Multi-channel marketing strategy development",
-      },
-      {
-        step: "Execution",
-        description: "Campaign creation and implementation",
-      },
-      {
-        step: "Optimization",
-        description: "Continuous testing and optimization",
-      },
-    ],
-    pricing: {
-      basic: "$2,000 - $5,000/month",
-      premium: "$5,000 - $15,000/month",
-      enterprise: "$15,000+/month",
-    },
-    deliverables: [
-      "Marketing strategy document",
-      "Campaign assets and creatives",
-      "Landing page optimization",
-      "Monthly performance reports",
-      "Ongoing strategy refinement",
-    ],
-    timeline: "Ongoing monthly service",
     category: "marketing",
   },
   {

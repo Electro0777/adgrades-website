@@ -213,11 +213,11 @@ const Home: React.FC = () => {
                   transition={{ duration: 0.6, delay: 0.6 }}
                 >
                   {heroData.highlight}
-                  {/* Underline effect */}
+                  {/* Underline effect - original style restored */}
                   <motion.div
                     className="absolute -bottom-2 left-0 h-1 bg-gradient-to-r from-primary to-secondary rounded-full"
                     initial={{ width: 0 }}
-                    animate={{ width: "100%" }}
+                    animate={{ width: "100%" }} 
                     transition={{ duration: 1, delay: 1.2 }}
                   />
                 </motion.span>
