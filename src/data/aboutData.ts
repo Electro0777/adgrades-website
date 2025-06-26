@@ -89,10 +89,9 @@ export const team = [
   {
     name: "Sumith",
     role: "CFO",
-    image:
-      "",
+    image: "/sumith.jpg",
     bio: "Sumith is the logical person at AdGrades—the one who makes sure every rupee spent is a smart investment. From managing costs to analyzing performance, Sumith ensures that our strategies are not just creative, but financially sound.",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/sumeeth-leo-856a59277?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
   {
     name: "Chandu M",
@@ -104,8 +103,7 @@ export const team = [
   {
     name: "Nikhil",
     role: "Video Editing Lead",
-    image:
-      "/nikhil.jpg",
+    image: "/nikhil.jpg",
     bio: "Nikhil is the storyteller behind the screen, turning raw footage into scroll-stopping videos that feel more like cinema than content. As the Video Editing Lead, he brings brands to life through dynamic visuals, clean cuts, and creative storytelling. His edits don't just look good, they tell a story, spark emotion, and drive action.",
     linkedin: "#",
   },
@@ -119,8 +117,7 @@ export const team = [
   {
     name: "Karthik",
     role: "Offline Marketing Manager",
-    image:
-      "/karthik.jpg",
+    image: "/karthik.jpg",
     bio: "Karthik brings life to brands beyond the screen. He plans and manages offline campaigns that connect directly with people—through events, print, and local promotions. With a hands-on approach and smart strategies, Karthik helps AdGrades create strong brand presence in the real world, where it truly matters.",
     linkedin: "#",
   },

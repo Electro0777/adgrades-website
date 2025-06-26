@@ -643,7 +643,7 @@ const Home: React.FC = () => {
                   <img
                     src={client.logo}
                     alt={`${client.name} logo`}
-                    className="max-w-full max-h-full object-contain dark:filter dark:brightness-0 dark:invert group-hover:filter-none group-hover:scale-110 transition-all duration-300"
+                    className="max-w-full max-h-full object-contain group-hover:scale-110 transition-all duration-300"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
                       target.style.display = "none";

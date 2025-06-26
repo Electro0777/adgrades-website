@@ -74,7 +74,7 @@ const About: React.FC = () => {
               <div className="bg-card/60 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-border/50 hover:border-primary/30 hover:bg-card/80 transition-all duration-300">
                 <Users className="w-5 h-5 sm:w-6 sm:h-6 text-primary mx-auto mb-2" />
                 <div className="text-lg sm:text-xl font-bold text-foreground mb-1">
-                  <AnimatedCounter end={12} suffix="+" />
+                  <AnimatedCounter end={25} suffix="+" />
                 </div>
                 <div className="text-xs text-muted-foreground font-medium">
                   Happy Clients
@@ -83,7 +83,7 @@ const About: React.FC = () => {
               <div className="bg-card/60 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-border/50 hover:border-primary/30 hover:bg-card/80 transition-all duration-300">
                 <Target className="w-5 h-5 sm:w-6 sm:h-6 text-secondary mx-auto mb-2" />
                 <div className="text-lg sm:text-xl font-bold text-foreground mb-1">
-                  <AnimatedCounter end={12} suffix="" />
+                  <AnimatedCounter end={15} suffix="" />
                 </div>
                 <div className="text-xs text-muted-foreground font-medium">
                   Team Members
@@ -92,7 +92,7 @@ const About: React.FC = () => {
               <div className="bg-card/60 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-border/50 hover:border-primary/30 hover:bg-card/80 transition-all duration-300">
                 <Zap className="w-5 h-5 sm:w-6 sm:h-6 text-accent mx-auto mb-2" />
                 <div className="text-lg sm:text-xl font-bold text-foreground mb-1">
-                  100%
+                  90%
                 </div>
                 <div className="text-xs text-muted-foreground font-medium">
                   Success Rate
